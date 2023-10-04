@@ -193,6 +193,11 @@
   background: rgba(162, 193, 196, 0.7);
   transition: 0.2s;
 }
+.accord-inner__list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
 .accord-inner__element {
   padding-bottom: 24px;
@@ -201,6 +206,9 @@
 .accord-inner__element:last-of-type {
   border-bottom: none;
   padding-bottom: 0;
+}
+.accord-inner__element_final {
+  padding-bottom: 31px;
 }
 
 .accord-inner__body {
@@ -286,6 +294,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+  position: relative;
 }
 @media screen and (max-width: 959px) {
   .accord-header__right {
@@ -301,6 +310,9 @@
   .accord-header__right button {
     width: 35px;
     height: 35px;
+    position: absolute;
+    right: 0px;
+    top: 0;
   }
 }
 
@@ -442,6 +454,7 @@
   border-radius: 8px;
   background: #e7eeee;
   padding: 20px 30px;
+  margin-bottom: 40px;
 }
 .accord__content-subtitle p {
   color: #181818;
@@ -455,10 +468,14 @@
     font-size: 14px;
   }
 }
+@media screen and (max-width: 959px) {
+  .accord__content-subtitle {
+    margin-bottom: 0;
+  }
+}
 @media screen and (max-width: 639px) {
   .accord__content-subtitle {
     order: 1;
-    margin-bottom: 30px;
     padding: 15px 20px;
   }
 }

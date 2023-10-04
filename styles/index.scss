@@ -164,6 +164,12 @@
 			transition: 0.2s;
 		}
 	}
+
+	&__list-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
 }
 
 .accord-inner__element {
@@ -173,6 +179,10 @@
 	&:last-of-type {
 		border-bottom: none;
 		padding-bottom: 0;
+	}
+
+	&_final {
+		padding-bottom: 31px;
 	}
 }
 
@@ -272,6 +282,7 @@
 	justify-content: center;
 	align-items: center;
 	gap: 30px;
+	position: relative;
 
 	@media screen and (max-width: 959px) {
 		width: 100%;
@@ -285,6 +296,9 @@
 		button {
 			width: 35px;
 			height: 35px;
+			position: absolute;
+			right: 0px;
+			top: 0;
 		}
 	}
 }
@@ -420,6 +434,7 @@
 	border-radius: 8px;
 	background: #e7eeee;
 	padding: 20px 30px;
+	margin-bottom: 40px;
 
 	p {
 		color: #181818;
@@ -433,9 +448,12 @@
 		}
 	}
 
+	@media screen and (max-width: 959px) {
+		margin-bottom: 0;
+	}
+
 	@media screen and (max-width: 639px) {
 		order: 1;
-		margin-bottom: 30px;
 		padding: 15px 20px;
 	}
 }
