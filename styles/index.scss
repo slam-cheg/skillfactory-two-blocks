@@ -182,7 +182,11 @@
 	}
 
 	&_final {
-		padding-bottom: 31px;
+		padding-bottom: 24px;
+
+		@media screen and (max-width: 959px) {
+			padding-bottom: 30px;
+		}
 	}
 }
 

@@ -208,7 +208,12 @@
   padding-bottom: 0;
 }
 .accord-inner__element_final {
-  padding-bottom: 31px;
+  padding-bottom: 24px;
+}
+@media screen and (max-width: 959px) {
+  .accord-inner__element_final {
+    padding-bottom: 30px;
+  }
 }
 
 .accord-inner__body {
