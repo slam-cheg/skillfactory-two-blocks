@@ -398,7 +398,7 @@
 	font-style: normal;
 	font-weight: 400 !important;
 	line-height: 130%;
-	margin-bottom: 40px;
+	//margin-bottom: 40px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -649,7 +649,7 @@
 		.accord-inner__body {
 			padding-top: 64px;
 
-			@media screen and (max-width: 639px) {
+			@media screen and (max-width: 959px) {
 				padding-top: 20px;
 			}
 		}
@@ -667,6 +667,12 @@
 
 		@media screen and (max-width: 639px) {
 			gap: 30px;
+		}
+	}
+
+	.accord-inner__element_listonly {
+		.accord-inner__body{
+			gap: 0;
 		}
 	}
 

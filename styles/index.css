@@ -418,7 +418,6 @@
   font-style: normal;
   font-weight: 400 !important;
   line-height: 130%;
-  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -676,7 +675,7 @@
 .program__accord-wrapper .accord-opened .accord-inner__body {
   padding-top: 64px;
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 959px) {
   .program__accord-wrapper .accord-opened .accord-inner__body {
     padding-top: 20px;
   }
@@ -696,6 +695,9 @@
   .program__accord-wrapper .accord-inner__body {
     gap: 30px;
   }
+}
+.program__accord-wrapper .accord-inner__element_listonly .accord-inner__body {
+  gap: 0;
 }
 @media screen and (max-width: 959px) {
   .program__accord-wrapper .h4-title {
