@@ -266,6 +266,14 @@
 .accord-opened .accord-inner__body {
   padding-top: 23px;
 }
+.accord-opened .accord-inner__body a {
+  color: #181818;
+  transition: opacity 0.2s;
+}
+.accord-opened .accord-inner__body a:hover {
+  transition: opacity 0.2s;
+  opacity: 0.7;
+}
 @media screen and (max-width: 639px) {
   .accord-opened .accord-inner__body {
     padding-top: 20px;
