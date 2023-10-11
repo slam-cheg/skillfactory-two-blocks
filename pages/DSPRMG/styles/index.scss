@@ -478,6 +478,11 @@
 		grid-template-columns: 1fr 1fr;
 		max-width: 100%;
 
+		@media screen and (max-width: 959px) {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
 		&_column {
 			display: flex;
 			flex-direction: column;
@@ -490,6 +495,14 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
+		}
+	}
+
+	.accord-header_inner {
+		@media screen and (max-width: 959px) {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: flex-start;
 		}
 	}
 }

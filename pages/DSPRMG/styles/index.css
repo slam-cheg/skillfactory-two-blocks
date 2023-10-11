@@ -497,6 +497,12 @@
   grid-template-columns: 1fr 1fr;
   max-width: 100%;
 }
+@media screen and (max-width: 959px) {
+  .program .accord-inner__body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
 .program .accord-inner__body_column {
   display: flex;
   flex-direction: column;
@@ -504,6 +510,13 @@
 }
 .program .accord__content .accord__content-description:last-child {
   margin-bottom: 0;
+}
+@media screen and (max-width: 959px) {
+  .program .accord-header_inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 }
 
 .program__lead-container {
