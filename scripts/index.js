@@ -38,10 +38,9 @@ function handlerAccordToggle(accord) {
 	accord.classList.toggle("accord-closed");
 }
 
-
-
 setTimeout(() => {
-	// endDate = window.SFData['https://skillfactory.ru/python-fullstack-web-developer-b/']['75'];
+	endDate = window.SFData["https://skillfactory.ru/python-fullstack-web-developer-b/"]["75"];
+	// endDate = document.querySelector(".takeit__timerEndTime").textContent;
 }, 500);
 
 function updateTimerClock() {
