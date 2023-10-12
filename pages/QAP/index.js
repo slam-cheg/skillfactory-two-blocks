@@ -7,6 +7,8 @@ const timerHoursValue = timer.querySelector(".takeit-timer__hours-value");
 const timerMinutesValue = timer.querySelector(".takeit-timer__minutes-value");
 const timerSecondsValue = timer.querySelector(".takeit-timer__seconds-value");
 let endDate = 0;
+const ratesPopupLinks = document.querySelectorAll(".rate-card__list-item_underline");
+const ratesPopups = document.querySelectorAll(".takeit__popup");
 
 outerAccords.forEach((accord) => {
 	const outerAccordElement = accord.querySelector(".accord-outer__element");
@@ -30,6 +32,20 @@ programAccordItems.forEach((element) => {
 	const programAccordHeader = element.querySelector(".accord-header");
 	programAccordHeader.addEventListener("click", () => {
 		handlerAccordToggle(element);
+	});
+});
+
+ratesPopupLinks.forEach((link) => {
+	link.addEventListener("click", () => {
+		ratesPopups.forEach((popup) => {
+			if (popup.id === link.id) {
+				openPopup(popup);
+				const closeIco = popup.querySelector(".takeit__popup-close");
+				closeIco.addEventListener("click", () => {
+					closePopup(popup);
+				});
+			}
+		});
 	});
 });
 
@@ -98,3 +114,29 @@ const ratesSlider = new Swiper(".takeit__slider", {
 		},
 	},
 });
+
+function openPopup(currentPopup) {
+	currentPopup.classList.add("popup_opened");
+	currentPopup.addEventListener("click", handleOverlayClick);
+	window.addEventListener("keydown", closeByEscape);
+}
+
+function closePopup(currentPopup) {
+	currentPopup.classList.remove("popup_opened");
+	window.removeEventListener("keydown", closeByEscape);
+}
+
+function handleOverlayClick(event) {
+	if (event.type === "click") {
+		if (event.target === event.currentTarget) {
+			closePopup(event.target);
+		}
+	}
+}
+
+function closeByEscape(event) {
+	if (event.key === "Escape") {
+		const openedPopUp = document.querySelector(".popup_opened");
+		closePopup(openedPopUp);
+	}
+}
