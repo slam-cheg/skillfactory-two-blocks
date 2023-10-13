@@ -445,6 +445,9 @@
   border-radius: 8px;
   background: #e7eeee;
   padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .accord__content-subtitle p {
   color: #181818;
