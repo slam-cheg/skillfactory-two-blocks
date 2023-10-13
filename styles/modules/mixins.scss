@@ -1,0 +1,71 @@
+@import "./variables.scss";
+
+@mixin h2 {
+	color: $color-coal;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: $font_machina;
+	line-height: 90%;
+	margin-bottom: 80px;
+
+	@media screen and (max-width: $hor-tablet) {
+		font-size: 55px;
+	}
+
+	@media screen and (max-width: $ver-tablet) {
+		font-size: 50px;
+	}
+
+	@media screen and (max-width: $hor-mobile) {
+		font-size: 40px;
+		line-height: 36px;
+		margin-bottom: 20px;
+	}
+
+	@media screen and (max-width: $ver-mobile) {
+		font-size: 30px;
+		line-height: 28px;
+	}
+}
+
+@mixin h3 {
+	color: $color-deepGreen;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 110%;
+
+	@media screen and (max-width: $hor-mobile) {
+		color: $color-carrot;
+		font-size: 20px;
+	}
+}
+
+@mixin h4 {
+	color: $color-coal;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: $font_helios;
+	line-height: 120%;
+	max-width: 93%;
+
+	@media screen and (max-width: $hor-mobile) {
+		font-size: 18px;
+		max-width: calc(90% - 32px);
+	}
+}
+
+@mixin h5 {
+	color: $color-coal;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: $font_helios;
+	line-height: 120%;
+	margin-bottom: 20px;
+
+	@media screen and (max-width: $hor-mobile) {
+		font-size: 18px;
+		margin-bottom: 15px;
+		order: 2;
+	}
+}
