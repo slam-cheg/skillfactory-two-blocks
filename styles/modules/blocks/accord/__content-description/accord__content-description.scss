@@ -1,0 +1,38 @@
+.accord__content-description {
+	color: $color-coal !important;
+	opacity: 0.7;
+	font-size: 16px !important;
+	font-style: normal;
+	font-weight: $font_helios !important;
+	line-height: 130%;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	li {
+		display: flex;
+
+		&::before {
+			content: "→";
+			margin-right: 20px;
+			color: $color-coal;
+			opacity: 0.7;
+			font-size: 18px;
+			font-weight: $font_machina;
+			line-height: 120%;
+			position: relative;
+			top: -2px;
+
+			@media screen and (max-width: $hor-mobile) {
+				font-size: 18px;
+				line-height: 1;top: 0;
+			}
+		}
+	}
+
+	@media screen and (max-width: $hor-mobile) {
+		margin-bottom: 0;
+		order: 3;
+	}
+}

@@ -1,0 +1,27 @@
+.program {
+	margin-bottom: 100px;
+
+	.h2-title {
+		max-width: 540px;
+		margin-bottom: 60px;
+
+		@media screen and (max-width: $hor-tablet) {
+			max-width: 610px;
+		}
+
+		@media screen and (max-width: $hor-mobile) {
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	.h4-title {
+		@media screen and (max-width: $hor-mobile) {
+			font-size: 20px;
+		}
+	}
+
+	.accord__content-description {
+		gap: 10px;
+	}
+}

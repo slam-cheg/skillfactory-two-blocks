@@ -1,0 +1,10 @@
+.accord__list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 370px;
+
+	@media screen and (max-width: $ver-tablet) {
+		max-width: 100%;
+	}
+}

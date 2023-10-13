@@ -1,5 +1,26 @@
 .accord__content-subtitle {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+	border-radius: 8px;
+	background: $color-bone;
+	padding: 20px 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	p {
+		color: $color-coal;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: $font_helios;
+		line-height: 120%;
+
+		@media screen and (max-width: $hor-mobile) {
+			font-size: 14px;
+		}
+	}
+
+	@media screen and (max-width: $hor-mobile) {
+		order: 1;
+		margin-bottom: 30px;
+		padding: 15px 20px;
+	}
 }

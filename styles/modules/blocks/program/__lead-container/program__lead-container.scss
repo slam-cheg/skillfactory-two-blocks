@@ -1,0 +1,15 @@
+.program__lead-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	margin-bottom: 60px;
+
+	@media screen and (max-width: $ver-tablet) {
+		grid-template-columns: 1fr;
+	}
+
+	@media screen and (max-width: $hor-mobile) {
+		gap: 30px;
+		margin-bottom: 30px;
+	}
+}

@@ -1,0 +1,21 @@
+.accord-header__right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+
+	@media screen and (max-width: 959px) {
+		width: 100%;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	@media screen and (max-width: 479px) {
+		align-items: flex-start;
+
+		button {
+			width: 35px;
+			height: 35px;
+		}
+	}
+}

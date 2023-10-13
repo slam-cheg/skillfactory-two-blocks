@@ -1,0 +1,11 @@
+.accord-inner {
+	.accord-button {
+		background: rgba(162, 193, 196, 0.3);
+		border-radius: 4px;
+
+		&:hover {
+			background: rgba(162, 193, 196, 0.7);
+			transition: 0.2s;
+		}
+	}
+}

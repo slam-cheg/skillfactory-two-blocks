@@ -1,0 +1,11 @@
+.accord-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	padding: 0 30px;
+
+	@media screen and (max-width: $hor-mobile) {
+		padding: 0 15px;
+	}
+}

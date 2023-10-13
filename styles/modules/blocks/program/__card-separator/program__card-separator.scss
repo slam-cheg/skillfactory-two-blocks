@@ -1,0 +1,11 @@
+.program__card-separator {
+	display: block;
+	background: $color-midGreen;
+	height: 1px;
+	width: 100%;
+	margin-bottom: 20px;
+
+	@media screen and (max-width: $hor-mobile) {
+		margin-bottom: 10px;
+	}
+}

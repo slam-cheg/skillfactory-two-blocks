@@ -1,0 +1,40 @@
+.accord-opened {
+	.accord-outer__body,
+	.accord-inner__body {
+		visibility: visible;
+		opacity: 1;
+		pointer-events: auto;
+		max-height: initial;
+		transition: 0.2s;
+	}
+
+	.accord-inner__element {
+		&:first-of-type {
+			.accord-header_inner {
+				padding-top: 60px;
+			}
+		}
+		.accord-header_inner {
+			padding-top: 20px;
+
+			@media screen and (max-width: 639px) {
+				padding-top: 20px;
+			}
+		}
+	}
+
+	.accord-inner__body {
+		padding-top: 23px;
+
+		@media screen and (max-width: 639px) {
+			padding-top: 20px;
+		}
+	}
+
+	.accord-inner {
+		svg {
+			transform: rotate(45deg);
+			transition: 0.2s;
+		}
+	}
+}

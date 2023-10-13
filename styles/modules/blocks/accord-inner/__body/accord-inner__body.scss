@@ -1,0 +1,24 @@
+.accord-inner__body {
+	max-width: 86%;
+	padding: 0 30px;
+
+	@media screen and (max-width: $hor-mobile) {
+		padding: 0 15px;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	p,
+	ul,
+	li {
+		font-size: 16px;
+		font-weight: 400;
+		color: rgba(24, 24, 24, 0.7);
+
+		@media screen and (max-width: $hor-mobile) {
+			font-size: 14px;
+		}
+	}
+}

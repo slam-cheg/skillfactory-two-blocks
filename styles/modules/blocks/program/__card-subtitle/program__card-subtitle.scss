@@ -1,0 +1,8 @@
+.program__card-subtitle {
+	@include program__card-text;
+	max-width: 330px;
+
+	@media screen and (max-width: $hor-mobile) {
+		max-width: 100%;
+	}
+}

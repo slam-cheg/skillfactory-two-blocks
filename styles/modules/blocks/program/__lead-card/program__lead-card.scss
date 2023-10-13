@@ -1,0 +1,14 @@
+.program__lead-card {
+	border-radius: 8px;
+	background: $color-lightGreen;
+	padding: 30px;
+
+	@media screen and (max-width: $hor-mobile) {
+		padding: 20px 15px;
+	}
+
+	.h4-title {
+		margin-bottom: 20px;
+		max-width: 394px;
+	}
+}

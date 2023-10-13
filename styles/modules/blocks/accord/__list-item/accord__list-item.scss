@@ -1,0 +1,26 @@
+.accord__list-item {
+	display: grid;
+	grid-template-columns: 14px auto;
+	gap: 20px;
+
+	@media screen and (max-width: $hor-mobile) {
+		grid-template-columns: 12px auto;
+	}
+
+	&:before {
+		content: "";
+		background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/FPW_b/arrow-right.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-clip: border-box;
+		width: 14px;
+		height: 14px;
+		position: relative;
+		top: 2px;
+
+		@media screen and (max-width: $hor-mobile) {
+			width: 12px;
+			height: 12px;
+		}
+	}
+}
