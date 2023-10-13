@@ -1,0 +1,25 @@
+.accord-outer {
+	border-radius: 8px;
+	background: #dde6e7;
+	padding: 30px 0;
+	transition: 0.5s;
+	max-height: initial;
+	margin-bottom: 10px;
+
+	&:last-of-type {
+		margin-bottom: 80px;
+
+		@media screen and (max-width: 639px) {
+			margin-bottom: 60px;
+		}
+	}
+
+	@media screen and (max-width: 639px) {
+		padding: 20px 0;
+	}
+
+	.accord-button {
+		background: #043933;
+		border-radius: 4px;
+	}
+}

@@ -1,0 +1,16 @@
+@import "../../../fonts/index.scss";
+@import "../../../styles/modules/mixins.scss";
+@import "../../../styles/modules/blocks/tilda-reset/tilda-reset.scss";
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: $font;
+	box-sizing: border-box;
+}
+
+
+@import "../../../styles/modules/blocks/inner-wrapper/inner-wrapper.scss";
+@import "../../../styles/modules/blocks/h2-title/h2-title.scss";
+
+@import "../../../styles/modules/blocks/accord-outer/accord-outer.scss";

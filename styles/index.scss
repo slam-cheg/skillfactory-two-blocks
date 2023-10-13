@@ -1,3 +1,4 @@
+
 @import "../fonts/index.scss";
 @import "./modules/mixins.scss";
 @import "./modules/blocks/tilda-reset/tilda-reset.scss";
@@ -9,28 +10,17 @@
 	box-sizing: border-box;
 }
 
-.inner-wrapper {
-	width: 1160px;
-	margin: 0 auto;
-	position: relative;
 
-	@media screen and (max-width: 1199px) {
-		max-width: 940px;
-	}
-	@media screen and (max-width: 959px) {
-		max-width: 620px;
-	}
-	@media screen and (max-width: 639px) {
-		max-width: 460px;
-	}
-	@media screen and (max-width: 479px) {
-		max-width: 300px;
-	}
-}
+@import "./modules/blocks/inner-wrapper/inner-wrapper.scss";
+@import "./modules/blocks/h2-title/h2-title.scss";
 
-.h2-title {
-	@include h2;
-}
+@import "./modules/blocks/accord-outer/accord-outer.scss";
+
+
+
+
+
+
 
 .h3-title {
 	@include h3;
@@ -41,33 +31,7 @@
 }
 
 .h5-title {
-@include h5
-}
-
-.accord-outer {
-	border-radius: 8px;
-	background: #dde6e7;
-	padding: 30px 0;
-	transition: 0.5s;
-	max-height: initial;
-	margin-bottom: 10px;
-
-	&:last-of-type {
-		margin-bottom: 80px;
-
-		@media screen and (max-width: 639px) {
-			margin-bottom: 60px;
-		}
-	}
-
-	@media screen and (max-width: 639px) {
-		padding: 20px 0;
-	}
-
-	.accord-button {
-		background: #043933;
-		border-radius: 4px;
-	}
+	@include h5;
 }
 
 .accord-header {

@@ -1741,7 +1741,7 @@
   border-radius: 8px 8px 0 0;
 }
 
-.timer {
+.takeit__timerEndTime {
   display: none;
   pointer-events: none;
 }
