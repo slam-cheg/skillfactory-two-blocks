@@ -188,6 +188,18 @@
 			padding-bottom: 30px;
 		}
 	}
+
+	&_list-cols {
+		.accord__list {
+			max-width: unset;
+		}
+
+		@media screen and (max-width: 959px) {
+			.accord-inner__body {
+				gap: 10px !important;
+			}
+		}
+	}
 }
 
 .accord-inner__body {
@@ -445,9 +457,11 @@
 				background-size: contain;
 				background-clip: border-box;
 				width: 14px;
+				min-width: 14px;
 				height: 14px;
 				position: relative;
 				top: 2px;
+				opacity: 1;
 			}
 		}
 	}

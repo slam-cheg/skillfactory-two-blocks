@@ -215,6 +215,14 @@
     padding-bottom: 30px;
   }
 }
+.accord-inner__element_list-cols .accord__list {
+  max-width: unset;
+}
+@media screen and (max-width: 959px) {
+  .accord-inner__element_list-cols .accord-inner__body {
+    gap: 10px !important;
+  }
+}
 
 .accord-inner__body {
   max-width: 86%;
@@ -466,9 +474,11 @@
   background-size: contain;
   background-clip: border-box;
   width: 14px;
+  min-width: 14px;
   height: 14px;
   position: relative;
   top: 2px;
+  opacity: 1;
 }
 
 .accord__content-subtitle {
