@@ -605,6 +605,22 @@
 		font-size: 18px;
 	}
 
+	&_long {
+		position: relative;
+		display: grid;
+		grid-template-columns: 24px auto;
+		align-items: start;
+
+		&::before {
+			position: relative;
+			top: 6px;
+
+			@media screen and (max-width: 639px) {
+				top: 2px;
+			}
+		}
+	}
+
 	&::before {
 		content: "";
 		background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/FPW_b/list-marker.svg);

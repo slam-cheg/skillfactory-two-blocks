@@ -634,6 +634,21 @@
     font-size: 18px;
   }
 }
+.program__list-item_long {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  align-items: start;
+}
+.program__list-item_long::before {
+  position: relative;
+  top: 6px;
+}
+@media screen and (max-width: 639px) {
+  .program__list-item_long::before {
+    top: 2px;
+  }
+}
 .program__list-item::before {
   content: "";
   background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/FPW_b/list-marker.svg);
