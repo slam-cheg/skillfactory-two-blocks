@@ -17,6 +17,9 @@
   font-weight: 800;
   font-style: normal;
 }
+#allrecords ul {
+  padding-left: 0;
+}
 #allrecords a {
   color: inherit;
 }
@@ -129,6 +132,12 @@
     margin-bottom: 15px;
     order: 2;
   }
+}
+
+.double-accord,
+.program,
+.takeit {
+  padding-top: 2px;
 }
 
 .accord-outer {
@@ -1668,7 +1677,7 @@
 }
 .takeit__popup .h5-title {
   font-size: 24px;
-  max-width: 80%;
+  max-width: 90%;
 }
 @media screen and (max-width: 639px) {
   .takeit__popup .h5-title {

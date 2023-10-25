@@ -1,7 +1,12 @@
 @import "../../../fonts/index.scss";
 
-#allrecords a {
-	color: inherit;
+#allrecords {
+	ul {
+		padding-left: 0;
+	}
+	a {
+		color: inherit;
+	}
 }
 
 * {
@@ -98,6 +103,12 @@
 		margin-bottom: 15px;
 		order: 2;
 	}
+}
+
+.double-accord,
+.program,
+.takeit {
+	padding-top: 2px;
 }
 
 .accord-outer {
@@ -671,7 +682,7 @@
 	}
 
 	.accord-inner__element_listonly {
-		.accord-inner__body{
+		.accord-inner__body {
 			gap: 0;
 		}
 	}
@@ -1639,7 +1650,7 @@
 
 		.h5-title {
 			font-size: 24px;
-			max-width: 80%;
+			max-width: 90%; // default 80%
 
 			@media screen and (max-width: 639px) {
 				font-size: 20px;
@@ -1714,8 +1725,8 @@
 }
 
 .takeit__timerEndTime {
-    display: none;
-    pointer-events: none;
+	display: none;
+	pointer-events: none;
 }
 
 .takeit-timer {
