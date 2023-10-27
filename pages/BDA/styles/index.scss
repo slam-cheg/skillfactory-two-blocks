@@ -671,7 +671,7 @@
 	}
 
 	.accord-inner__element_listonly {
-		.accord-inner__body{
+		.accord-inner__body {
 			gap: 0;
 		}
 	}
@@ -1714,8 +1714,8 @@
 }
 
 .takeit__timerEndTime {
-    display: none;
-    pointer-events: none;
+	display: none;
+	pointer-events: none;
 }
 
 .takeit-timer {
@@ -1901,9 +1901,8 @@
 		justify-content: center;
 		align-items: center;
 		background: #043933;
-		border-radius: 4px;
 		width: 100%;
-		color: #fff;
+		color: #fff !important;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 130%;
