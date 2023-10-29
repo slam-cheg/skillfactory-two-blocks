@@ -1,6 +1,14 @@
+@font-face {
+    font-family: 'CoFo Sans';
+    src: url('./CoFoSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
 * {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 html,
@@ -8,7 +16,6 @@ body {
 	height: 110px;
 	width: 100%;
 	margin: 0;
-	box-sizing: border-box;
 }
 
 .link {
@@ -27,13 +34,13 @@ body {
 	line-height: 105%;
 	letter-spacing: -0.87px;
 	text-transform: lowercase;
+	padding: 40px;
 
 	span {
 		color: #ff4f9c;
 	}
 
 	@media screen and (max-width: 1149px) {
-		padding-left: 20px;
 		justify-content: flex-start;
 	}
 }
@@ -44,25 +51,61 @@ body {
 	left: 0;
 	z-index: 1;
 
-	@media screen and (max-width: 1149px) {
-		display: none;
+	@media screen and (max-width: 629px) {
+		left: -10px;
+	}
+
+	@media screen and (max-width: 429px) {
+		left: -90px;
 	}
 }
 
 .center {
-	position: relative;
-	z-index: 3;
+	position: absolute;
+    z-index: 3;
+    left: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+
+	@media screen and (min-width: 1440px) {
+		position: relative;
+		left: 0;
+	}
+
+	@media screen and (max-width: 1329px) {
+		left: 290px;
+	}
+
+	@media screen and (max-width: 629px) {
+		left: 190px;
+	}
+
+	@media screen and (max-width: 429px) {
+		left: 120px;
+	}
 }
 
 .rigth-img {
 	position: absolute;
 	right: 0;
 	top: 0;
+
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
+
+
 }
 
 .text {
+	@media screen and (max-width: 949px) {
+		width: calc(100% - 90px);
+	}
+
 	@media screen and (max-width: 849px) {
-		font-size: 3vw;
+		font-size: 16px;
 		width: 53vw;
 		line-height: 105%;
 	}
