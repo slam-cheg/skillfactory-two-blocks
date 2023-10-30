@@ -464,10 +464,10 @@
 }
 
 .courses {
-	margin-bottom: 110px;
+	margin-bottom: 96px;
 
 	@media screen and (max-width: 479px) {
-		margin-bottom: 0px;
+		margin-bottom: 56px;
 	}
 
 	.cards {
@@ -748,18 +748,18 @@
 				bottom: 50px;
 			}
 		}
-        svg {
-            transition: .1s;
-        }
+		svg {
+			transition: 0.1s;
+		}
 
 		&:hover {
 			background: #ffe040;
 			transition: 0.1s;
 
-            svg path {
-                stroke: #FF6945;
-                transition: 0.1s;
-            }
+			svg path {
+				stroke: #ff6945;
+				transition: 0.1s;
+			}
 		}
 	}
 
@@ -772,24 +772,28 @@
 		}
 
 		img {
-            width: 380px;
-            bottom: 0;
-            right: 0;
+			width: 380px;
+			bottom: 0;
+			right: 0;
 
 			@media screen and (max-width: 1199px) {
 				width: 270px;
-				height: 270px;
-				bottom: 59px;
+				height: 280px;
+				bottom: 50px;
 			}
 
 			@media screen and (max-width: 639px) {
-				right: 92px;
+				right: 0;
+				bottom: 0;
+				width: 300px;
+				height: 310px;
 			}
 
 			@media screen and (max-width: 479px) {
 				right: 0;
-				width: 250px;
-				bottom: 50px;
+				width: 300px;
+				height: 310px;
+				bottom: 10px;
 			}
 		}
 
@@ -824,18 +828,19 @@
 
 			@media screen and (max-width: 1199px) {
 				width: 270px;
-				height: 270px;
-				bottom: 59px;
+				height: 290px;
+				bottom: 0;
 			}
 
 			@media screen and (max-width: 639px) {
-				right: 92px;
+				right: 20px;
 			}
 
 			@media screen and (max-width: 479px) {
 				right: 0;
-				width: 250px;
-				bottom: 50px;
+				width: 270px;
+				height: 280px;
+				bottom: 0;
 			}
 		}
 
@@ -855,7 +860,7 @@
 		}
 	}
 
-    #BF3 {
+	#BF3 {
 		background: #181818;
 		transition: 0.1s;
 
@@ -869,19 +874,23 @@
 			right: 0;
 
 			@media screen and (max-width: 1199px) {
-				width: 270px;
-				height: 270px;
-				bottom: 59px;
+				width: 210px;
+				height: 187px;
+				bottom: 0;
 			}
 
 			@media screen and (max-width: 639px) {
-				right: 92px;
+				right: -4px;
+				bottom: 0;
+				width: 350px;
+				height: 310px;
 			}
 
 			@media screen and (max-width: 479px) {
 				right: 0;
-				width: 250px;
-				bottom: 50px;
+				width: 235px;
+				height: 265px;
+				bottom: -31px;
 			}
 		}
 
@@ -1226,5 +1235,160 @@
 	@media screen and (max-width: 479px) {
 		font-size: 18px;
 		line-height: 22px;
+	}
+}
+
+.black-friday {
+	margin-bottom: 60px;
+
+	&__background {
+		background-image: url(./images/cardboard.jpg);
+		padding: 44px 40px;
+		border-radius: 8px;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (max-width: 959px) {
+			overflow: visible;
+		}
+
+		@media screen and (max-width: 639px) {
+			padding: 32px 20px;
+		}
+	}
+
+	.h2-title {
+		margin-bottom: 40px;
+		max-width: 700px;
+
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+			max-width: unset;
+			width: calc(100% + 20px);
+		}
+	}
+
+	&__list {
+		margin-bottom: 60px;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		max-width: 530px;
+
+		@media screen and (max-width: 639px) {
+			gap: 16px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__list-item {
+		color: #181818;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 120%;
+		display: grid;
+		grid-template-columns: 30px auto;
+		gap: 30px;
+
+		@media screen and (max-width: 639px) {
+			font-size: 16px;
+			gap: 10px;
+		}
+
+		&::before {
+			content: "";
+			background: url("./images/bf-arrow.svg");
+			width: 30px;
+			height: 24px;
+			position: relative;
+			background-size: contain;
+			background-repeat: no-repeat;
+
+			@media screen and (max-width: 1199px) {
+				transform: translateY(1px);
+			}
+
+			@media screen and (max-width: 639px) {
+				width: 20px;
+				height: 16px;
+				transform: translateY(2px);
+			}
+		}
+	}
+
+	&__button {
+		margin-bottom: 50px;
+		color: #000;
+		text-align: center;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 135%;
+		text-decoration: none;
+		background: #fff;
+		border-radius: 4px;
+		padding: 18px 108px 16px 108px;
+		transition: background 0.3s;
+		max-width: 350px;
+
+		&:hover {
+			background: #dde6e7;
+			transition: background 0.3s;
+		}
+
+		@media screen and (max-width: 959px) {
+			margin-bottom: 150px;
+		}
+
+		@media screen and (max-width: 639px) {
+			max-width: unset;
+		}
+
+		@media screen and (max-width: 479px) {
+			padding: 16px 10px;
+			margin-bottom: 100px;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		pointer-events: none;
+
+		&_one {
+			bottom: 0px;
+			right: 120px;
+			width: 480px;
+			z-index: 2;
+
+			@media screen and (max-width: 1199px) {
+				bottom: 0px;
+				right: 80px;
+				width: 360px;
+			}
+
+			@media screen and (max-width: 959px) {
+				bottom: -40px;
+				right: unset;
+				left: -20px;
+				width: 350px;
+			}
+
+			@media screen and (max-width: 479px) {
+				width: 240px;
+				bottom: -30px;
+			}
+		}
+
+		&_two {
+			top: 0;
+			right: 0;
+			height: 100%;
+
+			@media screen and (max-width: 959px) {
+				display: none;
+			}
+		}
 	}
 }

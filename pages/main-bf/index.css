@@ -503,11 +503,11 @@
 }
 
 .courses {
-  margin-bottom: 110px;
+  margin-bottom: 96px;
 }
 @media screen and (max-width: 479px) {
   .courses {
-    margin-bottom: 0px;
+    margin-bottom: 56px;
   }
 }
 .courses .cards {
@@ -789,7 +789,7 @@
   transition: 0.1s;
 }
 .courses #DAPR:hover svg path {
-  stroke: #FF6945;
+  stroke: #ff6945;
   transition: 0.1s;
 }
 .courses #BF1 {
@@ -807,20 +807,24 @@
 @media screen and (max-width: 1199px) {
   .courses #BF1 img {
     width: 270px;
-    height: 270px;
-    bottom: 59px;
+    height: 280px;
+    bottom: 50px;
   }
 }
 @media screen and (max-width: 639px) {
   .courses #BF1 img {
-    right: 92px;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 310px;
   }
 }
 @media screen and (max-width: 479px) {
   .courses #BF1 img {
     right: 0;
-    width: 250px;
-    bottom: 50px;
+    width: 300px;
+    height: 310px;
+    bottom: 10px;
   }
 }
 .courses #BF1:hover {
@@ -850,20 +854,21 @@
 @media screen and (max-width: 1199px) {
   .courses #BF2 img {
     width: 270px;
-    height: 270px;
-    bottom: 59px;
+    height: 290px;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 639px) {
   .courses #BF2 img {
-    right: 92px;
+    right: 20px;
   }
 }
 @media screen and (max-width: 479px) {
   .courses #BF2 img {
     right: 0;
-    width: 250px;
-    bottom: 50px;
+    width: 270px;
+    height: 280px;
+    bottom: 0;
   }
 }
 .courses #BF2:hover {
@@ -892,21 +897,25 @@
 }
 @media screen and (max-width: 1199px) {
   .courses #BF3 img {
-    width: 270px;
-    height: 270px;
-    bottom: 59px;
+    width: 210px;
+    height: 187px;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 639px) {
   .courses #BF3 img {
-    right: 92px;
+    right: -4px;
+    bottom: 0;
+    width: 350px;
+    height: 310px;
   }
 }
 @media screen and (max-width: 479px) {
   .courses #BF3 img {
     right: 0;
-    width: 250px;
-    bottom: 50px;
+    width: 235px;
+    height: 265px;
+    bottom: -31px;
   }
 }
 .courses #BF3:hover {
@@ -1217,5 +1226,164 @@
   .all-link {
     font-size: 18px;
     line-height: 22px;
+  }
+}
+
+.black-friday {
+  margin-bottom: 60px;
+}
+.black-friday__background {
+  background-image: url(./images/cardboard.jpg);
+  padding: 44px 40px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 959px) {
+  .black-friday__background {
+    overflow: visible;
+  }
+}
+@media screen and (max-width: 639px) {
+  .black-friday__background {
+    padding: 32px 20px;
+  }
+}
+.black-friday .h2-title {
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+@media screen and (max-width: 639px) {
+  .black-friday .h2-title {
+    margin-bottom: 20px;
+    max-width: unset;
+    width: calc(100% + 20px);
+  }
+}
+.black-friday__list {
+  margin-bottom: 60px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 530px;
+}
+@media screen and (max-width: 639px) {
+  .black-friday__list {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+}
+.black-friday__list-item {
+  color: #181818;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+  display: grid;
+  grid-template-columns: 30px auto;
+  gap: 30px;
+}
+@media screen and (max-width: 639px) {
+  .black-friday__list-item {
+    font-size: 16px;
+    gap: 10px;
+  }
+}
+.black-friday__list-item::before {
+  content: "";
+  background: url("./images/bf-arrow.svg");
+  width: 30px;
+  height: 24px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1199px) {
+  .black-friday__list-item::before {
+    transform: translateY(1px);
+  }
+}
+@media screen and (max-width: 639px) {
+  .black-friday__list-item::before {
+    width: 20px;
+    height: 16px;
+    transform: translateY(2px);
+  }
+}
+.black-friday__button {
+  margin-bottom: 50px;
+  color: #000;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 135%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 4px;
+  padding: 18px 108px 16px 108px;
+  transition: background 0.3s;
+  max-width: 350px;
+}
+.black-friday__button:hover {
+  background: #dde6e7;
+  transition: background 0.3s;
+}
+@media screen and (max-width: 959px) {
+  .black-friday__button {
+    margin-bottom: 150px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .black-friday__button {
+    max-width: unset;
+  }
+}
+@media screen and (max-width: 479px) {
+  .black-friday__button {
+    padding: 16px 10px;
+    margin-bottom: 100px;
+  }
+}
+.black-friday__image {
+  position: absolute;
+  pointer-events: none;
+}
+.black-friday__image_one {
+  bottom: 0px;
+  right: 120px;
+  width: 480px;
+  z-index: 2;
+}
+@media screen and (max-width: 1199px) {
+  .black-friday__image_one {
+    bottom: 0px;
+    right: 80px;
+    width: 360px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .black-friday__image_one {
+    bottom: -40px;
+    right: unset;
+    left: -20px;
+    width: 350px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .black-friday__image_one {
+    width: 240px;
+    bottom: -30px;
+  }
+}
+.black-friday__image_two {
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+@media screen and (max-width: 959px) {
+  .black-friday__image_two {
+    display: none;
   }
 }
