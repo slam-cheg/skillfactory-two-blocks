@@ -583,6 +583,7 @@
 @media screen and (max-width: 639px) {
   .courses .cards {
     grid-template-columns: 1fr;
+    grid-template-areas: "start" "bf1" "dapr" "dspr" "bf2" "uxspro" "bf3" "pdev" "hacker";
   }
 }
 @media screen and (max-width: 479px) {
@@ -768,6 +769,11 @@
   background: #043933;
   transition: 0.1s;
 }
+@media screen and (max-width: 639px) {
+  .courses #START {
+    grid-area: start;
+  }
+}
 .courses #START img {
   bottom: -50px;
 }
@@ -808,6 +814,11 @@
 .courses #DAPR {
   background: #fffaed;
   transition: 0.1s;
+}
+@media screen and (max-width: 639px) {
+  .courses #DAPR {
+    grid-area: dapr;
+  }
 }
 .courses #DAPR .card__old-price {
   color: #718f8d;
@@ -850,6 +861,11 @@
 .courses #BF1 {
   background: #ff6945;
   transition: 0.1s;
+}
+@media screen and (max-width: 639px) {
+  .courses #BF1 {
+    grid-area: bf1;
+  }
 }
 .courses #BF1 .card__old-price {
   color: #718f8d;
@@ -898,6 +914,11 @@
   background: #68c1ea;
   transition: 0.1s;
 }
+@media screen and (max-width: 639px) {
+  .courses #BF2 {
+    grid-area: bf2;
+  }
+}
 .courses #BF2 .card__old-price {
   color: #718f8d;
 }
@@ -941,6 +962,11 @@
 .courses #BF3 {
   background: #181818;
   transition: 0.1s;
+}
+@media screen and (max-width: 639px) {
+  .courses #BF3 {
+    grid-area: bf3;
+  }
 }
 .courses #BF3 .card__old-price {
   color: #718f8d;
@@ -988,6 +1014,11 @@
 .courses #DSPR {
   background: #ffe040;
   transition: 0.1s;
+}
+@media screen and (max-width: 639px) {
+  .courses #DSPR {
+    grid-area: dspr;
+  }
 }
 .courses #DSPR .card__old-price {
   color: #718f8d;
@@ -1040,6 +1071,11 @@
 .courses #UXSPRO {
   background: #fdcbd6;
   transition: 0.1s;
+}
+@media screen and (max-width: 639px) {
+  .courses #UXSPRO {
+    grid-area: uxspro;
+  }
 }
 @media screen and (max-width: 639px) {
   .courses #UXSPRO .card__title {
@@ -1151,6 +1187,11 @@
   background: #dde6e7;
   transition: 0.1s;
 }
+@media screen and (max-width: 639px) {
+  .courses #PDEV {
+    grid-area: pdev;
+  }
+}
 .courses #PDEV .card__old-price {
   color: #718f8d;
 }
@@ -1198,6 +1239,11 @@
 .courses #HACKER {
   background: #fffaed;
   transition: 0.1s;
+}
+@media screen and (max-width: 639px) {
+  .courses #HACKER {
+    grid-area: hacker;
+  }
 }
 .courses #HACKER .card__old-price {
   color: #718f8d;
@@ -1342,6 +1388,7 @@
 }
 @media screen and (max-width: 639px) {
   .black-friday__list-item {
+    grid-template-columns: 16px auto;
     font-size: 16px;
     gap: 10px;
   }

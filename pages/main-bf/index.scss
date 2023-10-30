@@ -535,6 +535,7 @@
 		}
 		@media screen and (max-width: 639px) {
 			grid-template-columns: 1fr;
+			grid-template-areas: "start" "bf1" "dapr" "dspr" "bf2" "uxspro" "bf3" "pdev" "hacker";
 		}
 		@media screen and (max-width: 479px) {
 			gap: 0;
@@ -729,7 +730,9 @@
 	#START {
 		background: #043933;
 		transition: 0.1s;
-
+		@media screen and (max-width: 639px) {
+			grid-area: start;
+		}
 		img {
 			bottom: -50px;
 
@@ -773,6 +776,9 @@
 		background: #fffaed;
 		transition: 0.1s;
 
+		@media screen and (max-width: 639px) {
+			grid-area: dapr;
+		}
 		.card__old-price {
 			color: #718f8d;
 		}
@@ -816,6 +822,10 @@
 	#BF1 {
 		background: #ff6945;
 		transition: 0.1s;
+
+		@media screen and (max-width: 639px) {
+			grid-area: bf1;
+		}
 
 		.card__old-price {
 			color: #718f8d;
@@ -867,6 +877,10 @@
 		background: #68c1ea;
 		transition: 0.1s;
 
+		@media screen and (max-width: 639px) {
+			grid-area: bf2;
+		}
+
 		.card__old-price {
 			color: #718f8d;
 		}
@@ -913,6 +927,10 @@
 	#BF3 {
 		background: #181818;
 		transition: 0.1s;
+
+		@media screen and (max-width: 639px) {
+			grid-area: bf3;
+		}
 
 		.card__old-price {
 			color: #718f8d;
@@ -963,6 +981,10 @@
 	#DSPR {
 		background: #ffe040;
 		transition: 0.1s;
+
+		@media screen and (max-width: 639px) {
+			grid-area: dspr;
+		}
 
 		.card__old-price {
 			color: #718f8d;
@@ -1020,6 +1042,10 @@
 	#UXSPRO {
 		background: #fdcbd6;
 		transition: 0.1s;
+
+		@media screen and (max-width: 639px) {
+			grid-area: uxspro;
+		}
 
 		.card__title {
 			@media screen and (max-width: 639px) {
@@ -1138,6 +1164,10 @@
 		background: #dde6e7;
 		transition: 0.1s;
 
+		@media screen and (max-width: 639px) {
+			grid-area: pdev;
+		}
+
 		.card__old-price {
 			color: #718f8d;
 		}
@@ -1194,6 +1224,9 @@
 	#HACKER {
 		background: #fffaed;
 		transition: 0.1s;
+		@media screen and (max-width: 639px) {
+			grid-area: hacker;
+		}
 
 		.card__old-price {
 			color: #718f8d;
@@ -1344,6 +1377,7 @@
 		gap: 30px;
 
 		@media screen and (max-width: 639px) {
+			grid-template-columns: 16px auto;
 			font-size: 16px;
 			gap: 10px;
 		}
