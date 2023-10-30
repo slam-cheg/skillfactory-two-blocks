@@ -1242,7 +1242,7 @@
 	margin-bottom: 60px;
 
 	&__background {
-		background-image: url(./images/cardboard.jpg);
+		background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/cardboard.jpg);
 		padding: 44px 40px;
 		border-radius: 8px;
 		position: relative;
@@ -1300,7 +1300,7 @@
 
 		&::before {
 			content: "";
-			background: url("./images/bf-arrow.svg");
+			background: url("https://storage.yandexcloud.net/sf-wallaper-bucket/images/bf-arrow.svg");
 			width: 30px;
 			height: 24px;
 			position: relative;
