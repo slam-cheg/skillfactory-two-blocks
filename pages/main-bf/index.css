@@ -16,6 +16,9 @@
   font-weight: 800;
   font-style: normal;
 }
+#allrecords ul {
+  padding-left: 0;
+}
 #allrecords a {
   color: inherit;
 }
@@ -248,17 +251,17 @@
 }
 @media screen and (max-width: 959px) {
   .main .list {
-    margin-bottom: 630px;
+    margin-bottom: 670px;
   }
 }
 @media screen and (max-width: 639px) {
   .main .list {
-    margin-bottom: 500px;
+    margin-bottom: 570px;
   }
 }
 @media screen and (max-width: 479px) {
   .main .list {
-    margin-bottom: 374px;
+    margin-bottom: 394px;
   }
 }
 .main .list-item {
@@ -410,7 +413,7 @@
 }
 @media screen and (max-width: 959px) {
   .main .main__pic {
-    top: -890px;
+    top: -880px;
   }
 }
 @media screen and (max-width: 639px) {
@@ -445,6 +448,7 @@
   .main .main__pic .main__img,
   .main .main__pic .main__picture {
     max-width: 374px;
+    max-height: 450px;
   }
 }
 @media screen and (max-width: 479px) {
@@ -467,9 +471,60 @@
   top: -126px;
   left: -60px;
 }
+@media screen and (max-width: 959px) {
+  .main .main__pic .main__sticker_blackfriday {
+    left: -34px;
+    top: -112px;
+    width: 280px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main .main__pic .main__sticker_blackfriday {
+    top: -86px;
+    left: -58px;
+    width: 260px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main .main__pic .main__sticker_blackfriday {
+    top: -66px;
+    left: -24px;
+    width: 160px;
+  }
+}
 .main .main__pic .main__sticker_percents {
   bottom: -37px;
   left: -30px;
+}
+@media screen and (max-width: 1199px) {
+  .main .main__pic .main__sticker_percents {
+    bottom: 50px;
+    left: unset;
+    right: -110px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .main .main__pic .main__sticker_percents {
+    bottom: unset;
+    left: unset;
+    right: 50px;
+    top: 330px;
+    width: 280px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main .main__pic .main__sticker_percents {
+    right: -30px;
+    top: 310px;
+    width: 240px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main .main__pic .main__sticker_percents {
+    right: -35px;
+    top: 170px;
+    width: 170px;
+  }
 }
 .main .main__pic svg {
   position: absolute;
@@ -1233,7 +1288,7 @@
   margin-bottom: 60px;
 }
 .black-friday__background {
-  background-image: url(./images/cardboard.jpg);
+  background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/cardboard.jpg);
   padding: 44px 40px;
   border-radius: 8px;
   position: relative;
@@ -1293,7 +1348,7 @@
 }
 .black-friday__list-item::before {
   content: "";
-  background: url("./images/bf-arrow.svg");
+  background: url("https://storage.yandexcloud.net/sf-wallaper-bucket/images/bf-arrow.svg");
   width: 30px;
   height: 24px;
   position: relative;
