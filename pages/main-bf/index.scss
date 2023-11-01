@@ -71,6 +71,12 @@
 	margin-bottom: 110px;
 	overflow: hidden;
 
+	&_bf {
+		@media screen and (min-width: 960px) {
+			margin-bottom: 16px;
+		}
+	}
+
 	@media screen and (max-width: 479px) {
 		margin-bottom: 75px;
 	}
@@ -1318,6 +1324,70 @@
 	@media screen and (max-width: 479px) {
 		font-size: 18px;
 		line-height: 22px;
+	}
+}
+
+.bf-banner {
+	background: #68c1ea;
+	overflow: hidden;
+	margin-bottom: 118px;
+
+	@media screen and (max-width: 959px) {
+		display: none;
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__content {
+		display: flex;
+		padding: 12px 0;
+		align-items: center;
+	}
+
+	.h2-title {
+		max-width: 380px;
+		font-size: 42px;
+		margin-right: 138px;
+		margin-bottom: unset;
+
+		@media screen and (max-width: 1199px) {
+			margin-right: 68px;
+		}
+	}
+
+	&__button {
+		color: #163833 !important;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 130%;
+		background: #fff;
+		border: none;
+		border-radius: 4px;
+		transition: 0.3s;
+		width: 278px;
+		height: 48px;
+		cursor: pointer;
+
+		&:hover {
+			background: #000;
+			transition: 0.3s;
+			color: #fff !important;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		right: 0;
+		top: -190px;
+		pointer-events: none;
+		z-index: 1;
+
+		@media screen and (max-width: 1199px) {
+			right: -120px;
+		}
 	}
 }
 

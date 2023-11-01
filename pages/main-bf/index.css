@@ -96,6 +96,11 @@
   margin-bottom: 110px;
   overflow: hidden;
 }
+@media screen and (min-width: 960px) {
+  .main_bf {
+    margin-bottom: 16px;
+  }
+}
 @media screen and (max-width: 479px) {
   .main {
     margin-bottom: 75px;
@@ -1327,6 +1332,67 @@
   .all-link {
     font-size: 18px;
     line-height: 22px;
+  }
+}
+
+.bf-banner {
+  background: #68c1ea;
+  overflow: hidden;
+  margin-bottom: 118px;
+}
+@media screen and (max-width: 959px) {
+  .bf-banner {
+    display: none;
+  }
+}
+.bf-banner__link {
+  text-decoration: none;
+}
+.bf-banner__content {
+  display: flex;
+  padding: 12px 0;
+  align-items: center;
+}
+.bf-banner .h2-title {
+  max-width: 380px;
+  font-size: 42px;
+  margin-right: 138px;
+  margin-bottom: unset;
+}
+@media screen and (max-width: 1199px) {
+  .bf-banner .h2-title {
+    margin-right: 68px;
+  }
+}
+.bf-banner__button {
+  color: #163833 !important;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+  width: 278px;
+  height: 48px;
+  cursor: pointer;
+}
+.bf-banner__button:hover {
+  background: #000;
+  transition: 0.3s;
+  color: #fff !important;
+}
+.bf-banner__img {
+  position: absolute;
+  right: 0;
+  top: -190px;
+  pointer-events: none;
+  z-index: 1;
+}
+@media screen and (max-width: 1199px) {
+  .bf-banner__img {
+    right: -120px;
   }
 }
 
