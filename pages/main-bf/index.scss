@@ -71,12 +71,6 @@
 	margin-bottom: 110px;
 	overflow: hidden;
 
-	&_bf {
-		@media screen and (min-width: 960px) {
-			margin-bottom: 16px;
-		}
-	}
-
 	@media screen and (max-width: 479px) {
 		margin-bottom: 75px;
 	}
@@ -1330,7 +1324,10 @@
 .bf-banner {
 	background: #68c1ea;
 	overflow: hidden;
-	margin-bottom: 118px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
 
 	@media screen and (max-width: 959px) {
 		display: none;
@@ -1370,6 +1367,7 @@
 		width: 278px;
 		height: 48px;
 		cursor: pointer;
+		z-index: 2;
 
 		&:hover {
 			background: #000;
@@ -1380,8 +1378,8 @@
 
 	&__img {
 		position: absolute;
-		right: 0;
-		top: -190px;
+		right: -43px;
+		top: -130px;
 		pointer-events: none;
 		z-index: 1;
 
