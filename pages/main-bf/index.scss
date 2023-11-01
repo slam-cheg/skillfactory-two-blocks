@@ -1329,10 +1329,6 @@
 	width: 100%;
 	z-index: 999;
 
-	@media screen and (max-width: 959px) {
-		display: none;
-	}
-
 	&__link {
 		text-decoration: none;
 	}
@@ -1341,6 +1337,16 @@
 		display: flex;
 		padding: 12px 0;
 		align-items: center;
+
+		@media screen and (max-width: 959px) {
+			justify-content: space-between;
+		}
+
+		@media screen and (max-width: 479px) {
+			flex-direction: column;
+			gap: 15px;
+			align-items: flex-start;
+		}
 	}
 
 	.h2-title {
@@ -1348,9 +1354,21 @@
 		font-size: 42px;
 		margin-right: 138px;
 		margin-bottom: unset;
+		z-index: 3;
 
 		@media screen and (max-width: 1199px) {
 			margin-right: 68px;
+		}
+
+		@media screen and (max-width: 959px) {
+			max-width: 260px;
+			font-size: 28px;
+			margin-right: unset;
+		}
+
+		@media screen and (max-width: 639px) {
+			font-size: 24px;
+			line-height: 1;
 		}
 	}
 
@@ -1359,7 +1377,7 @@
 		text-align: center;
 		font-size: 20px;
 		font-weight: 400;
-		line-height: 130%;
+		line-height: 1.2;
 		background: #fff;
 		border: none;
 		border-radius: 4px;
@@ -1374,6 +1392,17 @@
 			transition: 0.3s;
 			color: #fff !important;
 		}
+
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+			width: unset;
+			height: unset;
+			padding: 10px 20px;
+		}
+
+		@media screen and (max-width: 479px) {
+			width: 100%;
+		}
 	}
 
 	&__img {
@@ -1386,10 +1415,16 @@
 		@media screen and (max-width: 1199px) {
 			right: -120px;
 		}
+
+		@media screen and (max-width: 479px) {
+			right: -110px;
+			top: -40px;
+			width: 90%;
+		}
 	}
 }
 
-.black-friday {
+.courses-bf {
 	margin-bottom: 60px;
 
 	&__background {

@@ -1338,11 +1338,6 @@
     width: 100%;
     z-index: 999;
   }
-  @media screen and (max-width: 959px) {
-    .bf-banner {
-      display: none;
-    }
-  }
   .bf-banner__link {
     text-decoration: none;
   }
@@ -1351,15 +1346,41 @@
     padding: 12px 0;
     align-items: center;
   }
+  @media screen and (max-width: 959px) {
+    .bf-banner__content {
+      justify-content: space-between;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .bf-banner__content {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+  }
   .bf-banner .h2-title {
     max-width: 380px;
     font-size: 42px;
     margin-right: 138px;
     margin-bottom: unset;
+    z-index: 3;
   }
   @media screen and (max-width: 1199px) {
     .bf-banner .h2-title {
       margin-right: 68px;
+    }
+  }
+  @media screen and (max-width: 959px) {
+    .bf-banner .h2-title {
+      max-width: 260px;
+      font-size: 28px;
+      margin-right: unset;
+    }
+  }
+  @media screen and (max-width: 639px) {
+    .bf-banner .h2-title {
+      font-size: 24px;
+      line-height: 1;
     }
   }
   .bf-banner__button {
@@ -1367,7 +1388,7 @@
     text-align: center;
     font-size: 20px;
     font-weight: 400;
-    line-height: 130%;
+    line-height: 1.2;
     background: #fff;
     border: none;
     border-radius: 4px;
@@ -1382,6 +1403,19 @@
     transition: 0.3s;
     color: #fff !important;
   }
+  @media screen and (max-width: 639px) {
+    .bf-banner__button {
+      font-size: 12px;
+      width: unset;
+      height: unset;
+      padding: 10px 20px;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .bf-banner__button {
+      width: 100%;
+    }
+  }
   .bf-banner__img {
     position: absolute;
     right: -43px;
@@ -1392,6 +1426,13 @@
   @media screen and (max-width: 1199px) {
     .bf-banner__img {
       right: -120px;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    .bf-banner__img {
+      right: -110px;
+      top: -40px;
+      width: 90%;
     }
   }
   

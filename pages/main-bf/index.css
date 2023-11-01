@@ -1338,11 +1338,6 @@
   width: 100%;
   z-index: 999;
 }
-@media screen and (max-width: 959px) {
-  .bf-banner {
-    display: none;
-  }
-}
 .bf-banner__link {
   text-decoration: none;
 }
@@ -1351,15 +1346,41 @@
   padding: 12px 0;
   align-items: center;
 }
+@media screen and (max-width: 959px) {
+  .bf-banner__content {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 479px) {
+  .bf-banner__content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
 .bf-banner .h2-title {
   max-width: 380px;
   font-size: 42px;
   margin-right: 138px;
   margin-bottom: unset;
+  z-index: 3;
 }
 @media screen and (max-width: 1199px) {
   .bf-banner .h2-title {
     margin-right: 68px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .bf-banner .h2-title {
+    max-width: 260px;
+    font-size: 28px;
+    margin-right: unset;
+  }
+}
+@media screen and (max-width: 639px) {
+  .bf-banner .h2-title {
+    font-size: 24px;
+    line-height: 1;
   }
 }
 .bf-banner__button {
@@ -1367,7 +1388,7 @@
   text-align: center;
   font-size: 20px;
   font-weight: 400;
-  line-height: 130%;
+  line-height: 1.2;
   background: #fff;
   border: none;
   border-radius: 4px;
@@ -1382,6 +1403,19 @@
   transition: 0.3s;
   color: #fff !important;
 }
+@media screen and (max-width: 639px) {
+  .bf-banner__button {
+    font-size: 12px;
+    width: unset;
+    height: unset;
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .bf-banner__button {
+    width: 100%;
+  }
+}
 .bf-banner__img {
   position: absolute;
   right: -43px;
@@ -1394,11 +1428,18 @@
     right: -120px;
   }
 }
+@media screen and (max-width: 479px) {
+  .bf-banner__img {
+    right: -110px;
+    top: -40px;
+    width: 90%;
+  }
+}
 
-.black-friday {
+.courses-bf {
   margin-bottom: 60px;
 }
-.black-friday__background {
+.courses-bf__background {
   background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/cardboard.jpg);
   padding: 44px 40px 0 40px;
   border-radius: 8px;
@@ -1408,27 +1449,27 @@
   flex-direction: column;
 }
 @media screen and (max-width: 959px) {
-  .black-friday__background {
+  .courses-bf__background {
     overflow: visible;
   }
 }
 @media screen and (max-width: 639px) {
-  .black-friday__background {
+  .courses-bf__background {
     padding: 32px 20px;
   }
 }
-.black-friday .h2-title {
+.courses-bf .h2-title {
   margin-bottom: 40px;
   max-width: 700px;
 }
 @media screen and (max-width: 639px) {
-  .black-friday .h2-title {
+  .courses-bf .h2-title {
     margin-bottom: 20px;
     max-width: unset;
     width: calc(100% + 20px);
   }
 }
-.black-friday__list {
+.courses-bf__list {
   margin-bottom: 60px !important;
   list-style: none;
   display: flex;
@@ -1437,12 +1478,12 @@
   max-width: 530px;
 }
 @media screen and (max-width: 639px) {
-  .black-friday__list {
+  .courses-bf__list {
     gap: 16px;
     margin-bottom: 30px;
   }
 }
-.black-friday__list-item {
+.courses-bf__list-item {
   color: #181818;
   font-size: 24px;
   font-weight: 400;
@@ -1452,13 +1493,13 @@
   gap: 30px;
 }
 @media screen and (max-width: 639px) {
-  .black-friday__list-item {
+  .courses-bf__list-item {
     grid-template-columns: 16px auto;
     font-size: 16px;
     gap: 10px;
   }
 }
-.black-friday__list-item::before {
+.courses-bf__list-item::before {
   content: "";
   background: url("https://storage.yandexcloud.net/sf-wallaper-bucket/images/bf-arrow.svg");
   width: 30px;
@@ -1468,18 +1509,18 @@
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 1199px) {
-  .black-friday__list-item::before {
+  .courses-bf__list-item::before {
     transform: translateY(1px);
   }
 }
 @media screen and (max-width: 639px) {
-  .black-friday__list-item::before {
+  .courses-bf__list-item::before {
     width: 20px;
     height: 16px;
     transform: translateY(2px);
   }
 }
-.black-friday__button {
+.courses-bf__button {
   margin-bottom: 50px;
   color: #000 !important;
   text-align: center;
@@ -1493,46 +1534,46 @@
   transition: 0.3s;
   max-width: 350px;
 }
-.black-friday__button:hover {
+.courses-bf__button:hover {
   background: #000;
   transition: 0.3s;
   color: #fff !important;
 }
 @media screen and (max-width: 959px) {
-  .black-friday__button {
+  .courses-bf__button {
     margin-bottom: 150px;
   }
 }
 @media screen and (max-width: 639px) {
-  .black-friday__button {
+  .courses-bf__button {
     max-width: unset;
   }
 }
 @media screen and (max-width: 479px) {
-  .black-friday__button {
+  .courses-bf__button {
     padding: 16px 10px;
     margin-bottom: 100px;
   }
 }
-.black-friday__image {
+.courses-bf__image {
   position: absolute;
   pointer-events: none;
 }
-.black-friday__image_one {
+.courses-bf__image_one {
   bottom: 0px;
   right: 120px;
   width: 480px;
   z-index: 2;
 }
 @media screen and (max-width: 1199px) {
-  .black-friday__image_one {
+  .courses-bf__image_one {
     bottom: 0px;
     right: 80px;
     width: 360px;
   }
 }
 @media screen and (max-width: 959px) {
-  .black-friday__image_one {
+  .courses-bf__image_one {
     bottom: -40px;
     right: unset;
     left: -20px;
@@ -1540,18 +1581,18 @@
   }
 }
 @media screen and (max-width: 479px) {
-  .black-friday__image_one {
+  .courses-bf__image_one {
     width: 240px;
     bottom: -30px;
   }
 }
-.black-friday__image_two {
+.courses-bf__image_two {
   top: 0;
   right: 0;
   height: 100%;
 }
 @media screen and (max-width: 959px) {
-  .black-friday__image_two {
+  .courses-bf__image_two {
     display: none;
   }
 }
