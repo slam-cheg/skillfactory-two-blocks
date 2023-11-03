@@ -459,7 +459,7 @@
 				@media screen and (max-width: 1199px) {
 					bottom: 50px;
 					left: unset;
-					right: -110px;
+					right: -58px;
 				}
 
 				@media screen and (max-width: 959px) {
@@ -942,8 +942,8 @@
 			right: 0;
 
 			@media screen and (max-width: 1199px) {
-				width: 210px;
-				height: 187px;
+				width: 270px;
+				height: 188px;
 				bottom: 0;
 			}
 
@@ -951,13 +951,13 @@
 				right: -4px;
 				bottom: 0;
 				width: 350px;
-				height: 310px;
+				height: 240px;
 			}
 
 			@media screen and (max-width: 479px) {
 				right: 0;
 				width: 235px;
-				height: 265px;
+				height: 225px;
 				bottom: -31px;
 			}
 		}
@@ -1424,7 +1424,7 @@
 	}
 }
 
-.courses-bf {
+.black-friday {
 	margin-bottom: 60px;
 
 	&__background {
@@ -1560,7 +1560,7 @@
 				bottom: -40px;
 				right: unset;
 				left: -20px;
-				width: 350px;
+				width: 290px;
 			}
 
 			@media screen and (max-width: 479px) {
