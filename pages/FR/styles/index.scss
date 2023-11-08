@@ -102,7 +102,6 @@
 	@media screen and (max-width: 639px) {
 		font-size: 18px;
 		margin-bottom: 15px;
-		order: 2;
 	}
 }
 
@@ -447,29 +446,7 @@
 	}
 
 	@media screen and (max-width: 639px) {
-		margin-bottom: 0;
-		order: 3;
-	}
-
-	&_second-col {
-		opacity: 1;
-		li {
-			color: rgba(24, 24, 24, 0.7);
-
-			&::before {
-				content: "";
-				background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/FPW_b/arrow-right.svg);
-				background-repeat: no-repeat;
-				background-size: contain;
-				background-clip: border-box;
-				width: 14px;
-				min-width: 14px;
-				height: 14px;
-				position: relative;
-				top: 2px;
-				opacity: 1;
-			}
-		}
+		margin-bottom: 30px;
 	}
 }
 
@@ -496,7 +473,6 @@
 	}
 
 	@media screen and (max-width: 639px) {
-		order: 1;
 		padding: 15px 20px;
 	}
 }
