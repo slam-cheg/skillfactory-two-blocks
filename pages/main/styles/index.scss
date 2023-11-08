@@ -15,20 +15,6 @@
 	width: calc(100% - 80px);
 	margin: 0 40px;
 	position: relative;
-
-	// @media screen and (max-width: 1199px) {
-	// 	width: 100%;
-	// 	margin: 0 40px;
-	// }
-	// @media screen and (max-width: 959px) {
-	// 	max-width: 620px;
-	// }
-	// @media screen and (max-width: 639px) {
-	// 	max-width: 460px;
-	// }
-	// @media screen and (max-width: 479px) {
-	// 	max-width: 300px;
-	// }
 }
 
 .h2-title {
@@ -61,29 +47,26 @@
 
 .courses {
 	background: #e9e9e9;
-    min-height: 100vh;
+	min-height: 100vh;
 }
 
 .courses__cards {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	width: 100%;
-    padding-top: 40px;
-	flex-wrap: wrap;
+	gap: 40px;
+	padding-top: 40px;
 }
 
 .card {
-	width: calc(25% - 15px);
-	margin-right: 20px;
-	margin-bottom: 40px;
+	width: 100%;
+	margin-right: 0;
+	margin-bottom: 0;
 	min-height: 200px;
 	transition: box-shadow 0.3s;
 	border-radius: 20px;
 	background: #e9e9e9;
 	box-shadow: 10px 10px 10px #d2d2d2, -10px -10px 10px #ffffff;
-
-	&:nth-of-type(4) {
-		margin-right: 0;
-	}
 
 	@media screen and (max-width: 959px) {
 		width: calc(50% - 20px);
@@ -95,8 +78,11 @@
 	}
 
 	&_generator {
+		display: flex;
 		width: 100%;
 		margin-right: 0;
+		grid-column-start: 1;
+		grid-column-end: 5;
 	}
 
 	a {
@@ -115,7 +101,7 @@
 		cursor: pointer;
 	}
 
-    &__title {
-        text-align: center;
-    }
+	&__title {
+		text-align: center;
+	}
 }
