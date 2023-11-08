@@ -1509,14 +1509,14 @@
 	background: #dde6e7;
 	padding: 30px;
 	border-radius: 8px;
-	min-height: 750px;
+	min-height: 780px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
 	@media screen and (max-width: 639px) {
 		padding: 20px 15px;
-		min-height: 610px;
+		min-height: 670px;
 		gap: 35px;
 	}
 
@@ -1652,11 +1652,25 @@
 		border: none;
 		outline: none;
 		border-radius: 6px;
+		margin-bottom: 10px;
 
 		&:hover {
 			transition: 0.2s;
 			background: #06433c;
 		}
+
+		&_light {
+			background: #A2C1C4;
+			color: #181818;
+			margin-bottom: 0;
+
+			&:hover {
+				background: rgba(162, 193, 196, 0.7);
+				transition: 0.2s;
+			}
+		}
+
+
 
 		@media screen and (max-width: 639px) {
 			font-size: 18px;
