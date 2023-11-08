@@ -1661,7 +1661,7 @@
   background: #043933;
   border-radius: 4px;
   width: 100%;
-  color: #fff;
+  color: #fff !important;
   font-size: 16px;
   font-weight: 400;
   line-height: 130%;
@@ -1679,7 +1679,7 @@
 }
 .rate-card__button_light {
   background: #A2C1C4;
-  color: #181818;
+  color: #181818 !important;
   margin-bottom: 0;
 }
 .rate-card__button_light:hover {
