@@ -57,7 +57,7 @@
   }
 }
 
-.h2-title {
+.rentgen .h2-title {
   color: #b5e916;
   font-size: 48px;
   font-style: normal;
@@ -67,12 +67,11 @@
   margin-bottom: 34px;
 }
 @media screen and (max-width: 639px) {
-  .h2-title {
+  .rentgen .h2-title {
     font-size: 32px;
     margin-bottom: 20px;
   }
 }
-
 .rentgen__wrapper {
   display: flex;
   flex-direction: column;
@@ -96,12 +95,12 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-bottom: 74px;
+  margin-bottom: 74px !important;
   list-style: none;
 }
 @media screen and (max-width: 959px) {
   .rentgen__list {
-    margin-bottom: 420px;
+    margin-bottom: 420px !important;
   }
 }
 @media screen and (max-width: 639px) {
@@ -111,7 +110,7 @@
 }
 @media screen and (max-width: 479px) {
   .rentgen__list {
-    margin-bottom: 344px;
+    margin-bottom: 344px !important;
   }
 }
 .rentgen__list-item {
@@ -148,7 +147,7 @@
 }
 .rentgen__button {
   display: flex;
-  color: #fffaed;
+  color: #fffaed !important;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;

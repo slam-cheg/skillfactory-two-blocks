@@ -6,7 +6,7 @@
 	}
 
 	ul {
-		padding-left: 0 !important;
+		padding-left: 0;
 	}
 }
 
@@ -104,6 +104,10 @@
 		margin-bottom: 15px;
 		order: 2;
 	}
+}
+
+.double-accord {
+    padding-top: 2px;
 }
 
 .accord-outer {
@@ -451,6 +455,7 @@
 
 .program {
 	margin-bottom: 100px;
+	padding-top: 2px;
 
 	.h2-title {
 		max-width: 540px;
@@ -1416,6 +1421,7 @@
 .takeit {
 	margin-bottom: 100px;
 	overflow: hidden;
+	padding-top: 2px;
 
 	.h2-title {
 		margin-bottom: 60px;
@@ -1512,7 +1518,7 @@
 	&__benefits {
 		border-radius: 8px;
 		background: #dde6e7;
-		padding: 30px;
+		padding: 30px !important;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		list-style: none;
@@ -1524,7 +1530,7 @@
 		}
 
 		@media screen and (max-width: 639px) {
-			padding: 20px 15px;
+			padding: 20px 15px !important;
 			grid-template-columns: 1fr;
 			row-gap: 10px;
 		}
@@ -1882,9 +1888,8 @@
 		justify-content: center;
 		align-items: center;
 		background: #043933;
-		border-radius: 4px;
 		width: 100%;
-		color: #fff;
+		color: #fff !important;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 130%;

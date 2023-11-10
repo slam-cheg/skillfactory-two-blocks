@@ -35,22 +35,24 @@
 	}
 }
 
-.h2-title {
-	color: #b5e916;
-	font-size: 48px;
-	font-style: normal;
-	font-weight: 800;
-	line-height: 0.9;
-	letter-spacing: -1.44px;
-	margin-bottom: 34px;
 
-	@media screen and (max-width: 639px) {
-		font-size: 32px;
-		margin-bottom: 20px;
-	}
-}
 
 .rentgen {
+	.h2-title {
+		color: #b5e916;
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 0.9;
+		letter-spacing: -1.44px;
+		margin-bottom: 34px;
+	
+		@media screen and (max-width: 639px) {
+			font-size: 32px;
+			margin-bottom: 20px;
+		}
+	}
+	
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
@@ -75,11 +77,11 @@
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
-		margin-bottom: 74px;
+		margin-bottom: 74px !important;
 		list-style: none;
 
 		@media screen and (max-width: 959px) {
-			margin-bottom: 420px;
+			margin-bottom: 420px !important;
 		}
 
 		@media screen and (max-width: 639px) {
@@ -87,7 +89,7 @@
 		}
 
         @media screen and (max-width:479px) {
-            margin-bottom: 344px;
+            margin-bottom: 344px !important;
         }
 	}
 
@@ -125,7 +127,7 @@
 
 	&__button {
 		display: flex;
-		color: #fffaed;
+		color: #fffaed !important;
 		font-size: 18px;
 		font-style: normal;
 		font-weight: 400;
