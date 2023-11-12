@@ -130,14 +130,18 @@
     grid-column-end: unset;
   }
 }
-.card a {
+.card__link {
   color: #181818;
   text-decoration: none;
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.card__link span {
+  color: #008000;
 }
 .card:hover {
   transition: box-shadow 0.3s;
