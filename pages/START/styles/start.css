@@ -739,10 +739,12 @@
 }
 .program__accord-wrapper .accord-opened .accord-inner__body {
   padding-top: 64px;
+  padding-bottom: 36px;
 }
 @media screen and (max-width: 959px) {
   .program__accord-wrapper .accord-opened .accord-inner__body {
     padding-top: 20px;
+    padding-bottom: 0;
   }
 }
 .program__accord-wrapper .accord-inner__body {
@@ -1626,7 +1628,7 @@
   background: #dde6e7;
   padding: 30px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
   -moz-column-gap: 58px;
        column-gap: 58px;
@@ -1650,6 +1652,7 @@
   font-weight: 400;
   line-height: 130%;
   display: flex;
+  max-width: 270px;
 }
 @media screen and (max-width: 639px) {
   .takeit__benefits-item {
