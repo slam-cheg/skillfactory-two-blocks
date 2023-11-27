@@ -553,7 +553,6 @@
   display: flex;
   justify-content: center;
   padding: 20px;
-  text-align: center;
 }
 @media screen and (max-width: 959px) {
   .accord__wide-text {
@@ -562,7 +561,7 @@
 }
 @media screen and (max-width: 639px) {
   .accord__wide-text {
-    font-size: 20px !important;
+    font-size: 16px !important;
     padding: 20px 15px;
   }
 }
@@ -766,10 +765,13 @@
 @media screen and (max-width: 959px) {
   .program__accord-wrapper .accord-header_nolabel {
     flex-direction: row;
+    align-items: center;
   }
   .program__accord-wrapper .accord-header_nolabel .accord-header__right {
     margin-bottom: 0;
-    width: 32px;
+    width: 35px;
+    height: 35px;
+    align-items: center;
   }
   .program__accord-wrapper .accord-header_nolabel .h4-title {
     max-width: 80%;

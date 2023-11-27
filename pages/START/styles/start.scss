@@ -547,14 +547,13 @@
 	display: flex;
     justify-content: center;
     padding: 20px;
-	text-align: center;
 
 	@media screen and (max-width: 959px) {
 		margin-bottom: 30px;
 	}
 
 	@media screen and (max-width: 639px) {
-		font-size: 20px !important;
+		font-size: 16px !important;
 		padding: 20px 15px;
 	}
 
@@ -747,10 +746,13 @@
 		&_nolabel {
 			@media screen and (max-width: 959px) {
 				flex-direction: row;
+				align-items: center;
 
 				.accord-header__right {
 					margin-bottom: 0;
-					width: 32px;
+					width: 35px;
+					height: 35px;
+					align-items: center;
 				}
 
 				.h4-title {
