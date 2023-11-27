@@ -562,7 +562,8 @@
 }
 @media screen and (max-width: 639px) {
   .accord__wide-text {
-    font-size: 16px !important;
+    font-size: 20px !important;
+    padding: 20px 15px;
   }
 }
 @media screen and (max-width: 479px) {
