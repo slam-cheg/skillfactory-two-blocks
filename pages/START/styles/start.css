@@ -607,7 +607,6 @@
 }
 .program__lead-card .h4-title {
   margin-bottom: 20px;
-  max-width: 394px;
 }
 
 .program__card-description,
@@ -636,8 +635,8 @@
 
 .program__card-description {
   opacity: 0.7;
-  margin-bottom: 60px;
-  max-width: 470px;
+  margin-bottom: 30px;
+  max-width: 450px;
 }
 @media screen and (max-width: 639px) {
   .program__card-description {
