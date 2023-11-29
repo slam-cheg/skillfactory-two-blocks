@@ -433,6 +433,7 @@
 			&_top {
 				top: -66px;
 				left: -40px;
+				width: 240px;
 
 				@media screen and (max-width: 959px) {
 					left: -34px;
@@ -455,6 +456,7 @@
 			&_bottom {
 				bottom: 10px;
 				left: -30px;
+				width: 270px;
 
 				@media screen and (max-width: 1199px) {
 					bottom: 90px;
@@ -1492,6 +1494,7 @@
 			bottom: 0;
 			right: 102px;
 			z-index: 1;
+			width: 340px;
 
 			@media screen and (max-width: 1199px) {
 				right: 12px;

@@ -470,6 +470,7 @@
 .main .main__pic .main__sticker_top {
   top: -66px;
   left: -40px;
+  width: 240px;
 }
 @media screen and (max-width: 959px) {
   .main .main__pic .main__sticker_top {
@@ -495,6 +496,7 @@
 .main .main__pic .main__sticker_bottom {
   bottom: 10px;
   left: -30px;
+  width: 270px;
 }
 @media screen and (max-width: 1199px) {
   .main .main__pic .main__sticker_bottom {
@@ -1508,6 +1510,7 @@
   bottom: 0;
   right: 102px;
   z-index: 1;
+  width: 340px;
 }
 @media screen and (max-width: 1199px) {
   .ny2024__image_two {
