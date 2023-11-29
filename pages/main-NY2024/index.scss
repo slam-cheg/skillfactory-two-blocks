@@ -1513,9 +1513,14 @@
 			@media screen and (max-width: 959px) {
 				bottom: -20px;
 				right: 10px;
+				width: 200px;
 			}
 			@media screen and (max-width: 639px) {
 				bottom: -64px;
+				width: 186px;
+			}
+			@media screen and (max-width: 479px) {
+				right: -30px;
 			}
 		}
 	}

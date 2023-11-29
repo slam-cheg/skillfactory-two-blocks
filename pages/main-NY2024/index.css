@@ -1532,10 +1532,17 @@
   .ny2024__image_three {
     bottom: -20px;
     right: 10px;
+    width: 200px;
   }
 }
 @media screen and (max-width: 639px) {
   .ny2024__image_three {
     bottom: -64px;
+    width: 186px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .ny2024__image_three {
+    right: -30px;
   }
 }/*# sourceMappingURL=index.css.map */
