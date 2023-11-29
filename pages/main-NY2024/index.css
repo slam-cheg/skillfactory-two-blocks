@@ -1406,7 +1406,7 @@
 @media screen and (max-width: 639px) {
   .ny2024__list {
     gap: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
 }
 .ny2024__list-item {
