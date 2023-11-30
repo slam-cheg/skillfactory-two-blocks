@@ -1908,6 +1908,7 @@
 		justify-content: center;
 		align-items: center;
 		background: #043933;
+		border-radius: 4px;
 		width: 100%;
 		color: #fff !important;
 		font-size: 16px;
@@ -1919,14 +1920,22 @@
 		border: none;
 		outline: none;
 		border-radius: 6px;
+		margin-bottom: 10px;
 
 		&:hover {
 			transition: 0.2s;
 			background: #06433c;
 		}
 
-		@media screen and (max-width: 639px) {
-			font-size: 18px;
+		&_light {
+			background: #A2C1C4;
+			color: #181818 !important;
+			margin-bottom: 0;
+
+			&:hover {
+				background: rgba(162, 193, 196, 0.7);
+				transition: 0.2s;
+			}
 		}
 	}
 }
