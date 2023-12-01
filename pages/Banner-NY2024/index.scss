@@ -1,0 +1,206 @@
+@font-face {
+	font-family: "CoFo Sans";
+	src: url("./CoFoSans-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 110px;
+	width: 100%;
+	margin: 0;
+}
+
+.link {
+	background: #000;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	text-decoration: none;
+	color: #fff;
+	font-family: CoFo Sans;
+	font-size: 27px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 75.5%;
+	letter-spacing: -0.54px;
+	text-transform: lowercase;
+	overflow: hidden;
+
+	span {
+		color: #000;
+		background: #fff;
+		font-size: 19px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 95%;
+		text-transform: lowercase;
+		padding: 0 6px 2px 6px;
+		position: absolute;
+		top: 34px;
+		left: 204px;
+
+		@media screen and (max-width: 849px) {
+			font-size: 16px;
+			left: 111px;
+		}
+	}
+
+	@media screen and (max-width: 1149px) {
+		justify-content: flex-start;
+	}
+}
+
+.left-img {
+	position: absolute;
+	top: -104px;
+	left: -210px;
+	z-index: 1;
+
+	@media screen and (max-width: 949px) {
+		left: -285px;
+	}
+
+	@media screen and (max-width: 704px) {
+		left: unset;
+		right: 220px;
+	}
+
+	@media screen and (max-width: 479px) {
+		right: 170px;
+	}
+}
+
+.center {
+	position: absolute;
+	z-index: 3;
+	left: 37%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: flex-start;
+
+	@media screen and (max-width: 1329px) {
+		left: 358px;
+	}
+
+	@media screen and (max-width: 959px) {
+		left: 278px;
+	}
+
+	@media screen and (max-width: 859px) {
+		top: 23px;
+	}
+
+	@media screen and (max-width: 704px) {
+		left: unset;
+		right: 40px;
+	}
+
+	@media screen and (max-width: 479px) {
+		right: 30px;
+	}
+}
+
+.right {
+	position: absolute;
+	right: 18px;
+
+	button {
+		background: #c0fb00;
+		display: flex;
+		height: 43px;
+		width: 168px;
+		padding: 0;
+		justify-content: center;
+		align-items: center;
+		color: #000;
+		font-size: 19px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 95%;
+		letter-spacing: -0.228px;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		transition: background 0.3s;
+		z-index: 2;
+		position: relative;
+
+		&:hover {
+			transition: background 0.3s;
+			background: #97c500;
+		}
+
+		@media screen and (max-width: 859px) {
+			width: 148px;
+			font-size: 16px;
+		}
+	}
+
+	@media screen and (min-width: 1199px) {
+		right: 50px;
+	}
+
+	@media screen and (max-width: 859px) {
+		top: 32px;
+	}
+
+	@media screen and (max-width: 704px) {
+		display: none;
+	}
+}
+
+.right-img {
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	&_bottom {
+		z-index: 1;
+		top: -45px;
+		right: 83px;
+
+		@media screen and (max-width: 859px) {
+			top: -37px;
+			right: 103px;
+			width: 100px;
+		}
+	}
+
+	&_top {
+		z-index: 3;
+		right: -30px;
+		top: -30px;
+
+		@media screen and (max-width: 859px) {
+			top: -29px;
+			right: -14px;
+		}
+	}
+
+	@media screen and (max-width: 1199px) {
+		//display: none;
+	}
+}
+
+.text {
+	@media screen and (max-width: 849px) {
+		font-size: 16px;
+		line-height: 105%;
+
+		svg {
+			width: 25px;
+			transform: translateY(7px);
+		}
+	}
+}
