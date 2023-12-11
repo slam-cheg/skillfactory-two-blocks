@@ -1,6 +1,3 @@
-const outerAccords = document.querySelectorAll(".accord-outer");
-const programAccord = document.querySelector(".program__accord-wrapper");
-const programAccordItems = programAccord.querySelectorAll(".accord-inner__element");
 const timer = document.querySelector(".takeit-timer");
 const timerDaysValue = timer.querySelector(".takeit-timer__days-value");
 const timerHoursValue = timer.querySelector(".takeit-timer__hours-value");
@@ -9,31 +6,6 @@ const timerSecondsValue = timer.querySelector(".takeit-timer__seconds-value");
 let endDate = 0;
 const ratesPopupLinks = document.querySelectorAll(".rate-card__list-item_underline");
 const ratesPopups = document.querySelectorAll(".takeit__popup");
-
-outerAccords.forEach((accord) => {
-	const outerAccordElement = accord.querySelector(".accord-outer__element");
-	const outerAccordHeader = outerAccordElement.querySelector(".accord-header_outer");
-	const innerAccords = outerAccordElement.querySelectorAll(".accord-inner");
-
-	outerAccordHeader.addEventListener("click", () => {
-		handlerAccordToggle(outerAccordElement);
-	});
-	innerAccords.forEach((innerAccord) => {
-		const innerAccordElements = innerAccord.querySelectorAll(".accord-inner__element");
-		innerAccordElements.forEach((element) => {
-			element.addEventListener("click", () => {
-				handlerAccordToggle(element);
-			});
-		});
-	});
-});
-
-programAccordItems.forEach((element) => {
-	const programAccordHeader = element.querySelector(".accord-header");
-	programAccordHeader.addEventListener("click", () => {
-		handlerAccordToggle(element);
-	});
-});
 
 ratesPopupLinks.forEach((link) => {
 	link.addEventListener("click", () => {
@@ -49,14 +21,14 @@ ratesPopupLinks.forEach((link) => {
 	});
 });
 
-function handlerAccordToggle(accord) {
-	accord.classList.toggle("accord-opened");
-	accord.classList.toggle("accord-closed");
-}
 
 setTimeout(() => {
-	endDate = window.SFData["https://skillfactory.ru/python-fullstack-web-developer-b/"]["75"];
-	// endDate = document.querySelector(".takeit__timerEndTime").textContent;
+	try {
+		endDate = window.SFData['https://skillfactory.ru/python-fullstack-web-developer-b/']['75'];
+	}
+	catch {
+		endDate = "2023-12-31 23:59:59"
+	}
 }, 500);
 
 function updateTimerClock() {
