@@ -1,0 +1,42 @@
+@import "../../../fonts/index.scss";
+@import "../../../styles/modules/mixins.scss";
+@import "../../../styles/modules/blocks/tilda-reset/tilda-reset.scss";
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: $font;
+	box-sizing: border-box;
+}
+
+
+@import "../../../styles/modules/blocks/inner-wrapper/inner-wrapper.scss";
+@import "../../../styles/modules/blocks/h2-title/h2-title.scss";
+@import "../../../styles/modules/blocks/h3-title/h3-title.scss";
+@import "../../../styles/modules/blocks/h4-title/h4-title.scss";
+@import "../../../styles/modules/blocks/h5-title/h5-title.scss";
+
+@import "../../../styles/modules/blocks/accord-outer/accord-outer.scss";
+@import "../../../styles/modules/blocks/accord-header/accord-header.scss";
+@import "../../../styles/modules/blocks/accord-button/accord-button.scss";
+@import "../../../styles/modules/blocks/accord-inner/accord-inner.scss";
+@import "../../../styles/modules/blocks/accord-inner/__element/accord-inner__element.scss";
+@import "../../../styles/modules/blocks/accord-inner/__body/accord-inner__body.scss";
+@import "../../../styles/modules/blocks/accord-opened/accord-opened.scss";
+@import "../../../styles/modules/blocks/accord-closed/accord-closer.scss";
+@import "../../../styles/modules/blocks/accord-inner/__element/_notopenable/accord-inner__element_notopenable.scss";
+@import "../../../styles/modules/blocks/accord-header/__right/accord-header__right.scss";
+@import "../../../styles/modules/blocks/accord-labels/accord-labels.scss";
+@import "../../../styles/modules/blocks/accord-label/accord__label.scss";
+@import "../../../styles/modules/blocks/accord/__list/accord__list.scss";
+@import "../../../styles/modules/blocks/accord/__list-item/accord__list-item.scss";
+@import "../../../styles/modules/blocks/accord/__content/accord__content.scss";
+@import "../../../styles/modules/blocks/accord/__content-description/accord__content-description.scss";
+@import "../../../styles/modules/blocks/accord/__content-subtitle/accord__content-subtitle.scss";
+
+@import "../../../styles/modules/blocks/program/program.scss";
+@import "../../../styles/modules/blocks/program/__lead-container/program__lead-container.scss";
+@import "../../../styles/modules/blocks/program/__lead-card/program__lead-card.scss";
+@import "../../../styles/modules/blocks/program/__card-description/program__card-description.scss";
+@import "../../../styles/modules/blocks/program/__card-subtitle/program__card-subtitle.scss";
+@import "../../../styles/modules/blocks/program/__card-separator/program__card-separator.scss";
