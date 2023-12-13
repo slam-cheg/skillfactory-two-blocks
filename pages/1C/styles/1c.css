@@ -98,7 +98,6 @@
 }
 @media screen and (max-width: 639px) {
   .h3-title {
-    color: #ff6945;
     font-size: 20px;
   }
 }
@@ -167,7 +166,7 @@
 .accord-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
   padding: 0 30px;
 }
@@ -293,12 +292,14 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
+  transform: translateY(3px);
 }
 @media screen and (max-width: 959px) {
   .accord-header__right {
     width: 100%;
     justify-content: space-between;
     margin-bottom: 20px;
+    transform: unset;
   }
 }
 @media screen and (max-width: 479px) {
@@ -314,7 +315,7 @@
 .accord-labels {
   display: flex;
   gap: 10px;
-  min-width: 410px;
+  min-width: 300px;
   justify-content: flex-end;
 }
 @media screen and (max-width: 959px) {
@@ -329,6 +330,14 @@
     min-width: unset;
     max-width: 190px;
     flex-wrap: wrap;
+  }
+}
+.accord-labels_maximize {
+  min-width: 410px;
+}
+@media screen and (max-width: 959px) {
+  .accord-labels_maximize {
+    min-width: initial;
   }
 }
 
@@ -682,10 +691,12 @@
 }
 .program__accord-wrapper .accord-opened .accord-inner__body {
   padding-top: 64px;
+  padding-bottom: 36px;
 }
 @media screen and (max-width: 639px) {
   .program__accord-wrapper .accord-opened .accord-inner__body {
     padding-top: 20px;
+    padding-bottom: 0;
   }
 }
 .program__accord-wrapper .accord-inner__body {
@@ -1564,9 +1575,9 @@
 .takeit__benefits {
   border-radius: 8px;
   background: #dde6e7;
-  padding: 30px !important;
+  padding: 30px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
   -moz-column-gap: 58px;
        column-gap: 58px;
@@ -1579,7 +1590,7 @@
 }
 @media screen and (max-width: 639px) {
   .takeit__benefits {
-    padding: 20px 15px !important;
+    padding: 20px 15px;
     grid-template-columns: 1fr;
     row-gap: 10px;
   }
@@ -1811,7 +1822,7 @@
 @media screen and (max-width: 639px) {
   .rate-card {
     padding: 20px 15px;
-    min-height: 610px;
+    min-height: 626px;
     gap: 35px;
   }
 }
