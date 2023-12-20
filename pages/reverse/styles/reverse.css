@@ -54,6 +54,7 @@
 }
 
 .reverse {
+  margin-top: 100px;
   margin-bottom: 60px;
 }
 .reverse__cards {
@@ -68,6 +69,7 @@
   overflow: hidden;
   backface-visibility: hidden;
   transition: transform 0.3s ease-in-out;
+  height: 100%;
 }
 .reverse__card-front {
   display: flex;
@@ -77,6 +79,8 @@
   background: #dde6e7;
   padding: 40px 40px 40px 30px;
   border-radius: 8px;
+  position: relative;
+  justify-content: space-between;
 }
 .reverse__card-back {
   position: absolute;
@@ -88,6 +92,10 @@
   padding: 40px 40px 40px 30px;
   border-radius: 8px;
   background: #bad2d8;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 52px 52px;
+  gap: 10px;
 }
 .reverse__card:hover > .reverse__card-front {
   transform: perspective(600px) rotateY(-180deg);
@@ -118,26 +126,12 @@
     display: none;
   }
 }
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.reverse__link {
+  display: flex;
 }
-
-.card {
-  cursor: pointer;
-  width: 340px;
-  height: 480px;
-}
-
-.front,
-.back {
+.reverse__img {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  backface-visibility: hidden;
-  position: absolute;
-  transition: transform 0.6s linear;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 52px;
 }
