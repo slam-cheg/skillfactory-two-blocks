@@ -69,6 +69,10 @@
 			border-radius: 8px;
 			position: relative;
 			justify-content: space-between;
+
+			@media screen and (max-width: 959px) {
+				flex-direction: row;
+			}
 		}
 
 		&-back {
@@ -80,6 +84,9 @@
 			padding: 40px 40px 40px 30px;
 			border-radius: 8px;
 			background: #bad2d8;
+		}
+
+		&-content {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 52px 52px;
@@ -105,12 +112,12 @@
 			font-weight: 400;
 			line-height: 1;
 
-			@media screen and (max-width: 639px) {
+			@media screen and (max-width: 959px) {
 				font-size: 24px;
 			}
 
 			&_back {
-				@media screen and (min-width: 1199px) {
+				@media screen and (min-width: 959px) {
 					display: none;
 				}
 			}
