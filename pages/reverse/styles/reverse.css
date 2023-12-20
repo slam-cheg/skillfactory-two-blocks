@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/heliosext.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/HeliosExtC-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/PPNeueMachina-InktrapRegular.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+#allrecords a {
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.inner-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .inner-wrapper {
+    max-width: 940px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .inner-wrapper {
+    max-width: 620px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .inner-wrapper {
+    max-width: 460px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .inner-wrapper {
+    max-width: 300px;
+  }
+}
+
+.reverse {
+  margin-bottom: 60px;
+}
+.reverse__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.reverse__card {
+  position: relative;
+}
+.reverse__card-front, .reverse__card-back {
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.reverse__card-front {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transform: perspective(600px) rotateY(0deg);
+  background: #dde6e7;
+  padding: 40px 40px 40px 30px;
+  border-radius: 8px;
+}
+.reverse__card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(600px) rotateY(180deg);
+  padding: 40px 40px 40px 30px;
+  border-radius: 8px;
+  background: #bad2d8;
+}
+.reverse__card:hover > .reverse__card-front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.reverse__card:hover > .reverse__card-back {
+  transform: perspective(600px) rotateY(0deg);
+}
+.reverse__card-title {
+  color: #000;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+}
+.reverse__card-arrow {
+  width: 34px;
+  max-height: 28px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: auto;
+}
+@media screen and (max-width: 1199px) {
+  .reverse__card-arrow_desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reverse__card-arrow_mobile {
+    display: none;
+  }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  cursor: pointer;
+  width: 340px;
+  height: 480px;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform 0.6s linear;
+}

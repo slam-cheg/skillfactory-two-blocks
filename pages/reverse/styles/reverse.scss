@@ -1,0 +1,130 @@
+@import "../../../fonts/index.scss";
+
+#allrecords a {
+	color: inherit;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+.inner-wrapper {
+	width: 1160px;
+	margin: 0 auto;
+	position: relative;
+
+	@media screen and (max-width: 1199px) {
+		max-width: 940px;
+	}
+	@media screen and (max-width: 959px) {
+		max-width: 620px;
+	}
+	@media screen and (max-width: 639px) {
+		max-width: 460px;
+	}
+	@media screen and (max-width: 479px) {
+		max-width: 300px;
+	}
+}
+
+.reverse {
+	margin-bottom: 60px;
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 25px;
+	}
+
+	&__card {
+		position: relative;
+
+		&-front,
+		&-back {
+			overflow: hidden;
+			backface-visibility: hidden;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		&-front {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			transform: perspective(600px) rotateY(0deg);
+			background: #dde6e7;
+			padding: 40px 40px 40px 30px;
+			border-radius: 8px;
+		}
+
+		&-back {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform: perspective(600px) rotateY(180deg);
+			padding: 40px 40px 40px 30px;
+			border-radius: 8px;
+			background: #bad2d8;
+		}
+
+		&:hover > .reverse__card-front {
+			transform: perspective(600px) rotateY(-180deg);
+		}
+
+		&:hover > .reverse__card-back {
+			transform: perspective(600px) rotateY(0deg);
+		}
+
+		&-title {
+			color: #000;
+			font-size: 40px;
+			font-weight: 400;
+			line-height: 1;
+		}
+
+		&-arrow {
+			width: 34px;
+			max-height: 28px;
+			object-fit: contain;
+			margin-left: auto;
+
+			&_desktop {
+				@media screen and (max-width: 1199px) {
+					display: none;
+				}
+			}
+			&_mobile {
+				@media screen and (min-width: 1200px) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card {
+	cursor: pointer;
+	width: 340px;
+	height: 480px;
+}
+
+.front,
+.back {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: transform 0.6s linear;
+}
