@@ -68,7 +68,7 @@
 .reverse__card-front, .reverse__card-back {
   overflow: hidden;
   backface-visibility: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   height: 100%;
 }
 .reverse__card-front {
