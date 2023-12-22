@@ -74,12 +74,20 @@
 }
 .reverse__card {
   position: relative;
+  border-radius: 8px;
 }
 .reverse__card-front, .reverse__card-back {
   overflow: hidden;
   backface-visibility: hidden;
   transition: transform 0.5s ease-in-out;
   height: 100%;
+}
+@media screen and (max-width: 959px) {
+  .reverse__card-front, .reverse__card-back {
+    overflow: auto;
+    backface-visibility: initial;
+    height: auto;
+  }
 }
 .reverse__card-front {
   display: flex;
@@ -95,6 +103,9 @@
 @media screen and (max-width: 959px) {
   .reverse__card-front {
     flex-direction: row;
+    transform: unset;
+    padding: 20px 15px;
+    gap: 0;
   }
 }
 .reverse__card-back {
@@ -107,23 +118,35 @@
   border-radius: 8px;
   background: #bad2d8;
 }
+@media screen and (max-width: 959px) {
+  .reverse__card-back {
+    transform: unset;
+    position: initial;
+    top: unset;
+    left: unset;
+  }
+}
 .reverse__card-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 52px 52px;
   gap: 10px;
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 959px) {
   .reverse__card-content {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: unset;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
-.reverse__card:hover > .reverse__card-front {
-  transform: perspective(600px) rotateY(-180deg);
-}
-.reverse__card:hover > .reverse__card-back {
-  transform: perspective(600px) rotateY(0deg);
+@media screen and (min-width: 960px) {
+  .reverse__card:hover > .reverse__card-front {
+    transform: perspective(600px) rotateY(-180deg);
+  }
+  .reverse__card:hover > .reverse__card-back {
+    transform: perspective(600px) rotateY(0deg);
+  }
 }
 .reverse__card-title {
   color: #000;
@@ -134,6 +157,7 @@
 @media screen and (max-width: 959px) {
   .reverse__card-title {
     font-size: 24px;
+    transform: translateY(4px);
   }
 }
 @media screen and (min-width: 959px) {
@@ -147,19 +171,66 @@
   -o-object-fit: contain;
      object-fit: contain;
   margin-left: auto;
+  transition: 0.3s ease-in-out transform;
 }
 @media screen and (max-width: 1199px) {
   .reverse__card-arrow_desktop {
     display: none;
   }
 }
+.reverse__card-arrow_mobile {
+  width: 32px;
+  max-height: 32px;
+  transition: 0.3s ease-in-out transform;
+}
 @media screen and (min-width: 1200px) {
   .reverse__card-arrow_mobile {
     display: none;
   }
 }
+@media screen and (max-width: 959px) {
+  .reverse__card_closed {
+    background: #dde6e7;
+    transition: 0.3s ease-in-out;
+    border-radius: 8px;
+  }
+  .reverse__card_closed .reverse__card-back {
+    background: #dde6e7;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 0;
+    transition: 0s;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .reverse__card_opened {
+    background: #bad2d8;
+    transition: 0.3s ease-in-out;
+  }
+  .reverse__card_opened .reverse__card-arrow_mobile {
+    transform: rotate(90deg);
+  }
+  .reverse__card_opened .reverse__card-front {
+    background: #bad2d8;
+  }
+  .reverse__card_opened .reverse__card-back {
+    background: #bad2d8;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    max-height: initial;
+    transition: 0.2s;
+    padding: 0 15px 20px 15px;
+  }
+}
 .reverse__link {
   display: flex;
+}
+@media screen and (max-width: 959px) {
+  .reverse__link {
+    max-width: calc(50% - 5px);
+  }
 }
 .reverse__img {
   width: 100%;

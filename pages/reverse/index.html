@@ -10,14 +10,13 @@
 		<section class="reverse">
 			<div class="inner-wrapper">
 				<div class="reverse__cards">
-					<div class="reverse__card">
+					<div class="reverse__card reverse__card_closed">
 						<div class="reverse__card-front">
 							<h3 class="reverse__card-title">Coding</h3>
 							<img src="./images/desktop-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_desktop" />
 							<img src="./images/mobile-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_mobile" />
 						</div>
 						<div class="reverse__card-back">
-							<h3 class="reverse__card-title reverse__card-title_back">Высшее образование</h3>
 							<div class="reverse__card-content">
 								<a href="https://g.page/r/Cco4p6TVCbgUEB0/review" target="_blank" class="reverse__link">
 									<img src="./images/g-maps.png" alt="" class="reverse__img" />
@@ -31,14 +30,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="reverse__card">
+					<div class="reverse__card reverse__card_closed">
 						<div class="reverse__card-front">
 							<h3 class="reverse__card-title">Data Science</h3>
 							<img src="./images/desktop-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_desktop" />
 							<img src="./images/mobile-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_mobile" />
 						</div>
 						<div class="reverse__card-back">
-							<h3 class="reverse__card-title reverse__card-title_back">Высшее образование</h3>
 							<div class="reverse__card-content">
 								<a href="https://otzovik.com/reviews/kursi_programmirovaniya_skillfactory/" target="_blank" class="reverse__link">
 									<img src="./images/otzovik.png" alt="" class="reverse__img" />
@@ -52,14 +50,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="reverse__card">
+					<div class="reverse__card reverse__card_closed">
 						<div class="reverse__card-front">
 							<h3 class="reverse__card-title">Analytics</h3>
 							<img src="./images/desktop-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_desktop" />
 							<img src="./images/mobile-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_mobile" />
 						</div>
 						<div class="reverse__card-back">
-							<h3 class="reverse__card-title reverse__card-title_back">Высшее образование</h3>
 							<div class="reverse__card-content">
 								<a href="https://www.sravni.ru/shkola/skillfactory/otzyvy/" target="_blank" class="reverse__link">
 									<img src="./images/sravni.png" alt="" class="reverse__img" />
@@ -73,14 +70,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="reverse__card">
+					<div class="reverse__card reverse__card_closed">
 						<div class="reverse__card-front">
 							<h3 class="reverse__card-title">IT Management</h3>
 							<img src="./images/desktop-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_desktop" />
 							<img src="./images/mobile-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_mobile" />
 						</div>
 						<div class="reverse__card-back">
-							<h3 class="reverse__card-title reverse__card-title_back">Высшее образование</h3>
 							<div class="reverse__card-content">
 								<a href="https://otzovik.com/reviews/kursi_programmirovaniya_skillfactory/" target="_blank" class="reverse__link">
 									<img src="./images/g-maps.png" alt="" class="reverse__img" />
@@ -94,7 +90,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="reverse__card">
+					<div class="reverse__card reverse__card_closed">
 						<div class="reverse__card-front">
 							<h3 class="reverse__card-title">Высшее образование</h3>
 							<img src="./images/desktop-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_desktop" />
@@ -115,14 +111,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="reverse__card">
+					<div class="reverse__card reverse__card_closed">
 						<div class="reverse__card-front">
 							<h3 class="reverse__card-title">Marketing</h3>
 							<img src="./images/desktop-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_desktop" />
 							<img src="./images/mobile-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_mobile" />
 						</div>
 						<div class="reverse__card-back">
-							<h3 class="reverse__card-title reverse__card-title_back">Высшее образование</h3>
 							<div class="reverse__card-content">
 								<a href="https://yandex.ru/maps/org/skillfactory/237135461560/reviews/" target="_blank" class="reverse__link">
 									<img src="./images/ya-maps.png" alt="" class="reverse__img" />
@@ -139,5 +134,20 @@
 				</div>
 			</div>
 		</section>
+
+		<script>
+			const accordItems = document.querySelectorAll(".reverse__card");
+
+			accordItems.forEach((item) => {
+				item.addEventListener("click", () => {
+					handlerAccordToggle(item);
+				});
+			});
+
+			function handlerAccordToggle(accord) {
+				accord.classList.toggle("reverse__card_opened");
+				accord.classList.toggle("reverse__card_closed");
+			}
+		</script>
 	</body>
 </html>

@@ -419,7 +419,7 @@
   font-style: normal;
   font-weight: 400 !important;
   line-height: 130%;
-  margin-bottom: 40px !important;
+  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -451,7 +451,7 @@
 }
 @media screen and (max-width: 639px) {
   .accord__content-description {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
     order: 3;
   }
 }
@@ -1575,7 +1575,7 @@
 .takeit__benefits {
   border-radius: 8px;
   background: #dde6e7;
-  padding: 30px !important;
+  padding: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   list-style: none;
@@ -1590,7 +1590,7 @@
 }
 @media screen and (max-width: 639px) {
   .takeit__benefits {
-    padding: 20px 15px !important;
+    padding: 20px 15px;
     grid-template-columns: 1fr;
     row-gap: 10px;
   }

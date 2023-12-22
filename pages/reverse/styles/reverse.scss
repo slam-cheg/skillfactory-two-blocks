@@ -50,6 +50,7 @@
 
 	&__card {
 		position: relative;
+		border-radius: 8px;
 
 		&-front,
 		&-back {
@@ -57,6 +58,12 @@
 			backface-visibility: hidden;
 			transition: transform 0.5s ease-in-out;
 			height: 100%;
+
+			@media screen and (max-width: 959px) {
+				overflow: auto;
+				backface-visibility: initial;
+				height: auto;
+			}
 		}
 
 		&-front {
@@ -72,6 +79,9 @@
 
 			@media screen and (max-width: 959px) {
 				flex-direction: row;
+				transform: unset;
+				padding: 20px 15px;
+				gap: 0;
 			}
 		}
 
@@ -84,6 +94,13 @@
 			padding: 40px 40px 40px 30px;
 			border-radius: 8px;
 			background: #bad2d8;
+
+			@media screen and (max-width: 959px) {
+				transform: unset;
+				position: initial;
+				top: unset;
+				left: unset;
+			}
 		}
 
 		&-content {
@@ -92,18 +109,22 @@
 			grid-template-rows: 52px 52px;
 			gap: 10px;
 
-			@media screen and (max-width: 639px) {
-				grid-template-columns: 1fr 1fr;
-				grid-template-rows: unset;
+			@media screen and (max-width: 959px) {
+				display: flex;
+				gap: 10px;
+				flex-direction: row;
+				flex-wrap: wrap;
 			}
 		}
 
-		&:hover > .reverse__card-front {
-			transform: perspective(600px) rotateY(-180deg);
-		}
+		@media screen and (min-width: 960px) {
+			&:hover > .reverse__card-front {
+				transform: perspective(600px) rotateY(-180deg);
+			}
 
-		&:hover > .reverse__card-back {
-			transform: perspective(600px) rotateY(0deg);
+			&:hover > .reverse__card-back {
+				transform: perspective(600px) rotateY(0deg);
+			}
 		}
 
 		&-title {
@@ -114,6 +135,7 @@
 
 			@media screen and (max-width: 959px) {
 				font-size: 24px;
+				transform: translateY(4px);
 			}
 
 			&_back {
@@ -128,6 +150,7 @@
 			max-height: 28px;
 			object-fit: contain;
 			margin-left: auto;
+			transition: 0.3s ease-in-out transform;
 
 			&_desktop {
 				@media screen and (max-width: 1199px) {
@@ -135,8 +158,53 @@
 				}
 			}
 			&_mobile {
+				width: 32px;
+				max-height: 32px;
+				transition: 0.3s ease-in-out transform;
 				@media screen and (min-width: 1200px) {
 					display: none;
+				}
+			}
+		}
+
+		@media screen and (max-width: 959px) {
+			&_closed {
+				background: #dde6e7;
+				transition: 0.3s ease-in-out;
+				border-radius: 8px;
+
+				.reverse__card-back {
+					background: #dde6e7;
+					visibility: hidden;
+					opacity: 0;
+					pointer-events: none;
+					max-height: 0;
+					transition: 0s;
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+			}
+
+			&_opened {
+				background: #bad2d8;
+				transition: 0.3s ease-in-out;
+
+				.reverse__card-arrow_mobile {
+					transform: rotate(90deg);
+				}
+
+				.reverse__card-front {
+					background: #bad2d8;
+				}
+
+				.reverse__card-back {
+					background: #bad2d8;
+					visibility: visible;
+					opacity: 1;
+					pointer-events: auto;
+					max-height: initial;
+					transition: 0.2s;
+					padding: 0 15px 20px 15px;
 				}
 			}
 		}
@@ -144,6 +212,9 @@
 
 	&__link {
 		display: flex;
+		@media screen and (max-width: 959px) {
+			max-width: calc(50% - 5px);
+		}
 	}
 
 	&__img {
