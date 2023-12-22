@@ -172,7 +172,11 @@
 				background: #dde6e7;
 				transition: 0.3s ease-in-out;
 				border-radius: 8px;
-
+				
+				.reverse__card-front {
+					transition: .3s ease-in-out;
+				}
+				
 				.reverse__card-back {
 					background: #dde6e7;
 					visibility: hidden;
@@ -180,8 +184,7 @@
 					pointer-events: none;
 					max-height: 0;
 					transition: 0s;
-					padding-top: 0;
-					padding-bottom: 0;
+					padding: 0 15px 0 15px;
 				}
 			}
 
@@ -195,6 +198,7 @@
 
 				.reverse__card-front {
 					background: #bad2d8;
+					transition: .3s ease-in-out;
 				}
 
 				.reverse__card-back {
@@ -205,6 +209,7 @@
 					max-height: initial;
 					transition: 0.2s;
 					padding: 0 15px 20px 15px;
+					transition: .3s ease-in-out;
 				}
 			}
 		}

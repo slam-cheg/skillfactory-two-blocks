@@ -97,7 +97,6 @@
 							<img src="./images/mobile-arrow.svg" alt="arrow" class="reverse__card-arrow reverse__card-arrow_mobile" />
 						</div>
 						<div class="reverse__card-back">
-							<h3 class="reverse__card-title reverse__card-title_back">Высшее образование</h3>
 							<div class="reverse__card-content">
 								<a href="https://mooc.ru/company/skillfactory/reviews" target="_blank" class="reverse__link">
 									<img src="./images/mooc.png" alt="" class="reverse__img" />
@@ -145,8 +144,23 @@
 			});
 
 			function handlerAccordToggle(accord) {
-				accord.classList.toggle("reverse__card_opened");
-				accord.classList.toggle("reverse__card_closed");
+				accordItems.forEach((item) => {
+					if (item !== accord && item.classList.contains("reverse__card_opened")) {
+						item.classList.remove("reverse__card_opened");
+						item.classList.add("reverse__card_closed");
+					}
+				});
+
+				if (accord.classList.contains("reverse__card_opened")) {
+					accord.classList.remove("reverse__card_opened");
+					accord.classList.add("reverse__card_closed");
+					return;
+				}
+				if (accord.classList.contains("reverse__card_closed")) {
+					accord.classList.add("reverse__card_opened");
+					accord.classList.remove("reverse__card_closed");
+					return;
+				}
 			}
 		</script>
 	</body>

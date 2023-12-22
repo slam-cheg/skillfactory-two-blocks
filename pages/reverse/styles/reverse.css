@@ -194,6 +194,9 @@
     transition: 0.3s ease-in-out;
     border-radius: 8px;
   }
+  .reverse__card_closed .reverse__card-front {
+    transition: 0.3s ease-in-out;
+  }
   .reverse__card_closed .reverse__card-back {
     background: #dde6e7;
     visibility: hidden;
@@ -201,8 +204,7 @@
     pointer-events: none;
     max-height: 0;
     transition: 0s;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 15px 0 15px;
   }
   .reverse__card_opened {
     background: #bad2d8;
@@ -213,6 +215,7 @@
   }
   .reverse__card_opened .reverse__card-front {
     background: #bad2d8;
+    transition: 0.3s ease-in-out;
   }
   .reverse__card_opened .reverse__card-back {
     background: #bad2d8;
@@ -222,6 +225,7 @@
     max-height: initial;
     transition: 0.2s;
     padding: 0 15px 20px 15px;
+    transition: 0.3s ease-in-out;
   }
 }
 .reverse__link {
