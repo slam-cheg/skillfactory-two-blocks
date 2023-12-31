@@ -1565,7 +1565,7 @@
 .takeit__benefits {
   border-radius: 8px;
   background: #dde6e7;
-  padding: 30px;
+  padding: 30px !important;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   list-style: none;
@@ -1946,8 +1946,6 @@
   cursor: pointer;
   border: none;
   outline: none;
-  border-radius: 6px;
-  margin-bottom: 10px;
 }
 .rate-card__button:hover {
   transition: 0.2s;
