@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz</title>
+		<link rel="stylesheet" href="./quiz.css" />
+	</head>
+	<body>
+		<section class="quiz-wrapper">
+			<button class="button">Квиз</button>
+
+			<div class="popup popup_opened">
+				<div class="inner-wrapper">
+					<div class="quiz">
+						<div class="quiz__close">
+							<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M27.0393 28.9998L0.000488281 1.96096L1.96145 0L29.0003 27.0388L27.0393 28.9998Z" fill="white" />
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0.000212441 27.0388L27.039 -8.57162e-08L29 1.96096L1.96117 28.9998L0.000212441 27.0388Z" fill="white" />
+							</svg>
+						</div>
+						<div class="question question_short-text question_active" data-page="1">
+							<h2 class="h2-title">Какой предмет был вам наиболее интересен в&nbsp;школе или университете?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="A,B,C,D">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Математика</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H,I,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Гуманитарные науки</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Информатика</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Обществознание, менеджмент</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="D,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Естественные науки</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_short-text question_deactive" data-page="2">
+							<h2 class="h2-title">Вы&nbsp;решили встретиться с&nbsp;друзьями и&nbsp;поиграть в&nbsp;настольные игры. Какую игру выберете?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="I,H">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Имаджинариум</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Монополия</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="C,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Дженга (башня)</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="F,I">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Мафия</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="A,B,D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Покер</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_long-text question_deactive" data-page="3">
+							<h2 class="h2-title">Представьте, что вам больше не&nbsp;нужно работать. Чем вы&nbsp;занимаетесь для себя?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="I,H">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Буду творить в&nbsp;свое удовольствие, чтобы мир был прекраснее и&nbsp;живописнее. Свое творчество буду дарить другим</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Буду изучать мир, путешествовать в&nbsp;разные страны, изучать плюсы и&nbsp;минусы каждой</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Создам искусственный интеллект, чтобы он&nbsp;помогал мне выполнять рутинные дела</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Буду много общаться с&nbsp;людьми и&nbsp;стараться помогать&nbsp;им</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Я&nbsp;перееду в&nbsp;новый дом и&nbsp;буду обустраивать его так, как мне хотелось&nbsp;бы</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_imgs question_deactive" data-page="4">
+							<h2 class="h2-title">Какое изображение характеризует ваше состояние?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="A,B,C,F" data-variation="1">
+									<img src="./images/A.jpg" alt="" />
+									<div class="question__bottom">
+										<div class="question__circle"></div>
+										<div class="question__text">
+											<p>1</p>
+										</div>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="D,E,F" data-variation="2">
+									<img src="./images/B.png" alt="" />
+									<div class="question__bottom">
+										<div class="question__circle"></div>
+										<div class="question__text">
+											<p>2</p>
+										</div>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H,I,J" data-variation="3">
+									<img src="./images/C.png" alt="" />
+									<div class="question__bottom">
+										<div class="question__circle"></div>
+										<div class="question__text">
+											<p>3</p>
+										</div>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_long-text question_deactive" data-page="5" data-variation="5.1">
+							<h2 class="h2-title">Представьте, что вам больше не&nbsp;нужно работать. Чем вы&nbsp;занимаетесь для себя?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="D">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Прагматичность и&nbsp;хорошая интуиция</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="A">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Самостоятельность и&nbsp;независимость</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="C">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Креативность</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="B">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Логика и&nbsp;рациональность</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_long-text question_deactive" data-page="5" data-variation="5.2">
+							<h2 class="h2-title">Какой чертой своей личности вы&nbsp;гордитесь больше всего?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Коммуникабельность и&nbsp;лидерство</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Внимательность к&nbsp;деталям</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Аналитический склад ума</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_long-text question_deactive" data-page="5" data-variation="5.3">
+							<h2 class="h2-title">Какой чертой своей личности вы&nbsp;гордитесь больше всего?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="I">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Целеустремленность и&nbsp;упорство</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Мечтательность и&nbsp;чуткость</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Любознательность и&nbsp;наблюдательность</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_short-text question_deactive" data-page="6">
+							<h2 class="h2-title">Оцените, насколько утверждение про вас: &laquo;Я&nbsp;быстро разбираюсь в&nbsp;новом приложении или программе, мне не&nbsp;нужны инструкции&raquo;</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="A,B,C,D,E,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Полностью согласен</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H,I">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Нейтрально</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Не согласен</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_short-text question_deactive" data-page="7">
+							<h2 class="h2-title">Оцените, насколько утверждение про вас: &laquo;Я&nbsp;думаю образами и&nbsp;картинками&raquo;</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="H,J,I,C">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Полностью согласен</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="F,G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Нейтрально</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="A,B,D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Не согласен</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_long-text question_deactive" data-page="8">
+							<h2 class="h2-title">Я&nbsp;лучше всего воспринимаю и&nbsp;запоминаю информацию:</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="G,E,D">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Через цифры и&nbsp;логическое разъяснение</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>С&nbsp;помощью текстов</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H,I,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Благодаря рисункам</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_long-text question_deactive" data-page="9" data-variation="9.1">
+							<h2 class="h2-title">Вы&nbsp;ищете новое приложение, которое&nbsp;бы помогло вам с&nbsp;рутинными задачами. Что вам больше подходит?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Генератор текстов и&nbsp;слоганов</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Калькулятор личного бюджета</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="D">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Нейросеть для прогнозов будущего</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_long-text question_deactive" data-page="9" data-variation="9.2">
+							<h2 class="h2-title">Вы&nbsp;заходите на&nbsp;сайт. На&nbsp;что обратите внимание в&nbsp;первую очередь?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="A">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Насколько сайт удобен в&nbsp;использовании, какие есть функции</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="C">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Насколько красиво и&nbsp;понятно оформлен сайт</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="B">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Насколько быстро работает сайт и&nbsp;переключаются вкладки</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Есть&nbsp;ли ошибки при нажатии кнопок, все&nbsp;ли в&nbsp;порядке с&nbsp;расположением текста и&nbsp;картинок</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="question question_long-text question_deactive" data-page="9" data-variation="9.3">
+							<h2 class="h2-title">На&nbsp;что вы&nbsp;обращаете внимание, гуляя по&nbsp;городу?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="I">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Люди: их&nbsp;образы и&nbsp;стиль</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Детали города: граффити на&nbsp;стенах, нетипичные формы предметов</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Интересные здания, их&nbsp;архитектура</p>
+									</div>
+								</button>
+							</div>
+						</div>
+                        <div class="question question_long-text question_deactive" data-page="10">
+							<h2 class="h2-title">Вы&nbsp;выбираете видео на&nbsp;YouTube, чтобы посмотреть фоном, пока едите. Какая тема вам ближе?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Что-то развивающее: люблю всегда изучать новое</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Что-то спокойное, про путешествия и&nbsp;природу</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H,J,I">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Музыкальное&nbsp;&mdash; клипы и&nbsp;концерты</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>О&nbsp;жизни других людей: интервью, подкасты</p>
+									</div>
+								</button>
+							</div>
+						</div>
+                        <div class="question question_long-text question_deactive" data-page="11">
+							<h2 class="h2-title">Планируя встречу с&nbsp;друзьями, вы&nbsp;чаще всего:</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Продумываете маршрут до&nbsp;мелочей и&nbsp;анализируете, какой путь быстрее</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Придумываете темы для дискуссий и&nbsp;сами рассказываете истории</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H,I,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Предлагаете новые и&nbsp;красивые места для посещения</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Скрупулезно вычисляете, сколько вы&nbsp;сможете потратить</p>
+									</div>
+								</button>
+							</div>
+						</div>
+                        <div class="question question_long-text question_deactive" data-page="12">
+							<h2 class="h2-title">Представьте ваш идеальный день на&nbsp;работе. Чем&nbsp;бы вам больше всего хотелось заниматься?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Работать с&nbsp;большим потоком цифр и&nbsp;данных</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Работать с&nbsp;разными проектами и&nbsp;общаться с&nbsp;командами</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H,I,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Творить: рисовать, креативить, придумывать новое</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Разбираться в&nbsp;сложностях, для меня работа&nbsp;&mdash; головоломка</p>
+									</div>
+								</button>
+							</div>
+						</div>
+                        <div class="question question_short-text question_deactive" data-page="13">
+							<h2 class="h2-title">Сколько вам лет?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="I,H">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Меньше 18</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>От&nbsp;18&nbsp;до&nbsp;20</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="C,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>От&nbsp;21&nbsp;до&nbsp;25</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="F,I">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>От&nbsp;26&nbsp;до&nbsp;30</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="A,B,D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>От&nbsp;31&nbsp;до&nbsp;40</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="A,B,D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>От&nbsp;41&nbsp;до&nbsp;50</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="A,B,D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Больше&nbsp;50</p>
+									</div>
+								</button>
+							</div>
+						</div>
+                        <div class="question question_long-text question_deactive" data-page="14">
+							<h2 class="h2-title">Рассматриваете&nbsp;ли вы&nbsp;дополнительное обучение?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Не&nbsp;планирую активно учиться в&nbsp;ближайшее время</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Уже активно учусь и&nbsp;ищу новые источники знаний</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H,I,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Хочу начать обучение в&nbsp;ближайшее время</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Хочу начать обучение, но&nbsp;не&nbsp;сейчас</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Я&nbsp;учусь периодически, но&nbsp;хотел&nbsp;бы уделять этому больше времени</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Я&nbsp;учусь периодически и&nbsp;не&nbsp;хочу ничего менять в&nbsp;своем подходе</p>
+									</div>
+								</button>
+							</div>
+						</div>
+                        <div class="question question_long-text question_deactive" data-page="15">
+							<h2 class="h2-title">Если&nbsp;бы вам было нужно выбрать основную цель для обучения новой профессии, что&nbsp;бы это было?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="D,E">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Найти дополнительный источник дохода, подработку</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Освоить новую профессию</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="H,I,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Получить повышение в&nbsp;текущей компании</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Найти свою первую постоянную работу</p>
+									</div>
+								</button>
+                                <button class="question__variant" data-scores="A,B,C,F">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Уйти из&nbsp;найма на&nbsp;фриланс</p>
+									</div>
+								</button>
+							</div>
+						</div>
+                        <div class="question question_short-text question_deactive" data-page="16">
+							<h2 class="h2-title">Готовы&nbsp;ли вы&nbsp;рассматривать для себя платное обучение?</h2>
+							<div class="question__variants">
+								<button class="question__variant" data-scores="I,H">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Да</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="G">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Скорее да, чем нет</p>
+									</div>
+								</button>
+								<button class="question__variant" data-scores="C,J">
+									<div class="question__circle"></div>
+									<div class="question__text">
+										<p>Нет</p>
+									</div>
+								</button>
+							</div>
+						</div>
+						<div class="quiz__bottom">
+							<div class="quiz__counter"><span class="current">1</span>&nbsp;из&nbsp;<span class="total">16</span></div>
+							<div class="quiz__button">Далее</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="./quiz.js"></script>
+	</body>
+</html>

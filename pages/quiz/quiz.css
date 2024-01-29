@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/heliosext.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/HeliosExtC-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/PPNeueMachina-InktrapRegular.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+.inner-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .inner-wrapper {
+    max-width: 940px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .inner-wrapper {
+    max-width: 620px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .inner-wrapper {
+    max-width: 460px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .inner-wrapper {
+    max-width: 300px;
+  }
+}
+
+.h2-title {
+  color: #181818;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 90%;
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 1199px) {
+  .h2-title {
+    font-size: 55px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .h2-title {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .h2-title {
+    font-size: 40px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .h2-title {
+    font-size: 30px;
+    line-height: 28px;
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+#allrecords ul {
+  padding-left: 0;
+}
+#allrecords a {
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.quiz-wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.3s;
+}
+
+.quiz {
+  padding: 54px 48px 26px 48px;
+  background: #fff;
+  min-height: 942px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.quiz__close {
+  position: absolute;
+  right: 0;
+  top: -53px;
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quiz__close:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.quiz__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.quiz__counter {
+  opacity: 0.7;
+}
+.quiz__button {
+  padding: 16px 54px;
+  border-radius: 6px;
+  background: #b5e916;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.quiz__button:hover {
+  transition: 0.3s;
+  background: #d9fe63;
+}
+
+.question {
+  display: block;
+}
+.question_deactive {
+  display: none;
+}
+.question__variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+.question__variant {
+  display: flex;
+  width: calc(50% - 12px);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 26px 28px;
+  align-items: center;
+  gap: 30px;
+  border-radius: 6px;
+  background: #dde6e7;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.question__variant:hover {
+  transition: 0.3s;
+  background: #bad2d8;
+}
+.question__variant_checked .question__circle {
+  background: url(./images/checked.svg);
+  width: 26px;
+  height: 26px;
+  transition: 0.3s;
+}
+.question__circle {
+  background: url(./images/non-checked.svg);
+  min-width: 26px;
+  height: 26px;
+  transition: 0.3s;
+}
+.question__text {
+  text-align: left;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.question_long-text .question__variant {
+  align-items: flex-start;
+}
+.question_imgs .question__variant {
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(33% - 14px);
+}
+.question_imgs .question__variant img {
+  width: 100%;
+  border-radius: 6px;
+}
+.question_imgs .question__bottom {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  padding: 0 0 26px 28px;
+}
