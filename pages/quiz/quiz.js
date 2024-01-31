@@ -134,16 +134,15 @@ function countPageAnswers(page) {
 	} else {
 		currentPage.classList.remove("question_active");
 		currentPage.classList.add("question_deactive");
-	
+
 		nextPage.classList.remove("question_deactive");
 		nextPage.classList.add("question_active");
-	
+
 		quizPage++;
-	
+
 		pageCounter.textContent = quizPage;
+		quiz.scrollIntoView(true);
 	}
-
-
 }
 
 function result(variants) {
@@ -151,8 +150,7 @@ function result(variants) {
 	let resultVariant = "";
 
 	for (let key in variants) {
-
-		console.log(variants[key]["score"])
+		console.log(variants[key]["score"]);
 
 		if (variants[key]["score"] > maxNum) {
 			maxNum = variants[key]["score"];
@@ -162,5 +160,5 @@ function result(variants) {
 
 	// console.log(variants[resultVariant]["url"]);
 
-	window.location.href = variants[resultVariant]["url"]
+	window.location.href = variants[resultVariant]["url"];
 }

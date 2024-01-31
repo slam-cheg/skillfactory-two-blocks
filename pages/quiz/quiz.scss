@@ -62,10 +62,6 @@ body {
 	align-items: center;
 	background: rgba(0, 0, 0, 0.5);
 
-	@media screen and (max-width: $hor-tablet) {
-		// height: unset;
-	}
-
 	@media screen and (max-width: $hor-mobile) {
 		align-items: unset;
 		overflow: scroll;
@@ -73,6 +69,11 @@ body {
 		.h2-title {
 			margin-bottom: 32px;
 		}
+	}
+
+	@media screen and (max-height: 1019px) {
+		align-items: unset;
+		overflow: scroll;
 	}
 
 	&_opened {
@@ -99,6 +100,12 @@ body {
 		position: relative;
 		padding: 34px 18px;
 		top: 75px;
+	}
+
+	@media screen and (max-height: 1019px) {
+		top: 90px;
+		position: relative;
+		min-height: unset;
 	}
 
 	&__close {
@@ -160,6 +167,7 @@ body {
 		width: 100%;
 		column-count: 2;
 		column-gap: 24px;
+		margin-bottom: 100px;
 
 		@media screen and (max-width: $hor-tablet) {
 			column-count: 1;
@@ -241,6 +249,10 @@ body {
 	&_long-text {
 		.question__variant {
 			align-items: flex-start;
+
+			@media screen and (max-width: $hor-mobile) {
+				align-items: center;
+			}
 		}
 	}
 
