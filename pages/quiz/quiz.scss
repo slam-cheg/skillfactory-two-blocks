@@ -241,6 +241,10 @@ body {
 		font-weight: 400;
 		line-height: 1.2;
 
+		p {
+			color: #181818;
+		}
+
 		@media screen and (max-width: $hor-mobile) {
 			font-size: 14px;
 		}
