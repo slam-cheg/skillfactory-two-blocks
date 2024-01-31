@@ -30,7 +30,7 @@ body {
 	overflow: hidden;
 	display: flex;
 	align-items: center;
-    justify-content: center;
+	justify-content: center;
 
 	.button {
 		padding: 16px 54px;
@@ -48,7 +48,7 @@ body {
 	}
 }
 
-.popup {
+.popup-quiz {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -61,6 +61,19 @@ body {
 	display: flex;
 	align-items: center;
 	background: rgba(0, 0, 0, 0.5);
+
+	@media screen and (max-width: $hor-tablet) {
+		// height: unset;
+	}
+
+	@media screen and (max-width: $hor-mobile) {
+		align-items: unset;
+		overflow: scroll;
+
+		.h2-title {
+			margin-bottom: 32px;
+		}
+	}
 
 	&_opened {
 		visibility: visible;
@@ -77,6 +90,16 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
+	@media screen and (max-width: $hor-tablet) {
+		min-height: unset;
+	}
+
+	@media screen and (max-width: $hor-mobile) {
+		position: relative;
+		padding: 34px 18px;
+		top: 75px;
+	}
 
 	&__close {
 		position: absolute;
@@ -101,6 +124,10 @@ body {
 
 	&__counter {
 		opacity: 0.7;
+
+		@media screen and (max-width: $hor-mobile) {
+			font-size: 14px;
+		}
 	}
 
 	&__button {
@@ -109,6 +136,11 @@ body {
 		background: #b5e916;
 		transition: 0.3s;
 		cursor: pointer;
+
+		@media screen and (max-width: $hor-mobile) {
+			font-size: 14px;
+			padding: 14px 42px;
+		}
 
 		&:hover {
 			transition: 0.3s;
@@ -128,6 +160,11 @@ body {
 		width: 100%;
 		column-count: 2;
 		column-gap: 24px;
+
+		@media screen and (max-width: $hor-tablet) {
+			column-count: 1;
+			margin-bottom: 60px;
+		}
 	}
 
 	&__variant {
@@ -153,18 +190,40 @@ body {
 		&_checked {
 			.question__circle {
 				background: url(./images/checked.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
 				width: 26px;
 				height: 26px;
 				transition: 0.3s;
+
+				@media screen and (max-width: $hor-mobile) {
+					min-width: 14px;
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+
+		&:last-of-type {
+			@media screen and (max-width: $hor-tablet) {
+				margin-bottom: 0;
 			}
 		}
 	}
 
 	&__circle {
 		background: url(./images/non-checked.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
 		min-width: 26px;
 		height: 26px;
 		transition: 0.3s;
+
+		@media screen and (max-width: $hor-mobile) {
+			min-width: 14px;
+			width: 14px;
+			height: 14px;
+		}
 	}
 
 	&__text {
@@ -173,6 +232,10 @@ body {
 		font-style: normal;
 		font-weight: 400;
 		line-height: 1.2;
+
+		@media screen and (max-width: $hor-mobile) {
+			font-size: 14px;
+		}
 	}
 
 	&_long-text {
@@ -185,6 +248,11 @@ body {
 		.question__variants {
 			display: flex;
 			gap: 16px 24px;
+
+			@media screen and (max-width: $hor-mobile) {
+				gap: 20px;
+				flex-direction: column;
+			}
 		}
 
 		.question__variant {
@@ -196,6 +264,10 @@ body {
 			img {
 				width: 100%;
 				border-radius: 6px;
+			}
+
+			@media screen and (max-width: $hor-mobile) {
+				width: 100%;
 			}
 		}
 

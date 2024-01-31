@@ -1,5 +1,5 @@
 const startQuiz = document.querySelector(".button");
-const quiz = document.querySelector(".popup");
+const quiz = document.querySelector(".popup-quiz");
 const closeQuiz = quiz.querySelector(".quiz__close");
 const questions = quiz.querySelectorAll(".question");
 const pageButton = quiz.querySelector(".quiz__button");
@@ -69,13 +69,13 @@ pageButton.addEventListener("click", () => {
 });
 
 function openPopup(currentPopup) {
-	currentPopup.classList.add("popup_opened");
+	currentPopup.classList.add("popup-quiz_opened");
 	currentPopup.addEventListener("click", handleOverlayClick);
 	window.addEventListener("keydown", closeByEscape);
 }
 
 function closePopup(currentPopup) {
-	currentPopup.classList.remove("popup_opened");
+	currentPopup.classList.remove("popup-quiz_opened");
 	window.removeEventListener("keydown", closeByEscape);
 }
 
@@ -89,7 +89,7 @@ function handleOverlayClick(event) {
 
 function closeByEscape(event) {
 	if (event.key === "Escape") {
-		const openedPopUp = document.querySelector(".popup_opened");
+		const openedPopUp = document.querySelector(".popup-quiz_opened");
 		closePopup(openedPopUp);
 	}
 }
