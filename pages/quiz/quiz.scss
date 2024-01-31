@@ -28,6 +28,24 @@ body {
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+
+	.button {
+		padding: 16px 54px;
+		border-radius: 6px;
+		background: #b5e916;
+		transition: 0.3s;
+		outline: none;
+		border: none;
+		cursor: pointer;
+
+		&:hover {
+			transition: 0.3s;
+			background: #d9fe63;
+		}
+	}
 }
 
 .popup {

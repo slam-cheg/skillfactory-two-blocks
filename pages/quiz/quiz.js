@@ -130,17 +130,37 @@ function countPageAnswers(page) {
 		pageButton.textContent = "К результату";
 	}
 	if (quizPage === 16) {
-		console.log(variants);
-		return variants;
+		result(variants);
+	} else {
+		currentPage.classList.remove("question_active");
+		currentPage.classList.add("question_deactive");
+	
+		nextPage.classList.remove("question_deactive");
+		nextPage.classList.add("question_active");
+	
+		quizPage++;
+	
+		pageCounter.textContent = quizPage;
 	}
 
-	currentPage.classList.remove("question_active");
-	currentPage.classList.add("question_deactive");
 
-	nextPage.classList.remove("question_deactive");
-	nextPage.classList.add("question_active");
+}
 
-	quizPage++;
+function result(variants) {
+	let maxNum = 0;
+	let resultVariant = "";
 
-	pageCounter.textContent = quizPage;
+	for (let key in variants) {
+
+		console.log(variants[key]["score"])
+
+		if (variants[key]["score"] > maxNum) {
+			maxNum = variants[key]["score"];
+			resultVariant = key;
+		}
+	}
+
+	// console.log(variants[resultVariant]["url"]);
+
+	window.location.href = variants[resultVariant]["url"]
 }
