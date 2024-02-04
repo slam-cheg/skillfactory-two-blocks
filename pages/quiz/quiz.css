@@ -174,7 +174,7 @@ body {
   .quiz {
     top: 90px;
     position: relative;
-    min-height: unset;
+    min-height: 832px;
   }
 }
 .quiz__close {
