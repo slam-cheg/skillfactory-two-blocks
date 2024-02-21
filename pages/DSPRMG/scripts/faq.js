@@ -1,9 +1,6 @@
-const outerAccords = document.querySelectorAll(".accord-outer");
-// const programAccord = document.querySelector(".program__accord-wrapper");
-// const programAccordItems = programAccord.querySelectorAll(".accord-inner__element");
+const outerAccordsFaq = document.querySelectorAll(".accord-outer");
 
-
-outerAccords.forEach((accord) => {
+outerAccordsFaq.forEach((accord) => {
 	const outerAccordElement = accord.querySelector(".accord-outer__element");
 	const outerAccordHeader = outerAccordElement.querySelector(".accord-header_outer");
 	const innerAccords = outerAccordElement.querySelectorAll(".accord-inner");
@@ -21,14 +18,7 @@ outerAccords.forEach((accord) => {
 	});
 });
 
-// programAccordItems.forEach((element) => {
-// 	const programAccordHeader = element.querySelector(".accord-header");
-// 	programAccordHeader.addEventListener("click", () => {
-// 		handlerAccordToggle(element);
-// 	});
-// });
-
-function handlerAccordToggle(accord) {
+export default function handlerAccordToggle(accord) {
 	accord.classList.toggle("accord-opened");
 	accord.classList.toggle("accord-closed");
 }

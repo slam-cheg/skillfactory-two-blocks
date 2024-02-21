@@ -1543,7 +1543,7 @@
 		background: #dde6e7;
 		padding: 30px !important;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		list-style: none;
 		column-gap: 58px;
 
@@ -1565,6 +1565,7 @@
 		font-weight: 400;
 		line-height: 130%;
 		display: flex;
+		max-width: 270px;
 
 		@media screen and (max-width: 639px) {
 			font-size: 14px;
