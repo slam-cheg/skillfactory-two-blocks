@@ -8,8 +8,6 @@ function changeCookies() {
 
 		setCookie(cookieName, cookieString);
 	});
-
-	// visited - хранится только одну сессию
 }
 
 function setCookie(name, value) {
