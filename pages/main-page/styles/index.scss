@@ -397,7 +397,7 @@
 		picture {
 			position: relative;
 			max-width: 466px;
-			height: 539px;
+			height: 553px;
 			object-fit: cover;
 
 			@media screen and (max-width: 959px) {
@@ -528,11 +528,10 @@
 			height: 432px;
 		}
 
-		@media screen and (max-width: 479px) {
-			width: 320px;
-			left: -10px;
-			border-radius: 0;
-		}
+		// @media screen and (max-width: 479px) {
+		// 	width: 320px;
+		// 	left: -10px;
+		// }
 
 		img {
 			position: absolute;
@@ -1103,7 +1102,7 @@
 }
 
 .rentgen {
-	margin-bottom: 115px;
+	margin-bottom: calc(115px - 47px);
 
 	@media screen and (max-width: 639px) {
 		margin-bottom: 56px;
@@ -1119,6 +1118,11 @@
 		@media screen and (max-width: 959px) {
 			padding: 30px 20px 46px 20px;
 		}
+
+		// @media screen and (max-width: 479px) {
+		// 	width: 320px;
+		// 	left: -10px;
+		// }
 	}
 	.h2-title {
 		margin-bottom: 40px;

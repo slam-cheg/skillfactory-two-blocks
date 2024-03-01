@@ -430,7 +430,7 @@
 .main .main__pic picture {
   position: relative;
   max-width: 466px;
-  height: 539px;
+  height: 553px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -566,13 +566,6 @@
 @media screen and (max-width: 639px) {
   .courses .card {
     height: 432px;
-  }
-}
-@media screen and (max-width: 479px) {
-  .courses .card {
-    width: 320px;
-    left: -10px;
-    border-radius: 0;
   }
 }
 .courses .card img {
@@ -1096,7 +1089,7 @@
 }
 
 .rentgen {
-  margin-bottom: 115px;
+  margin-bottom: 68px;
 }
 @media screen and (max-width: 639px) {
   .rentgen {
