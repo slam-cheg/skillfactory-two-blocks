@@ -1,4 +1,4 @@
-const startQuiz = document.querySelector(".quiz-start-button");
+//const startQuiz = document.querySelector(".quiz-start-button");
 const quiz = document.querySelector(".quiz-wrapper");
 const closeQuiz = quiz.querySelector(".quiz__close");
 const questions = quiz.querySelectorAll(".question");
@@ -49,9 +49,9 @@ const variants = {
 	},
 };
 
-startQuiz.addEventListener("click", () => {
-	openPopup(quiz);
-});
+// startQuiz.addEventListener("click", () => {
+// 	openPopup(quiz);
+// });
 closeQuiz.addEventListener("click", () => {
 	closePopup(quiz);
 });
@@ -117,6 +117,10 @@ function countPageAnswers(page) {
 			nextPage = question;
 		}
 	});
+
+	if(page === 13) {
+		debugger
+	}
 	if (page < 13) {
 		scores.forEach((score) => {
 			variants[score]["score"] += 1;
@@ -160,5 +164,5 @@ function result(variants) {
 
 	// console.log(variants[resultVariant]["url"]);
 
-	window.location.href = variants[resultVariant]["url"];
+	//window.location.href = variants[resultVariant]["url"];
 }
