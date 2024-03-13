@@ -49,12 +49,10 @@ const variants = {
 	},
 };
 
-// startQuiz.addEventListener("click", () => {
-// 	openPopup(quiz);
-// });
 closeQuiz.addEventListener("click", () => {
 	closePopup(quiz);
 });
+
 questions.forEach((question) => {
 	const pageAnswers = question.querySelectorAll(".question__variant");
 	pageAnswers.forEach((answer) => {
@@ -107,7 +105,6 @@ function setActive(pageAnswers, currentAnswer) {
 function countPageAnswers(page) {
 	let scores, currentVariant, currentPage, nextPage;
 	questions.forEach((question) => {
-		//if (Number(question.dataset.page) === page) {
 		if (question.classList.contains("question_active")) {
 			currentVariant = question.querySelector(".question__variant_checked");
 			scores = currentVariant.dataset.scores.split(",");
@@ -161,8 +158,4 @@ function result(variants) {
 			resultVariant = key;
 		}
 	}
-
-	// console.log(variants[resultVariant]["url"]);
-
-	//window.location.href = variants[resultVariant]["url"];
 }
