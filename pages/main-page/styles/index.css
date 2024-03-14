@@ -3356,10 +3356,21 @@
 }
 .higher-education__cards {
   display: grid;
+  max-width: 462px;
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 12px;
+}
+@media screen and (max-width: 1199px) {
+  .higher-education__cards {
+    max-width: 442px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .higher-education__cards {
+    max-width: unset;
+  }
 }
 @media screen and (max-width: 639px) {
   .higher-education__cards {

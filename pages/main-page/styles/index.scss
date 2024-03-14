@@ -3279,7 +3279,7 @@
 		margin-bottom: 40px;
 
 		@media screen and (max-width: 959px) {
-			flex-direction: column;	
+			flex-direction: column;
 		}
 
 		@media screen and (max-width: 639px) {
@@ -3311,10 +3311,19 @@
 
 	&__cards {
 		display: grid;
+		max-width: 462px;
 		width: 100%;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		gap: 12px;
+
+		@media screen and (max-width: 1199px) {
+			max-width: 442px;
+		}
+
+		@media screen and (max-width: 959px) {
+			max-width: unset;
+		}
 
 		@media screen and (max-width: 639px) {
 			gap: 8px;
@@ -3354,11 +3363,11 @@
 		color: #fff !important;
 		text-decoration: none;
 		padding: 18px 76px 16px 76px;
-		transition: .3s;
+		transition: 0.3s;
 
 		&:hover {
 			background: #00594f;
-			transition: .3s;
+			transition: 0.3s;
 		}
 
 		@media screen and (max-width: 639px) {
