@@ -147,6 +147,7 @@ function countPageAnswers(page) {
 }
 
 function result(variants) {
+	debugger
 	let maxNum = 0;
 	let resultVariant = "";
 

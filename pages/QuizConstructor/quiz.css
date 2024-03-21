@@ -145,6 +145,7 @@
 .quiz {
   padding: 54px 48px 26px 48px;
   background: #fff;
+  min-height: 832px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -159,6 +160,7 @@
     position: relative;
     padding: 34px 18px;
     margin: 75px 0;
+    min-height: 80vh;
   }
 }
 @media screen and (max-height: 1019px) {
