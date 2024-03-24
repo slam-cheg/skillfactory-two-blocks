@@ -22,15 +22,17 @@ const quizData = {
 			url: "https://free.skillfactory.ru/burnout_result_high",
 		},
 	},
-	validationToVariants: ["B", "C"], // Сюда пишем варианты которым показываем валидативные вопросы если они набрали большее количество баллов
+	validationToVariants: ["B", "C"], // Сюда в виде массива пишем варианты которым показываем валидативные вопросы если они набрали большее количество баллов
 	questions: [
 		// Указываем вопросы в виде массива из объектов
 		{
 			question: "В конце рабочего дня я чувствую себя как выжатый лимон", // Сам вопрос
-			type: "usual", // Тип вопроса. usual - обычный текстовый, image - с картинками, validation - валидативный, last - последний вопрос перед валидацией, lastUsual - последний вопрос не валидационный
+			type: "usual", // Тип вопроса. usual - обычный текстовый, image - с картинками
+			validation: "false", // Вопрос для валидации, true/false
+			position: "normal", // Тип позиции вопроса в тесте. normal - обычный порядковый вопрос, last - последний вопрос всего теста, lastUsual - последний вопрос не валидационный
 			length: "short", // Указываем длину вариантов ответа. short - короткие, однословные, long - длинные многословные
-			variation: "unset", // Указываем если этот вопрос появляется по условию. unset - не выставлено (обычный вопрос), цифра - порядковый номер ответа из предыдущего вопроса
-			variable: "false", // Является ли вопрос вариативным (после него вопросы разные в зависимости от ответа). Может быть true или false
+			variation: "unset", // Указываем если этот вопрос появляется по условию. unset - не выставлено (обычный вопрос), цифра - порядковый номер ответа из предыдущего вопроса (начиная с 1)
+			variable: "true", // Является ли вопрос вариативным (после него вопросы разные в зависимости от ответа). Может быть true или false
 			variants: [
 				// Указываем варианты в виде массива из объектов
 				{
@@ -57,10 +59,12 @@ const quizData = {
 			],
 		},
 		{
-			question: "Ощущение, что я живу от выходных до выходных",
+			question: "Var 1",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "short",
-			variation: "unset",
+			variation: "1",
 			variable: "false",
 			variants: [
 				{
@@ -86,10 +90,12 @@ const quizData = {
 			],
 		},
 		{
-			question: "Я могу эмоционально срываться на коллег в течение рабочего дня",
+			question: "Var 2",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "short",
-			variation: "unset",
+			variation: "2",
 			variable: "false",
 			variants: [
 				{
@@ -115,10 +121,12 @@ const quizData = {
 			],
 		},
 		{
-			question: "Начался новый рабочий день. Мое состояние и эмоции:",
+			question: "Var 3",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "long",
-			variation: "unset",
+			variation: "3",
 			variable: "false",
 			variants: [
 				{
@@ -136,10 +144,12 @@ const quizData = {
 			],
 		},
 		{
-			question: "Мне хочется общаться с коллегами и делиться с ними новостями",
+			question: "Var 4",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "short",
-			variation: "unset",
+			variation: "4",
 			variable: "false",
 			variants: [
 				{
@@ -165,10 +175,12 @@ const quizData = {
 			],
 		},
 		{
-			question: "После работы хочется посвятить время себе и ни с кем не разговаривать",
+			question: "Var 5",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "short",
-			variation: "unset",
+			variation: "5",
 			variable: "false",
 			variants: [
 				{
@@ -196,6 +208,8 @@ const quizData = {
 		{
 			question: "Я могу разрешить конфликт в команде на работе",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "short",
 			variation: "unset",
 			variable: "false",
@@ -225,6 +239,8 @@ const quizData = {
 		{
 			question: "Если передо мной ставят кропотливую и требующую большого внимания задачу, я...",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "long",
 			variation: "unset",
 			variable: "false",
@@ -246,6 +262,8 @@ const quizData = {
 		{
 			question: "Мне говорят: «Я вижу искру в твоих глазах от работы»",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "short",
 			variation: "unset",
 			variable: "false",
@@ -275,6 +293,8 @@ const quizData = {
 		{
 			question: "Я раздражаюсь на коллег, которые медленно выполняют свою работу",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "short",
 			variation: "unset",
 			variable: "false",
@@ -304,6 +324,8 @@ const quizData = {
 		{
 			question: "Я чувствую эмоциональный подъем на работе",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "long",
 			variation: "unset",
 			variable: "false",
@@ -325,6 +347,8 @@ const quizData = {
 		{
 			question: "Я люблю свою работу и вижу ее ценность",
 			type: "usual",
+			validation: "false",
+			position: "normal",
 			length: "short",
 			variation: "unset",
 			variable: "false",
@@ -353,7 +377,9 @@ const quizData = {
 		},
 		{
 			question: "У меня появляются мысли сменить работу или направление моей работы",
-			type: "lastUsual",
+			type: "usual",
+			validation: "false",
+			position: "lastUsual",
 			length: "short",
 			variation: "unset",
 			variable: "false",
@@ -382,7 +408,9 @@ const quizData = {
 		},
 		{
 			question: "Сколько вам лет?",
-			type: "validation",
+			type: "usual",
+			validation: "true",
+			position: "normal",
 			length: "short",
 			variation: "unset",
 			variable: "false",
@@ -412,7 +440,9 @@ const quizData = {
 		},
 		{
 			question: "Где вы сейчас живете?",
-			type: "validation",
+			type: "usual",
+			validation: "true",
+			position: "normal",
 			length: "long",
 			variation: "unset",
 			variable: "false",
@@ -442,7 +472,9 @@ const quizData = {
 		},
 		{
 			question: "Чем вам интересна сфера IT или дизайна?",
-			type: "validation",
+			type: "usual",
+			validation: "true",
+			position: "normal",
 			length: "long",
 			variation: "unset",
 			variable: "false",
@@ -475,7 +507,9 @@ const quizData = {
 		},
 		{
 			question: "Рассматриваете ли вы дополнительное обучение?",
-			type: "validation",
+			type: "usual",
+			validation: "true",
+			position: "normal",
 			length: "long",
 			variation: "unset",
 			variable: "false",
@@ -496,7 +530,9 @@ const quizData = {
 		},
 		{
 			question: "Сколько вы готовы инвестировать в свое обучение в год, если решите начать учиться?",
-			type: "validation",
+			type: "usual",
+			validation: "true",
+			position: "normal",
 			length: "long",
 			variation: "unset",
 			variable: "false",
@@ -520,7 +556,9 @@ const quizData = {
 		},
 		{
 			question: "Что для вас наиболее важно при выборе обучения?",
-			type: "last",
+			type: "usual",
+			validation: "true",
+			position: "last",
 			length: "long",
 			variation: "unset",
 			variable: "false",
@@ -570,9 +608,11 @@ pageButton.addEventListener("click", () => {
 });
 
 function createLayout() {
+	let variationPage;
+	let page = 1;
 	quizData.questions.forEach((question) => {
 		let newQuestion, variant;
-		if (question.type === "usual" || question.type === "validation" || question.type === "last" || question.type === "lastUsual") {
+		if (question.type === "usual") {
 			newQuestion = textQuestion.cloneNode(true);
 			variant = questionsTemplates.querySelector("#variant-usual");
 		}
@@ -587,23 +627,39 @@ function createLayout() {
 			const newVariant = variant.cloneNode(true);
 			const variantTitle = newVariant.querySelector(".question__text").querySelector("p");
 
-			if (question.type === "usual" || question.type === "lastUsual") {
+			if (question.validation === "false") {
 				newVariant.dataset.scores = vrnt.scores.join(",");
+
+				if (question.type === "image") {
+					const variantImage = newVariant.querySelector("img");
+					variantImage.src = vrnt.image;
+				}
 			}
-			if (question.type === "image") {
-				const variantImage = newVariant.querySelector("img");
-				variantImage.src = vrnt.image;
-			}
+
 			variantTitle.textContent = vrnt.value;
 			variantsContainer.appendChild(newVariant);
 		});
 
 		questionTitle.textContent = question.question;
 		newQuestion.dataset.type = question.type;
-		newQuestion.dataset.page = `${quizData.questions.indexOf(question) + 1}`;
+		newQuestion.dataset.page = page;
 		newQuestion.dataset.length = question.length;
 		newQuestion.dataset.variation = question.variation;
 		newQuestion.dataset.variable = question.variable;
+		newQuestion.dataset.position = question.position;
+		newQuestion.dataset.validation = question.validation;
+
+		if(question.variable === "true") {
+			variationPage = newQuestion.dataset.page;
+			page++
+		}
+
+		if(question.variation !== "unset") {
+			newQuestion.classList.add(`question-${variationPage}_variation`)
+			newQuestion.dataset.page = Number(variationPage) + 1
+		} else {
+			page++
+		}
 
 		if (question.length === "long") {
 			newQuestion.classList.add("question_long-text");
@@ -655,45 +711,63 @@ function setActive(pageAnswers, currentAnswer) {
 }
 
 function countPageAnswers(page) {
-	let scores, currentVariant, currentPage, nextPage, resultVariant;
+	const openedPopUp = document.querySelector(".quiz-wrapper_opened");
+	let scores, currentVariant, currentPage, nextPage, resultVariant, currentVariantIndex;
+
 	questions.forEach((question) => {
 		if (question.classList.contains("question_active")) {
+			const allVariants = question.querySelectorAll(".question__variant");
 			currentVariant = question.querySelector(".question__variant_checked");
 			currentPage = question;
-			if (currentPage.dataset.type === "usual" || currentPage.dataset.type === "lastUsual") {
+			if (currentPage.dataset.validation === "false") {
 				scores = currentVariant.dataset.scores.split(",");
 			}
+			
+			for(let i = 0; i < allVariants.length; i++) {
+				if(allVariants[i] === currentVariant) {
+					currentVariantIndex = i + 1;
+					break;
+				}
+			}
 		}
+
 		if (Number(question.dataset.page) === page + 1 && quizPage < questions.length) {
 			nextPage = question;
 		}
 	});
 
-	if (currentPage.dataset.type === "usual" || currentPage.dataset.type === "lastUsual") {
+	if (currentPage.dataset.validation === "false") {
 		scores.forEach((score) => {
 			quizData.variants[score]["score"] += 1;
 		});
 	}
+
 	if (currentPage.dataset.variable === "true") {
-		const variant = currentVariant.dataset.variation;
-		nextPage = document.querySelector(`[data-variation='${quizPage + 1}.${variant}']`);
+		const allVariations = document.querySelectorAll(`.question-${page}_variation`);
+		allVariations.forEach(variation => {
+			if(variation.dataset.variation === `${currentVariantIndex}`) {
+				nextPage = variation;
+			}
+		})
 	}
+
 	if (page === questions.length - 1) {
 		pageButton.textContent = "К результату";
 	}
+
 	if (nextPage == undefined) {
+		resultVariant = result(quizData.variants);
 		redirect(resultUrl, resultVariant);
-		
-		const openedPopUp = document.querySelector(".quiz-wrapper_opened");
 		closePopup(openedPopUp);
+		return;
 	}
-	if (currentPage.dataset.type === "lastUsual") {
+
+	if (currentPage.dataset.position === "lastUsual") {
 		resultVariant = result(quizData.variants);
 		if (!quizData.validationToVariants.find((el) => el === resultVariant)) {
 			redirect(resultUrl, resultVariant);
-
-			const openedPopUp = document.querySelector(".quiz-wrapper_opened");
 			closePopup(openedPopUp);
+			return;
 		}
 	}
 	currentPage.classList.remove("question_active");
