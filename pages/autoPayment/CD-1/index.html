@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="Ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>autoPayments</title>
+		<link rel="stylesheet" href="./autoPayments.css" />
+	</head>
+	<body style="background-color: #f4f4f4">
+		<section class="autoPayments">
+			<div class="inner-wrapper">
+				<div class="autoPayments__wrapper">
+					<div class="autoPayments__price">
+						<h2 class="h2-title">стоимость курса</h2>
+						<div class="autoPayments__switch">
+							<div class="autoPayments__tabs">
+								<button class="autoPayments__tab autoPayments__tab_active" id="tab-installment">В рассрочку</button>
+								<button class="autoPayments__tab" id="tab-full">Полная оплата</button>
+							</div>
+							<div class="autoPayments__content">
+								<div class="autoPayments__card autoPayments__card_active" id="tab-installment">
+									<div class="autoPayments__prices-wrapper">
+										<p class="autoPayments__old-price price_installment"><span>12 452</span>&nbsp;₽/мес</p>
+										<p class="autoPayments__new-price price_installment_discount"><span>6 565</span>&nbsp;₽/мес</p>
+										<p class="autoPayments__disclamer">при рассрочке на 12 месяцев, первый платеж через месяц</p>
+									</div>
+									<div class="autoPayments__sale">
+										<span class="discount_auto">-10%</span>
+										<span class="discount_until">до 14 февраля</span>
+									</div>
+								</div>
+								<div class="autoPayments__card" id="tab-full">
+									<div class="autoPayments__prices-wrapper">
+										<p class="autoPayments__old-price price_full"><span>132 452</span>&nbsp;₽</p>
+										<p class="autoPayments__new-price price_full_discount"><span>105 600</span>&nbsp;₽</p>
+									</div>
+									<div class="autoPayments__sale">
+										<span>-10%</span>
+										<p>Дополнительная скидка при оплате всей суммы сразу</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="autoPayments__form">
+						<h2 class="h2-title">Перейти к оплате</h2>
+
+						<!-- FORM's PLACE -->
+
+						<form id="form725192337" name="form725192337" role="form" action="" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_3" data-success-callback="mySuccessForm">
+							<!-- NO ONE SERVICES CONNECTED -->
+							<div class="js-successbox t-form__successbox t-text t-text_md" aria-live="polite" style="display: none"></div>
+							<div class="t-form__inputsbox t-form__inputsbox_vertical-form t-form__inputsbox_inrow">
+								<div class="t-input-group t-input-group_nm" data-input-lid="0118200886441" data-field-type="nm">
+									<div class="t-input-block">
+										<input type="text" autocomplete="name" name="Name" id="input_0118200886441" class="t-input js-tilda-rule" value="" placeholder="Имя" data-tilda-req="1" aria-required="true" data-tilda-rule="name" aria-describedby="error_0118200886441" style="color: #000000; border: 1px solid #000000" />
+										<div class="t-input-error" aria-live="polite" id="error_0118200886441"></div>
+									</div>
+								</div>
+								<div class="t-input-group t-input-group_ph" data-input-lid="0118200886442" data-field-type="ph">
+									<div class="t-input-block">
+										<input type="tel" autocomplete="tel" name="Phone" id="input_0118200886442" class="t-input js-tilda-rule" value="" placeholder="Телефон" data-tilda-req="1" aria-required="true" data-tilda-rule="phone" pattern="[0-9]*" aria-describedby="error_0118200886442" style="color: #000000; border: 1px solid #000000" />
+										<div class="t-input-error" aria-live="polite" id="error_0118200886442"></div>
+									</div>
+								</div>
+								<div class="t-input-group t-input-group_em" data-input-lid="0118200886440" data-field-type="em">
+									<div class="t-input-block">
+										<input type="email" autocomplete="email" name="Email" id="input_0118200886440" class="t-input js-tilda-rule" value="" placeholder="Почта" data-tilda-req="1" aria-required="true" data-tilda-rule="email" aria-describedby="error_0118200886440" style="color: #000000; border: 1px solid #000000" />
+										<div class="t-input-error" aria-live="polite" id="error_0118200886440"></div>
+									</div>
+								</div>
+								<div class="t-form__errorbox-middle">
+									<!--noindex-->
+									<div class="js-errorbox-all t-form__errorbox-wrapper" style="display: none" data-nosnippet="" tabindex="-1" aria-label="Ошибки при заполнении формы">
+										<ul role="list" class="t-form__errorbox-text t-text t-text_md">
+											<li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li>
+											<li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li>
+											<li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li>
+											<li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li>
+											<li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li>
+											<li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li>
+											<li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li>
+										</ul>
+									</div>
+									<!--/noindex-->
+								</div>
+								<div class="t-form__submit"><button type="submit" class="t-submit" style="color: #043933; background-color: #b5e916; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px" data-field="buttontitle" data-buttonfieldset="button">Оплатить курс</button></div>
+							</div>
+							<div class="t-form__errorbox-bottom">
+								<!--noindex-->
+								<div class="js-errorbox-all t-form__errorbox-wrapper" style="display: none" data-nosnippet="" tabindex="-1" aria-label="Ошибки при заполнении формы">
+									<ul role="list" class="t-form__errorbox-text t-text t-text_md">
+										<li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li>
+										<li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li>
+										<li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li>
+										<li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li>
+										<li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li>
+										<li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li>
+										<li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li>
+									</ul>
+								</div>
+								<!--/noindex-->
+							</div>
+							<div style="position: absolute; left: -5000px; bottom: 0; display: none"><input type="text" name="form-spec-comments" value="Its good" class="js-form-spec-comments" tabindex="-1" /></div>
+							<input type="hidden" name="mb_uuid" value="48aad083-503e-499d-b134-0cae3f8b0a1a" />
+						</form>
+
+						<!--Form end -->
+
+						<p class="autoPayments__afterForm">Нажимая кнопку &laquo;Оплатить курс&raquo;, я&nbsp;даю согласие на&nbsp;обработку моих персональных данных и&nbsp;соглашаюсь с&nbsp;<a href="https://skillfactory.ru/position_of_user_personal_data" target="_blank">Положением о&nbsp;порядке хранения и&nbsp;защиты персональных данных пользователей</a></p>
+					</div>
+				</div>
+				<div class="autoPayments__bottom">
+					<p class="autoPayments__text">Если нужна помощь, оставьте заявку на&nbsp;консультацию. Это бесплатно.</p>
+					<a href="#" class="autoPayments__link">Получить консультацию</a>
+				</div>
+			</div>
+		</section>
+
+		<script src="./autoPayments.js"></script>
+	</body>
+</html>
