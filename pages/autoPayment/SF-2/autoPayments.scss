@@ -270,7 +270,7 @@
 		background: none;
 		border: none;
 		outline: none;
-		padding: 18px 20px;
+		padding: 18px 0;
 		flex-grow: 1;
 		transition: .3s;
 		font-family: $font;
@@ -282,7 +282,7 @@
 		}
 
 		@media screen and (max-width: $hor-mobile) {
-			padding: 8px 12px;
+			padding: 8px 0;
 			font-size: 10px;
 		}
 
