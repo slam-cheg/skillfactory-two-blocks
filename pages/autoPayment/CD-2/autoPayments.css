@@ -327,6 +327,61 @@
     font-size: 14px;
   }
 }
+.autoPayments__form-wrapper {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.autoPayments__form-wrapper_active {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autoPayments__form-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 4px solid #f0f0f0;
+  background: #f0f0f0;
+  gap: 10px;
+}
+@media screen and (max-width: 959px) {
+  .autoPayments__form-tabs {
+    gap: 10px;
+  }
+}
+.autoPayments__form-tab {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #161616;
+  font-family: "CoFo Sans", Arial, sans-serif;
+  font-weight: 400;
+  padding: 14px 0;
+  transition: 0.3s;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+@media screen and (max-width: 639px) {
+  .autoPayments__form-tab {
+    font-size: 14px;
+    padding: 12px 0;
+  }
+}
+.autoPayments__form-tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+.autoPayments__form-tab_active {
+  background: #fff;
+  transition: 0.3s;
+}
+.autoPayments__form-tab_active:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
 .autoPayments__form {
   background: #fff;
   padding: 34px 30px 30px 30px;
@@ -348,6 +403,7 @@
     font-size: 18px;
     line-height: 1;
     margin-bottom: 20px;
+    width: 70%;
   }
 }
 .autoPayments__form-heading {
@@ -356,6 +412,23 @@
 @media screen and (max-width: 639px) {
   .autoPayments__form-heading {
     margin-bottom: 40px;
+  }
+}
+.autoPayments__form-heading_cjm-2 {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 250px auto;
+  gap: 58px;
+}
+@media screen and (max-width: 1199px) {
+  .autoPayments__form-heading_cjm-2 {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 639px) {
+  .autoPayments__form-heading_cjm-2 {
+    margin-top: 20px;
   }
 }
 .autoPayments__form .t-form {
@@ -429,6 +502,10 @@
 }
 .autoPayments__form .t-input-group {
   margin-bottom: 10px;
+}
+.autoPayments__form #form-consult .t-submit {
+  background-color: #161616 !important;
+  color: #fff !important;
 }
 .autoPayments__afterForm {
   color: rgba(255, 255, 255, 0.7);

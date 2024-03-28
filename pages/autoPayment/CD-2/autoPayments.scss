@@ -277,6 +277,66 @@
 		}
 	}
 
+		&__form-wrapper {
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+
+		&_active {
+			position: relative;
+			visibility: visible;
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+
+	&__form-tabs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		border: 4px solid #f0f0f0;
+		background: #f0f0f0;
+		gap: 10px;
+
+		@media screen and (max-width: $ver-tablet) {
+			gap: 10px;
+		}
+	}
+
+	&__form-tab {
+		background: none;
+		border: none;
+		outline: none;
+		font-size: 16px;
+		color: #161616;
+		font-family: $font-cofo;
+		font-weight: 400;
+		padding: 14px 0;
+		transition: 0.3s;
+		cursor: pointer;
+		text-transform: lowercase;
+
+		@media screen and (max-width: $hor-mobile) {
+			font-size: 14px;
+			padding: 12px 0;
+		}
+
+		&:hover {
+			background: rgb(#fff, 0.2);
+			transition: 0.3s;
+		}
+
+		&_active {
+			background: #fff;
+			transition: 0.3s;
+
+			&:hover {
+				background: rgb(#fff, 0.7);
+				transition: 0.3s;
+			}
+		}
+	}
+
 	&__form {
 		background: #fff;
 		padding: 34px 30px 30px 30px;
@@ -296,6 +356,7 @@
 				font-size: 18px;
 				line-height: 1;
 				margin-bottom: 20px;
+				width: 70%;
 			}
 		}
 
@@ -304,6 +365,22 @@
 
 			@media screen and (max-width: $hor-mobile) {
 				margin-bottom: 40px;
+			}
+
+			&_cjm-2 {
+				margin-top: 32px;
+				display: grid;
+				grid-template-columns: 250px auto;
+				gap: 58px;
+
+				@media screen and (max-width: $hor-tablet) {
+					gap: 0;
+					grid-template-columns: 1fr;
+				}
+
+				@media screen and (max-width: $hor-mobile) {
+					margin-top: 20px;
+				}
 			}
 		}
 
@@ -384,6 +461,13 @@
 
 		.t-input-group {
 			margin-bottom: 10px;
+		}
+
+		#form-consult {
+			.t-submit {
+				background-color: #161616 !important;
+				color: #fff !important;
+			}
 		}
 	}
 
