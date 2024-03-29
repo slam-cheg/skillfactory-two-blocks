@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>autoPayments</title>
-		<link rel="stylesheet" href="./autoPayments.css" />
+		<link rel="stylesheet" href="../autoPayments.css" />
 	</head>
 	<body style="background-color: #f4f4f4">
 		<section class="autoPayments">
@@ -53,7 +53,7 @@
 						</ul>
 					</div>
 					<div class="autoPayments__form">
-						<div class="autoPayments__form-heading">
+						<div class="autoPayments__form-heading autoPayments__form-heading_cjm-1">
 							<h2 class="h2-title">Оплатить курс</h2>
 							<div class="autoPayments__disclamer autoPayments__disclamer_form">
 								<p>дата старта: <span>5 марта</span></p>
@@ -63,7 +63,7 @@
 
 						<!-- FORM's PLACE -->
 
-						<form id="form725192337" name="form725192337" role="form" action="" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_4" data-success-callback="mySuccessForm">
+						<form id="form725192337" name="form725192337" role="form" action="" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_3" data-success-callback="mySuccessForm">
 							<!-- NO ONE SERVICES CONNECTED -->
 							<div class="js-successbox t-form__successbox t-text t-text_md" aria-live="polite" style="display: none"></div>
 							<div class="t-form__inputsbox t-form__inputsbox_vertical-form t-form__inputsbox_inrow">
@@ -85,33 +85,6 @@
 										<div class="t-input-error" aria-live="polite" id="error_0118200886440"></div>
 									</div>
 								</div>
-								<div class="t-input-group t-input-group_cb" data-input-lid="1711629714887" data-field-type="cb">
-									<div class="t-input-block">
-										<label class="t-checkbox__control t-text t-text_xs">
-											<input type="checkbox" name="Checkbox" value="yes" class="t-checkbox js-tilda-rule" data-tilda-req="1" aria-required="true" />
-											<div class="t-checkbox__indicator"></div>
-											Я согласен с политикой конфиденциальности
-										</label>
-										<div class="t-input-error" aria-live="polite" id="error_1711629714887"></div>
-									</div>
-								</div>
-								<!--[if IE 8
-									]><style>
-										.t-checkbox__control .t-checkbox,
-										.t-radio__control .t-radio {
-											left: 0px;
-											z-index: 1;
-											opacity: 1;
-										}
-										.t-checkbox__indicator,
-										.t-radio__indicator {
-											display: none;
-										}
-										.t-img-select__control .t-img-select {
-											position: static;
-										}
-									</style><!
-								[endif]-->
 								<div class="t-form__errorbox-middle">
 									<!--noindex-->
 									<div class="js-errorbox-all t-form__errorbox-wrapper" style="display: none" data-nosnippet="" tabindex="-1" aria-label="Ошибки при заполнении формы">
@@ -145,9 +118,10 @@
 								<!--/noindex-->
 							</div>
 							<div style="position: absolute; left: -5000px; bottom: 0; display: none"><input type="text" name="form-spec-comments" value="Its good" class="js-form-spec-comments" tabindex="-1" /></div>
+							<input type="hidden" name="mb_uuid" value="48aad083-503e-499d-b134-0cae3f8b0a1a" />
 						</form>
-
-						<!--Form end -->
+						<!-- FORM END -->
+						<p class="autoPayments__afterForm">нажимая кнопку, я&nbsp;соглашаюсь с&nbsp;<a href="https://skillfactory.ru/position_of_user_personal_data" target="_blank">положением о&nbsp;персональных данных</a></p>
 					</div>
 				</div>
 				<div class="autoPayments__bottom">
@@ -157,6 +131,6 @@
 			</div>
 		</section>
 
-		<script src="../autoPayments.js"></script>
+		<script src="../../autoPayments.js"></script>
 	</body>
 </html>

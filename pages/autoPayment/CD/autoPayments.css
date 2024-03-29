@@ -166,15 +166,11 @@
   }
 }
 .autoPayments__tab:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #fff;
   transition: 0.3s;
 }
 .autoPayments__tab_active {
   background: #fff;
-  transition: 0.3s;
-}
-.autoPayments__tab_active:hover {
-  background: rgba(255, 255, 255, 0.7);
   transition: 0.3s;
 }
 .autoPayments__card {
@@ -202,6 +198,10 @@
   opacity: 1;
   visibility: visible;
   transform: translate(0);
+}
+.autoPayments__card_cjm-2 {
+  gap: 94px;
+  min-height: 268px;
 }
 .autoPayments__content {
   position: relative;
@@ -385,6 +385,8 @@
 .autoPayments__form {
   background: #fff;
   padding: 34px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 639px) {
   .autoPayments__form {
@@ -398,6 +400,9 @@
   font-weight: 500;
   margin-bottom: 20px;
 }
+.autoPayments__form .h2-title_cjm-2 {
+  margin-bottom: 0;
+}
 @media screen and (max-width: 639px) {
   .autoPayments__form .h2-title {
     font-size: 18px;
@@ -408,6 +413,9 @@
 }
 .autoPayments__form-heading {
   margin-bottom: 36px;
+}
+.autoPayments__form-heading_cjm-1 {
+  margin-bottom: auto;
 }
 @media screen and (max-width: 639px) {
   .autoPayments__form-heading {
@@ -508,10 +516,10 @@
   color: #fff !important;
 }
 .autoPayments__afterForm {
-  color: rgba(255, 255, 255, 0.7);
-  font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+  color: #939393;
+  font-family: "CoFo Sans", Arial, sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   text-transform: lowercase;
 }
@@ -522,7 +530,7 @@
 }
 .autoPayments__afterForm a {
   text-decoration: underline !important;
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: #939393 !important;
 }
 .autoPayments__bottom {
   background: #fff;
@@ -591,6 +599,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  line-height: 1;
 }
 @media screen and (max-width: 639px) {
   .autoPayments__list {

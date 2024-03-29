@@ -4,70 +4,50 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>autoPayments</title>
-		<link rel="stylesheet" href="./autoPayments.css" />
+		<link rel="stylesheet" href="../autoPayments.css" />
 	</head>
-	<body style="background-color: #f4f4f4">
+	<body>
 		<section class="autoPayments">
 			<div class="inner-wrapper">
 				<div class="autoPayments__wrapper">
 					<div class="autoPayments__price">
-						<h2 class="h2-title">стоимость курса</h2>
+						<h2 class="h2-title">Стоимость</h2>
 						<div class="autoPayments__switch">
 							<div class="autoPayments__tabs">
 								<button class="autoPayments__tab autoPayments__tab_active" id="tab-installment">В рассрочку</button>
 								<button class="autoPayments__tab" id="tab-full">Полная оплата</button>
-							</div>
-							<div class="autoPayments__sale-corner autoPayments__sale-corner_active" id="sale-installment">
-								<span class="discount_auto">-10%</span>
-								<span class="discount_until">до 14 февраля</span>
-							</div>
-							<div class="autoPayments__sale-corner" id="sale-installment">
-								<span class="discount_auto">-20%</span>
-								<span class="discount_until">до 14 февраля</span>
 							</div>
 							<div class="autoPayments__content">
 								<div class="autoPayments__card autoPayments__card_active" id="tab-installment">
 									<div class="autoPayments__prices-wrapper">
 										<p class="autoPayments__old-price price_installment"><span>12 452</span>&nbsp;₽/мес</p>
 										<p class="autoPayments__new-price price_installment_discount"><span>6 565</span>&nbsp;₽/мес</p>
-										<p class="autoPayments__disclamer">при рассрочке на 12 месяцев, первый платеж через месяц</p>
+										<p class="autoPayments__disclamer">При рассрочке на 12 мес. <br />Первый платеж через месяц</p>
 									</div>
+									<div class="autoPayments__sale"><span>-10%</span></div>
 								</div>
 								<div class="autoPayments__card" id="tab-full">
-									<div class="autoPayments__sale">
-										<p>cкидка больше при полной оплате</p>
-									</div>
 									<div class="autoPayments__prices-wrapper">
 										<p class="autoPayments__old-price price_full"><span>132 452</span>&nbsp;₽</p>
 										<p class="autoPayments__new-price price_full_discount"><span>105 600</span>&nbsp;₽</p>
 									</div>
+									<div class="autoPayments__sale">
+										<span>-10%</span>
+										<p>Дополнительная скидка при оплате всей суммы сразу</p>
+									</div>
 								</div>
 							</div>
 						</div>
-						<span class="line"></span>
-						<ul class="autoPayments__list">
-							<li class="autoPayments__list-item">5&nbsp;работ в&nbsp;портфолио</li>
-							<li class="autoPayments__list-item">10+&nbsp;топовых нейросетей</li>
-							<li class="autoPayments__list-item">онлайн-вебинары каждую неделю</li>
-							<li class="autoPayments__list-item">бесплатный доступ в&nbsp;Midjourney на&nbsp;время обучения</li>
-						</ul>
 					</div>
 					<div class="autoPayments__form">
 						<div class="autoPayments__form-tabs">
-							<button class="autoPayments__form-tab autoPayments__form-tab_active" id="form-payment">оплатить курс</button>
-							<button class="autoPayments__form-tab" id="form-consult">консультация</button>
+							<button class="autoPayments__form-tab autoPayments__form-tab_active" id="form-payment">Перейти к оплате</button>
+							<button class="autoPayments__form-tab" id="form-consult">Получить консультацию</button>
 						</div>
 						<div class="autoPayments__form-variants">
 							<div class="autoPayments__form-wrapper autoPayments__form-wrapper_active" id="form-payment">
-								<div class="autoPayments__form-heading autoPayments__form-heading_cjm-2">
-									<h2 class="h2-title">для оплаты курса заполните форму</h2>
-									<div class="autoPayments__disclamer autoPayments__disclamer_form">
-										<p>дата старта: <span>5 марта</span></p>
-										<p>длительность: <span>20 месяцев</span></p>
-									</div>
-								</div>
 								<!-- FORM 1 PLACE -->
-								<form id="form725192337" name="form725192337" role="form" action="" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_4" data-success-callback="mySuccessForm">
+								<form id="form725192337" name="form725192337" role="form" action="" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_3" data-success-callback="mySuccessForm">
 									<!-- NO ONE SERVICES CONNECTED -->
 									<div class="js-successbox t-form__successbox t-text t-text_md" aria-live="polite" style="display: none"></div>
 									<div class="t-form__inputsbox t-form__inputsbox_vertical-form t-form__inputsbox_inrow">
@@ -89,33 +69,6 @@
 												<div class="t-input-error" aria-live="polite" id="error_0118200886440"></div>
 											</div>
 										</div>
-										<div class="t-input-group t-input-group_cb" data-input-lid="1711629714887" data-field-type="cb">
-											<div class="t-input-block">
-												<label class="t-checkbox__control t-text t-text_xs">
-													<input type="checkbox" name="Checkbox" value="yes" class="t-checkbox js-tilda-rule" data-tilda-req="1" aria-required="true" />
-													<div class="t-checkbox__indicator"></div>
-													Я согласен с политикой конфиденциальности
-												</label>
-												<div class="t-input-error" aria-live="polite" id="error_1711629714887"></div>
-											</div>
-										</div>
-										<!--[if IE 8
-											]><style>
-												.t-checkbox__control .t-checkbox,
-												.t-radio__control .t-radio {
-													left: 0px;
-													z-index: 1;
-													opacity: 1;
-												}
-												.t-checkbox__indicator,
-												.t-radio__indicator {
-													display: none;
-												}
-												.t-img-select__control .t-img-select {
-													position: static;
-												}
-											</style><!
-										[endif]-->
 										<div class="t-form__errorbox-middle">
 											<!--noindex-->
 											<div class="js-errorbox-all t-form__errorbox-wrapper" style="display: none" data-nosnippet="" tabindex="-1" aria-label="Ошибки при заполнении формы">
@@ -149,19 +102,14 @@
 										<!--/noindex-->
 									</div>
 									<div style="position: absolute; left: -5000px; bottom: 0; display: none"><input type="text" name="form-spec-comments" value="Its good" class="js-form-spec-comments" tabindex="-1" /></div>
+									<input type="hidden" name="mb_uuid" value="48aad083-503e-499d-b134-0cae3f8b0a1a" />
 								</form>
 								<!-- FORM END -->
+								<p class="autoPayments__afterForm">Нажимая кнопку &laquo;Оплатить курс&raquo;, я&nbsp;даю согласие на&nbsp;обработку моих персональных данных и&nbsp;соглашаюсь с&nbsp;<a href="https://skillfactory.ru/position_of_user_personal_data" target="_blank">Положением о&nbsp;порядке хранения и&nbsp;защиты персональных данных пользователей</a></p>
 							</div>
 							<div class="autoPayments__form-wrapper" id="form-consult">
-								<div class="autoPayments__form-heading autoPayments__form-heading_cjm-2">
-									<h2 class="h2-title">для консультации заполните форму</h2>
-									<div class="autoPayments__disclamer autoPayments__disclamer_form">
-										<p>дата старта: <span>5 марта</span></p>
-										<p>длительность: <span>20 месяцев</span></p>
-									</div>
-								</div>
 								<!-- FORM 2 PLACE -->
-								<form id="form725192337" name="form725192337" role="form" action="" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_4" data-success-callback="mySuccessForm">
+								<form id="form725192337" name="form725192337" role="form" action="" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_3" data-success-callback="mySuccessForm">
 									<!-- NO ONE SERVICES CONNECTED -->
 									<div class="js-successbox t-form__successbox t-text t-text_md" aria-live="polite" style="display: none"></div>
 									<div class="t-form__inputsbox t-form__inputsbox_vertical-form t-form__inputsbox_inrow">
@@ -183,33 +131,6 @@
 												<div class="t-input-error" aria-live="polite" id="error_0118200886440"></div>
 											</div>
 										</div>
-										<div class="t-input-group t-input-group_cb" data-input-lid="1711629714887" data-field-type="cb">
-											<div class="t-input-block">
-												<label class="t-checkbox__control t-text t-text_xs">
-													<input type="checkbox" name="Checkbox" value="yes" class="t-checkbox js-tilda-rule" data-tilda-req="1" aria-required="true" />
-													<div class="t-checkbox__indicator"></div>
-													Я согласен с политикой конфиденциальности
-												</label>
-												<div class="t-input-error" aria-live="polite" id="error_1711629714887"></div>
-											</div>
-										</div>
-										<!--[if IE 8
-											]><style>
-												.t-checkbox__control .t-checkbox,
-												.t-radio__control .t-radio {
-													left: 0px;
-													z-index: 1;
-													opacity: 1;
-												}
-												.t-checkbox__indicator,
-												.t-radio__indicator {
-													display: none;
-												}
-												.t-img-select__control .t-img-select {
-													position: static;
-												}
-											</style><!
-										[endif]-->
 										<div class="t-form__errorbox-middle">
 											<!--noindex-->
 											<div class="js-errorbox-all t-form__errorbox-wrapper" style="display: none" data-nosnippet="" tabindex="-1" aria-label="Ошибки при заполнении формы">
@@ -225,7 +146,7 @@
 											</div>
 											<!--/noindex-->
 										</div>
-										<div class="t-form__submit"><button type="submit" class="t-submit" style="color: #043933; background-color: #b5e916; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px" data-field="buttontitle" data-buttonfieldset="button">оставить заявку</button></div>
+										<div class="t-form__submit"><button type="submit" class="t-submit" style="color: #043933; background-color: #b5e916; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px" data-field="buttontitle" data-buttonfieldset="button">Отправить заявку</button></div>
 									</div>
 									<div class="t-form__errorbox-bottom">
 										<!--noindex-->
@@ -243,8 +164,10 @@
 										<!--/noindex-->
 									</div>
 									<div style="position: absolute; left: -5000px; bottom: 0; display: none"><input type="text" name="form-spec-comments" value="Its good" class="js-form-spec-comments" tabindex="-1" /></div>
+									<input type="hidden" name="mb_uuid" value="48aad083-503e-499d-b134-0cae3f8b0a1a" />
 								</form>
 								<!-- FORM END -->
+								<p class="autoPayments__afterForm">Нажимая кнопку &laquo;Отправить заявку&raquo;, я&nbsp;даю согласие на&nbsp;обработку моих персональных данных и&nbsp;соглашаюсь с&nbsp;<a href="https://skillfactory.ru/position_of_user_personal_data" target="_blank">Положением о&nbsp;порядке хранения и&nbsp;защиты персональных данных пользователей</a></p>
 							</div>
 						</div>
 					</div>
@@ -252,6 +175,6 @@
 			</div>
 		</section>
 
-		<script src="../autoPayments.js"></script>
+		<script src="../../autoPayments.js"></script>
 	</body>
 </html>

@@ -10,8 +10,8 @@
 }
 
 .autoPayments {
-	.inner-wrapper{
-		@media screen and (max-width:$ver-mobile) {
+	.inner-wrapper {
+		@media screen and (max-width: $ver-mobile) {
 			max-width: 320px;
 		}
 	}
@@ -101,18 +101,13 @@
 		}
 
 		&:hover {
-			background: rgb(#fff, 0.2);
+			background: #fff;
 			transition: 0.3s;
 		}
 
 		&_active {
 			background: #fff;
 			transition: 0.3s;
-
-			&:hover {
-				background: rgb(#fff, 0.7);
-				transition: 0.3s;
-			}
 		}
 	}
 
@@ -140,6 +135,11 @@
 			opacity: 1;
 			visibility: visible;
 			transform: translate(0);
+		}
+
+		&_cjm-2 {
+			gap: 94px;
+			min-height: 268px;
 		}
 	}
 
@@ -212,7 +212,7 @@
 		transition: 0.3s;
 		text-transform: lowercase;
 
-		@media screen and (max-width:$hor-mobile) {
+		@media screen and (max-width: $hor-mobile) {
 			gap: 4px;
 			padding: 14px 10px;
 		}
@@ -271,13 +271,13 @@
 		display: flex;
 		flex-direction: column;
 		gap: 4px;
-		
+
 		@media screen and (max-width: $hor-mobile) {
 			font-size: 14px;
 		}
 	}
 
-		&__form-wrapper {
+	&__form-wrapper {
 		position: absolute;
 		visibility: hidden;
 		opacity: 0;
@@ -340,6 +340,8 @@
 	&__form {
 		background: #fff;
 		padding: 34px 30px 30px 30px;
+		display: flex;
+		flex-direction: column;
 
 		@media screen and (max-width: $hor-mobile) {
 			padding: 20px 14px;
@@ -352,6 +354,10 @@
 			font-weight: 500;
 			margin-bottom: 20px;
 
+			&_cjm-2 {
+				margin-bottom: 0;
+			}
+
 			@media screen and (max-width: $hor-mobile) {
 				font-size: 18px;
 				line-height: 1;
@@ -362,6 +368,10 @@
 
 		&-heading {
 			margin-bottom: 36px;
+
+			&_cjm-1 {
+				margin-bottom: auto;
+			}
 
 			@media screen and (max-width: $hor-mobile) {
 				margin-bottom: 40px;
@@ -472,10 +482,10 @@
 	}
 
 	&__afterForm {
-		color: rgb(255, 255, 255, 0.7);
-		font-family: $font;
-		font-weight: $font_helios;
-		font-size: 12px;
+		color: #939393;
+		font-family: $font-cofo;
+		font-weight: 400;
+		font-size: 14px;
 		line-height: 1;
 		text-transform: lowercase;
 
@@ -485,7 +495,7 @@
 
 		a {
 			text-decoration: underline !important;
-			color: rgb(255, 255, 255, 0.7) !important;
+			color: #939393 !important;
 		}
 	}
 
@@ -555,6 +565,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
+		line-height: 1;
 
 		@media screen and (max-width: $hor-mobile) {
 			gap: 6px;
