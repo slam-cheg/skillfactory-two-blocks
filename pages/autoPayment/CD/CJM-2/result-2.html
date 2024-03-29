@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LANDING-3042</title>
+	</head>
+	<body>
+		<style>
+			@charset "UTF-8";
+			@font-face {
+				font-family: "CoFo Sans";
+				src: url("https://static.tildacdn.com/tild3965-3764-4731-a634-636639303036/CoFoSans-Regular.woff");
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "CoFo Sans";
+				src: url("https://static.tildacdn.com/tild3934-3534-4238-b733-363661636632/CoFoSans-Medium.woff");
+				font-weight: 500;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "CoFo Sans";
+				src: url("https://static.tildacdn.com/tild6631-6237-4138-b738-353333613266/CoFoSans-Bold.woff");
+				font-weight: 700;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "CoFo Sans";
+				src: url("./CoFoSans-Black.woff");
+				font-weight: 900;
+				font-style: normal;
+			}
+			.inner-wrapper {
+				width: 1160px;
+				margin: 0 auto;
+				position: relative;
+			}
+			@media screen and (max-width: 1199px) {
+				.inner-wrapper {
+					max-width: 940px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.inner-wrapper {
+					max-width: 620px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.inner-wrapper {
+					max-width: 460px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.inner-wrapper {
+					max-width: 300px;
+				}
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			@media screen and (max-width: 479px) {
+				.autoPayments .inner-wrapper {
+					max-width: 320px;
+				}
+			}
+			.autoPayments__wrapper {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 40px;
+				margin-bottom: 40px;
+			}
+			@media screen and (max-width: 959px) {
+				.autoPayments__wrapper {
+					grid-template-columns: 1fr;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__wrapper {
+					gap: 20px;
+					margin-bottom: 20px;
+				}
+			}
+			.autoPayments__switch {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.autoPayments__price {
+				background: #fff;
+				padding: 30px;
+				display: flex;
+				flex-direction: column;
+				overflow: hidden;
+				position: relative;
+			}
+			@media screen and (max-width: 959px) {
+				.autoPayments__price {
+					padding: 40px 20px 20px 20px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__price {
+					padding: 20px 14px 20px 14px;
+				}
+			}
+			.autoPayments .h2-title {
+				margin-bottom: 40px;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 500;
+				font-size: 42px;
+				line-height: 0.8;
+				color: #161616;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 1199px) {
+				.autoPayments .h2-title {
+					width: 70%;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments .h2-title {
+					font-size: 24px;
+					margin-bottom: 30px;
+					width: 40%;
+				}
+			}
+			.autoPayments__tabs {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				border: 4px solid #f0f0f0;
+				background: #f0f0f0;
+				gap: 10px;
+			}
+			.autoPayments__tab {
+				background: none;
+				border: none;
+				outline: none;
+				font-size: 16px;
+				color: #161616;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 400;
+				padding: 14px 0;
+				transition: 0.3s;
+				cursor: pointer;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__tab {
+					font-size: 14px;
+					padding: 12px 0;
+				}
+			}
+			.autoPayments__tab:hover {
+				background: #fff;
+				transition: 0.3s;
+			}
+			.autoPayments__tab_active {
+				background: #fff;
+				transition: 0.3s;
+			}
+			.autoPayments__card {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				position: absolute;
+				transition: 0.3s;
+				opacity: 0;
+				visibility: hidden;
+				bottom: 0;
+				gap: 30px;
+				min-height: 204px;
+				justify-content: flex-end;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__card {
+					min-height: 170px;
+					gap: 40px;
+				}
+			}
+			.autoPayments__card_active {
+				position: relative;
+				transition: 0.3s;
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0);
+			}
+			.autoPayments__card_cjm-2 {
+				gap: 94px;
+				min-height: 268px;
+			}
+			.autoPayments__content {
+				position: relative;
+				overflow: hidden;
+			}
+			.autoPayments__old-price {
+				color: #939393;
+				font-size: 22px;
+				font-weight: 400;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				line-height: 1;
+				text-decoration: line-through;
+				margin-bottom: 10px;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__old-price {
+					font-size: 18px;
+					margin-bottom: 14px;
+				}
+			}
+			.autoPayments__new-price {
+				color: #161616;
+				font-size: 60px;
+				font-weight: 500;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				line-height: 1;
+				margin-bottom: 4px;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__new-price {
+					font-size: 42px;
+					margin-bottom: 4px;
+				}
+			}
+			.autoPayments__new-price:last-of-type {
+				margin-bottom: 0;
+			}
+			.autoPayments__disclamer {
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-size: 16px;
+				font-weight: 400;
+				color: #939393;
+				line-height: 1;
+				text-transform: lowercase;
+			}
+			.autoPayments__sale-corner {
+				display: flex;
+				gap: 6px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				flex-direction: column;
+				background: #e0fb52;
+				padding: 18px 10px;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transition: 0.3s;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__sale-corner {
+					gap: 4px;
+					padding: 14px 10px;
+				}
+			}
+			.autoPayments__sale-corner span {
+				width: -moz-fit-content;
+				width: fit-content;
+				color: #161616;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 500;
+				font-size: 26px;
+				line-height: 1;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__sale-corner span {
+					font-size: 18px;
+				}
+			}
+			.autoPayments__sale-corner .discount_until {
+				opacity: 0.5;
+				font-size: 16px;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__sale-corner .discount_until {
+					font-size: 14px;
+				}
+			}
+			.autoPayments__sale-corner_active {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: auto;
+				transition: 0.3s;
+			}
+			.autoPayments__sale p {
+				width: 280px;
+				border-radius: 6px;
+				color: #939393;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 500;
+				font-size: 26px;
+				margin-top: 30px;
+				text-transform: lowercase;
+				line-height: 1;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__sale p {
+					font-size: 18px;
+					margin-top: 20px;
+				}
+			}
+			.autoPayments__disclamer_form {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__disclamer_form {
+					font-size: 14px;
+				}
+			}
+			.autoPayments__form-wrapper {
+				position: absolute;
+				visibility: hidden;
+				opacity: 0;
+				pointer-events: none;
+			}
+			.autoPayments__form-wrapper_active {
+				position: relative;
+				visibility: visible;
+				opacity: 1;
+				pointer-events: auto;
+			}
+			.autoPayments__form-tabs {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				border: 4px solid #f0f0f0;
+				background: #f0f0f0;
+				gap: 10px;
+			}
+			@media screen and (max-width: 959px) {
+				.autoPayments__form-tabs {
+					gap: 10px;
+				}
+			}
+			.autoPayments__form-tab {
+				background: none;
+				border: none;
+				outline: none;
+				font-size: 16px;
+				color: #161616;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 400;
+				padding: 14px 0;
+				transition: 0.3s;
+				cursor: pointer;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__form-tab {
+					font-size: 14px;
+					padding: 12px 0;
+				}
+			}
+			.autoPayments__form-tab:hover {
+				background: #fff;
+				transition: 0.3s;
+			}
+			.autoPayments__form-tab_active {
+				background: #fff;
+				transition: 0.3s;
+			}
+			.autoPayments__form {
+				background: #fff;
+				padding: 34px 30px 30px 30px;
+				display: flex;
+				flex-direction: column;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__form {
+					padding: 20px 14px;
+				}
+			}
+			.autoPayments__form .h2-title {
+				color: #161616;
+				text-transform: lowercase;
+				font-size: 26px;
+				font-weight: 500;
+				margin-bottom: 20px;
+			}
+			.autoPayments__form .h2-title_cjm-2 {
+				margin-bottom: 0;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__form .h2-title {
+					font-size: 18px;
+					line-height: 1;
+					margin-bottom: 20px;
+					width: 70%;
+				}
+			}
+			.autoPayments__form-heading {
+				margin-bottom: 36px;
+			}
+			.autoPayments__form-heading_cjm-1 {
+				margin-bottom: auto;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__form-heading {
+					margin-bottom: 40px;
+				}
+			}
+			.autoPayments__form-heading_cjm-2 {
+				margin-top: 32px;
+				display: grid;
+				grid-template-columns: 250px auto;
+				gap: 58px;
+			}
+			@media screen and (max-width: 1199px) {
+				.autoPayments__form-heading_cjm-2 {
+					gap: 0;
+					grid-template-columns: 1fr;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__form-heading_cjm-2 {
+					margin-top: 20px;
+				}
+			}
+			.autoPayments__form .t-form {
+				margin-bottom: 12px;
+			}
+			.autoPayments__form .t-input {
+				width: 100% !important;
+				padding: 24px 0 !important;
+				font-size: 20px !important;
+				font-family: "CoFo Sans", Arial, sans-serif !important;
+				font-weight: 400 !important;
+				outline: none !important;
+				color: #161616 !important;
+				border-radius: 0 !important;
+				border: none !important;
+				border-bottom: 1px solid #161616 !important;
+				text-transform: lowercase;
+			}
+			.autoPayments__form .t-input::-webkit-input-placeholder {
+				color: #161616 !important;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__form .t-input {
+					padding: 22px 0 !important;
+					font-size: 16px !important;
+				}
+			}
+			.autoPayments__form .t-checkbox__control {
+				display: flex;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 400;
+				font-size: 16px;
+				color: #161616;
+				align-items: center;
+			}
+			.autoPayments__form .t-checkbox__indicator {
+				border: 1px solid #161616 !important;
+				width: 18px !important;
+				height: 18px !important;
+			}
+			.autoPayments__form .t-checkbox {
+				border-radius: 0 !important;
+				margin-right: 10px;
+			}
+			.autoPayments__form .t-submit {
+				width: 100% !important;
+				padding: 24px !important;
+				font-size: 20px !important;
+				font-weight: 400 !important;
+				outline: none !important;
+				border: none !important;
+				cursor: pointer !important;
+				transition: 0.3s !important;
+				background-color: #e0fb52 !important;
+				margin-top: 30px !important;
+				color: #161616 !important;
+				height: unset !important;
+				border-radius: 0 !important;
+				text-transform: lowercase !important;
+			}
+			.autoPayments__form .t-submit:hover {
+				transition: 0.3s !important;
+				color: #fff !important;
+				background: #161616 !important;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__form .t-submit {
+					font-size: 16px !important;
+				}
+			}
+			.autoPayments__form .t-input-group {
+				margin-bottom: 10px;
+			}
+			.autoPayments__form #form-consult .t-submit {
+				background-color: #161616 !important;
+				color: #fff !important;
+			}
+			.autoPayments__afterForm {
+				color: #939393;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 1;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__afterForm {
+					font-size: 10px;
+				}
+			}
+			.autoPayments__afterForm a {
+				text-decoration: underline !important;
+				color: #939393 !important;
+			}
+			.autoPayments__bottom {
+				background: #fff;
+				padding: 24px 30px;
+				display: flex;
+				justify-content: space-between;
+			}
+			@media screen and (max-width: 959px) {
+				.autoPayments__bottom {
+					gap: 40px;
+					flex-direction: column;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__bottom {
+					padding: 14px;
+				}
+			}
+			.autoPayments__text {
+				color: #161616;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 500;
+				font-size: 26px;
+				max-width: 540px;
+				line-height: 1;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__text {
+					font-size: 18px;
+				}
+			}
+			.autoPayments__link {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 500px;
+				padding-block: 14px;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 400;
+				font-size: 20px;
+				color: #161616 !important;
+				border: 1px solid #161616;
+				text-decoration: none !important;
+				transition: 0.3s;
+				text-transform: lowercase;
+			}
+			.autoPayments__link:hover {
+				transition: 0.3s;
+				color: #fff !important;
+				background: #161616;
+			}
+			@media screen and (max-width: 959px) {
+				.autoPayments__link {
+					width: 100%;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__link {
+					font-size: 16px;
+				}
+			}
+			.autoPayments__list {
+				list-style: none;
+				padding-left: 0 !important;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+				line-height: 1;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__list {
+					gap: 6px;
+				}
+			}
+			.autoPayments__list-item {
+				font-family: "CoFo Sans", Arial, sans-serif;
+				font-weight: 400;
+				font-size: 16px;
+				color: #939393;
+				display: flex;
+				gap: 10px;
+				flex-wrap: nowrap;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.autoPayments__list-item {
+					font-size: 14px;
+				}
+			}
+			.autoPayments__list-item::before {
+				content: "—";
+			}
+
+			.line {
+				height: 2px;
+				width: calc(100% + 60px);
+				background: #f4f4f4;
+				position: relative;
+				left: -30px;
+				margin: 30px 0;
+			}
+			@media screen and (max-width: 639px) {
+				.line {
+					margin: 20px 0;
+				}
+			}
+		</style>
+		<section class="autoPayments">
+			<div class="inner-wrapper">
+				<div class="autoPayments__wrapper">
+					<div class="autoPayments__price">
+						<h2 class="h2-title">стоимость курса</h2>
+						<div class="autoPayments__switch">
+							<div class="autoPayments__tabs">
+								<button class="autoPayments__tab autoPayments__tab_active" id="tab-installment">В рассрочку</button>
+								<button class="autoPayments__tab" id="tab-full">Полная оплата</button>
+							</div>
+							<div class="autoPayments__sale-corner autoPayments__sale-corner_active" id="sale-installment">
+								<span class="discount_auto">-10%</span>
+								<span class="discount_until">до 14 февраля</span>
+							</div>
+							<div class="autoPayments__sale-corner" id="sale-installment">
+								<span class="discount_auto">-20%</span>
+								<span class="discount_until">до 14 февраля</span>
+							</div>
+							<div class="autoPayments__content">
+								<div class="autoPayments__card autoPayments__card_cjm-2 autoPayments__card_active" id="tab-installment">
+									<div class="autoPayments__prices-wrapper">
+										<p class="autoPayments__old-price price_installment"><span>12 452</span>&nbsp;₽/мес</p>
+										<p class="autoPayments__new-price price_installment_discount"><span>6 565</span>&nbsp;₽/мес</p>
+										<p class="autoPayments__disclamer">при рассрочке на 12 месяцев, первый платеж через месяц</p>
+									</div>
+								</div>
+								<div class="autoPayments__card autoPayments__card_cjm-2" id="tab-full">
+									<div class="autoPayments__sale">
+										<p>cкидка больше при полной оплате</p>
+									</div>
+									<div class="autoPayments__prices-wrapper">
+										<p class="autoPayments__old-price price_full"><span>132 452</span>&nbsp;₽</p>
+										<p class="autoPayments__new-price price_full_discount"><span>105 600</span>&nbsp;₽</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="line"></span>
+						<ul class="autoPayments__list">
+							<li class="autoPayments__list-item">5&nbsp;работ в&nbsp;портфолио</li>
+							<li class="autoPayments__list-item">10+&nbsp;топовых нейросетей</li>
+							<li class="autoPayments__list-item">онлайн-вебинары каждую неделю</li>
+							<li class="autoPayments__list-item">бесплатный доступ в&nbsp;Midjourney на&nbsp;время обучения</li>
+						</ul>
+					</div>
+					<div class="autoPayments__form">
+						<div class="autoPayments__form-tabs">
+							<button class="autoPayments__form-tab autoPayments__form-tab_active" id="form-payment">оплатить курс</button>
+							<button class="autoPayments__form-tab" id="form-consult">консультация</button>
+						</div>
+						<div class="autoPayments__form-variants">
+							<div class="autoPayments__form-wrapper autoPayments__form-wrapper_active" id="form-payment">
+								<div class="autoPayments__form-heading autoPayments__form-heading_cjm-2">
+									<h2 class="h2-title h2-title_cjm-2">для оплаты курса заполните форму</h2>
+									<div class="autoPayments__disclamer autoPayments__disclamer_form">
+										<p>дата старта: <span>5 марта</span></p>
+										<p>длительность: <span>20 месяцев</span></p>
+									</div>
+								</div>
+								<!-- FORM 1 PLACE -->
+								<form id="form725192337" name="form725192337" role="form" action="" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_3" data-success-callback="mySuccessForm">
+									<!-- NO ONE SERVICES CONNECTED -->
+									<div class="js-successbox t-form__successbox t-text t-text_md" aria-live="polite" style="display: none"></div>
+									<div class="t-form__inputsbox t-form__inputsbox_vertical-form t-form__inputsbox_inrow">
+										<div class="t-input-group t-input-group_nm" data-input-lid="0118200886441" data-field-type="nm">
+											<div class="t-input-block">
+												<input type="text" autocomplete="name" name="Name" id="input_0118200886441" class="t-input js-tilda-rule" value="" placeholder="Имя" data-tilda-req="1" aria-required="true" data-tilda-rule="name" aria-describedby="error_0118200886441" style="color: #000000; border: 1px solid #000000" />
+												<div class="t-input-error" aria-live="polite" id="error_0118200886441"></div>
+											</div>
+										</div>
+										<div class="t-input-group t-input-group_ph" data-input-lid="0118200886442" data-field-type="ph">
+											<div class="t-input-block">
+												<input type="tel" autocomplete="tel" name="Phone" id="input_0118200886442" class="t-input js-tilda-rule" value="" placeholder="Телефон" data-tilda-req="1" aria-required="true" data-tilda-rule="phone" pattern="[0-9]*" aria-describedby="error_0118200886442" style="color: #000000; border: 1px solid #000000" />
+												<div class="t-input-error" aria-live="polite" id="error_0118200886442"></div>
+											</div>
+										</div>
+										<div class="t-input-group t-input-group_em" data-input-lid="0118200886440" data-field-type="em">
+											<div class="t-input-block">
+												<input type="email" autocomplete="email" name="Email" id="input_0118200886440" class="t-input js-tilda-rule" value="" placeholder="Почта" data-tilda-req="1" aria-required="true" data-tilda-rule="email" aria-describedby="error_0118200886440" style="color: #000000; border: 1px solid #000000" />
+												<div class="t-input-error" aria-live="polite" id="error_0118200886440"></div>
+											</div>
+										</div>
+										<div class="t-form__errorbox-middle">
+											<!--noindex-->
+											<div class="js-errorbox-all t-form__errorbox-wrapper" style="display: none" data-nosnippet="" tabindex="-1" aria-label="Ошибки при заполнении формы">
+												<ul role="list" class="t-form__errorbox-text t-text t-text_md">
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li>
+												</ul>
+											</div>
+											<!--/noindex-->
+										</div>
+										<div class="t-form__submit"><button type="submit" class="t-submit" style="color: #043933; background-color: #b5e916; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px" data-field="buttontitle" data-buttonfieldset="button">Оплатить курс</button></div>
+									</div>
+									<div class="t-form__errorbox-bottom">
+										<!--noindex-->
+										<div class="js-errorbox-all t-form__errorbox-wrapper" style="display: none" data-nosnippet="" tabindex="-1" aria-label="Ошибки при заполнении формы">
+											<ul role="list" class="t-form__errorbox-text t-text t-text_md">
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li>
+											</ul>
+										</div>
+										<!--/noindex-->
+									</div>
+									<div style="position: absolute; left: -5000px; bottom: 0; display: none"><input type="text" name="form-spec-comments" value="Its good" class="js-form-spec-comments" tabindex="-1" /></div>
+									<input type="hidden" name="mb_uuid" value="48aad083-503e-499d-b134-0cae3f8b0a1a" />
+								</form>
+								<!-- FORM END -->
+								<p class="autoPayments__afterForm">нажимая кнопку, я&nbsp;соглашаюсь с&nbsp;<a href="https://skillfactory.ru/position_of_user_personal_data" target="_blank">положением о&nbsp;персональных данных</a></p>
+							</div>
+							<div class="autoPayments__form-wrapper" id="form-consult">
+								<div class="autoPayments__form-heading autoPayments__form-heading_cjm-2">
+									<h2 class="h2-title h2-title_cjm-2">для консультации заполните форму</h2>
+									<div class="autoPayments__disclamer autoPayments__disclamer_form">
+										<p>дата старта: <span>5 марта</span></p>
+										<p>длительность: <span>20 месяцев</span></p>
+									</div>
+								</div>
+								<!-- FORM 2 PLACE -->
+								<form id="form725192337" name="form725192337" role="form" action="" method="POST" data-formactiontype="0" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_3" data-success-callback="mySuccessForm">
+									<!-- NO ONE SERVICES CONNECTED -->
+									<div class="js-successbox t-form__successbox t-text t-text_md" aria-live="polite" style="display: none"></div>
+									<div class="t-form__inputsbox t-form__inputsbox_vertical-form t-form__inputsbox_inrow">
+										<div class="t-input-group t-input-group_nm" data-input-lid="0118200886441" data-field-type="nm">
+											<div class="t-input-block">
+												<input type="text" autocomplete="name" name="Name" id="input_0118200886441" class="t-input js-tilda-rule" value="" placeholder="Имя" data-tilda-req="1" aria-required="true" data-tilda-rule="name" aria-describedby="error_0118200886441" style="color: #000000; border: 1px solid #000000" />
+												<div class="t-input-error" aria-live="polite" id="error_0118200886441"></div>
+											</div>
+										</div>
+										<div class="t-input-group t-input-group_ph" data-input-lid="0118200886442" data-field-type="ph">
+											<div class="t-input-block">
+												<input type="tel" autocomplete="tel" name="Phone" id="input_0118200886442" class="t-input js-tilda-rule" value="" placeholder="Телефон" data-tilda-req="1" aria-required="true" data-tilda-rule="phone" pattern="[0-9]*" aria-describedby="error_0118200886442" style="color: #000000; border: 1px solid #000000" />
+												<div class="t-input-error" aria-live="polite" id="error_0118200886442"></div>
+											</div>
+										</div>
+										<div class="t-input-group t-input-group_em" data-input-lid="0118200886440" data-field-type="em">
+											<div class="t-input-block">
+												<input type="email" autocomplete="email" name="Email" id="input_0118200886440" class="t-input js-tilda-rule" value="" placeholder="Почта" data-tilda-req="1" aria-required="true" data-tilda-rule="email" aria-describedby="error_0118200886440" style="color: #000000; border: 1px solid #000000" />
+												<div class="t-input-error" aria-live="polite" id="error_0118200886440"></div>
+											</div>
+										</div>
+										<div class="t-form__errorbox-middle">
+											<!--noindex-->
+											<div class="js-errorbox-all t-form__errorbox-wrapper" style="display: none" data-nosnippet="" tabindex="-1" aria-label="Ошибки при заполнении формы">
+												<ul role="list" class="t-form__errorbox-text t-text t-text_md">
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li>
+													<li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li>
+												</ul>
+											</div>
+											<!--/noindex-->
+										</div>
+										<div class="t-form__submit"><button type="submit" class="t-submit" style="color: #043933; background-color: #b5e916; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px" data-field="buttontitle" data-buttonfieldset="button">Оплатить курс</button></div>
+									</div>
+									<div class="t-form__errorbox-bottom">
+										<!--noindex-->
+										<div class="js-errorbox-all t-form__errorbox-wrapper" style="display: none" data-nosnippet="" tabindex="-1" aria-label="Ошибки при заполнении формы">
+											<ul role="list" class="t-form__errorbox-text t-text t-text_md">
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-all"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-req"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-email"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-name"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-phone"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></li>
+												<li class="t-form__errorbox-item js-rule-error js-rule-error-string"></li>
+											</ul>
+										</div>
+										<!--/noindex-->
+									</div>
+									<div style="position: absolute; left: -5000px; bottom: 0; display: none"><input type="text" name="form-spec-comments" value="Its good" class="js-form-spec-comments" tabindex="-1" /></div>
+									<input type="hidden" name="mb_uuid" value="48aad083-503e-499d-b134-0cae3f8b0a1a" />
+								</form>
+								<!-- FORM END -->
+								<p class="autoPayments__afterForm">нажимая кнопку, я&nbsp;соглашаюсь с&nbsp;<a href="https://skillfactory.ru/position_of_user_personal_data" target="_blank">положением о&nbsp;персональных данных</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script>
+			const autoPayments = document.querySelector(".autoPayments");
+			const tabs = autoPayments.querySelectorAll(".autoPayments__tab");
+			const contents = autoPayments.querySelectorAll(".autoPayments__card");
+
+			try {
+				const formsTabs = autoPayments.querySelectorAll(".autoPayments__form-tab");
+				const forms = autoPayments.querySelectorAll(".autoPayments__form-wrapper");
+
+				formsTabs.forEach((tab) => {
+					tab.addEventListener("click", (evt) => {
+						changeContent(evt, formsTabs, forms, "autoPayments__form-tab_active", "autoPayments__form-wrapper_active");
+					});
+				});
+			} catch {
+				console.log("Changing forms disabled");
+			}
+
+			try {
+				const saleCorners = autoPayments.querySelectorAll(".autoPayments__sale-corner");
+
+				function changeCorner() {
+					saleCorners.forEach((corner) => {
+						corner.classList.toggle("autoPayments__sale-corner_active");
+					});
+				}
+				tabs.forEach((tab) => {
+					tab.addEventListener("click", (evt) => {
+						changeContent(evt, tabs, contents, "autoPayments__tab_active", "autoPayments__card_active");
+						changeCorner();
+					});
+				});
+				console.log("Contented AutoPayments");
+			} catch {
+				tabs.forEach((tab) => {
+					tab.addEventListener("click", (evt) => {
+						changeContent(evt, tabs, contents, "autoPayments__tab_active", "autoPayments__card_active");
+					});
+				});
+				console.log("Skillfactory AutoPayments");
+			}
+
+			function changeContent(evt, tabs, changing, activeTabClass, activeContentClass) {
+				const pressedTab = evt.target;
+				const neededID = pressedTab.id;
+
+				tabs.forEach((tab) => {
+					if (tab.id === neededID) {
+						tab.classList.add(activeTabClass);
+					} else {
+						tab.classList.remove(activeTabClass);
+					}
+				});
+				changing.forEach((content) => {
+					if (content.id === neededID) {
+						content.classList.add(activeContentClass);
+					} else {
+						content.classList.remove(activeContentClass);
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
