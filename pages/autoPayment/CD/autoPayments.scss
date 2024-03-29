@@ -322,18 +322,13 @@
 		}
 
 		&:hover {
-			background: rgb(#fff, 0.2);
+			background: #fff;
 			transition: 0.3s;
 		}
 
 		&_active {
 			background: #fff;
 			transition: 0.3s;
-
-			&:hover {
-				background: rgb(#fff, 0.7);
-				transition: 0.3s;
-			}
 		}
 	}
 

@@ -371,15 +371,11 @@
   }
 }
 .autoPayments__form-tab:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #fff;
   transition: 0.3s;
 }
 .autoPayments__form-tab_active {
   background: #fff;
-  transition: 0.3s;
-}
-.autoPayments__form-tab_active:hover {
-  background: rgba(255, 255, 255, 0.7);
   transition: 0.3s;
 }
 .autoPayments__form {
