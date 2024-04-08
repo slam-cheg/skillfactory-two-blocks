@@ -270,7 +270,7 @@
     padding: 14px 10px;
   }
 }
-.autoPayments__sale-corner span {
+.autoPayments__sale-corner p {
   width: -moz-fit-content;
   width: fit-content;
   color: #161616;
@@ -281,7 +281,7 @@
   text-transform: lowercase;
 }
 @media screen and (max-width: 639px) {
-  .autoPayments__sale-corner span {
+  .autoPayments__sale-corner p {
     font-size: 18px;
   }
 }
