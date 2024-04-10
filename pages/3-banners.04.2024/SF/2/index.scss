@@ -1,0 +1,347 @@
+@font-face {
+	font-family: "PP_SF Neue Machina";
+	src: url("./PPNeueMachina-InktrapRegular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "HeliosExt Web";
+	src: url("./heliosext.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 110px;
+	width: 100%;
+	margin: 0;
+}
+
+.link {
+	background: #b5e916;
+	position: relative;
+	height: 100%;
+	text-decoration: none;
+	color: #043933;
+	display: flex;
+	overflow: hidden;
+}
+
+img {
+	position: absolute;
+}
+
+.circle1 {
+	top: -276px;
+	left: calc(50% - 1793px);
+
+	@media screen and (max-width: 2047px) {
+		display: none;
+	}
+}
+
+.circle2 {
+	top: -148px;
+	left: calc(50% - 1600px);
+
+	@media screen and (max-width: 2559px) {
+		top: -178px;
+		width: 300px;
+		transform: rotate(20deg);
+		left: calc(50% - 970px);
+		z-index: 2;
+	}
+
+	@media screen and (max-width: 2047px) {
+		left: calc(50% - 940px);
+	}
+
+	@media screen and (max-width: 1919px) {
+		display: none;
+	}
+}
+
+.circle3 {
+	top: -262px;
+	left: calc(50% - 1197px);
+
+	@media screen and (max-width: 2559px) {
+		top: -262px;
+		left: calc(50% - 920px);
+	}
+
+	@media screen and (max-width: 2047px) {
+		left: calc(50% - 880px);
+	}
+
+	@media screen and (max-width: 1919px) {
+		left: -10px;
+		transform: rotate(10deg);
+		width: 150px;
+		top: -155px;
+	}
+
+	@media screen and (max-width: 1365px) {
+		left: -65px;
+		transform: rotate(4deg);
+	}
+
+	@media screen and (max-width: 1079px) {
+		left: unset;
+		right: 1008px;
+	}
+
+	@media screen and (max-width: 869px) {
+		right: 150px;
+		top: -113px;
+		width: 130px;
+		transform: rotate(16deg);
+	}
+
+	@media screen and (max-width: 639px) {
+		right: 80px;
+		top: -93px;
+		width: 100px;
+		transform: rotate(26deg);
+	}
+
+	@media screen and (max-width: 479px) {
+		right: 85px;
+		top: -59px;
+		width: 70px;
+	}
+}
+
+.wire1 {
+	top: -233px;
+	left: calc(50% - 1220px);
+	z-index: 3;
+
+	@media screen and (max-width: 2559px) {
+		left: calc(50% - 1070px);
+	}
+
+	@media screen and (max-width: 2047px) {
+		left: calc(50% - 956px);
+		top: -167px;
+		width: 414px;
+	}
+
+	@media screen and (max-width: 1919px) {
+		left: -45px;
+		top: -107px;
+		width: 317px;
+	}
+	@media screen and (max-width: 1365px) {
+		left: -119px;
+		top: -124px;
+		width: 318px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		left: -120px;
+	}
+
+	@media screen and (max-width: 1079px) {
+		left: unset;
+		right: 890px;
+	}
+
+	@media screen and (max-width: 869px) {
+		left: unset;
+		right: 77px;
+		z-index: 6;
+		transform: rotate(9deg);
+		top: -84px;
+		width: 278px;
+	}
+
+	@media screen and (max-width: 639px) {
+		transform: rotate(22deg);
+		top: -76px;
+		width: 248px;
+		right: 30px;
+	}
+
+	@media screen and (max-width: 479px) {
+		top: -44px;
+		right: 39px;
+		width: 186px;
+	}
+}
+
+.paper {
+	top: -172px;
+	right: calc(50% - 1260px);
+	z-index: 5;
+
+	@media screen and (max-width: 2559px) {
+		top: -154px;
+		right: calc(50% - 1094px);
+		z-index: 5;
+		transform: rotate(7deg);
+	}
+
+	@media screen and (max-width: 1919px) {
+		right: -101px;
+		width: 310px;
+		top: -78px;
+	}
+
+	@media screen and (max-width: 1365px) {
+		right: -121px;
+		top: -88px;
+	}
+
+	@media screen and (max-width: 639px) {
+		right: -132px;
+		top: -78px;
+		width: 270px;
+	}
+
+	@media screen and (max-width: 479px) {
+		right: -119px;
+		top: -63px;
+		width: 240px;
+	}
+}
+
+.wire2 {
+	top: -170px;
+	right: calc(50% - 1527px);
+
+	@media screen and (max-width: 2559px) {
+		display: none;
+	}
+}
+
+.circle4 {
+	top: -184px;
+	right: calc(50% - 1500px);
+
+	@media screen and (max-width: 2559px) {
+		display: none;
+	}
+}
+
+.circle5 {
+	top: -80px;
+	right: calc(50% - 1830px);
+
+	@media screen and (max-width: 2559px) {
+		display: none;
+	}
+}
+
+p {
+	span {
+		color: #b5e916;
+	}
+}
+
+.center {
+	position: relative;
+	margin: 13px auto auto auto;
+	width: 860px;
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	@media screen and (max-width: 1919px) {
+		width: 742px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		width: 526px;
+		position: absolute;
+		right: 334px;
+	}
+
+	@media screen and (max-width: 869px) {
+		width: 300px;
+		top: 13px;
+		left: 12px;
+		margin: unset;
+	}
+
+	@media screen and (max-width: 479px) {
+		width: 192px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: calc(110px - 26px);
+	}
+}
+
+.title {
+	font-family: "PP_SF Neue Machina";
+	font-size: 36px;
+	line-height: 0.9;
+	margin-bottom: 11px;
+
+	@media screen and (max-width: 1919px) {
+		font-size: 31px;
+		margin-bottom: 16px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		font-size: 21px;
+	}
+
+	@media screen and (max-width: 479px) {
+		font-size: 11px;
+		margin-bottom: unset;
+		max-width: 150px;
+	}
+}
+
+.text {
+	font-family: "HeliosExt Web";
+	font-size: 16px;
+	font-weight: 400;
+
+	@media screen and (max-width: 1919px) {
+		font-size: 14px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		font-size: 9px;
+	}
+
+	@media screen and (max-width: 479px) {
+		font-size: 6px;
+		max-width: 99px;
+	}
+
+	&_btn {
+		padding: 7px 6px;
+		border: 1px solid #043933;
+		background: #fffaed;
+		border-radius: 2px;
+
+		@media screen and (max-width: 1919px) {
+			padding: 6px 5px;
+		}
+
+		@media screen and (max-width: 869px) {
+			padding: 4px 10px 4px 13px;
+			max-width: 137px;
+		}
+
+		@media screen and (max-width: 479px) {
+			padding: 2px 3px;
+			max-width: 83px;
+		}
+	}
+}
