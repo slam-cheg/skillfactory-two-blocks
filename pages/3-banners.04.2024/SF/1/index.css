@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "PP_SF Neue Machina";
+  src: url("./PPNeueMachina-InktrapRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HeliosExt Web";
+  src: url("./heliosext.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 110px;
+  width: 100%;
+  margin: 0;
+}
+
+.link {
+  background: #181818;
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  overflow: hidden;
+}
+
+.wire1 {
+  width: 932px;
+  position: absolute;
+  top: -653px;
+  left: 162px;
+}
+@media screen and (max-width: 2889px) {
+  .wire1 {
+    left: 54px;
+    top: -263px;
+    width: 375px;
+  }
+}
+@media screen and (max-width: 2047px) {
+  .wire1 {
+    left: 54px;
+    top: -317px;
+    width: 414px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  .wire1 {
+    left: 15px;
+    top: -177px;
+    width: 287px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .wire1 {
+    left: -21px;
+    top: -134px;
+    width: 218px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .wire1 {
+    left: 0;
+  }
+}
+@media screen and (max-width: 1079px) {
+  .wire1 {
+    left: unset;
+    right: 890px;
+  }
+}
+@media screen and (max-width: 869px) {
+  .wire1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  .wire1 {
+    display: block;
+    top: 5px;
+    right: 7px;
+    width: 186px;
+    height: 186px;
+  }
+}
+
+.wire2 {
+  position: absolute;
+  top: -562px;
+  right: -19px;
+  width: 997px;
+}
+@media screen and (max-width: 2889px) {
+  .wire2 {
+    right: -34px;
+    top: -228px;
+    width: 501px;
+  }
+}
+@media screen and (max-width: 2047px) {
+  .wire2 {
+    right: -12px;
+    top: -149px;
+    width: 371px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  .wire2 {
+    right: -20px;
+    top: -93px;
+    width: 287px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .wire2 {
+    right: -87px;
+    top: -84px;
+    width: 269px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .wire2 {
+    right: 0px;
+    top: -93px;
+    width: 289px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .wire2 {
+    right: -74px;
+    top: -72px;
+    width: 230px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .wire2 {
+    right: -39px;
+    top: -76px;
+    width: 186px;
+  }
+}
+
+p span {
+  color: #b5e916;
+}
+
+.center {
+  position: relative;
+  margin: 13px auto auto auto;
+  width: 900px;
+}
+.center__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1919px) {
+  .center {
+    width: 776px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .center {
+    width: 526px;
+    position: absolute;
+    right: 334px;
+  }
+}
+@media screen and (max-width: 869px) {
+  .center {
+    width: 300px;
+    top: 13px;
+    left: 12px;
+    margin: unset;
+  }
+}
+@media screen and (max-width: 479px) {
+  .center {
+    width: 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 84px;
+  }
+}
+
+.title {
+  font-family: "PP_SF Neue Machina";
+  font-size: 36px;
+  line-height: 0.9;
+  margin-bottom: 11px;
+}
+@media screen and (max-width: 1919px) {
+  .title {
+    font-size: 31px;
+    margin-bottom: 14px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .title {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .title {
+    font-size: 11px;
+    margin-bottom: unset;
+  }
+}
+
+.text {
+  font-family: "HeliosExt Web";
+  font-size: 16px;
+  font-weight: 400;
+}
+@media screen and (max-width: 1919px) {
+  .text {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .text {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .text {
+    font-size: 6px;
+    max-width: 99px;
+  }
+}
+.text_btn {
+  padding: 8px 12px;
+  border: 1px solid #fffbf0;
+  border-radius: 2px;
+}
+@media screen and (max-width: 869px) {
+  .text_btn {
+    padding: 4px 10px 4px 13px;
+    max-width: 137px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .text_btn {
+    padding: 2px 3px;
+    max-width: 83px;
+    background: #181818;
+  }
+}
