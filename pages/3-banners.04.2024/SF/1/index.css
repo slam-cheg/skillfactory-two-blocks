@@ -178,7 +178,7 @@ p span {
 @media screen and (max-width: 869px) {
   .center {
     width: 300px;
-    top: 13px;
+    top: 25px;
     left: 12px;
     margin: unset;
   }
@@ -190,7 +190,6 @@ p span {
     flex-direction: column;
     justify-content: space-between;
     height: 74px;
-    margin-top: 10px;
   }
 }
 
@@ -209,6 +208,11 @@ p span {
 @media screen and (max-width: 1199px) {
   .title {
     font-size: 21px;
+  }
+}
+@media screen and (max-width: 869px) {
+  .title {
+    margin-bottom: 4px;
   }
 }
 @media screen and (max-width: 479px) {

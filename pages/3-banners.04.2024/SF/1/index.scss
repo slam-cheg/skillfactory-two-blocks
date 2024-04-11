@@ -164,7 +164,7 @@ p {
 
 	@media screen and (max-width: 869px) {
 		width: 300px;
-		top: 13px;
+		top: 25px;
 		left: 12px;
 		margin: unset;
 	}
@@ -175,7 +175,6 @@ p {
 		flex-direction: column;
 		justify-content: space-between;
 		height: 74px;
-		margin-top: 10px;
 	}
 }
 
@@ -192,6 +191,10 @@ p {
 
 	@media screen and (max-width: 1199px) {
 		font-size: 21px;
+	}
+
+	@media screen and (max-width: 869px) {
+		margin-bottom: 4px;
 	}
 
 	@media screen and (max-width: 479px) {
