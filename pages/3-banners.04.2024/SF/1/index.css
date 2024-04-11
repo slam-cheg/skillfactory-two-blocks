@@ -189,7 +189,8 @@ p span {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 84px;
+    height: 74px;
+    margin-top: 10px;
   }
 }
 

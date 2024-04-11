@@ -152,6 +152,10 @@ body {
 		max-width: 254px;
 		margin: 8px auto auto 11px;
 	}
+
+	@media screen and (max-width: 479px) {
+		margin: 18px auto auto 11px;
+	}
 }
 
 .figma {
