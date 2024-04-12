@@ -575,7 +575,6 @@
   grid-column-end: 3;
   display: flex;
   justify-content: center;
-  padding: 20px;
   text-decoration: none;
 }
 @media screen and (max-width: 959px) {
