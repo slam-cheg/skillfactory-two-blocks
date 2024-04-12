@@ -285,13 +285,6 @@ body {
     right: -152px;
   }
 }
-@media screen and (max-width: 639px) {
-  .circle-two {
-    width: 306px;
-    top: -200px;
-    right: -96px;
-  }
-}
 @media screen and (max-width: 479px) {
   .circle-two {
     width: 185px;
@@ -344,13 +337,6 @@ body {
   .poster {
     right: -72px;
     width: 200px;
-  }
-}
-@media screen and (max-width: 639px) {
-  .poster {
-    top: -43px;
-    right: -60px;
-    width: 168px;
   }
 }
 @media screen and (max-width: 479px) {
