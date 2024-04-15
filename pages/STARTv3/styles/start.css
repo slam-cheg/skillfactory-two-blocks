@@ -577,6 +577,14 @@
   justify-content: center;
   text-decoration: none;
 }
+.accord__wide-text_between {
+  background: none;
+  border-radius: none;
+  display: block;
+  color: #181818 !important;
+  margin-bottom: 30px;
+  max-width: 550px;
+}
 @media screen and (max-width: 959px) {
   .accord__wide-text {
     margin-bottom: 30px;
@@ -2225,4 +2233,4 @@
     width: -moz-min-content;
     width: min-content;
   }
-}/*# sourceMappingURL=start.css.map */
+}
