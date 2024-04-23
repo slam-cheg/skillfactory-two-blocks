@@ -231,8 +231,8 @@
 			}
 
 			@media screen and (max-width: 479px) {
-                top: 26px;
-                right: 134px;
+				top: 26px;
+				right: 134px;
 			}
 		}
 		span {
@@ -247,6 +247,7 @@
 			margin-bottom: 30px;
 
 			@media screen and (max-width: 639px) {
+				margin-bottom: 20px;
 				font-size: 20px;
 			}
 		}
@@ -260,8 +261,8 @@
 		}
 
 		@media screen and (max-width: 479px) {
-            padding-top: 24px;
-            margin-bottom: 50px;
+			padding-top: 24px;
+			margin-bottom: 20px;
 			line-height: 0.8;
 		}
 	}
@@ -284,9 +285,13 @@
 	.list {
 		list-style: none;
 		margin-bottom: 50px;
-		padding-left: 20px !important;
+		padding-left: 0 !important;
 		position: relative;
 		z-index: 10;
+
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+		}
 
 		&-item {
 			color: #181818;
@@ -309,10 +314,6 @@
 				font-size: 14px;
 				line-height: 20px;
 			}
-            
-            &::marker {
-                content: "— ";
-            }
 		}
 	}
 
@@ -344,8 +345,7 @@
 			}
 			@media screen and (max-width: 479px) {
 				font-size: 14px;
-				line-height: 20px;
-				opacity: 0.7;
+				line-height: 1.8;
 				margin-bottom: 8px;
 			}
 		}
@@ -356,10 +356,6 @@
 			gap: 15px;
 			flex-wrap: wrap;
 			padding-left: 0 !important;
-
-			@media screen and (max-width: 479px) {
-				gap: 12px;
-			}
 		}
 
 		&__list-link {
@@ -453,13 +449,13 @@
 
 		.flower {
 			//mix-blend-mode: color-dodge;
-            top: -103px;
-            right: -400px;
+			top: -103px;
+			right: -400px;
 
 			@media screen and (max-width: 1199px) {
-                width: 750px;
-                top: -60px;
-                right: -490px;
+				width: 750px;
+				top: -60px;
+				right: -490px;
 			}
 
 			@media screen and (max-width: 959px) {
@@ -496,12 +492,12 @@
 		}
 
 		.sale {
-            bottom: -16px;
+			bottom: -16px;
 			left: 60px;
 
 			@media screen and (max-width: 1199px) {
-                bottom: -50px;
-                left: -91px;
+				bottom: -50px;
+				left: -91px;
 			}
 			@media screen and (max-width: 959px) {
 				bottom: -37px;
