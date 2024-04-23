@@ -231,8 +231,8 @@
 			}
 
 			@media screen and (max-width: 479px) {
-				top: 5px;
-				right: 133px;
+                top: 26px;
+                right: 134px;
 			}
 		}
 		span {
@@ -260,7 +260,8 @@
 		}
 
 		@media screen and (max-width: 479px) {
-			margin-bottom: 20px;
+            padding-top: 24px;
+            margin-bottom: 50px;
 			line-height: 0.8;
 		}
 	}
@@ -283,7 +284,7 @@
 	.list {
 		list-style: none;
 		margin-bottom: 50px;
-		padding-left: 0 !important;
+		padding-left: 20px !important;
 		position: relative;
 		z-index: 10;
 
@@ -308,6 +309,10 @@
 				font-size: 14px;
 				line-height: 20px;
 			}
+            
+            &::marker {
+                content: "— ";
+            }
 		}
 	}
 
@@ -447,14 +452,14 @@
 		}
 
 		.flower {
-			mix-blend-mode: color-dodge;
-			top: -120px;
-			right: -400px;
+			//mix-blend-mode: color-dodge;
+            top: -103px;
+            right: -400px;
 
 			@media screen and (max-width: 1199px) {
-				width: 750px;
-				top: -120px;
-				right: -440px;
+                width: 750px;
+                top: -60px;
+                right: -490px;
 			}
 
 			@media screen and (max-width: 959px) {
@@ -491,12 +496,12 @@
 		}
 
 		.sale {
-			bottom: 30px;
+            bottom: -16px;
 			left: 60px;
 
 			@media screen and (max-width: 1199px) {
-				bottom: 0px;
-				left: 20px;
+                bottom: -50px;
+                left: -91px;
 			}
 			@media screen and (max-width: 959px) {
 				bottom: -37px;
