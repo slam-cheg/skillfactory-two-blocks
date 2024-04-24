@@ -310,13 +310,13 @@
   position: relative;
   z-index: 10;
   max-width: 535px;
-  opacity: 0.7;
 }
 .main .list-item {
   color: #181818;
   font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
+  opacity: 0.7;
 }
 @media screen and (max-width: 959px) {
   .main .list-item {
