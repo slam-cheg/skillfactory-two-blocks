@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="Ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Skillfactory - main</title>
+		<style>
+			@font-face {
+				font-family: "heliosexBOLD-neuemachina";
+				src: url("https://tools.skillfactory.ru/heliosext.woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "heliosexBOLD-neuemachina";
+				src: url("https://tools.skillfactory.ru/HeliosExtC-Bold.woff") format("woff");
+				font-weight: 700;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "heliosexBOLD-neuemachina";
+				src: url("https://tools.skillfactory.ru/PPNeueMachina-InktrapRegular.woff") format("woff");
+				font-weight: 800;
+				font-style: normal;
+			}
+			#allrecords a {
+				color: inherit;
+			}
+
+			* {
+				padding: 0;
+				margin: 0;
+				font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+				box-sizing: border-box;
+			}
+
+			.outer-wrapper {
+				background: #e0fb52;
+			}
+
+			.inner-wrapper {
+				width: 1160px;
+				margin: 0 auto;
+				position: relative;
+			}
+			@media screen and (max-width: 1199px) {
+				.inner-wrapper {
+					max-width: 940px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.inner-wrapper {
+					max-width: 620px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.inner-wrapper {
+					max-width: 460px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.inner-wrapper {
+					max-width: 300px;
+				}
+			}
+
+			.main {
+				margin-bottom: 110px;
+				overflow: hidden;
+			}
+			@media screen and (max-width: 959px) {
+				.main .outer-wrapper {
+					overflow: hidden;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main {
+					margin-bottom: 75px;
+				}
+			}
+			.main__header {
+				position: relative;
+				z-index: 12;
+				display: flex;
+				justify-content: space-between;
+				height: 88px;
+				align-items: center;
+				margin-bottom: 46px;
+			}
+			@media screen and (max-width: 479px) {
+				.main__header {
+					margin-bottom: 0;
+					height: 80px;
+				}
+			}
+			.main__logo-wrapper img {
+				max-width: 188px;
+			}
+			.main__nav {
+				display: flex;
+				list-style: none;
+				padding-left: 0 !important;
+				gap: 30px;
+				align-items: center;
+			}
+			@media screen and (max-width: 1199px) {
+				.main__nav {
+					display: none;
+				}
+			}
+			.main__nav-item {
+				text-decoration: none !important;
+				text-transform: uppercase;
+				color: #181818 !important;
+				font-size: 14px;
+				font-weight: 400;
+				transition: 0.2s;
+			}
+			.main__nav-item:hover {
+				transition: 0.2s;
+				opacity: 0.7;
+			}
+			.main__burger {
+				display: none;
+				border: none;
+				background: none;
+				outline: none;
+				position: relative;
+				color: transparent !important;
+			}
+			.main__burger .main__burger-line {
+				width: 17px;
+				height: 2px;
+				background: #181818;
+				transition: 0.2s;
+			}
+			@media screen and (max-width: 1199px) {
+				.main__burger {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 5px;
+				}
+			}
+			.main__burger_clicked .main__burger-line:first-of-type {
+				transform: rotate(45deg) translate3d(5px, 5px, 0px);
+				transition: 0.2s;
+			}
+			.main__burger_clicked .main__burger-line:nth-of-type(2) {
+				opacity: 0;
+				transition: 0.2s;
+			}
+			.main__burger_clicked .main__burger-line:last-of-type {
+				transform: rotate(-45deg) translate3d(5px, -5px, 0px);
+				transition: 0.2s;
+			}
+			.main .columns {
+				width: 100%;
+				display: grid;
+				grid-template-columns: 1fr 0.7fr;
+				padding-bottom: 58px;
+			}
+			@media screen and (max-width: 959px) {
+				.main .columns {
+					grid-template-columns: 1fr;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .columns {
+					padding-bottom: 78px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .columns {
+					padding-bottom: 90px;
+				}
+			}
+			.main .title {
+				color: #52a061;
+				font-size: 126px;
+				line-height: 0.8;
+				font-weight: 800;
+				margin-bottom: 15px;
+				width: 90%;
+				text-transform: uppercase;
+			}
+			.main .title-wrapper {
+				position: relative;
+				width: 130%;
+				z-index: 10;
+			}
+			@media screen and (max-width: 959px) {
+				.main .title-wrapper {
+					width: 100%;
+				}
+			}
+			.main .title-img {
+				position: absolute;
+				top: -5px;
+				right: 500px;
+				transform: rotate(-8deg);
+			}
+			@media screen and (max-width: 1199px) {
+				.main .title-img {
+					right: 477px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .title-img {
+					width: 340px;
+					top: 8px;
+					right: 290px;
+					transform: rotate(-12deg);
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .title-img {
+					top: 2px;
+					right: 274px;
+					transform: rotate(-8deg);
+					width: 184px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .title-img {
+					top: 34px;
+					right: 134px;
+				}
+			}
+			.main .title span {
+				opacity: 0;
+				padding-right: 36px;
+			}
+			@media screen and (max-width: 959px) {
+				.main .title span {
+					padding-right: 0;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .title span {
+					padding-right: 20px;
+				}
+			}
+			.main .title_additional {
+				font-size: 40px;
+				font-weight: 400;
+				color: #52a061;
+				line-height: 1.1;
+				margin-bottom: 28px;
+			}
+			@media screen and (max-width: 639px) {
+				.main .title_additional {
+					margin-bottom: 18px;
+					font-size: 20px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .title {
+					font-size: 120px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .title {
+					font-size: 60px;
+					margin-bottom: 20px;
+					max-width: 80%;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .title {
+					padding-top: 24px;
+					line-height: 1;
+				}
+			}
+			.main .block-lead {
+				color: #181818;
+				font-size: 24px;
+				line-height: 1.2;
+				font-weight: 400;
+				opacity: 0.7;
+				max-width: 600px;
+				margin-bottom: 40px;
+			}
+			@media screen and (max-width: 639px) {
+				.main .block-lead {
+					font-size: 18px;
+					line-height: 25px;
+				}
+			}
+			.main .list {
+				list-style: none;
+				padding-left: 0 !important;
+				position: relative;
+				z-index: 10;
+				max-width: 535px;
+			}
+			.main .list-item {
+				color: #181818;
+				font-size: 20px;
+				line-height: 1.2;
+				font-weight: 400;
+				opacity: 0.7;
+			}
+			@media screen and (max-width: 959px) {
+				.main .list-item {
+					width: 80%;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .list-item {
+					font-size: 14px;
+					width: 62%;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .list-item {
+					line-height: 20px;
+					width: auto;
+				}
+			}
+			.main .main__pic {
+				position: relative;
+				display: flex;
+				justify-content: flex-end;
+				top: 15px;
+				height: calc(100% - 15px);
+			}
+			.main .main__pic img {
+				position: absolute;
+			}
+			.main .main__pic .flower {
+				top: -103px;
+				right: -330px;
+			}
+			@media screen and (max-width: 1199px) {
+				.main .main__pic .flower {
+					width: 750px;
+					top: -100px;
+					right: -540px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .main__pic .flower {
+					width: 610px;
+					top: -440px;
+					right: -320px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .main__pic .flower {
+					width: 430px;
+					top: -127px;
+					right: -120px;
+					transform: rotate(28deg);
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .main__pic .flower {
+					top: -120px;
+					right: -220px;
+				}
+			}
+			.main .main__pic .sale {
+				bottom: -40px;
+				left: 60px;
+				width: 240px;
+			}
+			@media screen and (max-width: 1199px) {
+				.main .main__pic .sale {
+					bottom: -50px;
+					left: -31px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .main__pic .sale {
+					bottom: -37px;
+					left: 440px;
+					width: 180px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .main__pic .sale {
+					bottom: -47px;
+					left: 310px;
+					width: 140px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .main__pic .sale {
+					bottom: -72px;
+					left: 188px;
+					width: 130px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="main">
+			<div class="outer-wrapper">
+				<div class="inner-wrapper">
+					<div class="main__header">
+						<div class="main__logo-wrapper">
+							<img src="https://static.tildacdn.com/tild3736-6663-4331-b065-623334663336/SkillFactory.svg" alt="SkillFactory - научитесь работать в IT" />
+						</div>
+						<ul class="main__nav">
+							<li><a href="#submenu:details" class="main__nav-item">онлайн-курсы</a></li>
+							<li><a href="/free-events" target="_blank" class="main__nav-item">БЕСПЛАТНО</a></li>
+							<li><a href="/career-center" target="_blank" class="main__nav-item">центр карьеры</a></li>
+							<li><a href="/contacts" target="_blank" class="main__nav-item">контакты</a></li>
+							<li><a href="https://blog.skillfactory.ru/" target="_blank" class="main__nav-item">Медиа</a></li>
+							<li><a href="https://new.skillfactory.ru/corporativnoye-obuchenye" target="_blank" class="main__nav-item">корпоративное обучение</a></li>
+						</ul>
+						<a href="#submenu:details" class="main__burger">
+							<span class="main__burger-line">&nbsp;</span>
+							<span class="main__burger-line">&nbsp;</span>
+							<span class="main__burger-line">&nbsp;</span>
+						</a>
+					</div>
+					<div class="columns">
+						<div class="column">
+							<div class="title-wrapper">
+								<h1 class="title">Не <span>май</span>тесь</h1>
+								<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/SpringSale2024/springMay.webp" alt="Не майтесь — учитесь IT-профессиям со скидкой 45%" class="title-img" />
+								<p class="title_additional">учитесь IT-профессиям</p>
+							</div>
+							<ul class="list">
+								<li class="list-item">Выбирайте курс вместе с&nbsp;весенней скидкой 45%&nbsp;и&nbsp;модулем по&nbsp;soft skills в&nbsp;подарок</li>
+							</ul>
+						</div>
+						<div class="column">
+							<div class="main__pic">
+								<img class="flower" src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/SpringSale2024/springSaleMerged.webp" alt="skillfactory - IT курсы" />
+								<img class="sale" src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/SpringSale2024/springSale.svg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
