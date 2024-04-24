@@ -346,14 +346,14 @@
 			@media screen and (max-width: 479px) {
 				font-size: 14px;
 				line-height: 1.8;
-				margin-bottom: 8px;
+				margin-bottom: 14px;
 			}
 		}
 
 		&__list {
 			list-style: none;
 			display: flex;
-			gap: 15px;
+			gap: 12px;
 			flex-wrap: wrap;
 			padding-left: 0 !important;
 		}
@@ -492,7 +492,7 @@
 		}
 
 		.sale {
-			bottom: -16px;
+			bottom: -26px;
 			left: 60px;
 
 			@media screen and (max-width: 1199px) {
