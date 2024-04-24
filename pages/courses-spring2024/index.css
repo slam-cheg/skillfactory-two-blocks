@@ -195,7 +195,7 @@
 .main .title {
   color: #52a061;
   font-size: 126px;
-  line-height: 1.1;
+  line-height: 0.8;
   font-weight: 800;
   margin-bottom: 15px;
   width: 90%;
@@ -213,7 +213,7 @@
 }
 .main .title-img {
   position: absolute;
-  top: 36px;
+  top: -5px;
   right: 500px;
   transform: rotate(-8deg);
 }
@@ -225,14 +225,14 @@
 @media screen and (max-width: 959px) {
   .main .title-img {
     width: 340px;
-    top: 50px;
-    right: 285px;
+    top: 8px;
+    right: 290px;
     transform: rotate(-12deg);
   }
 }
 @media screen and (max-width: 639px) {
   .main .title-img {
-    top: 24px;
+    top: 2px;
     right: 274px;
     transform: rotate(-8deg);
     width: 184px;
@@ -240,7 +240,7 @@
 }
 @media screen and (max-width: 479px) {
   .main .title-img {
-    top: 26px;
+    top: 34px;
     right: 134px;
   }
 }
@@ -286,7 +286,7 @@
 @media screen and (max-width: 479px) {
   .main .title {
     padding-top: 24px;
-    line-height: 0.8;
+    line-height: 1;
   }
 }
 .main .block-lead {
