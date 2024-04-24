@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="Ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Skillfactory - main</title>
+		<style>
+			@charset "UTF-8";
+			@font-face {
+				font-family: "heliosexBOLD-neuemachina";
+				src: url("https://tools.skillfactory.ru/heliosext.woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "heliosexBOLD-neuemachina";
+				src: url("https://tools.skillfactory.ru/HeliosExtC-Bold.woff") format("woff");
+				font-weight: 700;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "heliosexBOLD-neuemachina";
+				src: url("https://tools.skillfactory.ru/PPNeueMachina-InktrapRegular.woff") format("woff");
+				font-weight: 800;
+				font-style: normal;
+			}
+
+			#allrecords a {
+				color: inherit;
+			}
+
+			* {
+				padding: 0;
+				margin: 0;
+				font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+				box-sizing: border-box;
+			}
+
+			.outer-wrapper {
+				background: #e0fb52;
+			}
+
+			.inner-wrapper {
+				width: 1160px;
+				margin: 0 auto;
+				position: relative;
+			}
+			@media screen and (max-width: 1199px) {
+				.inner-wrapper {
+					max-width: 940px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.inner-wrapper {
+					max-width: 620px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.inner-wrapper {
+					max-width: 460px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.inner-wrapper {
+					max-width: 300px;
+				}
+			}
+
+			.h2-title {
+				color: #181818;
+				font-size: 64px;
+				line-height: 90%;
+				font-weight: 800;
+				max-width: 770px;
+				margin-bottom: 27px;
+			}
+			@media screen and (max-width: 1199px) {
+				.h2-title {
+					font-size: 55px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.h2-title {
+					font-size: 50px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.h2-title {
+					font-size: 40px;
+					line-height: 36px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.h2-title {
+					font-size: 30px;
+					line-height: 28px;
+					margin-bottom: 24px;
+				}
+			}
+
+			.main {
+				margin-bottom: 110px;
+				overflow: hidden;
+			}
+			@media screen and (max-width: 959px) {
+				.main .outer-wrapper {
+					overflow: hidden;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main {
+					margin-bottom: 75px;
+				}
+			}
+			.main__header {
+				display: flex;
+				justify-content: space-between;
+				height: 100px;
+				align-items: center;
+				margin-bottom: 78px;
+			}
+			@media screen and (max-width: 479px) {
+				.main__header {
+					margin-bottom: 0;
+					height: 80px;
+				}
+			}
+			.main__logo-wrapper img {
+				max-width: 188px;
+			}
+			.main__nav {
+				display: flex;
+				list-style: none;
+				padding-left: 0 !important;
+				gap: 30px;
+				align-items: center;
+			}
+			@media screen and (max-width: 1199px) {
+				.main__nav {
+					display: none;
+				}
+			}
+			.main__nav-item {
+				text-decoration: none !important;
+				text-transform: uppercase;
+				color: #181818 !important;
+				font-size: 14px;
+				font-weight: 400;
+				transition: 0.2s;
+			}
+			.main__nav-item:hover {
+				transition: 0.2s;
+				opacity: 0.7;
+			}
+			.main__burger {
+				display: none;
+				border: none;
+				background: none;
+				outline: none;
+				position: relative;
+				color: transparent !important;
+			}
+			.main__burger .main__burger-line {
+				width: 17px;
+				height: 2px;
+				background: #181818;
+				transition: 0.2s;
+			}
+			@media screen and (max-width: 1199px) {
+				.main__burger {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 5px;
+				}
+			}
+			.main__burger_clicked .main__burger-line:first-of-type {
+				transform: rotate(45deg) translate3d(5px, 5px, 0px);
+				transition: 0.2s;
+			}
+			.main__burger_clicked .main__burger-line:nth-of-type(2) {
+				opacity: 0;
+				transition: 0.2s;
+			}
+			.main__burger_clicked .main__burger-line:last-of-type {
+				transform: rotate(-45deg) translate3d(5px, -5px, 0px);
+				transition: 0.2s;
+			}
+			.main .columns {
+				width: 100%;
+				display: grid;
+				grid-template-columns: 1fr 0.7fr;
+				padding-bottom: 58px;
+			}
+			@media screen and (max-width: 959px) {
+				.main .columns {
+					grid-template-columns: 1fr;
+				}
+			}
+			.main .main__bottom-border {
+				background-image: url(../../images/main-bb-2.svg);
+				background-position: center top;
+				background-repeat: no-repeat;
+				background-size: contain;
+				position: relative;
+				top: -1px;
+				display: flex;
+				margin: 0 auto;
+				height: 40px;
+				width: 100%;
+			}
+			@media screen and (max-width: 959px) {
+				.main .main__bottom-border {
+					left: 0;
+					background-size: cover;
+				}
+			}
+			.main .title {
+				color: #52a061;
+				font-size: 126px;
+				line-height: 1.1;
+				font-weight: 800;
+				margin-bottom: 10px;
+				width: 110%;
+				text-transform: uppercase;
+			}
+			.main .title-wrapper {
+				position: relative;
+				width: 130%;
+				z-index: 10;
+			}
+			@media screen and (max-width: 959px) {
+				.main .title-wrapper {
+					width: 100%;
+				}
+			}
+			.main .title-img {
+				position: absolute;
+				top: -70px;
+				right: 322px;
+				transform: rotate(-8deg);
+			}
+			@media screen and (max-width: 1199px) {
+				.main .title-img {
+					right: 257px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .title-img {
+					top: 20px;
+					right: 289px;
+					transform: rotate(-12deg);
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .title-img {
+					top: -40px;
+					right: 193px;
+					transform: rotate(-8deg);
+					width: 184px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .title-img {
+					top: 26px;
+					right: 134px;
+				}
+			}
+			.main .title span {
+				opacity: 0;
+			}
+			.main .title_additional {
+				font-size: 40px;
+				font-weight: 400;
+				color: #52a061;
+				line-height: 1.1;
+				margin-bottom: 30px;
+			}
+			@media screen and (max-width: 639px) {
+				.main .title_additional {
+					margin-bottom: 20px;
+					font-size: 20px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .title {
+					font-size: 120px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .title {
+					font-size: 60px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .title {
+					padding-top: 24px;
+					margin-bottom: 20px;
+					line-height: 0.8;
+				}
+			}
+			.main .block-lead {
+				color: #181818;
+				font-size: 24px;
+				line-height: 1.2;
+				font-weight: 400;
+				opacity: 0.7;
+				max-width: 600px;
+				margin-bottom: 40px;
+			}
+			@media screen and (max-width: 639px) {
+				.main .block-lead {
+					font-size: 18px;
+					line-height: 25px;
+				}
+			}
+			.main .list {
+				list-style: none;
+				margin-bottom: 50px;
+				padding-left: 0 !important;
+				position: relative;
+				z-index: 10;
+			}
+			@media screen and (max-width: 639px) {
+				.main .list {
+					margin-bottom: 20px;
+				}
+			}
+			.main .list-item {
+				color: #181818;
+				font-size: 24px;
+				line-height: 1.4;
+				font-weight: 400;
+			}
+			@media screen and (max-width: 1199px) {
+				.main .list-item {
+					font-size: 22px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .list-item {
+					font-size: 20px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .list-item {
+					font-size: 18px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .list-item {
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+			.main .directions {
+				position: relative;
+				z-index: 10;
+			}
+			@media screen and (max-width: 959px) {
+				.main .directions {
+					margin-bottom: 100px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .directions {
+					margin-bottom: 30px;
+				}
+			}
+			.main .directions__title {
+				color: #181818;
+				font-size: 24px;
+				line-height: 1.2;
+				font-weight: 400;
+				margin-bottom: 24px;
+			}
+			@media screen and (max-width: 1199px) {
+				.main .directions__title {
+					font-size: 22px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .directions__title {
+					font-size: 18px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .directions__title {
+					font-size: 14px;
+					line-height: 1.8;
+					margin-bottom: 14px;
+				}
+			}
+			.main .directions__list {
+				list-style: none;
+				display: flex;
+				gap: 10px;
+				flex-wrap: wrap;
+				padding-left: 0 !important;
+			}
+			.main .directions__list-link {
+				display: flex;
+				flex-wrap: nowrap;
+				background: #fff;
+				padding: 16px;
+				border-radius: 4px;
+				align-items: center;
+				justify-content: center;
+				transition: 0.1s linear;
+				text-decoration: none !important;
+				color: #033932 !important;
+				font-size: 24px;
+				line-height: 1.2;
+				font-weight: 400;
+			}
+			.main .directions__list-link span {
+				position: relative;
+				top: 2px;
+			}
+			@media screen and (max-width: 1199px) {
+				.main .directions__list-link {
+					font-size: 22px;
+					padding: 10px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .directions__list-link {
+					font-size: 20px;
+					padding: 15px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .directions__list-link {
+					font-size: 18px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .directions__list-link {
+					font-size: 12px;
+					line-height: 1.2;
+					padding: 12px;
+				}
+			}
+			@media screen and (max-width: 1199px) {
+				.main .directions__list-link svg {
+					width: 22px;
+					height: 22px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .directions__list-link svg {
+					width: 18px;
+					height: 18px;
+					margin-left: 20px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .directions__list-link svg {
+					display: none;
+				}
+			}
+			.main .directions__list-link:hover {
+				background: #dde6e7;
+				transition: 0.1s linear;
+			}
+			.main .directions__list-link:hover svg path {
+				fill: #043933;
+				transition: 0.1s linear;
+			}
+			.main .directions__list-link_pink {
+				background: #fc5f7c;
+				color: #fff !important;
+			}
+			.main .directions__list-link_pink:hover {
+				background: #ff8da2;
+			}
+			.main .main__pic {
+				position: relative;
+				display: flex;
+				justify-content: flex-end;
+				top: 15px;
+				height: calc(100% - 15px);
+			}
+			.main .main__pic img {
+				position: absolute;
+			}
+			.main .main__pic .flower {
+				top: -103px;
+				right: -400px;
+			}
+			@media screen and (max-width: 1199px) {
+				.main .main__pic .flower {
+					width: 750px;
+					top: -60px;
+					right: -490px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .main__pic .flower {
+					width: 610px;
+					top: -440px;
+					right: -320px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .main__pic .flower {
+					width: 460px;
+					top: -280px;
+				}
+			}
+			.main .main__pic .sale {
+				bottom: -26px;
+				left: 60px;
+			}
+			@media screen and (max-width: 1199px) {
+				.main .main__pic .sale {
+					bottom: -50px;
+					left: -91px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.main .main__pic .sale {
+					bottom: -37px;
+					left: 420px;
+					width: 180px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.main .main__pic .sale {
+					bottom: -7px;
+					left: 260px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.main .main__pic .sale {
+					bottom: -40px;
+					left: 150px;
+					width: 130px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="main">
+			<div class="outer-wrapper">
+				<div class="inner-wrapper">
+					<div class="main__header">
+						<div class="main__logo-wrapper">
+							<img src="https://static.tildacdn.com/tild3736-6663-4331-b065-623334663336/SkillFactory.svg" alt="SkillFactory - научитесь работать в IT" />
+						</div>
+						<ul class="main__nav">
+							<li><a href="#submenu:details" class="main__nav-item">онлайн-курсы</a></li>
+							<li><a href="/free-events" target="_blank" class="main__nav-item">БЕСПЛАТНО</a></li>
+							<li><a href="/career-center" target="_blank" class="main__nav-item">центр карьеры</a></li>
+							<li><a href="/contacts" target="_blank" class="main__nav-item">контакты</a></li>
+							<li><a href="https://blog.skillfactory.ru/" target="_blank" class="main__nav-item">Медиа</a></li>
+							<li><a href="https://new.skillfactory.ru/corporativnoye-obuchenye" target="_blank" class="main__nav-item">корпоративное обучение</a></li>
+						</ul>
+						<a href="#submenu:details" class="main__burger">
+							<span class="main__burger-line">&nbsp;</span>
+							<span class="main__burger-line">&nbsp;</span>
+							<span class="main__burger-line">&nbsp;</span>
+						</a>
+					</div>
+					<div class="columns">
+						<div class="column">
+							<div class="title-wrapper">
+								<h1 class="title">Не <span>май</span>тесь</h1>
+								<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/SpringSale2024/springMay.webp" alt="Не майтесь — учитесь IT-профессиям со скидкой 45%" class="title-img" />
+								<p class="title_additional">учитесь IT-профессиям</p>
+							</div>
+
+							<ul class="list">
+								<li class="list-item">&mdash;&nbsp;Практика на реальных проектах</li>
+								<li class="list-item">&mdash;&nbsp;Помощь с&nbsp;трудоустройством</li>
+								<li class="list-item">&mdash;&nbsp;Скидка 45% и&nbsp;мини-курс по&nbsp;soft skills в&nbsp;подарок</li>
+							</ul>
+							<div class="directions">
+								<p class="directions__title">Выберите направление:</p>
+								<ul class="directions__list">
+									<li>
+										<a target="_blank" href="/courses/programmirovanie" class="directions__list-link">
+											<span>Программирование</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+												<path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#E0FB52"></path>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="/courses/data-science" class="directions__list-link">
+											<span>Data Science</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+												<path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#E0FB52"></path>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="/courses/analitika-dannyh" class="directions__list-link">
+											<span>Аналитика данных</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+												<path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#E0FB52"></path>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="/courses/testirovanie" class="directions__list-link">
+											<span>Тестирование</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+												<path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#E0FB52"></path>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="https://new.skillfactory.ru/vyssheye-obrazovaniye" class="directions__list-link">
+											<span>Высшее образование</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+												<path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#E0FB52"></path>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="https://new.skillfactory.ru/vyssheye-obrazovaniye" class="directions__list-link">
+											<span>Дизайн</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+												<path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#E0FB52"></path>
+											</svg>
+										</a>
+									</li>
+									<li class="">
+										<a target="_blank" href="/courses" class="directions__list-link directions__list-link_pink"><span>Все курсы</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="column">
+							<div class="main__pic">
+								<img class="flower" src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/SpringSale2024/springSaleMerged.webp" alt="skillfactory - IT курсы" />
+								<img class="sale" src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/SpringSale2024/springSale.svg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__bottom-border"></div>
+		</section>
+	</body>
+</html>

@@ -524,30 +524,6 @@
     top: -280px;
   }
 }
-.main .main__pic .lines {
-  right: -244px;
-  top: -90px;
-}
-@media screen and (max-width: 1199px) {
-  .main .main__pic .lines {
-    right: -290px;
-    top: -70px;
-    width: 540px;
-  }
-}
-@media screen and (max-width: 959px) {
-  .main .main__pic .lines {
-    right: -203px;
-    top: -400px;
-    width: 460px;
-  }
-}
-@media screen and (max-width: 479px) {
-  .main .main__pic .lines {
-    top: -220px;
-    width: 280px;
-  }
-}
 .main .main__pic .sale {
   bottom: -26px;
   left: 60px;

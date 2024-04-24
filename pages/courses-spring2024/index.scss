@@ -263,6 +263,7 @@
 		position: relative;
 		z-index: 10;
 		max-width: 535px;
+		opacity: 0.7;
 
 		&-item {
 			color: #181818;
@@ -276,7 +277,6 @@
 
 			@media screen and (max-width: 639px) {
 				font-size: 14px;
-				opacity: 0.7;
 				width: 62%;
 			}
 			@media screen and (max-width: 479px) {
