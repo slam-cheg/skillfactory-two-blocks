@@ -404,13 +404,13 @@
   .main .directions__title {
     font-size: 14px;
     line-height: 1.8;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
   }
 }
 .main .directions__list {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   flex-wrap: wrap;
   padding-left: 0 !important;
 }
@@ -549,7 +549,7 @@
   }
 }
 .main .main__pic .sale {
-  bottom: -16px;
+  bottom: -26px;
   left: 60px;
 }
 @media screen and (max-width: 1199px) {
