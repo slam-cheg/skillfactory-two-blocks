@@ -82,7 +82,7 @@
 }
 
 .main {
-  margin-bottom: 110px;
+  margin-bottom: 0px;
   overflow: hidden;
 }
 @media screen and (max-width: 959px) {
