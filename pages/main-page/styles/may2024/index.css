@@ -53,7 +53,7 @@
 }
 
 .outer-wrapper {
-  background: #e0fb52;
+  background: #b5e916;
 }
 
 .inner-wrapper {
@@ -117,6 +117,9 @@
 .main {
   margin-bottom: 110px;
   overflow: hidden;
+}
+.main .outer-wrapper {
+  background: #e0fb52;
 }
 @media screen and (max-width: 959px) {
   .main .outer-wrapper {
@@ -211,24 +214,6 @@
 @media screen and (max-width: 959px) {
   .main .columns {
     grid-template-columns: 1fr;
-  }
-}
-.main .main__bottom-border {
-  background-image: url(../../images/main-bb-2.svg);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  top: -1px;
-  display: flex;
-  margin: 0 auto;
-  height: 40px;
-  width: 100%;
-}
-@media screen and (max-width: 959px) {
-  .main .main__bottom-border {
-    left: 0;
-    background-size: cover;
   }
 }
 .main .title {
@@ -552,6 +537,24 @@
     bottom: -40px;
     left: 150px;
     width: 130px;
+  }
+}
+.main__bottom-border {
+  background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/SpringSale2024/main-bb-2.svg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: -1px;
+  display: flex;
+  margin: 0 auto;
+  height: 40px;
+  width: 100%;
+}
+@media screen and (max-width: 959px) {
+  .main__bottom-border {
+    left: 0;
+    background-size: cover;
   }
 }
 
