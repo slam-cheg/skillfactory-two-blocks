@@ -1,0 +1,323 @@
+@font-face {
+  font-family: "CoFo Sans";
+  src: url("https://static.tildacdn.com/tild3965-3764-4731-a634-636639303036/CoFoSans-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CoFo Sans";
+  src: url("https://static.tildacdn.com/tild3934-3534-4238-b733-363661636632/CoFoSans-Medium.woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CoFo Sans";
+  src: url("https://static.tildacdn.com/tild6631-6237-4138-b738-353333613266/CoFoSans-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CoFo Sans";
+  src: url("./CoFoSans-Black.woff");
+  font-weight: 900;
+  font-style: normal;
+}
+#allrecords ul {
+  padding-left: 0;
+}
+#allrecords a {
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "CoFo Sans", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.outer-wrapper {
+  background: #f4f4f4;
+}
+
+.inner-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .inner-wrapper {
+    max-width: 940px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .inner-wrapper {
+    max-width: 620px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .inner-wrapper {
+    max-width: 460px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .inner-wrapper {
+    max-width: 300px;
+  }
+}
+
+.courses {
+  background: #f4f4f4;
+  padding: 90px 0;
+  position: relative;
+}
+.courses .h2-title {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 0.9;
+  margin-bottom: 60px;
+  color: #161616;
+}
+.courses .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  list-style: none;
+  pointer-events: auto;
+  overflow: hidden;
+  transition: 1s;
+}
+@media screen and (max-width: 1199px) {
+  .courses .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 959px) {
+  .courses .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.courses .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #161616;
+  margin-bottom: 40px;
+  padding: 10px;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.4s;
+  max-height: 1000px;
+}
+@media screen and (max-width: 959px) {
+  .courses .card {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .courses .card {
+    margin-bottom: 10px;
+  }
+}
+.courses .card__top {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 44px;
+}
+@media screen and (max-width: 639px) {
+  .courses .card__top {
+    flex-direction: column;
+  }
+}
+.courses .card__center {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 50px;
+  width: 73%;
+}
+.courses .card__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 4;
+  margin-top: auto;
+}
+.courses .card .sticker {
+  background: #e0fb52;
+  color: #161616;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.courses .card .sticker_dark {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.courses .card__title {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 0.9;
+  color: #ffffff;
+}
+.courses .card__title {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 0.9;
+  color: #ffffff;
+}
+.courses .card__title span {
+  color: #e0fb52;
+}
+.courses .card__description {
+  font-size: 16px;
+  line-height: 1.06;
+  font-weight: 400;
+  color: #ffffff;
+}
+.courses .card__image {
+  position: absolute;
+  z-index: 1;
+  top: -4px;
+  right: -114px;
+}
+@media screen and (max-width: 639px) {
+  .courses .card__image {
+    top: -114px;
+    right: -85px;
+    width: 292px;
+  }
+}
+.courses .card__price-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.courses .card__price {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 0.9;
+  color: #ffffff;
+}
+.courses .card__installment {
+  color: #737373;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+.courses .card__buttons {
+  display: flex;
+  gap: 10px;
+}
+.courses .card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0fb52;
+  color: #161616;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  flex-grow: 1;
+  transition: 0.3s;
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .courses .card__button:hover {
+    background: #ffffff;
+    transition: 0.3s;
+  }
+}
+.courses .card__button_dark {
+  background: transparent;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+@media screen and (min-width: 1200px) {
+  .courses .card__button_dark:hover {
+    color: #161616;
+    transition: 0.3s;
+  }
+}
+.courses .card_light {
+  background: #ffffff;
+}
+.courses .card_light .card__title,
+.courses .card_light .card__description,
+.courses .card_light .card__price {
+  color: #161616;
+}
+.courses .card_light .card__title span {
+  color: #939393;
+}
+.courses .card_light .sticker_dark,
+.courses .card_light .card__button_dark {
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .courses .card_light .card__button:hover {
+    background: #161616;
+    color: #ffffff;
+    transition: 0.3s;
+  }
+}
+.courses .card_hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  transform: translateX(1000px);
+  max-height: 0px;
+  margin-bottom: 0;
+}
+.courses .button {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 70px;
+  color: #161616;
+  border: 1px solid #161616;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1199px) {
+  .courses .button {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .courses .button {
+    margin-top: 30px;
+    width: 100%;
+    height: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .courses .button:hover {
+    background: #161616;
+    color: #ffffff;
+    transition: 0.3s;
+  }
+}
