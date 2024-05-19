@@ -1,9 +1,15 @@
 #allrecords {
+	ul {
+		padding-left: 0;
+	}
 	a {
 		color: inherit;
 	}
+}
 
-	ul {
-		padding-left: 0 !important;
-	}
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "CoFo Sans", Arial, sans-serif;
+	box-sizing: border-box;
 }

@@ -1,0 +1,16 @@
+@import "../../../../../../fonts/CD/fonts.scss";
+@import "../../../../../../styles/modules/variables.scss";
+@import "../../../../../../styles/modules/mixins.scss";
+@import "../../../../../../styles/modules/blocks/tilda-reset/tilda-reset.scss";
+@import "../../../../../../styles/modules/blocks/inner-wrapper/inner-wrapper.scss";
+
+@import "./blocks/first/first.scss";
+
+@import "./blocks/h2-title/h2-title.scss";
+@import "./blocks/courses/courses.scss";
+@import "./blocks/courses/cards/cards.scss";
+@import "./blocks/courses/cards/card.scss";
+@import "./blocks/courses/button/button.scss";
+@import "./blocks/courses/tags/tags.scss";
+
+@import "./blocks/faq/faq.scss";
