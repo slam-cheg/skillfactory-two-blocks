@@ -1,0 +1,83 @@
+@import "../../../../../fonts/SF/fonts.css";
+#allrecords ul {
+  padding-left: 0;
+}
+#allrecords a {
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.inner-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .inner-wrapper {
+    max-width: 940px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .inner-wrapper {
+    max-width: 620px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .inner-wrapper {
+    max-width: 460px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .inner-wrapper {
+    max-width: 300px;
+  }
+}
+
+.h2-title {
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 0.8;
+}
+
+.reviews {
+  padding: 90px 0;
+}
+.reviews__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+.reviews__scroll-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review {
+  background: #F2F2F4;
+  padding: 20px;
+  border-radius: 6px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.review__text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: rgba(24, 24, 24, 0.5);
+}
+.review__bottom {
+  display: flex;
+  gap: 14px;
+}

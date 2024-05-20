@@ -1,0 +1,40 @@
+.reviews {
+    padding: 90px 0;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 60px;
+    }
+
+    &__scroll-buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.review {
+    background: #F2F2F4;
+    padding: 20px;
+    border-radius: 6px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.2;
+        color: rgba(24, 24, 24, 0.5);
+    }
+
+    &__bottom {
+        display: flex;
+        gap: 14px;
+    }
+}
