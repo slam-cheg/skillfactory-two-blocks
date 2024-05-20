@@ -1,8 +1,16 @@
 .first {
 	background: #161616;
-	padding-top: 140px;
+	padding-top: 130px;
     padding-bottom: 90px;
 	overflow: hidden;
+
+	@media screen and (max-width: 959px) {
+		padding-top: 146px;
+	}
+
+	@media screen and (max-width: 639px) {
+		padding-top: 156px;
+	}
 
 	&__text {
 		display: grid;
@@ -10,13 +18,21 @@
 		align-items: center;
 		gap: 100px;
 		margin-bottom: 68px;
-	}
 
-	.h1-title {
-		color: #fff;
-		font-size: 60px;
-		line-height: 0.9;
-		font-weight: 400;
+		@media screen and (max-width: 1199px) {
+			gap: 50px;
+			grid-template-columns: 500px auto;
+		}
+
+		@media screen and (max-width: 959px) {
+			grid-template-columns: 1fr;
+			gap: 20px;
+			margin-bottom: 82px;
+		}
+
+		@media screen and (max-width: 639px) {
+			margin-bottom: 60px;
+		}
 	}
 
 	&__description {
@@ -24,6 +40,10 @@
 		line-height: 1.12;
 		color: #939393;
 		font-weight: 400;
+
+		@media screen and (max-width: 639px) {
+			font-size: 16px;
+		}
 	}
 
 	&__images {
@@ -32,6 +52,20 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 34px;
+
+		@media screen and (max-width: 639px) {
+			height: 130px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__image {
+		max-height: 100%;
+		&_small {
+			@media screen and (max-width: 639px) {
+				max-height: 70px;
+			}
+		}
 	}
 
 	&__list {
@@ -43,10 +77,35 @@
 		border-top: 1px solid #939393;
 		padding-top: 10px;
 
+		@media screen and (max-width: 959px) {
+			padding-top: 0;
+			grid-template-columns: repeat(2, 1fr);
+			border-top: none;
+			column-gap: 0;
+		}
+
+		@media screen and (max-width: 639px) {
+			grid-template-columns: 1fr;
+			row-gap: 20px;
+		}
+
 		&-item {
 			display: flex;
 			flex-direction: column;
 			gap: 10px;
+
+			@media screen and (max-width: 959px) {
+				padding-top: 10px;
+				padding-right: 40px;
+				margin-right: 20px;
+				border-top: 1px solid #939393;
+			}
+
+			@media screen and (max-width: 639px) {
+				padding-right: 0;
+				margin-right: 0;
+			}
+
 		}
 
 		&-title {
@@ -54,6 +113,10 @@
 			font-size: 20px;
 			font-weight: 400;
 			line-height: 1;
+
+			@media screen and (max-width: 639px) {
+				font-size: 16px;
+			}
 		}
 
 		&-description {
@@ -61,6 +124,11 @@
 			font-size: 20px;
 			font-weight: 400;
 			line-height: 1;
+
+			@media screen and (max-width: 639px) {
+				font-size: 16px;
+				max-width: 250px;
+			}
 		}
 	}
 }

@@ -4,4 +4,9 @@
     line-height: 0.9;
     margin-bottom: 60px;
     color: #161616;
+    text-transform: lowercase;
+
+    @media screen and (max-width: 639px) {
+        font-size: 30px;
+    }
 }

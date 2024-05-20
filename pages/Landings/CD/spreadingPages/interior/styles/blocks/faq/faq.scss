@@ -1,13 +1,123 @@
 .faq {
-    background: #f4f4f4;
-	padding: 90px 0;
+	background: #f4f4f4;
+	padding: 90px 0 60px 0;
 	position: relative;
 
-    .accordeon {
-        &__close-button {
-            background-image: url(../../../images/cross.svg);
-            width: 36px;
-            height: 36px;
-        }
-    }
+	@media screen and (max-width: 639px) {
+		padding: 60px 0;
+	}
+
+	.h2-title {
+		margin-bottom: 70px;
+
+		@media screen and (max-width: 639px) {
+			margin-bottom: 60px;
+		}
+	}
+
+	.accordeon {
+		list-style: none;
+
+		&__item {
+			padding: 10px 0;
+			border-top: 1px solid #939393;
+
+			&:last-of-type {
+				border-bottom: 1px solid #939393;
+			}
+
+			&_opened {
+				.accordeon__body {
+					max-height: 3000px;
+					pointer-events: auto;
+					transition: max-height 0.5s;
+				}
+
+				.accordeon__close-button {
+					transform: rotate(45deg);
+					transition: 0.3s;
+
+					&:hover {
+						transform: rotate(50deg);
+						transition: 0.3s;
+					}
+				}
+			}
+		}
+
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			@media screen and (max-width: 639px) {
+				align-items: center;
+			}
+		}
+
+		&__body {
+			max-height: 0px;
+			transition: max-height 0.5s;
+			pointer-events: none;
+			overflow: hidden;
+		}
+
+		.h5-title {
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 0.9;
+			margin-bottom: 20px;
+			text-transform: lowercase;
+
+			@media screen and (max-width: 639px) {
+				font-size: 16px;
+				margin-bottom: 0;
+			}
+		}
+
+		&__close-button {
+			background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/CD/spreadPages/interrior-designer/cross.svg);
+			background-repeat: no-repeat;
+			background-color: transparent;
+			background-position: center;
+			background-size: 100%;
+			border: none;
+			cursor: pointer;
+			display: block;
+			outline: none;
+			width: 36px;
+			height: 36px;
+			transition: 0.3s;
+
+			@media screen and (min-width: 1200px) {
+				&:hover {
+					transform: rotate(5deg);
+					transition: 0.3s;
+				}
+			}
+
+			@media screen and (max-width: 639px) {
+				width: 28px;
+				height: 28px;
+			}
+		}
+
+		&__list {
+			list-style: none;
+		}
+
+		&__text {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.2;
+			color: #939393;
+			text-transform: lowercase;
+
+			@media screen and (max-width: 639px) {
+				&:first-child {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
 }
