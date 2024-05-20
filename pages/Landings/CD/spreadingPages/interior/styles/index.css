@@ -675,6 +675,7 @@
   .faq .accordeon .h5-title {
     font-size: 16px;
     margin-bottom: 0;
+    max-width: calc(100% - 30px);
   }
 }
 .faq .accordeon__close-button {

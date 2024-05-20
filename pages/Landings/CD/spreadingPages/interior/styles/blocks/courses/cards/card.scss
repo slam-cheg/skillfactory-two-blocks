@@ -98,14 +98,6 @@
 	&__image {
 		position: absolute;
 		z-index: 1;
-		top: -4px;
-		right: -114px;
-
-		@media screen and (max-width: 639px) {
-			top: -114px;
-			right: -85px;
-			width: 292px;
-		}
 	}
 
 	&#COM-DESIGNER {

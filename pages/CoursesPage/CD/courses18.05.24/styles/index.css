@@ -36,10 +36,6 @@
   box-sizing: border-box;
 }
 
-.outer-wrapper {
-  background: #f4f4f4;
-}
-
 .inner-wrapper {
   width: 1160px;
   margin: 0 auto;
@@ -66,19 +62,81 @@
   }
 }
 
-.courses {
-  background: #f4f4f4;
-  padding: 90px 0;
-  position: relative;
+#allrecords ul {
+  padding-left: 0;
 }
-.courses .h2-title {
+#allrecords a {
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "CoFo Sans", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.h2-title {
   font-size: 42px;
   font-weight: 400;
   line-height: 0.9;
   margin-bottom: 60px;
   color: #161616;
+  text-transform: lowercase;
 }
-.courses .cards {
+@media screen and (max-width: 639px) {
+  .h2-title {
+    font-size: 30px;
+  }
+}
+
+.courses {
+  background: #f4f4f4;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 639px) {
+  .courses {
+    padding: 60px 0;
+  }
+}
+.courses__head {
+  display: grid;
+  gap: 240px;
+  align-items: center;
+  grid-template-columns: 360px auto;
+  max-width: 1082px;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 1199px) {
+  .courses__head {
+    gap: 130px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .courses__head {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.courses__head .h2-title {
+  margin-bottom: 0;
+  max-width: 360px;
+}
+.courses__description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #939393;
+}
+@media screen and (max-width: 639px) {
+  .courses__description {
+    font-size: 16px;
+  }
+}
+
+.cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -moz-column-gap: 40px;
@@ -89,16 +147,17 @@
   transition: 1s;
 }
 @media screen and (max-width: 1199px) {
-  .courses .cards {
+  .cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 959px) {
-  .courses .cards {
+  .cards {
     grid-template-columns: 1fr;
   }
 }
-.courses .card {
+
+.card {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -113,16 +172,16 @@
   max-height: 1000px;
 }
 @media screen and (max-width: 959px) {
-  .courses .card {
+  .card {
     margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 639px) {
-  .courses .card {
+  .card {
     margin-bottom: 10px;
   }
 }
-.courses .card__top {
+.card__top {
   display: flex;
   gap: 10px;
   position: relative;
@@ -130,11 +189,11 @@
   margin-bottom: 44px;
 }
 @media screen and (max-width: 639px) {
-  .courses .card__top {
+  .card__top {
     flex-direction: column;
   }
 }
-.courses .card__center {
+.card__center {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -143,7 +202,7 @@
   margin-bottom: 50px;
   width: 73%;
 }
-.courses .card__bottom {
+.card__bottom {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -151,7 +210,7 @@
   z-index: 4;
   margin-top: auto;
 }
-.courses .card .sticker {
+.card .sticker {
   background: #e0fb52;
   color: #161616;
   padding: 4px 8px;
@@ -164,66 +223,65 @@
   width: -moz-fit-content;
   width: fit-content;
 }
-.courses .card .sticker_dark {
+.card .sticker_dark {
   background: transparent;
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
-.courses .card__title {
+.card__title {
   font-size: 28px;
   font-weight: 400;
   line-height: 0.9;
   color: #ffffff;
 }
-.courses .card__title {
+.card__title {
   font-size: 28px;
   font-weight: 400;
   line-height: 0.9;
   color: #ffffff;
 }
-.courses .card__title span {
+.card__title span {
   color: #e0fb52;
 }
-.courses .card__description {
+.card__description {
   font-size: 16px;
   line-height: 1.06;
   font-weight: 400;
   color: #ffffff;
 }
-.courses .card__image {
+.card__image {
   position: absolute;
   z-index: 1;
-  top: -4px;
-  right: -114px;
 }
-@media screen and (max-width: 639px) {
-  .courses .card__image {
-    top: -114px;
-    right: -85px;
-    width: 292px;
-  }
+.card#COM-DESIGNER .card__image {
+  top: -55px;
+  right: -123px;
 }
-.courses .card__price-wrapper {
+.card#INT-DESIGNER .card__image {
+  top: 26px;
+  right: -87px;
+}
+.card__price-wrapper {
   display: flex;
   flex-direction: column;
 }
-.courses .card__price {
+.card__price {
   font-size: 28px;
   font-weight: 400;
   line-height: 0.9;
   color: #ffffff;
 }
-.courses .card__installment {
+.card__installment {
   color: #737373;
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
 }
-.courses .card__buttons {
+.card__buttons {
   display: flex;
   gap: 10px;
 }
-.courses .card__button {
+.card__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,46 +298,46 @@
   text-decoration: none;
 }
 @media screen and (min-width: 1200px) {
-  .courses .card__button:hover {
+  .card__button:hover {
     background: #ffffff;
     transition: 0.3s;
   }
 }
-.courses .card__button_dark {
+.card__button_dark {
   background: transparent;
   color: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
 }
 @media screen and (min-width: 1200px) {
-  .courses .card__button_dark:hover {
+  .card__button_dark:hover {
     color: #161616;
     transition: 0.3s;
   }
 }
-.courses .card_light {
+.card_light {
   background: #ffffff;
 }
-.courses .card_light .card__title,
-.courses .card_light .card__description,
-.courses .card_light .card__price {
+.card_light .card__title,
+.card_light .card__description,
+.card_light .card__price {
   color: #161616;
 }
-.courses .card_light .card__title span {
+.card_light .card__title span {
   color: #939393;
 }
-.courses .card_light .sticker_dark,
-.courses .card_light .card__button_dark {
+.card_light .sticker_dark,
+.card_light .card__button_dark {
   color: rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(0, 0, 0, 0.6);
 }
 @media screen and (min-width: 1200px) {
-  .courses .card_light .card__button:hover {
+  .card_light .card__button:hover {
     background: #161616;
     color: #ffffff;
     transition: 0.3s;
   }
 }
-.courses .card_hidden {
+.card_hidden {
   opacity: 0;
   visibility: hidden;
   transition: 0.4s;
@@ -287,7 +345,8 @@
   max-height: 0px;
   margin-bottom: 0;
 }
-.courses .button {
+
+.button {
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -303,19 +362,19 @@
   transition: 0.3s;
 }
 @media screen and (max-width: 1199px) {
-  .courses .button {
+  .button {
     margin-top: 20px;
   }
 }
 @media screen and (max-width: 639px) {
-  .courses .button {
+  .button {
     margin-top: 30px;
     width: 100%;
     height: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .courses .button:hover {
+  .button:hover {
     background: #161616;
     color: #ffffff;
     transition: 0.3s;
