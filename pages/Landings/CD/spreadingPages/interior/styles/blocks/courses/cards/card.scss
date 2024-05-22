@@ -45,7 +45,7 @@
 	&__bottom {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 20px;
 		position: relative;
 		z-index: 4;
 		margin-top: auto;
@@ -75,16 +75,13 @@
 		font-weight: 400;
 		line-height: 0.9;
 		color: #ffffff;
-	}
-
-	&__title {
-		font-size: 28px;
-		font-weight: 400;
-		line-height: 0.9;
-		color: #ffffff;
 
 		span {
 			color: #e0fb52;
+		}
+
+		@media screen and (max-width: 479px) {
+			font-size: 22px;
 		}
 	}
 
@@ -92,7 +89,7 @@
 		font-size: 16px;
 		line-height: 1.06;
 		font-weight: 400;
-		color: #ffffff;
+		color: #939393;
 	}
 
 	&__image {
@@ -134,8 +131,17 @@
 	}
 
 	&__buttons {
-		display: flex;
+		display: grid;
+		grid-template-columns: 190px 140px;
 		gap: 10px;
+
+		@media screen and (max-width: 1199px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media screen and (max-width: 639px) {
+			grid-template-columns: 1.2fr 1fr;
+		}
 	}
 
 	&__button {
@@ -150,7 +156,7 @@
 		line-height: 1;
 		border: none;
 		cursor: pointer;
-		flex-grow: 1;
+		width: 100%;
 		transition: 0.3s;
 		text-decoration: none;
 

@@ -1,18 +1,18 @@
 @font-face {
   font-family: "CoFo Sans";
-  src: url("https://static.tildacdn.com/tild3965-3764-4731-a634-636639303036/CoFoSans-Regular.woff");
+  src: url("./CoFoSans-Regular.woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "CoFo Sans";
-  src: url("https://static.tildacdn.com/tild3934-3534-4238-b733-363661636632/CoFoSans-Medium.woff");
+  src: url("./CoFoSans-Medium.woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "CoFo Sans";
-  src: url("https://static.tildacdn.com/tild6631-6237-4138-b738-353333613266/CoFoSans-Bold.woff");
+  src: url("./CoFoSans-Bold.woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -121,28 +121,33 @@
   margin-bottom: 34px;
   justify-content: space-between;
 }
+@media screen and (max-width: 959px) {
+  .first__images {
+    height: 180px;
+  }
+}
 @media screen and (max-width: 639px) {
   .first__images {
-    height: 130px;
+    height: 150px;
     margin-bottom: 20px;
   }
 }
-.first__image {
-  max-height: 100%;
-}
-@media screen and (max-width: 959px) {
-  .first__image_big {
-    max-height: 180px;
+@media screen and (min-width: 480px) and (max-width: 639px) {
+  .first__images {
+    justify-content: space-around;
   }
 }
-@media screen and (max-width: 639px) {
+.first__image {
+  height: 100%;
+}
+@media screen and (max-width: 479px) {
   .first__image_big:nth-child(3) {
     display: none;
   }
 }
 @media screen and (max-width: 959px) {
   .first__image_small {
-    max-height: 94px;
+    height: 94px;
   }
   .first__image_small:last-child {
     display: none;
@@ -150,7 +155,7 @@
 }
 @media screen and (max-width: 639px) {
   .first__image_small {
-    max-height: 70px;
+    height: 70px;
   }
 }
 .first__list {
@@ -361,7 +366,7 @@
 .card__bottom {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   position: relative;
   z-index: 4;
   margin-top: auto;
@@ -390,20 +395,19 @@
   line-height: 0.9;
   color: #ffffff;
 }
-.card__title {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 0.9;
-  color: #ffffff;
-}
 .card__title span {
   color: #e0fb52;
+}
+@media screen and (max-width: 479px) {
+  .card__title {
+    font-size: 22px;
+  }
 }
 .card__description {
   font-size: 16px;
   line-height: 1.06;
   font-weight: 400;
-  color: #ffffff;
+  color: #939393;
 }
 .card__image {
   position: absolute;
@@ -434,8 +438,19 @@
   line-height: 1;
 }
 .card__buttons {
-  display: flex;
+  display: grid;
+  grid-template-columns: 190px 140px;
   gap: 10px;
+}
+@media screen and (max-width: 1199px) {
+  .card__buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card__buttons {
+    grid-template-columns: 1.2fr 1fr;
+  }
 }
 .card__button {
   display: flex;
@@ -449,7 +464,7 @@
   line-height: 1;
   border: none;
   cursor: pointer;
-  flex-grow: 1;
+  width: 100%;
   transition: 0.3s;
   text-decoration: none;
 }
