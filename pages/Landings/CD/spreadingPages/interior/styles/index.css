@@ -412,6 +412,7 @@
 .card__image {
   position: absolute;
   z-index: 1;
+  pointer-events: none;
 }
 .card#COM-DESIGNER .card__image {
   top: -55px;
@@ -457,7 +458,7 @@
   justify-content: center;
   align-items: center;
   background: #e0fb52;
-  color: #161616;
+  color: #161616 !important;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 400;
@@ -470,18 +471,18 @@
 }
 @media screen and (min-width: 1200px) {
   .card__button:hover {
-    background: #ffffff;
+    background: #ffffff !important;
     transition: 0.3s;
   }
 }
 .card__button_dark {
   background: transparent;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
   border: 1px solid rgb(255, 255, 255);
 }
 @media screen and (min-width: 1200px) {
   .card__button_dark:hover {
-    color: #161616;
+    color: #161616 !important;
     transition: 0.3s;
   }
 }
@@ -498,13 +499,13 @@
 }
 .card_light .sticker_dark,
 .card_light .card__button_dark {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.6) !important;
   border: 1px solid rgba(0, 0, 0, 0.6);
 }
 @media screen and (min-width: 1200px) {
   .card_light .card__button:hover {
     background: #161616;
-    color: #ffffff;
+    color: #ffffff !important;
     transition: 0.3s;
   }
 }
@@ -615,7 +616,7 @@
     cursor: pointer;
   }
   .tags__item:hover .tags__link {
-    color: #ffffff;
+    color: #ffffff !important;
     transition: 0.3s;
   }
 }
@@ -683,6 +684,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 @media screen and (max-width: 639px) {
   .faq .accordeon__header {

@@ -1,0 +1,195 @@
+.accordeon {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	&__item {
+		&_opened {
+			.accordeon__body {
+				pointer-events: auto;
+				transition: max-height 0.5s;
+			}
+
+			.accordeon__close-button {
+				width: 36px;
+				height: 36px;
+				transform: rotate(45deg);
+				transition: 0.3s;
+
+				@media screen and (min-width: 1200px) {
+					&:hover {
+						transform: rotate(50deg);
+						transition: 0.3s;
+					}
+				}
+			}
+		}
+
+		&_bonus {
+			.accordeon__header {
+				background: #043933 !important;
+			}
+            .h5-title {
+                color: #ffffff !important;
+            }
+            .accordeon__close-button {
+                background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/cross-white.svg) !important;
+            }
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
+		padding: 20px;
+		background: #ffffff;
+		border-radius: 6px;
+
+		@media screen and (max-width: 639px) {
+			align-items: center;
+		}
+
+		&-content {
+			display: flex;
+			width: calc(100% - 50px);
+			align-items: center;
+		}
+
+		&-label {
+			font-size: 16px;
+			padding: 10px 14px;
+			font-weight: 400;
+			color: #161616;
+			background: #f2f2f4;
+			border-radius: 6px;
+		}
+	}
+
+	&__separator {
+		overflow: hidden;
+		transition: 0.5s;
+		div {
+			height: 30px;
+		}
+	}
+
+	&__body {
+		transition: max-height 0.5s;
+		pointer-events: none;
+		overflow: hidden;
+
+		&-columns {
+			display: grid;
+			grid-template-columns: 560px auto;
+			gap: 40px;
+		}
+
+		&-col {
+			display: flex;
+			flex-direction: column;
+			&:first-child {
+				gap: 28px;
+			}
+			&:last-child {
+				gap: 40px;
+			}
+		}
+	}
+
+	.h5-title {
+		font-size: 30px;
+		font-weight: 800;
+		line-height: 1;
+        width: 640px;
+		padding-top: 5px;
+		color: #181818;
+
+		@media screen and (max-width: 639px) {
+			font-size: 16px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__close-button {
+		background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/cross.svg);
+		background-repeat: no-repeat;
+		background-color: transparent;
+		background-position: center;
+		background-size: 100%;
+		border: none;
+		cursor: pointer;
+		display: block;
+		outline: none;
+		width: 36px;
+		height: 36px;
+		transition: 0.3s;
+
+		@media screen and (min-width: 1200px) {
+			&:hover {
+				transform: rotate(5deg);
+				transition: 0.3s;
+			}
+		}
+
+		@media screen and (max-width: 639px) {
+			width: 28px;
+			height: 28px;
+		}
+	}
+
+	&__list {
+		list-style-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/mdash.svg);
+		padding-left: 27px;
+
+		&-lead {
+			font-size: 20px;
+			line-height: 1.2;
+			color: #181818;
+		}
+
+		&-labels {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px;
+		}
+
+		&-label {
+			font-size: 20px;
+			padding: 6px 10px;
+			border-radius: 6px;
+			line-height: 1.2;
+			background: #ffffff;
+			color: #181818;
+		}
+	}
+
+	&__bigLabel {
+		padding: 20px 0;
+		text-align: center;
+		width: 100%;
+		font-size: 20px;
+		line-height: 1.2;
+		background: #043933;
+		border-radius: 6px;
+		color: #ffffff;
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 1.2;
+		color: #181818;
+
+		@media screen and (max-width: 639px) {
+			&:first-child {
+				margin-top: 20px;
+			}
+		}
+
+        a {
+            text-decoration: none;
+        }
+	}
+}

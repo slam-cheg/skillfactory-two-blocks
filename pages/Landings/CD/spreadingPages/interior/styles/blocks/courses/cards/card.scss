@@ -95,6 +95,7 @@
 	&__image {
 		position: absolute;
 		z-index: 1;
+		pointer-events: none;
 	}
 
 	&#COM-DESIGNER {
@@ -149,7 +150,7 @@
 		justify-content: center;
 		align-items: center;
 		background: #e0fb52;
-		color: #161616;
+		color: #161616 !important;
 		padding: 10px 20px;
 		font-size: 14px;
 		font-weight: 400;
@@ -162,19 +163,19 @@
 
 		@media screen and (min-width: 1200px) {
 			&:hover {
-				background: #ffffff;
+				background: #ffffff !important;
 				transition: 0.3s;
 			}
 		}
 
 		&_dark {
 			background: transparent;
-			color: rgba(255, 255, 255);
+			color: rgba(255, 255, 255) !important;
 			border: 1px solid rgba(255, 255, 255);
 
 			@media screen and (min-width: 1200px) {
 				&:hover {
-					color: #161616;
+					color: #161616 !important;
 					transition: 0.3s;
 				}
 			}
@@ -198,7 +199,7 @@
 
 		.sticker_dark,
 		.card__button_dark {
-			color: rgba(0, 0, 0, 0.6);
+			color: rgba(0, 0, 0, 0.6) !important;
 			border: 1px solid rgba(0, 0, 0, 0.6);
 		}
 
@@ -206,7 +207,7 @@
 			.card__button {
 				&:hover {
 					background: #161616;
-					color: #ffffff;
+					color: #ffffff !important;
 					transition: 0.3s;
 				}
 			}

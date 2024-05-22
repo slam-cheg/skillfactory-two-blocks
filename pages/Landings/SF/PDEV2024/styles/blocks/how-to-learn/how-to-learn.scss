@@ -1,0 +1,36 @@
+.how-to-learn {
+	background: #f2f2f4;
+	padding: 90px 0;
+
+	&__header {
+		display: grid;
+		grid-template-columns: 370px 560px;
+		justify-content: space-between;
+		margin-bottom: 80px;
+
+		&-col {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+		}
+	}
+
+	&__labels {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+        width: 90%;
+	}
+
+    &__label {
+        padding: 10px 12px;
+        background: #ffffff;
+        color: #FF6945;font-size: 16px;line-height: 1.2;font-weight: 400;
+    }
+
+	&__lead {
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 1.2;
+	}
+}

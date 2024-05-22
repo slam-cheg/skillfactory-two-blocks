@@ -4,64 +4,397 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>PDEV2024</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="../../../../styles/modules/swiper11.1.3/swiper11.1.3.min.css" />
 		<link rel="stylesheet" href="./styles/pdev2024.css" />
 	</head>
 	<body>
 		<section class="reviews">
-			<div class="inner-wrapper">
-				<div class="reviews__header">
-					<h2 class="h2-title">
-						Истории студентов, <br />
-						окончивших курс
-					</h2>
-					<div class="reviews__scroll-buttons">
-						<svg class="reviews__scroll-button reviews__scroll-button_left" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect width="50" height="50" rx="25" fill="#043933" />
-							<path d="M32.1328 24.0814V25.8708H21.3131L25.988 30.4752L24.6385 31.6681L17.8671 25.0119L24.6385 18.3318L25.988 19.5247L21.3854 24.0814H32.1328Z" fill="#E7E7E7" />
-						</svg>
+			<div class="outer-wrapper">
+				<div class="inner-wrapper">
+					<div class="reviews__header">
+						<h2 class="h2-title">
+							Истории студентов, <br />
+							окончивших курс
+						</h2>
+						<div class="reviews__scroll-buttons">
+							<svg class="reviews__scroll-button reviews__scroll-button_left" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="50" height="50" rx="25" fill="#043933" />
+								<path d="M32.1328 24.0814V25.8708H21.3131L25.988 30.4752L24.6385 31.6681L17.8671 25.0119L24.6385 18.3318L25.988 19.5247L21.3854 24.0814H32.1328Z" fill="#E7E7E7" />
+							</svg>
 
-						<svg class="reviews__scroll-button reviews__scroll-button_right" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect width="50" height="50" rx="25" fill="#B5E916" />
-							<path d="M17.8672 24.0814V25.8708H28.6869L24.012 30.4752L25.3615 31.6681L32.1329 25.0119L25.3615 18.3318L24.012 19.5247L28.6146 24.0814H17.8672Z" fill="#181818" />
-						</svg>
+							<svg class="reviews__scroll-button reviews__scroll-button_right" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="50" height="50" rx="25" fill="#B5E916" />
+								<path d="M17.8672 24.0814V25.8708H28.6869L24.012 30.4752L25.3615 31.6681L32.1329 25.0119L25.3615 18.3318L24.012 19.5247L28.6146 24.0814H17.8672Z" fill="#181818" />
+							</svg>
+						</div>
 					</div>
-				</div>
-				<div class="reviews__slider">
-					<ul class="reviews__elements swiper-wrapper">
-						<li class="review swiper-slide">
-							<div class="review__top">
-								<p class="review__text">&laquo;Я&nbsp;сама освоила Python, легко закончила курс, а&nbsp;теперь я&nbsp;сеньор-питонист и&nbsp;получаю в&nbsp;два раза больше&raquo;</p>
-							</div>
-							<div class="review__bottom">
-								<img src="https://placehold.it/50" alt="Отзыв о курсе Python-разработчик в skillfactory" class="review__avatar" />
-								<p class="review__name">Наталья<br />Нижевясова</p>
-							</div>
-						</li>
-						<li class="review swiper-slide">
-							<div class="review__top">
-								<p class="review__text">&laquo;Оцениваю себя как специалиста между junior и&nbsp;middle. Мне&nbsp;39, считаю, что к&nbsp;43-44 могу стать годам senior- разработчиком&raquo;</p>
-							</div>
-							<div class="review__bottom">
-								<img src="https://placehold.it/50" alt="Отзыв о курсе Python-разработчик в skillfactory" class="review__avatar" />
-								<p class="review__name">Илья<br />Абрамов</p>
-							</div>
-						</li>
-						<li class="review swiper-slide">
-							<div class="review__top">
-								<p class="review__text">&quot;Я&nbsp;освоила Python на&nbsp;карантине и&nbsp;теперь работаю в&nbsp;консалтинге</p>
-							</div>
-							<div class="review__bottom">
-								<img src="https://placehold.it/50" alt="Отзыв о курсе Python-разработчик в skillfactory" class="review__avatar" />
-								<p class="review__name">Лариса<br />Петрова</p>
-							</div>
-						</li>
-					</ul>
+					<div class="reviews__slider">
+						<ul class="reviews__elements swiper-wrapper">
+							<li class="review swiper-slide">
+								<div class="review__top">
+									<p class="review__text">&laquo;Я&nbsp;сама освоила Python, легко закончила курс, а&nbsp;теперь я&nbsp;сеньор-питонист и&nbsp;получаю в&nbsp;два раза больше&raquo;</p>
+								</div>
+								<div class="review__bottom">
+									<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/nijevyasova.webp" alt="Отзыв о курсе Python-разработчик в skillfactory" class="review__avatar" />
+									<p class="review__name">Наталья<br />Нижевясова</p>
+								</div>
+							</li>
+							<li class="review swiper-slide">
+								<div class="review__top">
+									<p class="review__text">&laquo;Оцениваю себя как специалиста между junior и&nbsp;middle. Мне&nbsp;39, считаю, что к&nbsp;43-44 могу стать годам senior- разработчиком&raquo;</p>
+								</div>
+								<div class="review__bottom">
+									<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/abramov.webp" alt="Отзыв о курсе Python-разработчик в skillfactory" class="review__avatar" />
+									<p class="review__name">Илья<br />Абрамов</p>
+								</div>
+							</li>
+							<li class="review swiper-slide">
+								<div class="review__top">
+									<p class="review__text">&quot;Я&nbsp;освоила Python на&nbsp;карантине и&nbsp;теперь работаю в&nbsp;консалтинге</p>
+								</div>
+								<div class="review__bottom">
+									<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/petrova.webp" alt="Отзыв о курсе Python-разработчик в skillfactory" class="review__avatar" />
+									<p class="review__name">Лариса<br />Петрова</p>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<section class="how-to-learn">
+			<div class="inner-wrapper">
+				<div class="how-to-learn__header">
+					<div class="how-to-learn__header-col">
+						<h2 class="h2-title">Как построено обучение</h2>
+					</div>
+					<div class="how-to-learn__header-col">
+						<p class="how-to-learn__lead">Программа курса составлена вместе с&nbsp;опытными разработчикам&nbsp;&mdash; они прошли путь от&nbsp;новичка до&nbsp;старшего специалиста и&nbsp;знают, какие навыки нужны нанимающим компаниям</p>
+						<div class="how-to-learn__labels">
+							<span class="how-to-learn__label">6&nbsp;проектов</span>
+							<span class="how-to-learn__label">280 часов практики</span>
+							<span class="how-to-learn__label">Финальный проект</span>
+							<span class="how-to-learn__label">120 часов теории</span>
+							<span class="how-to-learn__label">Обновлено в&nbsp;2023 году</span>
+						</div>
+					</div>
+				</div>
+				<ul class="accordeon accordeon_separators">
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Программирование на&nbsp;Python</h5>
+								<div class="accordeon__header-labels">
+									<span class="accordeon__header-label">3 месяца</span>
+								</div>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">10&nbsp;часов интерактивных вебинаров</span>
+										<span class="accordeon__list-label">тренажер по&nbsp;Python</span>
+										<span class="accordeon__list-label">20&nbsp;задач на&nbsp;алгоритмы</span>
+										<span class="accordeon__list-label">50&nbsp;написанных программ</span>
+										<span class="accordeon__list-label">проект&nbsp;&mdash; телеграмм-бот на&nbsp;Python</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Начнете писать код и&nbsp;создадите телеграм-бота</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">разбираться в&nbsp;типах данных</li>
+										<li class="accordeon__text">использовать разные алгоритмы для решения задач</li>
+										<li class="accordeon__text">писать код на&nbsp;Python</li>
+										<li class="accordeon__text">работать с&nbsp;файлами и&nbsp;данными</li>
+										<li class="accordeon__text">размещать код на&nbsp;GitHub</li>
+										<li class="accordeon__text">использовать ООП в&nbsp;программировании для Python</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Бэкенд-разработка на&nbsp;Python и&nbsp;Django</h5>
+								<div class="accordeon__header-labels">
+									<span class="accordeon__header-label">5 месяцев</span>
+								</div>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">20&nbsp;часов интерактивных вебинаров</span>
+										<span class="accordeon__list-label">2&nbsp;тренажера: SQL и&nbsp;HTML</span>
+										<span class="accordeon__list-label">20+&nbsp;мини-проектов</span>
+										<span class="accordeon__list-label">5&nbsp;сквозных проектов</span>
+										<span class="accordeon__list-label">большой проект на&nbsp;Django &laquo;Доска объявлений&raquo;</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Изучите веб-сервисы и&nbsp;создадите доску объявлений по&nbsp;типу Авито</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">поднимать веб-сервер на&nbsp;Python</li>
+										<li class="accordeon__text">настраивать взаимодействие с&nbsp;базами данных</li>
+										<li class="accordeon__text">проектировать базу данных</li>
+										<li class="accordeon__text">верстать веб-интерфейс на&nbsp;основе шаблонов Django</li>
+										<li class="accordeon__text">настраивать и&nbsp;проводить тестирование кода</li>
+										<li class="accordeon__text">создавать свой REST API</li>
+										<li class="accordeon__text">использовать Docker для сборки проекта</li>
+										<li class="accordeon__text">делать веб-проекты на&nbsp;Django и&nbsp;размещать их&nbsp;на&nbsp;сервере</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Финальный проект</h5>
+								<div class="accordeon__header-labels">
+									<span class="accordeon__header-label">1 месяц</span>
+								</div>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">2&nbsp;часа интерактивных вебинаров</span>
+										<span class="accordeon__list-label">финальный проект &laquo;Сервис REST API с&nbsp;подключением к&nbsp;базе данных&raquo;</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Примените полученные за&nbsp;курс знания и&nbsp;разработаете сервис с&nbsp;базой данных</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">Строить сложный API с&nbsp;подключением к&nbsp;SQL-базе данных и&nbsp;дополнительным условием&nbsp;&mdash; созданием веб-интерфейса</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Продвинутые навыки</h5>
+								<div class="accordeon__header-labels">
+									<span class="accordeon__header-label">2 месяца</span>
+								</div>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">8 дополнительных модулей</span>
+										<span class="accordeon__list-label">2 сквозных проекта</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Получите дополнительные скиллы, чтобы повысить шансы найти первую работу</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">работать в&nbsp;командной строке Linux</li>
+										<li class="accordeon__text">верстать веб-страницы с&nbsp;адаптивной версткой</li>
+										<li class="accordeon__text">ускорять и&nbsp;оптимизировать свой код с&nbsp;помощью асинхронного программирования</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Практика на реальных проектах</h5>
+								<div class="accordeon__header-labels">
+									<span class="accordeon__header-label">1-3 месяца</span>
+								</div>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Что вас ждет</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">Хакатон по&nbsp;лендингам с&nbsp;возможностью попасть на&nbsp;стажировку в&nbsp;<a target="_blank" href="https://streamads.media/" rel="nofollow">StreamAds</a></li>
+										<li class="accordeon__text">Реализация личного проекта с&nbsp;призовым фондом</li>
+										<li class="accordeon__text">Стажировка в&nbsp;сервисе аналитики <a href="" target="_blank">Vard</a>:</li>
+									</ul>
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">защита итогового проекта</span>
+										<span class="accordeon__list-label">кейс в портфолио</span>
+										<span class="accordeon__list-label">шанс устроиться в&nbsp;штат</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Хакатоны, конкурсы и&nbsp;стажировки в&nbsp;компаниях. Получите опыт работы с&nbsp;задачами бизнеса</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Что сделали студенты в&nbsp;2023</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">Провели хакатон и&nbsp;решили 7&nbsp;задач для разных партнеров</li>
+										<li class="accordeon__text">Создали интерактивный стенд с&nbsp;распознаванием голоса для Эксмо</li>
+										<li class="accordeon__text">Разработали <a href="https://blog.skillfactory.ru/keis-agrotech-zifrovaya-ferma/?utm_source=smm&utm_medium=tg&utm_campaign=np_sf_gamepro_smm_tg_media_post_19-01-2024_all_sf_sf-media_sf-id:64962323&utm_content=sf-media&utm_term=sf-id:64962323" target="_blank">игру</a> для Россельхозбанка</li>
+										<li class="accordeon__text">Запустили чат-бот для Московского зоопарка</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+					</li>
+
+					<li class="accordeon__item accordeon__item_bonus">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Курс по&nbsp;английскому языку</h5>
+								<div class="accordeon__header-labels">
+									<span class="accordeon__header-label">Бонус</span>
+									<span class="accordeon__header-label">Кроме тарифа &laquo;Базовый&raquo;</span>
+								</div>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">10&nbsp;часов интерактивных вебинаров</span>
+										<span class="accordeon__list-label">тренажер по&nbsp;Python</span>
+										<span class="accordeon__list-label">20&nbsp;задач на&nbsp;алгоритмы</span>
+										<span class="accordeon__list-label">50&nbsp;написанных программ</span>
+										<span class="accordeon__list-label">проект&nbsp;&mdash; телеграмм-бот на&nbsp;Python</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Начнете писать код и&nbsp;создадите телеграм-бота</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">разбираться в&nbsp;типах данных</li>
+										<li class="accordeon__text">использовать разные алгоритмы для решения задач</li>
+										<li class="accordeon__text">писать код на&nbsp;Python</li>
+										<li class="accordeon__text">работать с&nbsp;файлами и&nbsp;данными</li>
+										<li class="accordeon__text">размещать код на&nbsp;GitHub</li>
+										<li class="accordeon__text">использовать ООП в&nbsp;программировании для Python</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item accordeon__item_bonus">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Курс по&nbsp;Soft Skills</h5>
+								<div class="accordeon__header-labels">
+									<span class="accordeon__header-label">Бонус</span>
+									<span class="accordeon__header-label">Кроме тарифа &laquo;Базовый&raquo;</span>
+								</div>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">10&nbsp;часов интерактивных вебинаров</span>
+										<span class="accordeon__list-label">тренажер по&nbsp;Python</span>
+										<span class="accordeon__list-label">20&nbsp;задач на&nbsp;алгоритмы</span>
+										<span class="accordeon__list-label">50&nbsp;написанных программ</span>
+										<span class="accordeon__list-label">проект&nbsp;&mdash; телеграмм-бот на&nbsp;Python</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Начнете писать код и&nbsp;создадите телеграм-бота</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">разбираться в&nbsp;типах данных</li>
+										<li class="accordeon__text">использовать разные алгоритмы для решения задач</li>
+										<li class="accordeon__text">писать код на&nbsp;Python</li>
+										<li class="accordeon__text">работать с&nbsp;файлами и&nbsp;данными</li>
+										<li class="accordeon__text">размещать код на&nbsp;GitHub</li>
+										<li class="accordeon__text">использовать ООП в&nbsp;программировании для Python</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator">
+							<div></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<script src="./scripts/swiper-bundle.min.js"></script>
 		<script src="./scripts/reviews.js"></script>
+		<script src="./scripts/accordeon.js"></script>
 	</body>
 </html>
