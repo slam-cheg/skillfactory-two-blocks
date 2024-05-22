@@ -117,9 +117,9 @@
 .first__images {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
   margin-bottom: 34px;
+  justify-content: space-between;
 }
 @media screen and (max-width: 639px) {
   .first__images {
@@ -129,6 +129,24 @@
 }
 .first__image {
   max-height: 100%;
+}
+@media screen and (max-width: 959px) {
+  .first__image_big {
+    max-height: 180px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .first__image_big:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 959px) {
+  .first__image_small {
+    max-height: 94px;
+  }
+  .first__image_small:last-child {
+    display: none;
+  }
 }
 @media screen and (max-width: 639px) {
   .first__image_small {
@@ -390,15 +408,6 @@
 .card__image {
   position: absolute;
   z-index: 1;
-  top: -4px;
-  right: -114px;
-}
-@media screen and (max-width: 639px) {
-  .card__image {
-    top: -114px;
-    right: -85px;
-    width: 292px;
-  }
 }
 .card#COM-DESIGNER .card__image {
   top: -55px;
@@ -635,8 +644,13 @@
 .faq .accordeon__item:last-of-type {
   border-bottom: 1px solid #939393;
 }
+@media screen and (min-width: 640px) {
+  .faq .accordeon__item_opened .h5-title {
+    transform: translateY(-8px) !important;
+    transition: transform 0.5s !important;
+  }
+}
 .faq .accordeon__item_opened .accordeon__body {
-  max-height: 3000px;
   pointer-events: auto;
   transition: max-height 0.5s;
 }
@@ -644,14 +658,16 @@
   transform: rotate(45deg);
   transition: 0.3s;
 }
-.faq .accordeon__item_opened .accordeon__close-button:hover {
-  transform: rotate(50deg);
-  transition: 0.3s;
+@media screen and (min-width: 1200px) {
+  .faq .accordeon__item_opened .accordeon__close-button:hover {
+    transform: rotate(50deg);
+    transition: 0.3s;
+  }
 }
 .faq .accordeon__header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 @media screen and (max-width: 639px) {
   .faq .accordeon__header {
@@ -659,7 +675,6 @@
   }
 }
 .faq .accordeon__body {
-  max-height: 0px;
   transition: max-height 0.5s;
   pointer-events: none;
   overflow: hidden;
@@ -668,8 +683,9 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 0.9;
-  margin-bottom: 20px;
   text-transform: lowercase;
+  transform: translateY(0);
+  transition: transform 0.3s;
 }
 @media screen and (max-width: 639px) {
   .faq .accordeon .h5-title {
