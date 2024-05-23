@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>PDEV2024</title>
-		<link rel="stylesheet" href="../../../../styles/modules/swiper11.1.3/swiper11.1.3.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./styles/pdev2024.css" />
 	</head>
 	<body>
@@ -63,20 +63,20 @@
 			</div>
 		</section>
 
-		<section class="how-to-learn">
+		<section class="program">
 			<div class="inner-wrapper">
-				<div class="how-to-learn__header">
-					<div class="how-to-learn__header-col">
+				<div class="program__header">
+					<div class="program__header-col">
 						<h2 class="h2-title">Как построено обучение</h2>
 					</div>
-					<div class="how-to-learn__header-col">
-						<p class="how-to-learn__lead">Программа курса составлена вместе с&nbsp;опытными разработчикам&nbsp;&mdash; они прошли путь от&nbsp;новичка до&nbsp;старшего специалиста и&nbsp;знают, какие навыки нужны нанимающим компаниям</p>
-						<div class="how-to-learn__labels">
-							<span class="how-to-learn__label">6&nbsp;проектов</span>
-							<span class="how-to-learn__label">280 часов практики</span>
-							<span class="how-to-learn__label">Финальный проект</span>
-							<span class="how-to-learn__label">120 часов теории</span>
-							<span class="how-to-learn__label">Обновлено в&nbsp;2023 году</span>
+					<div class="program__header-col">
+						<p class="program__lead">Программа курса составлена вместе с&nbsp;опытными разработчикам&nbsp;&mdash; они прошли путь от&nbsp;новичка до&nbsp;старшего специалиста и&nbsp;знают, какие навыки нужны нанимающим компаниям</p>
+						<div class="program__labels">
+							<span class="program__label">6&nbsp;проектов</span>
+							<span class="program__label">280 часов практики</span>
+							<span class="program__label">Финальный проект</span>
+							<span class="program__label">120 часов теории</span>
+							<span class="program__label">Обновлено в&nbsp;2023 году</span>
 						</div>
 					</div>
 				</div>
@@ -393,8 +393,308 @@
 			</div>
 		</section>
 
-		<script src="./scripts/swiper-bundle.min.js"></script>
-		<script src="./scripts/reviews.js"></script>
-		<script src="./scripts/accordeon.js"></script>
+		<section class="how-to-learn">
+			<div class="inner-wrapper">
+				<div class="how-to-learn__header">
+					<h2 class="h2-title">Как проходит <br />обучение</h2>
+					<p class="how-to-learn__lead">В&nbsp;среднем оно занимает 10&nbsp;часов в&nbsp;неделю: это 2&nbsp;часа учебы в&nbsp;день по&nbsp;будням или 5&nbsp;часов&nbsp;&mdash; по&nbsp;выходным. Доступ к&nbsp;материалам курса остается навсегда</p>
+				</div>
+				<div class="how-to-learn__main">
+					<div class="how-to-learn__videos">
+						<div class="how-to-learn__video-container how-to-learn__video-container_opened" id="format">
+							<video id="video" src="https://storage.yandexcloud.net/sf-wallaper-bucket/video/lectures.mp4" loop width="100%" frameborder="0" playsinline></video>
+							<div class="how-to-learn__video-cover"></div>
+							<button class="how-to-learn__playbutton"></button>
+						</div>
+						<div class="how-to-learn__video-container" id="feedback">
+							<video id="video" src="https://storage.yandexcloud.net/sf-wallaper-bucket/video/trainer.mp4" width="100%" frameborder="0" playsinline></video>
+							<div class="how-to-learn__video-cover"></div>
+							<button class="how-to-learn__playbutton"></button>
+						</div>
+						<div class="how-to-learn__video-container" id="social">
+							<video id="video" src="https://storage.yandexcloud.net/sf-wallaper-bucket/video/homework.mp4" width="100%" frameborder="0" playsinline></video>
+							<div class="how-to-learn__video-cover"></div>
+							<button class="how-to-learn__playbutton"></button>
+						</div>
+						<div class="how-to-learn__video-container" id="carrier">
+							<video id="video" src="https://storage.yandexcloud.net/sf-wallaper-bucket/video/webinar.mp4" width="100%" frameborder="0" playsinline></video>
+							<div class="how-to-learn__video-cover"></div>
+							<button class="how-to-learn__playbutton"></button>
+						</div>
+					</div>
+					<ul class="accordeon accordeon_separators">
+						<li class="accordeon__item accordeon__item_opened" id="format">
+							<div class="accordeon__header">
+								<div class="accordeon__header-content">
+									<h5 class="h5-title">Формат</h5>
+									<div class="accordeon__header-labels">
+										<span class="accordeon__header-label">Теория на&nbsp;понятном языке и&nbsp;много практики внутри единой онлайн- платформы</span>
+									</div>
+								</div>
+
+								<button class="accordeon__close-button"></button>
+							</div>
+							<div class="accordeon__separator">
+								<div></div>
+							</div>
+							<div class="accordeon__body">
+								<div class="accordeon__body-columns">
+									<div class="accordeon__body-col">
+										<div class="accordeon__list-labels">
+											<span class="accordeon__list-label"></span>
+											<span class="accordeon__list-label"></span>
+											<span class="accordeon__list-label"></span>
+											<span class="accordeon__list-label"></span>
+											<span class="accordeon__list-label"></span>
+										</div>
+										<div class="accordeon__bigLabel">
+											<span></span>
+										</div>
+									</div>
+									<div class="accordeon__body-col">
+										<p class="accordeon__list-lead"></p>
+										<ul class="accordeon__list">
+											<li class="accordeon__text">Записанные лекции и задания для самостоятельной работы</li>
+											<li class="accordeon__text">Разбор сложных тем на&nbsp;вебинарах с&nbsp;менторами</li>
+											<li class="accordeon__text">3&nbsp;тренажера с&nbsp;десятками заданий в&nbsp;каждом модуле программы</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordeon__separator">
+								<div></div>
+							</div>
+						</li>
+						<li class="accordeon__item" id="feedback">
+							<div class="accordeon__header">
+								<div class="accordeon__header-content">
+									<h5 class="h5-title">Программирование на&nbsp;Python</h5>
+									<div class="accordeon__header-labels">
+										<span class="accordeon__header-label">3 месяца</span>
+									</div>
+								</div>
+
+								<button class="accordeon__close-button"></button>
+							</div>
+							<div class="accordeon__separator">
+								<div></div>
+							</div>
+							<div class="accordeon__body">
+								<div class="accordeon__body-columns">
+									<div class="accordeon__body-col">
+										<div class="accordeon__list-labels">
+											<span class="accordeon__list-label">10&nbsp;часов интерактивных вебинаров</span>
+											<span class="accordeon__list-label">тренажер по&nbsp;Python</span>
+											<span class="accordeon__list-label">20&nbsp;задач на&nbsp;алгоритмы</span>
+											<span class="accordeon__list-label">50&nbsp;написанных программ</span>
+											<span class="accordeon__list-label">проект&nbsp;&mdash; телеграмм-бот на&nbsp;Python</span>
+										</div>
+										<div class="accordeon__bigLabel">
+											<span>Начнете писать код и&nbsp;создадите телеграм-бота</span>
+										</div>
+									</div>
+									<div class="accordeon__body-col">
+										<p class="accordeon__list-lead">Чему научитесь:</p>
+										<ul class="accordeon__list">
+											<li class="accordeon__text">разбираться в&nbsp;типах данных</li>
+											<li class="accordeon__text">использовать разные алгоритмы для решения задач</li>
+											<li class="accordeon__text">писать код на&nbsp;Python</li>
+											<li class="accordeon__text">работать с&nbsp;файлами и&nbsp;данными</li>
+											<li class="accordeon__text">размещать код на&nbsp;GitHub</li>
+											<li class="accordeon__text">использовать ООП в&nbsp;программировании для Python</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordeon__separator">
+								<div></div>
+							</div>
+						</li>
+						<li class="accordeon__item" id="social">
+							<div class="accordeon__header">
+								<div class="accordeon__header-content">
+									<h5 class="h5-title">Программирование на&nbsp;Python</h5>
+									<div class="accordeon__header-labels">
+										<span class="accordeon__header-label">3 месяца</span>
+									</div>
+								</div>
+
+								<button class="accordeon__close-button"></button>
+							</div>
+							<div class="accordeon__separator">
+								<div></div>
+							</div>
+							<div class="accordeon__body">
+								<div class="accordeon__body-columns">
+									<div class="accordeon__body-col">
+										<div class="accordeon__list-labels">
+											<span class="accordeon__list-label">10&nbsp;часов интерактивных вебинаров</span>
+											<span class="accordeon__list-label">тренажер по&nbsp;Python</span>
+											<span class="accordeon__list-label">20&nbsp;задач на&nbsp;алгоритмы</span>
+											<span class="accordeon__list-label">50&nbsp;написанных программ</span>
+											<span class="accordeon__list-label">проект&nbsp;&mdash; телеграмм-бот на&nbsp;Python</span>
+										</div>
+										<div class="accordeon__bigLabel">
+											<span>Начнете писать код и&nbsp;создадите телеграм-бота</span>
+										</div>
+									</div>
+									<div class="accordeon__body-col">
+										<p class="accordeon__list-lead">Чему научитесь:</p>
+										<ul class="accordeon__list">
+											<li class="accordeon__text">разбираться в&nbsp;типах данных</li>
+											<li class="accordeon__text">использовать разные алгоритмы для решения задач</li>
+											<li class="accordeon__text">писать код на&nbsp;Python</li>
+											<li class="accordeon__text">работать с&nbsp;файлами и&nbsp;данными</li>
+											<li class="accordeon__text">размещать код на&nbsp;GitHub</li>
+											<li class="accordeon__text">использовать ООП в&nbsp;программировании для Python</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordeon__separator">
+								<div></div>
+							</div>
+						</li>
+						<li class="accordeon__item" id="carrier">
+							<div class="accordeon__header">
+								<div class="accordeon__header-content">
+									<h5 class="h5-title">Программирование на&nbsp;Python</h5>
+									<div class="accordeon__header-labels">
+										<span class="accordeon__header-label">3 месяца</span>
+									</div>
+								</div>
+
+								<button class="accordeon__close-button"></button>
+							</div>
+							<div class="accordeon__separator">
+								<div></div>
+							</div>
+							<div class="accordeon__body">
+								<div class="accordeon__body-columns">
+									<div class="accordeon__body-col">
+										<div class="accordeon__list-labels">
+											<span class="accordeon__list-label">10&nbsp;часов интерактивных вебинаров</span>
+											<span class="accordeon__list-label">тренажер по&nbsp;Python</span>
+											<span class="accordeon__list-label">20&nbsp;задач на&nbsp;алгоритмы</span>
+											<span class="accordeon__list-label">50&nbsp;написанных программ</span>
+											<span class="accordeon__list-label">проект&nbsp;&mdash; телеграмм-бот на&nbsp;Python</span>
+										</div>
+										<div class="accordeon__bigLabel">
+											<span>Начнете писать код и&nbsp;создадите телеграм-бота</span>
+										</div>
+									</div>
+									<div class="accordeon__body-col">
+										<p class="accordeon__list-lead">Чему научитесь:</p>
+										<ul class="accordeon__list">
+											<li class="accordeon__text">разбираться в&nbsp;типах данных</li>
+											<li class="accordeon__text">использовать разные алгоритмы для решения задач</li>
+											<li class="accordeon__text">писать код на&nbsp;Python</li>
+											<li class="accordeon__text">работать с&nbsp;файлами и&nbsp;данными</li>
+											<li class="accordeon__text">размещать код на&nbsp;GitHub</li>
+											<li class="accordeon__text">использовать ООП в&nbsp;программировании для Python</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordeon__separator">
+								<div></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="tariffs">
+			<div class="inner-wrapper">
+				<div class="tariffs__header">
+					<h2 class="h2-title">
+						Тарифы <br />
+						обучения
+					</h2>
+					<div class="tariffs__announce">
+						<div class="tariffs__announce-col"></div>
+						<div class="tariffs__announce-col"></div>
+					</div>
+				</div>
+				<div class="tariffs__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="rate-card">
+								<div class="rate-card__top">
+									<h3 class="h3-title">Базовый</h3>
+									<ul class="rate-card__list">
+										<li class="rate-card__list-item">Менторы отвечают на&nbsp;вопросы по&nbsp;темам курса в&nbsp;мессенджере</li>
+										<li class="rate-card__list-item">Координаторы помогают в&nbsp;обучении, решают организационные проблемы</li>
+										<li class="rate-card__list-item">Интерактивные вебинары</li>
+										<li class="rate-card__list-item">Доступ к&nbsp;материалам курса навсегда</li>
+										<li class="rate-card__list-item rate-card__list-item_underline" id="one">Программа трудоустройства</li>
+										<li class="rate-card__list-item rate-card__list-item_underline" id="two">Карьерный курс</li>
+										<li class="rate-card__list-item rate-card__list-item_underline" id="three">Telegram-канал Центра карьеры</li>
+									</ul>
+								</div>
+								<div class="rate-card__bottom">
+									<p class="rate-card__sale discount_auto_basic">скидка&nbsp;<span>40</span>%</p>
+									<p class="rate-card__old-price price_installment_basic"><span>6 000</span> ₽/мес</p>
+									<p class="rate-card__new-price price_installment_discount_basic"><span>4 300</span> ₽/мес</p>
+									<p class="rate-card__price-description count_of_installment_months">в&nbsp;рассрочку на&nbsp;<span>36</span>&nbsp;месяцев</p>
+									<a class="rate-card__button">Выбрать тариф</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="rate-card rate-card_lime">
+								<div class="rate-card__top">
+									<h3 class="h3-title">Оптимальный</h3>
+									<p class="rate-card__description">Все опции базового тарифа</p>
+									<ul class="rate-card__list">
+										<li class="rate-card__list-item rate-card__list-item_underline" id="four">12&nbsp;часов ИНДИВИДУАЛЬНЫХ консультаций с&nbsp;ментором</li>
+										<li class="rate-card__list-item">Дополнительные 4&nbsp;модуля по&nbsp;алгоритмам и&nbsp;структурам данных</li>
+										<li class="rate-card__list-item">Дополнительная карьерная консультация</li>
+										<li class="rate-card__list-item rate-card__list-item_underline" id="five">Тестовое техническое собеседование с&nbsp;экспертом</li>
+										<li class="rate-card__list-item rate-card__list-item_underline" id="six">Бонусный курс &laquo;Английский для&nbsp;IT&raquo;</li>
+										<li class="rate-card__list-item rate-card__list-item_underline" id="seven">Ревью резюме</li>
+									</ul>
+								</div>
+								<div class="rate-card__bottom">
+									<p class="rate-card__sale discount_auto_consult">скидка&nbsp;<span>40</span>%</p>
+									<p class="rate-card__old-price price_installment_consult"><span>6 000</span> ₽/мес</p>
+									<p class="rate-card__new-price price_installment_discount_consult"><span>4 300</span> ₽/мес</p>
+									<p class="rate-card__price-description count_of_installment_months">в&nbsp;рассрочку на&nbsp;<span>36</span>&nbsp;месяцев</p>
+									<a class="rate-card__button">Выбрать тариф</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="rate-card">
+								<div class="rate-card__top">
+									<h3 class="h3-title">VIP</h3>
+
+									<p class="rate-card__description">Все опции базового и&nbsp;оптимального тарифа</p>
+									<ul class="rate-card__list">
+										<li class="rate-card__list-item">Доступ ко&nbsp;всем модулям курса по&nbsp;алгоритмам и&nbsp;структурам данных</li>
+										<li class="rate-card__list-item rate-card__list-item_underline" id="four">Еженедельные персональные консультации с&nbsp;менторами по&nbsp;60&nbsp;минут</li>
+									</ul>
+								</div>
+								<div class="rate-card__bottom">
+									<p class="rate-card__sale discount_auto_full">скидка&nbsp;<span>40</span>%</p>
+									<p class="rate-card__old-price price_installment_vip"><span>6 000</span> ₽/мес</p>
+									<p class="rate-card__new-price price_installment_discount_vip"><span>4 300</span> ₽/мес</p>
+									<p class="rate-card__price-description count_of_installment_months">в&nbsp;рассрочку на&nbsp;<span>36</span>&nbsp;месяцев</p>
+									<a class="rate-card__button">Выбрать тариф</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script type="module" src="./scripts/reviews.js"></script>
+		<script type="module" src="./scripts/accordeon.js"></script>
+		<script type="module" src="./scripts/program.js"></script>
+		<script type="module" src="./scripts/howToLearn.js"></script>
+		<script type="module" src="./scripts/tariffs.js"></script>
 	</body>
 </html>
