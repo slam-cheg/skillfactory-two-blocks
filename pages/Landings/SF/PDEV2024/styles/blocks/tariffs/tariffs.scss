@@ -1,0 +1,225 @@
+.tariffs {
+	padding: 90px 0;
+
+	&__header {
+		margin-bottom: 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__announce {
+		display: grid;
+		grid-template-columns: 210px 330px;
+		gap: 20px;
+		border-radius: 6px;
+		background: #f2f2f4;
+		overflow: hidden;
+
+		&-col {
+			&:first-child {
+				background: #ff6945;
+				font-size: 24px;
+				line-height: 1;
+				font-weight: 800;
+				color: #ffffff;
+				padding: 10px 32px;
+			}
+			&:last-child {
+				font-weight: 400;
+				font-family: "NTSomic", Arial, sans-serif;
+				font-size: 20px;
+				line-height: 1.2;
+				padding: 10px 30px 10px 10px;
+			}
+		}
+	}
+
+	.card {
+		background: #f2f2f4;
+		border-radius: 6px;
+		position: relative;
+		padding: 70px 16px 20px 20px;
+
+		&__label {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background: #ff6945;
+			color: #ffffff;
+			border-radius: 6px;
+			padding: 6px 8px 3px 8px;
+			font-size: 24px;
+			line-height: 1;
+			font-weight: 800;
+		}
+
+		&__top {
+			margin-bottom: 40px;
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+		}
+
+		&__title {
+			font-size: 30px;
+			font-weight: 800;
+			line-height: 1;
+			color: #181818;
+		}
+
+		&__lead {
+			font-family: "NTSomic";
+			font-size: 16px;
+			font-weight: 1.2;
+			color: rgb(24, 24, 24, 0.5);
+		}
+
+		&__list {
+			list-style: none;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			margin-bottom: 60px;
+
+			&-text {
+				font-size: 16px;
+				font-family: "NTSomic";
+				font-weight: 400;
+				line-height: 1.2;
+				color: #181818;
+				max-width: calc(100% - 32px);
+			}
+
+			&-item {
+				display: flex;
+				gap: 20px;
+				border-bottom: 1px solid #bcbcbc;
+				padding-bottom: 12px;
+
+				&::before {
+					content: "";
+					background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/list-plus.svg);
+					background-size: contain;
+					background-position: center;
+					background-repeat: no-repeat;
+					width: 12px;
+					height: 12px;
+					position: relative;
+					top: 4px;
+				}
+
+				&_disabled {
+					.card__list-text {
+						color: rgba(24, 24, 24, 0.4);
+					}
+
+					&::before {
+						background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/list-minus.svg);
+					}
+				}
+
+				&:last-child {
+					padding-bottom: 0;
+					border-bottom: none;
+				}
+			}
+		}
+
+		&__prices {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin-bottom: 20px;
+		}
+
+		&__price {
+			color: #181818;
+			font-size: 30px;
+			line-height: 1;
+			font-weight: 800;
+
+			&_old {
+				font-size: 24px;
+				line-height: 1;
+				font-weight: 800;
+				color: rgba($color: #181818, $alpha: 0.4);
+				text-decoration: line-through;
+			}
+		}
+
+		&__installment {
+			color: rgba($color: #181818, $alpha: 0.4);
+			font-size: 16px;
+			font-family: "NTSomic";
+			line-height: 1;
+		}
+
+		&__buttons {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		&__button {
+			background: #b5e916;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			border-radius: 6px;
+			color: #181818 !important;
+			font-size: 20px;
+			line-height: 1.2;
+			font-family: "NTSomic";
+			font-weight: 400;
+			padding: 20px 0;
+			transition: 0.3s;
+
+			&:hover {
+				transition: 0.2s;
+				background: #043933;
+				color: #ffffff !important;
+			}
+
+			&_transparent {
+				background: transparent;
+				border: 1px solid #181818;
+				color: #181818 !important;
+
+				&:hover {
+					transform: 0.3s;
+					background: #181818;
+					color: #ffffff !important;
+				}
+			}
+		}
+
+		&_green {
+			background: #043933;
+
+			.card__title,
+			.card__list-text,
+			.card__price {
+				color: #ffffff;
+			}
+
+			.card__lead,
+			.card__price_old,
+			.card__list-item_disabled .card__list-text,
+			.card__installment {
+				color: rgba($color: #ffffff, $alpha: 0.4);
+			}
+
+            .card__button_transparent {
+				border: 1px solid #ffffff;
+				color: #ffffff !important;
+
+				&:hover {
+					background: #ffffff;
+					color: #181818 !important;
+				}
+			}
+		}
+	}
+}

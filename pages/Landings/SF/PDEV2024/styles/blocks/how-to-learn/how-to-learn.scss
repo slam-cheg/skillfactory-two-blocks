@@ -121,13 +121,8 @@
 			gap: unset;
 		}
 		&__body-col {
-			&:first-child {
-				display: none;
-			}
-			&:last-child {
-				gap: unset;
-				padding: 0 10px;
-			}
+			gap: unset;
+			padding: 0 10px;
 		}
 
 		&__text {

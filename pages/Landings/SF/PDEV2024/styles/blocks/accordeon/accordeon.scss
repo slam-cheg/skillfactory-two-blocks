@@ -80,6 +80,7 @@
 		transition: max-height 0.5s;
 		pointer-events: none;
 		overflow: hidden;
+		max-height: 0px;
 
 		&-columns {
 			display: grid;

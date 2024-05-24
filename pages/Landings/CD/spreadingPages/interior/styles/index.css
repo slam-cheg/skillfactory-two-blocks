@@ -443,6 +443,8 @@
   display: grid;
   grid-template-columns: 190px 140px;
   gap: 10px;
+  position: relative;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 1199px) {
   .card__buttons {
@@ -466,7 +468,7 @@
   line-height: 1;
   border: none;
   cursor: pointer;
-  width: 100%;
+  max-width: 100%;
   transition: 0.3s;
   text-decoration: none;
 }

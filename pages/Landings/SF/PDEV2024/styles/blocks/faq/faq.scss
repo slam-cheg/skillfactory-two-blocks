@@ -1,0 +1,23 @@
+.faq {
+    padding: 90px 0;
+
+    &__header {
+        margin-bottom: 58px;
+    }
+	.accordeon {
+		&__item {
+			background: #f2f2f4;
+            border-radius: 6px;
+		}
+        &__header {
+            background: transparent;
+        }
+        &__body-columns {
+            grid-template-columns: 1fr;
+            padding: 0 20px 20px 20px;
+        }
+        &__list {
+            display: none;
+        }
+	}
+}

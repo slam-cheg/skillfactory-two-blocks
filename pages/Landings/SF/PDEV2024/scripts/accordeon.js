@@ -20,10 +20,18 @@ export default class InitAccordeon {
 				separators = item.querySelectorAll(".accordeon__separator");
 				separators.forEach((separator) => {
 					separatorsHeight = separator.querySelector("div").getBoundingClientRect().height;
-					itemOpened ? this.__changeSeparators(separators, separatorsHeight) : this.__changeSeparators(separators, 0);
 				});
+				if (itemOpened) {
+					this.__changeSeparators(separators, separatorsHeight);
+				} else {
+					this.__changeSeparators(separators, 0);
+				}
 			}
-			itemOpened ? (bodyItem.style.maxHeight = `${bodyContent.getBoundingClientRect().height}px`) : (bodyItem.style.maxHeight = `0px`);
+			if (itemOpened) {
+				bodyItem.style.maxHeight = `${bodyContent.getBoundingClientRect().height}px`;
+			} else {
+				bodyItem.style.maxHeight = `0px`;
+			}
 
 			accordeonHeader.addEventListener("click", () => {
 				this.__closePrevOpenedAccordeonItem(item);
@@ -40,19 +48,17 @@ export default class InitAccordeon {
 			accordWithVideoItem.querySelector(".accordeon__header").addEventListener("click", () => {
 				this.__changeVideo(parentClass, videos, accordWithVideoItem);
 			});
-		});
-		videos.forEach((video) => {
-			const playButton = video.querySelector(`.${parentClass}__playbutton`);
-
+			const videoContainer = videos.find(video => video.id === accordWithVideoItem.id)
+			const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`)
 			playButton.addEventListener("click", () => {
-				this.__playPause(playButton, parentClass);
+				this.__playPause(videoContainer, parentClass);
 			});
 		});
 	}
 
-	__playPause(playButton, parentClass) {
-		const videoContainer = playButton.parentElement;
-		const videoCover = playButton.previousElementSibling;
+	__playPause(videoContainer, parentClass) {
+		const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`)
+		const videoCover = videoContainer.querySelector(`.${parentClass}__video-cover`);
 		const video = videoContainer.querySelector(`#video`);
 
 		if (video.paused && videoContainer.classList.contains(`${parentClass}__video-container_opened`)) {
@@ -73,16 +79,14 @@ export default class InitAccordeon {
 		if (this.__countOpenedAccordItems() !== 0) {
 			if (openedVideoContainer) {
 				openedVideoContainer.classList.remove(`${parentClass}__video-container_opened`);
-				this.__playPause(openedVideoContainer.querySelector(`.${parentClass}__playbutton`, parentClass));
+				this.__playPause(openedVideoContainer, parentClass)
 			}
 
 			if (currentAccordItem.classList.contains("accordeon__item_opened")) {
 				neededVideoContainer.classList.add(`${parentClass}__video-container_opened`);
-				this.__playPause(openedVideoContainer.querySelector(`.${parentClass}__playbutton`, parentClass));
 				return;
 			} else {
 				neededVideoContainer.classList.remove(`${parentClass}__video-container_opened`);
-				this.__playPause(openedVideoContainer.querySelector(`.${parentClass}__playbutton`, parentClass));
 				return;
 			}
 		}
