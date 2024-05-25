@@ -1,10 +1,12 @@
 const tariffsBlock = document.querySelector(".tariffs");
+const tariffsPaginationButtonLeft = tariffsBlock.querySelector(".tariffs__pagination-button_left");
+const tariffsPaginationButtonRight = tariffsBlock.querySelector(".tariffs__pagination-button_right");
 
-const tariffsSlider = new Swiper (".tariffs__slider", {
+const tariffsSlider = new Swiper(".tariffs__slider", {
 	loop: false,
 	navigation: {
-		nextEl: "#rates-prev-btn",
-		prevEl: "#rates-next-btn",
+		nextEl: tariffsPaginationButtonRight,
+		prevEl: tariffsPaginationButtonLeft,
 	},
 	spaceBetween: 25,
 	breakpoints: {
@@ -14,8 +16,20 @@ const tariffsSlider = new Swiper (".tariffs__slider", {
 		960: {
 			slidesPerView: 2,
 		},
-		1199: {
+		1200: {
 			slidesPerView: 3,
 		},
 	},
-})
+});
+
+tariffsSlider.on("reachEnd", () => {
+	changeButtons(tariffsPaginationButtonRight, tariffsPaginationButtonLeft);
+});
+tariffsSlider.on("reachBeginning", () => {
+	changeButtons(tariffsPaginationButtonLeft, tariffsPaginationButtonRight);
+});
+
+function changeButtons(buttonAdd, buttonRemove) {
+	buttonAdd.classList.add("tariffs__pagination-button_hidden");
+	buttonRemove.classList.remove("tariffs__pagination-button_hidden");
+}

@@ -1,6 +1,11 @@
 .program {
 	background: #f2f2f4;
 	padding: 90px 0;
+	overflow: hidden;
+
+	@media screen and (max-width: 639px) {
+		padding: 60px 0;
+	}
 
 	&__header {
 		display: grid;
@@ -8,10 +13,28 @@
 		justify-content: space-between;
 		margin-bottom: 80px;
 
+		@media screen and (max-width: 1199px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media screen and (max-width: 959px) {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		@media screen and (max-width: 639px) {
+			gap: 10px;
+			margin-bottom: 20px;
+		}
+
 		&-col {
 			display: flex;
 			flex-direction: column;
 			gap: 30px;
+
+			@media screen and (max-width: 639px) {
+				gap: 60px;
+			}
 		}
 	}
 
@@ -19,18 +42,84 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 10px;
-        width: 90%;
+		width: 90%;
+
+		@media screen and (max-width: 639px) {
+			gap: 4px;
+			width: 100%;
+		}
 	}
 
-    &__label {
-        padding: 10px 12px;
-        background: #ffffff;
-        color: #FF6945;font-size: 16px;line-height: 1.2;font-weight: 400;
-    }
+	&__label {
+		padding: 10px 12px 6px 12px;
+		background: #ffffff;
+		color: #181818;
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: 800;
+		border-radius: 6px;
+		text-transform: uppercase;
+
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+			padding: 12px 8px 8px 8px;
+		}
+	}
 
 	&__lead {
+		font-family: "NTSomic";
 		font-size: 24px;
+		color: #181818;
 		font-weight: 400;
 		line-height: 1.2;
+
+		@media screen and (max-width: 639px) {
+			font-size: 15px;
+		}
+	}
+
+	.accordeon {
+		&__header-content {
+			display: grid;
+			grid-template-columns: 540px 490px;
+			gap: 40px;
+
+			@media screen and (max-width: 1199px) {
+				grid-template-columns: 430px 1fr;
+			}
+
+			@media screen and (max-width: 959px) {
+				grid-template-columns: 1fr;
+				gap: 14px;
+			}
+		}
+
+		&__item_bonus {
+			background: #043933 !important;
+			border-radius: 6px;
+
+			.accordeon__header {
+				cursor: auto !important;
+			}
+
+			.accordeon__body {
+				padding: 0 20px;
+			}
+
+			.accordeon__separator {
+				div {
+					height: 0;
+				}
+			}
+
+			.accordeon__body-columns {
+				grid-template-columns: 1fr;
+			}
+
+			.accordeon__list-lead {
+				color: #899d9b;
+				padding: 10px 0 20px 0;
+			}
+		}
 	}
 }

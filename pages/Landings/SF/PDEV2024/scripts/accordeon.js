@@ -3,6 +3,7 @@ export default class InitAccordeon {
 		this._parent = parent;
 		this._accordeon = parent.querySelector(".accordeon");
 		this._accordeonItems = [...this._accordeon.querySelectorAll(".accordeon__item")];
+		this._innerWrapperWidth = parent.querySelector(".inner-wrapper").getBoundingClientRect().width;
 	}
 
 	init() {
@@ -11,7 +12,7 @@ export default class InitAccordeon {
 			const bodyItem = item.querySelector(".accordeon__body");
 			const bodyContent = bodyItem.querySelector(".accordeon__body-columns");
 			let itemOpened = false;
-			let separatorsHeight = 0;
+			let separatorsHeight = [];
 			let separators = null;
 
 			item.classList.contains("accordeon__item_opened") ? (itemOpened = true) : (itemOpened = false);
@@ -19,12 +20,12 @@ export default class InitAccordeon {
 			if (this._accordeon.classList.contains("accordeon_separators")) {
 				separators = item.querySelectorAll(".accordeon__separator");
 				separators.forEach((separator) => {
-					separatorsHeight = separator.querySelector("div").getBoundingClientRect().height;
+					separatorsHeight.push(separator.querySelector("div").getBoundingClientRect().height);
 				});
 				if (itemOpened) {
 					this.__changeSeparators(separators, separatorsHeight);
 				} else {
-					this.__changeSeparators(separators, 0);
+					this.__changeSeparators(separators, [0, 0]);
 				}
 			}
 			if (itemOpened) {
@@ -32,32 +33,42 @@ export default class InitAccordeon {
 			} else {
 				bodyItem.style.maxHeight = `0px`;
 			}
-
-			accordeonHeader.addEventListener("click", () => {
-				this.__closePrevOpenedAccordeonItem(item);
-				this.__openCloseAccordeon(item, bodyItem, bodyContent, separators, separatorsHeight);
-			});
+			if (!item.classList.contains("accordeon__item_bonus")) {
+				accordeonHeader.addEventListener("click", () => {
+					this.__closePrevOpenedAccordeonItem(item);
+					this.__openCloseAccordeon(item, bodyItem, bodyContent, separators, separatorsHeight);
+				});
+			}
 		});
 	}
 
 	initVideos() {
 		const parentClass = this._parent.className;
 		const videos = [...this._parent.querySelectorAll(`.${parentClass}__video-container`)];
+		let countHeight = 0;
 
-		this._accordeonItems.forEach((accordWithVideoItem) => {
-			accordWithVideoItem.querySelector(".accordeon__header").addEventListener("click", () => {
-				this.__changeVideo(parentClass, videos, accordWithVideoItem);
+		for (let i = 0; i < this._accordeonItems.length; i++) {
+			const accordHeader = this._accordeonItems[i].querySelector(".accordeon__header");
+			const accordGap = getComputedStyle(this._accordeon).getPropertyValue("gap").slice(0, 2);
+			accordHeader.addEventListener("click", () => {
+				this.__changeVideo(parentClass, videos, this._accordeonItems[i]);
 			});
-			const videoContainer = videos.find(video => video.id === accordWithVideoItem.id)
-			const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`)
+
+			const videoContainer = videos.find((video) => video.id === this._accordeonItems[i].id);
+
+			if (this._innerWrapperWidth > 620) {
+				videoContainer.style.top = `${countHeight}px`;
+				countHeight += accordHeader.getBoundingClientRect().height + Number(accordGap);
+			}
+			const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`);
 			playButton.addEventListener("click", () => {
 				this.__playPause(videoContainer, parentClass);
 			});
-		});
+		}
 	}
 
 	__playPause(videoContainer, parentClass) {
-		const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`)
+		const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`);
 		const videoCover = videoContainer.querySelector(`.${parentClass}__video-cover`);
 		const video = videoContainer.querySelector(`#video`);
 
@@ -79,7 +90,7 @@ export default class InitAccordeon {
 		if (this.__countOpenedAccordItems() !== 0) {
 			if (openedVideoContainer) {
 				openedVideoContainer.classList.remove(`${parentClass}__video-container_opened`);
-				this.__playPause(openedVideoContainer, parentClass)
+				this.__playPause(openedVideoContainer, parentClass);
 			}
 
 			if (currentAccordItem.classList.contains("accordeon__item_opened")) {
@@ -103,7 +114,7 @@ export default class InitAccordeon {
 	}
 
 	__openCloseAccordeon(item, body, content, separatorsArr, separatorsHeight) {
-		if (!item.classList.contains("accordeon__item_opened")) {
+		if (!item.classList.contains("accordeon__item_opened") || item.classList.contains("accordeon__item_bonus")) {
 			if (separatorsArr !== null) {
 				this.__changeSeparators(separatorsArr, separatorsHeight);
 			}
@@ -114,7 +125,7 @@ export default class InitAccordeon {
 		} else {
 			if (separatorsArr !== null) {
 				if (separatorsArr !== null) {
-					this.__changeSeparators(separatorsArr, 0);
+					this.__changeSeparators(separatorsArr, [0, 0]);
 				}
 			}
 
@@ -124,9 +135,9 @@ export default class InitAccordeon {
 	}
 
 	__changeSeparators(separatorsArr, separatorsHeight) {
-		separatorsArr.forEach((separator) => {
-			separator.style.maxHeight = `${separatorsHeight}px`;
-		});
+		for (let i = 0; i < separatorsArr.length; i++) {
+			separatorsArr[i].style.maxHeight = `${separatorsHeight[i]}px`;
+		}
 	}
 
 	__closePrevOpenedAccordeonItem(item) {

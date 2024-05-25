@@ -1,6 +1,6 @@
 const reviews = document.querySelector(".reviews");
-const reviewsSliderPrev = reviews.querySelector(".reviews__scroll-button_left");
-const reviewsSliderNext = reviews.querySelector(".reviews__scroll-button_right");
+const reviewsSliderPrev = reviews.querySelector(".reviews__pagination-button_left");
+const reviewsSliderNext = reviews.querySelector(".reviews__pagination-button_right");
 
 
 const reviewsSlider = new Swiper(".reviews__slider", {

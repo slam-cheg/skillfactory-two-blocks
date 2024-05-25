@@ -17,12 +17,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("./Inter-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "NTSomic";
   src: url("./NTSomic-Regular.woff") format("woff");
   font-weight: 400;
