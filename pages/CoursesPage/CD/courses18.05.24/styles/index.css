@@ -151,11 +151,6 @@
   margin-bottom: 40px;
   padding: 10px;
   overflow: hidden;
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  transition: 0.4s;
-  max-height: 1000px;
   z-index: 3;
 }
 @media screen and (max-width: 959px) {
@@ -316,6 +311,7 @@
 }
 .card_light {
   background: #ffffff;
+  z-index: 2;
 }
 .card_light .card__title,
 .card_light .card__description,
@@ -338,13 +334,8 @@
   }
 }
 .card_hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.4s;
-  transform: translateY(-360px);
-  max-height: 0px;
   margin-bottom: 0;
-  z-index: 2;
+  display: none;
 }
 
 .button {
