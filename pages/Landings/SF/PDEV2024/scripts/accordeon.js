@@ -42,24 +42,28 @@ export default class InitAccordeon {
 		});
 	}
 
-	initVideos() {
+	initOneVideo() {
+		const parentClass = this._parent.className;
+		const videoContainer = this._parent.querySelector(`.${parentClass}__video-container`)
+		const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`);
+
+		playButton.addEventListener("click", () => {
+			this.__playPause(videoContainer, parentClass);
+		});
+	}
+
+	initSeveralVideos() {
 		const parentClass = this._parent.className;
 		const videos = [...this._parent.querySelectorAll(`.${parentClass}__video-container`)];
-		let countHeight = 0;
 
 		for (let i = 0; i < this._accordeonItems.length; i++) {
 			const accordHeader = this._accordeonItems[i].querySelector(".accordeon__header");
-			const accordGap = getComputedStyle(this._accordeon).getPropertyValue("gap").slice(0, 2);
 			accordHeader.addEventListener("click", () => {
 				this.__changeVideo(parentClass, videos, this._accordeonItems[i]);
 			});
 
 			const videoContainer = videos.find((video) => video.id === this._accordeonItems[i].id);
 
-			if (this._innerWrapperWidth > 620) {
-				videoContainer.style.top = `${countHeight}px`;
-				countHeight += accordHeader.getBoundingClientRect().height + Number(accordGap);
-			}
 			const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`);
 			playButton.addEventListener("click", () => {
 				this.__playPause(videoContainer, parentClass);
