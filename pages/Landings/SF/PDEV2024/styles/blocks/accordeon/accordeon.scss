@@ -140,6 +140,11 @@
 			flex-direction: column;
 			&:first-child {
 				gap: 36px;
+
+				@media screen and (max-width: 639px) {
+					gap: 20px;
+					flex-direction: column-reverse;
+				}
 			}
 			&:last-child {
 				gap: 40px;
@@ -247,7 +252,8 @@
 		align-items: center;
 
 		@media screen and (max-width: 639px) {
-			padding: 10px 20px;
+			padding: 10px;
+			justify-content: flex-start;
 		}
 
 		span {

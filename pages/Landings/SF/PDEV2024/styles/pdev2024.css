@@ -138,7 +138,7 @@
   justify-content: space-between;
 }
 .review__text {
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -253,7 +253,7 @@
   }
 }
 .program__lead {
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-size: 24px;
   color: #181818;
   font-weight: 400;
@@ -268,6 +268,7 @@
   display: grid;
   grid-template-columns: 540px 490px;
   gap: 40px;
+  align-items: start;
 }
 @media screen and (max-width: 1199px) {
   .program .accordeon__header-content {
@@ -289,6 +290,11 @@
 }
 .program .accordeon__item_bonus .accordeon__body {
   padding: 0 20px;
+}
+@media screen and (max-width: 639px) {
+  .program .accordeon__item_bonus .accordeon__body {
+    padding: 0 10px;
+  }
 }
 .program .accordeon__item_bonus .accordeon__separator div {
   height: 0;
@@ -433,6 +439,12 @@
 .accordeon__body-col:first-child {
   gap: 36px;
 }
+@media screen and (max-width: 639px) {
+  .accordeon__body-col:first-child {
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+}
 .accordeon__body-col:last-child {
   gap: 40px;
 }
@@ -488,7 +500,7 @@
   padding-left: 14px;
 }
 .accordeon__list-lead {
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
@@ -530,11 +542,12 @@
 }
 @media screen and (max-width: 639px) {
   .accordeon__bigLabel {
-    padding: 10px 20px;
+    padding: 10px;
+    justify-content: flex-start;
   }
 }
 .accordeon__bigLabel span {
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
@@ -547,7 +560,7 @@
   }
 }
 .accordeon__text {
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
@@ -596,7 +609,7 @@
   }
 }
 .how-to-learn__lead {
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-weight: 400;
   font-size: 24px;
   line-height: 1.2;
@@ -713,7 +726,7 @@
   padding: 0;
   font-size: 20px;
   background: transparent;
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-weight: 400;
   font-size: 24px;
   line-height: 1.2;
@@ -849,7 +862,7 @@
 }
 .tariffs__announce-col:last-child p {
   font-weight: 400;
-  font-family: "NTSomic", Arial, sans-serif;
+  font-family: "NT Somic", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.2;
 }
@@ -918,7 +931,7 @@
   }
 }
 .tariffs .card__lead {
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-size: 16px;
   font-weight: 1.2;
   color: rgba(24, 24, 24, 0.5);
@@ -944,7 +957,7 @@
 }
 .tariffs .card__list-text {
   font-size: 16px;
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-weight: 400;
   line-height: 1.2;
   color: #181818;
@@ -1020,7 +1033,7 @@
 .tariffs .card__installment {
   color: rgba(24, 24, 24, 0.4);
   font-size: 16px;
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   line-height: 1;
   font-weight: 400;
 }
@@ -1032,7 +1045,7 @@
 .tariffs .card__installment span {
   font-weight: 400;
   font-size: 16px;
-  font-family: "NTSomic";
+  font-family: "NT Somic";
 }
 @media screen and (max-width: 639px) {
   .tariffs .card__installment span {
@@ -1049,7 +1062,7 @@
   color: #181818 !important;
   font-size: 20px;
   line-height: 1.2;
-  font-family: "NTSomic";
+  font-family: "NT Somic";
   font-weight: 400;
   padding: 20px 0;
   transition: 0.3s;
