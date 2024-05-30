@@ -10,6 +10,7 @@ function hideUnhideCards() {
 		for (let i = 0; i < hiddenCards.length; i++) {
 			hiddenCards[i].classList.remove("card_hidden");
 		}
+		hideButton.textContent = "свернуть"
 		hideButton.dataset.hide = "visible";
 		return;
 	}
@@ -18,7 +19,7 @@ function hideUnhideCards() {
 		for (let i = hiddenCards.length - 1; i >= 0; i--) {
 			hiddenCards[i].classList.add("card_hidden");
 		}
-
+		hideButton.textContent = "все курсы"
 		hideButton.dataset.hide = "hidden";
 		return;
 	}

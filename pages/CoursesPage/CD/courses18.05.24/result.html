@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="Ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Courses Cards CD</title>
+		<style>
+			@font-face {
+				font-family: "CoFo Sans";
+				src: url("./CoFoSans-Regular.woff");
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "CoFo Sans";
+				src: url("./CoFoSans-Medium.woff");
+				font-weight: 500;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "CoFo Sans";
+				src: url("./CoFoSans-Bold.woff");
+				font-weight: 700;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "CoFo Sans";
+				src: url("./CoFoSans-Black.woff");
+				font-weight: 900;
+				font-style: normal;
+			}
+			#allrecords ul {
+				padding-left: 0;
+			}
+			#allrecords a {
+				color: inherit;
+			}
+
+			* {
+				padding: 0;
+				margin: 0;
+				font-family: "CoFo Sans", Arial, sans-serif;
+				box-sizing: border-box;
+			}
+
+			.inner-wrapper {
+				width: 1160px;
+				margin: 0 auto;
+				position: relative;
+			}
+			@media screen and (max-width: 1199px) {
+				.inner-wrapper {
+					max-width: 940px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.inner-wrapper {
+					max-width: 620px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.inner-wrapper {
+					max-width: 460px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.inner-wrapper {
+					max-width: 300px;
+				}
+			}
+
+			.h2-title {
+				font-size: 42px;
+				font-weight: 400;
+				line-height: 0.9;
+				margin-bottom: 60px;
+				color: #161616;
+				text-transform: lowercase;
+			}
+			@media screen and (max-width: 639px) {
+				.h2-title {
+					font-size: 30px;
+				}
+			}
+
+			.courses {
+				background: #f4f4f4;
+				padding: 90px 0;
+				position: relative;
+				overflow: hidden;
+			}
+			@media screen and (max-width: 639px) {
+				.courses {
+					padding: 60px 0;
+				}
+			}
+			.courses__head {
+				display: grid;
+				gap: 240px;
+				align-items: center;
+				grid-template-columns: 360px auto;
+				max-width: 1082px;
+				margin-bottom: 60px;
+			}
+			@media screen and (max-width: 1199px) {
+				.courses__head {
+					gap: 130px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.courses__head {
+					grid-template-columns: 1fr;
+					gap: 20px;
+				}
+			}
+			.courses__head .h2-title {
+				margin-bottom: 0;
+				max-width: 360px;
+			}
+			.courses__description {
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 1.2;
+				color: #939393;
+			}
+			@media screen and (max-width: 639px) {
+				.courses__description {
+					font-size: 16px;
+				}
+			}
+
+			.cards {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				-moz-column-gap: 40px;
+				column-gap: 40px;
+				list-style: none;
+				pointer-events: auto;
+				overflow: hidden;
+				transition: 1s;
+			}
+			@media screen and (max-width: 1199px) {
+				.cards {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.cards {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			.card {
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				background: #161616;
+				margin-bottom: 40px;
+				padding: 10px;
+				overflow: hidden;
+				z-index: 3;
+			}
+			@media screen and (max-width: 959px) {
+				.card {
+					margin-bottom: 20px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.card {
+					margin-bottom: 10px;
+				}
+			}
+			.card__top {
+				display: flex;
+				gap: 10px;
+				position: relative;
+				z-index: 2;
+				margin-bottom: 44px;
+			}
+			@media screen and (max-width: 639px) {
+				.card__top {
+					flex-direction: column;
+				}
+			}
+			.card__center {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				position: relative;
+				z-index: 3;
+				margin-bottom: 50px;
+				width: 73%;
+			}
+			.card__bottom {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				position: relative;
+				z-index: 4;
+				margin-top: auto;
+			}
+			.card .sticker {
+				background: #e0fb52;
+				color: #161616;
+				padding: 4px 8px;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: -moz-fit-content;
+				width: fit-content;
+			}
+			.card .sticker_dark {
+				background: transparent;
+				color: rgba(255, 255, 255, 0.6);
+				border: 1px solid rgba(255, 255, 255, 0.6);
+			}
+			.card__title {
+				font-size: 28px;
+				font-weight: 400;
+				line-height: 0.9;
+				color: #ffffff;
+			}
+			.card__title span {
+				color: #e0fb52;
+			}
+			@media screen and (max-width: 479px) {
+				.card__title {
+					font-size: 22px;
+				}
+			}
+			.card__description {
+				font-size: 16px;
+				line-height: 1.06;
+				font-weight: 400;
+				color: #939393;
+			}
+			.card__image {
+				position: absolute;
+				z-index: 1;
+				pointer-events: none;
+			}
+			.card#COM-DESIGNER .card__image {
+				top: -55px;
+				right: -123px;
+			}
+			.card#INT-DESIGNER .card__image {
+				top: 26px;
+				right: -87px;
+			}
+			.card__price-wrapper {
+				display: flex;
+				flex-direction: column;
+			}
+			.card__price {
+				font-size: 28px;
+				font-weight: 400;
+				line-height: 0.9;
+				color: #ffffff;
+			}
+			.card__installment {
+				color: #737373;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 1;
+			}
+			.card__buttons {
+				display: grid;
+				grid-template-columns: 190px 140px;
+				gap: 10px;
+				position: relative;
+				box-sizing: border-box;
+			}
+			@media screen and (max-width: 1199px) {
+				.card__buttons {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.card__buttons {
+					grid-template-columns: 1.2fr 1fr;
+				}
+			}
+			.card__button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #e0fb52;
+				color: #161616 !important;
+				padding: 16px 20px;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1;
+				border: none;
+				cursor: pointer;
+				max-width: 100%;
+				transition: 0.3s;
+				text-decoration: none;
+			}
+			@media screen and (min-width: 1200px) {
+				.card__button:hover {
+					background: #ffffff !important;
+					transition: 0.3s;
+				}
+			}
+			.card__button_dark {
+				background: transparent;
+				color: rgb(255, 255, 255) !important;
+				border: 1px solid rgb(255, 255, 255);
+			}
+			@media screen and (min-width: 1200px) {
+				.card__button_dark:hover {
+					color: #161616 !important;
+					transition: 0.3s;
+				}
+			}
+			.card_light {
+				background: #ffffff;
+				z-index: 2;
+			}
+			.card_light .card__title,
+			.card_light .card__description,
+			.card_light .card__price {
+				color: #161616;
+			}
+			.card_light .card__title span {
+				color: #939393;
+			}
+			.card_light .sticker_dark,
+			.card_light .card__button_dark {
+				color: rgba(0, 0, 0, 0.6) !important;
+				border: 1px solid rgba(0, 0, 0, 0.6);
+			}
+			@media screen and (min-width: 1200px) {
+				.card_light .card__button:hover {
+					background: #161616 !important;
+					color: #ffffff !important;
+					transition: 0.3s;
+				}
+			}
+			.card_hidden {
+				margin-bottom: 0;
+				display: none;
+			}
+
+			.button {
+				margin: 0 auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 360px;
+				height: 70px;
+				color: #161616;
+				border: 1px solid #161616;
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 1;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+			@media screen and (max-width: 1199px) {
+				.button {
+					margin-top: 20px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.button {
+					margin-top: 30px;
+					width: 100%;
+					height: 60px;
+				}
+			}
+			@media screen and (min-width: 1200px) {
+				.button:hover {
+					background: #161616;
+					color: #ffffff;
+					transition: 0.3s;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="courses">
+			<div class="inner-wrapper">
+				<h2 class="h2-title">наши курсы</h2>
+				<ul class="cards">
+					<li class="card" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">графический дизайнер с&nbsp;нуля до&nbsp;<span>ПРО</span></h4>
+							<p class="card__description">максимальное погружение в&nbsp;графический дизайн</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/bage.webp" alt="" class="card__image" />
+					</li>
+					<li class="card" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">UI/UX-дизайнер с&nbsp;нуля до&nbsp;<span>ПРО</span></h4>
+							<p class="card__description">максимальное погружение в&nbsp;UX/UI-дизайн</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/tumber.webp" alt="" class="card__image" />
+					</li>
+					<li class="card" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">моушн-дизайнер с&nbsp;нуля до&nbsp;<span>ПРО</span></h4>
+							<p class="card__description">максимальное погружение в&nbsp;моушн-дизайн</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/spiral.webp" alt="" class="card__image" />
+					</li>
+					<li class="card" id="COM-DESIGNER">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">дизайнер жилых и&nbsp;коммерческих интерьеров</h4>
+							<p class="card__description">научитесь создавать авторские интерьеры квартир, кафе и&nbsp;офисов</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/sofaGreen.webp" alt="" class="card__image" />
+					</li>
+					<li class="card" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">3D&nbsp;Artist</h4>
+							<p class="card__description">создавайте виртуальные миры для игровой, рекламной или киноиндустрии</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/oke.webp" alt="" class="card__image" />
+					</li>
+					<li class="card" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">старт в&nbsp; дизайне</h4>
+							<p class="card__description">профориентация + 5&nbsp;профессий на&nbsp;выбор</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/cube.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">геймдизайнер</h4>
+							<p class="card__description">научитесь создавать игры, от&nbsp;которых будут в&nbsp;восторге тысячи геймеров</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/sphere.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">веб-дизайнер</h4>
+							<p class="card__description">научитесь создавать стильные сайты, которыми приятно пользоваться</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/figma.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">нейросети для дизайнеров</h4>
+							<p class="card__description">практический курс для всех, кто хочет прокачать карьеру и&nbsp;освоить новый инструмент</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/bubble.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">коммерческий иллюстратор</h4>
+							<p class="card__description">максимум творчества для дизайнера&nbsp;&mdash; выйдите за&nbsp;границы привычных задач</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/brushes.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">режиссер видеомонтажа</h4>
+							<p class="card__description">научитесь делать видеоролики интересными&nbsp;&mdash; такими, чтобы их&nbsp;хотелось пересматривать</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/playbutton.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title"><span>буткемп</span> <br />UX/UI-дизайнер</h4>
+							<p class="card__description">получите творческую профессию в&nbsp;IT, в&nbsp;которой не&nbsp;нужно программировать</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/butkempUX.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title"><span>интенсив</span> графический дизайнер</h4>
+							<p class="card__description">освойте универсальную профессию, с&nbsp;которой начинают путь в&nbsp;дизайн многие новички</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/buckets.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">дизайнер интерактивных медиа</h4>
+							<p class="card__description">совмещайте искусство и&nbsp;технологии в&nbsp;уникальных мультимедиа-объектах</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/abstractFlower.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">графический дизайнер</h4>
+							<p class="card__description">погрузитесь в&nbsp;самое творческое направление дизайна</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/cover.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">UX/UI-дизайнер</h4>
+							<p class="card__description">получите профессию на&nbsp;стыке творчества и&nbsp;аналитики</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/keyboard.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">моушн-дизайнер</h4>
+							<p class="card__description">освойте 2D- и&nbsp;3D-анимацию для создания цепляющего видео и&nbsp;графики</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/tripoPhobia.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="INT-DESIGNER">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title">дизайнер интерьеров</h4>
+							<p class="card__description">научитесь преображать пространство и&nbsp;делать его комфортным</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/spreadPages/interrior-designer/second.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title"><span>курс</span> авторская фотография</h4>
+							<p class="card__description">найдите свой уникальный стиль в&nbsp;фотографии и&nbsp;начните карьеру</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/camera.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title"><span>курс</span> дизайн-системы</h4>
+							<p class="card__description">авторский курс Андрея Сундиева по&nbsp;разработке дизайн-систем</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/key.webp" alt="" class="card__image" />
+					</li>
+					<li class="card card_light card_hidden" id="COURSE-ABBREVIATION">
+						<div class="card__top">
+							<div class="sticker">
+								<p class="percent"><span class="automation-COURSE-ABBREVIATION-percent">&nbsp;</span></p>
+							</div>
+							<div class="sticker sticker_dark">
+								<p class="duration"><span class="automation-COURSE-ABBREVIATION-duration">&nbsp;</span></p>
+							</div>
+						</div>
+						<div class="card__center">
+							<h4 class="card__title"><span>профессия</span> веб-дизайнер</h4>
+							<p class="card__description">освойте больше инструментов для работы в&nbsp;дизайне вместе с&nbsp;НИУ ВШЭ</p>
+						</div>
+						<div class="card__bottom">
+							<div class="card__price-wrapper">
+								<p class="card__price">от&nbsp;<span class="automation-COURSE-ABBREVIATION-newprice">&nbsp;</span>&nbsp;₽/мес</p>
+								<p class="card__installment">цена со&nbsp;скидкой при&nbsp;рассрочке на&nbsp;36&nbsp;месяцев</p>
+							</div>
+							<div class="card__buttons">
+								<a class="card__button" href="#">хочу учиться</a>
+								<a class="card__button card__button_dark" href="#">подробнее</a>
+							</div>
+						</div>
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/CD/coursesBlock/letterT.webp" alt="" class="card__image" />
+					</li>
+				</ul>
+				<button class="button" aria-label="все курсы" data-hide="hidden">все&nbsp;курсы</button>
+			</div>
+		</section>
+
+		<script>
+			const courses = document.querySelector(".courses");
+			const hideButton = courses.querySelector(".button");
+			const hiddenCardsWrapper = courses.querySelector(".cards_hidden");
+			const hiddenCards = courses.querySelectorAll(".card_hidden");
+
+			hideButton.addEventListener("click", hideUnhideCards);
+
+			function hideUnhideCards() {
+				if (hideButton.dataset.hide === "hidden") {
+					for (let i = 0; i < hiddenCards.length; i++) {
+						hiddenCards[i].classList.remove("card_hidden");
+					}
+					hideButton.textContent = "свернуть";
+					hideButton.dataset.hide = "visible";
+					return;
+				}
+
+				if (hideButton.dataset.hide === "visible") {
+					for (let i = hiddenCards.length - 1; i >= 0; i--) {
+						hiddenCards[i].classList.add("card_hidden");
+					}
+					hideButton.textContent = "все курсы";
+					hideButton.dataset.hide = "hidden";
+					return;
+				}
+			}
+		</script>
+	</body>
+</html>
