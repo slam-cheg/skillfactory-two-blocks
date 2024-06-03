@@ -42,8 +42,6 @@ body {
   font-size: 36px;
   width: 800px;
   left: calc(50% - 935px);
-  transition: transform 0.5s;
-  transform: translateY(0);
 }
 @media screen and (min-width: 2440px) {
   .title {
@@ -144,8 +142,6 @@ body {
   left: calc(50% - 88px);
   width: 140px;
   height: 13px;
-  transition: transform 0.5s;
-  transform: translateY(0);
 }
 @media screen and (min-width: 2440px) {
   .logo {
@@ -220,8 +216,6 @@ body {
   border-radius: 4px;
   border: 2px solid #043933;
   z-index: 2;
-  transition: transform 0.5s;
-  transform: translateY(0);
 }
 @media screen and (min-width: 2440px) {
   .frame {
@@ -415,8 +409,6 @@ body {
   top: -173px;
   right: calc(50% - 1115px);
   width: 712px;
-  transition: opacity 0.5s;
-  opacity: 1;
 }
 @media screen and (min-width: 2440px) {
   .wires {
@@ -475,6 +467,6 @@ body {
   transition: transform 0.5s;
 }
 .anim.wires {
-  opacity: 0;
-  transition: opacity 0.5s;
+  transform: translateY(300%);
+  transition: transform 0.5s;
 }
