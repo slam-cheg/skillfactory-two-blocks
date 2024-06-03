@@ -22,23 +22,19 @@
 	left: calc(50% - 935px);
 
 	@media screen and (min-width: 2440px) {
-		left: calc(50% - 1206px);
+		left: calc(50% - 1175px);
 	}
 
 	@media screen and (max-width: 1919px) {
-		left: calc(50% - 695px);
-	}
-
-	@media screen and (max-width: 1439px) {
-		left: calc(50% - 580px);
+		left: calc(50% - 585px);
 	}
 
 	@media screen and (max-width: 1199px) {
-		left: calc(50% - 460px);
+		left: calc(50% - 455px);
 	}
 
 	@media screen and (max-width: 939px) {
-		left: calc(50% - 310px);
+		left: calc(50% - 306px);
 	}
 
 	@media screen and (max-width: 639px) {
@@ -46,51 +42,23 @@
 	}
 
 	@media screen and (max-width: 399px) {
-		left: 4px;
+		left: calc(50% - 135px);
 	}
 }
 
 @mixin leftSecond {
-	left: calc(50% - 88px);
-
-	@media screen and (min-width: 2440px) {
-		left: calc(50% - 218px);
-	}
-
-	@media screen and (max-width: 1919px) {
-		left: calc(50% + 140px);
-	}
-
-	@media screen and (max-width: 1439px) {
-		left: calc(50% + 80px);
-	}
-
-	@media screen and (max-width: 1199px) {
-		left: calc(50% - 50px);
-	}
-
-	@media screen and (max-width: 939px) {
-		left: calc(50% + 50px);
-	}
-
-	@media screen and (max-width: 639px) {
-		left: calc(50% + 46px);
-	}
-
-	@media screen and (max-width: 399px) {
-		left: 4px;
-	}
+	left: calc(50% - 117px);
 }
 
 html,
 body {
-	height: 110px;
+	height: 240px;
 	width: 100%;
 	margin: 0;
 }
 
 .link {
-	background: #b5e916;
+	background: #dde6e7;
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -101,57 +69,102 @@ body {
 
 .title {
 	font-family: "PP_SF Neue Machina";
-	color: #043933;
+	color: #ff6945;
 	line-height: 1;
 	position: absolute;
-	top: 12px;
-	font-size: 36px;
+	top: 74px;
+	font-size: 57px;
 	width: 800px;
 	@include leftFirst;
+	z-index: 5;
 
 	@media screen and (min-width: 2440px) {
-		top: 10px;
-		font-size: 40px;
-		width: 1000px;
+		top: calc(50% - 132px / 2);
+		font-size: 66px;
+		width: 900px;
 	}
 
-	@media screen and (max-width: 1439px) {
-		font-size: 28px;
-		width: 670px;
+	@media screen and (max-width: 1919px) {
+		top: 50px;
+		font-size: 46px;
 	}
 
 	@media screen and (max-width: 1199px) {
-		font-size: 24px;
-		width: 390px;
-		top: 10px;
+		font-size: 40px;
+		width: 550px;
 	}
 
 	@media screen and (max-width: 939px) {
-		font-size: 22px;
+		font-size: 28px;
+		width: 390px;
 	}
 
 	@media screen and (max-width: 639px) {
-		font-size: 14px;
-		width: 230px;
+		top: 37px;
 	}
 
 	@media screen and (max-width: 399px) {
-		font-size: 12px;
-		width: calc(100% - 8px);
-		top: 21px;
-		line-height: 0.8;
+		font-size: 22px;
+		width: 270px;
+		top: 28px;
+	}
+}
+
+.description {
+	color: #043933;
+	position: absolute;
+	top: 90px;
+	@include leftSecond;
+	font-size: 32px;
+	font-family: "HeliosExt Web";
+	line-height: 1.1;
+	width: 400px;
+	z-index: 4;
+
+	@media screen and (min-width: 2440px) {
+		top: calc(50% - 92px / 2);
+		left: calc(50% - 197px);
+		font-size: 42px;
+		width: 600px;
+	}
+
+	@media screen and (max-width: 1919px) {
+		@include leftFirst;
+		top: 158px;
+		font-size: 26px;
+		width: fit-content;
+	}
+
+	@media screen and (max-width: 1199px) {
+		top: 146px;
+		font-size: 20px;
+	}
+
+	@media screen and (max-width: 939px) {
+		top: 126px;
+		font-size: 18px;
+		width: 270px;
+	}
+
+	@media screen and (max-width: 639px) {
+		top: 106px;
+		font-size: 18px;
+		width: 320px;
+	}
+
+	@media screen and (max-width: 399px) {
+		width: 270px;
+		top: 108px;
+		font-size: 16px;
 	}
 
 	span {
-		background: #ff6945;
-		color: #ffffff;
+		background: #b5e916;
 		display: inline-block;
 		text-transform: uppercase;
+		padding: 0px 4px;
 
 		@media screen and (max-width: 1919px) {
-			padding: 5px 4px 0px 4px;
-			margin-top: -2px;
-			border-radius: 2px;
 		}
 	}
 }
@@ -164,96 +177,102 @@ body {
 	background-position: center;
 	position: absolute;
 	top: 14px;
-	@include leftSecond;
-	width: 140px;
-	height: 13px;
+	@include leftFirst;
+	width: 170px;
+	height: 15px;
 
 	@media screen and (min-width: 2440px) {
-		width: 160px;
-		height: 15px;
+		width: 200px;
+		height: 18px;
 	}
 
-	@media screen and (max-width: 1919px) {
-		top: 12px;
-		width: 110px;
-		height: 10px;
+	@media screen and (max-width: 939px) {
+		width: 130px;
+		height: 12px;
 	}
 
 	@media screen and (max-width: 639px) {
+		width: 120px;
+		height: 11px;
 		top: 10px;
-		width: 90px;
-		height: 8px;
 	}
 
 	@media screen and (max-width: 399px) {
-		top: 4px;
+		width: 110px;
+		height: 10px;
+		top: 5px;
 	}
 }
 
 .frame {
 	color: #043933;
 	position: absolute;
-	background: #fffaed;
+	background: #ffffff;
 	display: flex;
-	@include leftSecond;
-	top: 39px;
-	gap: 14px;
-	padding: 10px 20px;
+	right: calc(50% - 806px);
+	width: 264px;
+	top: 91px;
+	gap: 10px;
+	padding: 16px 14px;
 	border-radius: 4px;
-	border: 2px solid #043933;
-	z-index: 2;
+	border: 3px solid #043933;
+	z-index: 3;
 
 	@media screen and (min-width: 2440px) {
-		top: 40px;
-		gap: 14px;
-		padding: 12px 40px;
-		border-radius: 6px;
+		right: calc(50% - 993px);
+		width: 366px;
+		top: calc(50% - 100px / 2);
 	}
 
 	@media screen and (max-width: 1919px) {
-		top: 34px;
-		width: 200px;
-		gap: 5px;
+		right: calc(50% - 570px);
+		width: 244px;
+		top: 75px;
+		gap: 10px;
 		padding: 10px;
+		border-radius: 4px;
 	}
 
 	@media screen and (max-width: 1199px) {
-		width: 286px;
-		padding: 6px;
+		right: calc(50% - 420px);
+		width: 222px;
+		top: 127px;
 	}
 
 	@media screen and (max-width: 939px) {
-		width: 176px;
-		padding: 4px;
-		top: 30px;
+		right: calc(50% - 180px);
+		width: 222px;
+		top: 117px;
+		padding: 6px;
 	}
 
 	@media screen and (max-width: 639px) {
-		width: 132px;
-		top: 24px;
+		right: unset;
+		@include leftFirst;
+		width: max-content;
+		top: 164px;
+		padding: 4px;
+		gap: 4px;
+		border: 1px solid #043933;
 	}
 
 	@media screen and (max-width: 399px) {
-		width: fit-content;
-		top: 52px;
 	}
 
 	span {
 		font-family: "PP_SF Neue Machina";
-		padding-top: 3px;
-		font-size: 21px;
+		color: #ff6945;
+		font-size: 22px;
+		padding-top: 2px;
 
 		@media screen and (max-width: 1919px) {
-			font-size: 16px;
 		}
 
 		@media screen and (max-width: 1199px) {
-			font-size: 14px;
 		}
 
 		@media screen and (max-width: 639px) {
-			font-size: 10px;
-			padding-top: 2px;
+			font-size: 12px;
 		}
 	}
 
@@ -261,16 +280,24 @@ body {
 		font-family: "HeliosExt Web";
 		font-size: 20px;
 
+		@media screen and (min-width: 2440px) {
+			font-size: 26px;
+		}
+
 		@media screen and (max-width: 1919px) {
-			font-size: 15px;
+			font-size: 18px;
 		}
 
 		@media screen and (max-width: 1199px) {
-			font-size: 14px;
+			font-size: 16px;
 		}
 
 		@media screen and (max-width: 639px) {
-			font-size: 10px;
+			font-size: 14px;
+		}
+
+		@media screen and (max-width: 399px) {
+			font-size: 13px;
 		}
 	}
 }
@@ -280,78 +307,72 @@ body {
 	color: #181818;
 	position: absolute;
 	opacity: 0.6;
-	font-size: 8px;
+	font-size: 12px;
 	bottom: 12px;
 	@include leftFirst;
 	line-height: 1;
-
-	@media screen and (min-width: 2440px) {
-		bottom: 8px;
-	}
+	z-index: 2;
 
 	@media screen and (max-width: 1199px) {
-		bottom: 10px;
-	}
-
-	@media screen and (max-width: 639px) {
-		width: 290px;
-	}
-
-	@media screen and (max-width: 399px) {
-        width: calc(100% - 60px);
-		bottom: 2px;
-	}
-}
-
-.wires {
-	position: absolute;
-	object-fit: contain;
-	top: -173px;
-	right: calc(50% - 1115px);
-	width: 712px;
-
-	@media screen and (min-width: 2440px) {
-		top: -213px;
-		right: calc(50% - 1345px);
-		transform: rotate(6deg);
-		width: 910px;
-	}
-
-	@media screen and (max-width: 1919px) {
-		right: calc(50% - 1094px);
-		top: -173px;
-	}
-
-	@media screen and (max-width: 1439px) {
-		right: calc(50% - 1004px);
-	}
-
-	@media screen and (max-width: 1199px) {
-		right: calc(50% - 734px);
-		top: -110px;
-		width: 500px;
+		width: 522px;
 	}
 
 	@media screen and (max-width: 939px) {
-		right: calc(50% - 604px);
-		transform: rotate(-25deg);
-		top: -148px;
-		width: 466px;
-		z-index: 1;
+		width: 372px;
+		font-size: 10px;
 	}
 
 	@media screen and (max-width: 639px) {
-		right: calc(50% - 424px);
-		transform: rotate(-15deg);
-		top: -66px;
-		width: 366px;
+		width: 228px;
+		font-size: 8px;
+		bottom: 10px;
 	}
 
 	@media screen and (max-width: 399px) {
-        right: -142px;
-		transform: rotate(215deg);
-		top: 45px;
-		width: 236px;
+	}
+}
+
+.image {
+	position: absolute;
+	object-fit: contain;
+	top: -62px;
+	right: calc(50% - 1036px);
+	width: 830px;
+	z-index: 1;
+
+	@media screen and (min-width: 2440px) {
+		top: -72px;
+		right: calc(50% - 1266px);
+		width: 1030px;
+	}
+
+	@media screen and (max-width: 1919px) {
+		top: -22px;
+		right: calc(50% - 746px);
+		width: 680px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		right: calc(50% - 556px);
+		width: 540px;
+	}
+
+	@media screen and (max-width: 939px) {
+		right: calc(50% - 486px);
+		width: 490px;
+	}
+
+	@media screen and (max-width: 639px) {
+		right: calc(50% - 349px);
+		width: 330px;
+		top: 78px;
+	}
+
+	@media screen and (max-width: 399px) {
+		right: calc(50% - 336px);
+		width: 280px;
+		top: 28px;
+		transform: rotate(-45deg);
 	}
 }
 
