@@ -85,7 +85,7 @@ body {
 }
 @media screen and (max-width: 1919px) {
   .title {
-    top: 50px;
+    top: 74px;
     font-size: 46px;
   }
 }
@@ -103,23 +103,23 @@ body {
 }
 @media screen and (max-width: 639px) {
   .title {
-    top: 37px;
+    top: 60px;
   }
 }
 @media screen and (max-width: 399px) {
   .title {
     font-size: 22px;
     width: 270px;
-    top: 28px;
+    top: 50px;
   }
 }
 
 .description {
   color: #043933;
   position: absolute;
-  top: 90px;
   left: calc(50% - 117px);
-  font-size: 32px;
+  top: 115px;
+  font-size: 27px;
   font-family: "HeliosExt Web";
   line-height: 1.1;
   width: 400px;
@@ -129,16 +129,16 @@ body {
 }
 @media screen and (min-width: 2440px) {
   .description {
-    top: calc(50% - 46px);
+    top: calc(50% - 15px);
     left: calc(50% - 197px);
-    font-size: 42px;
-    width: 600px;
+    font-size: 32px;
+    width: 460px;
   }
 }
 @media screen and (max-width: 1919px) {
   .description {
     left: calc(50% - 935px);
-    top: 158px;
+    top: 170px;
     font-size: 26px;
     width: -moz-fit-content;
     width: fit-content;
@@ -189,7 +189,7 @@ body {
 }
 @media screen and (max-width: 639px) {
   .description {
-    top: 106px;
+    top: 116px;
     font-size: 18px;
     width: 320px;
   }
@@ -197,7 +197,7 @@ body {
 @media screen and (max-width: 399px) {
   .description {
     width: 270px;
-    top: 108px;
+    top: 122px;
     font-size: 16px;
   }
 }
@@ -214,8 +214,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 14px;
-  left: calc(50% - 935px);
+  top: 89px;
+  left: calc(50% - 117px);
   width: 170px;
   height: 15px;
   transform: translateY(0);
@@ -223,38 +223,46 @@ body {
 }
 @media screen and (min-width: 2440px) {
   .logo {
-    left: calc(50% - 1175px);
+    width: 200px;
+    height: 18px;
+    left: calc(50% - 197px);
+    top: 70px;
   }
 }
 @media screen and (max-width: 1919px) {
   .logo {
+    top: 49px;
+    left: calc(50% - 935px);
+  }
+}
+@media screen and (max-width: 1919px) and (min-width: 2440px) {
+  .logo {
+    left: calc(50% - 1175px);
+  }
+}
+@media screen and (max-width: 1919px) and (max-width: 1919px) {
+  .logo {
     left: calc(50% - 585px);
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1919px) and (max-width: 1199px) {
   .logo {
     left: calc(50% - 455px);
   }
 }
-@media screen and (max-width: 939px) {
+@media screen and (max-width: 1919px) and (max-width: 939px) {
   .logo {
     left: calc(50% - 306px);
   }
 }
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 1919px) and (max-width: 639px) {
   .logo {
     left: calc(50% - 190px);
   }
 }
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 1919px) and (max-width: 399px) {
   .logo {
     left: calc(50% - 135px);
-  }
-}
-@media screen and (min-width: 2440px) {
-  .logo {
-    width: 200px;
-    height: 18px;
   }
 }
 @media screen and (max-width: 939px) {
@@ -267,14 +275,14 @@ body {
   .logo {
     width: 120px;
     height: 11px;
-    top: 10px;
+    top: 35px;
   }
 }
 @media screen and (max-width: 399px) {
   .logo {
     width: 110px;
     height: 10px;
-    top: 5px;
+    top: 30px;
   }
 }
 
@@ -366,6 +374,11 @@ body {
 @media screen and (max-width: 639px) and (max-width: 399px) {
   .frame {
     left: calc(50% - 135px);
+  }
+}
+@media screen and (max-width: 399px) {
+  .frame {
+    top: 168px;
   }
 }
 .frame span {

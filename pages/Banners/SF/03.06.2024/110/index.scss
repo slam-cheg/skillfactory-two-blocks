@@ -112,7 +112,7 @@ body {
 	transform: translateY(0);
 
 	@media screen and (min-width: 2440px) {
-		top: 10px;
+		top: 15px;
 		font-size: 40px;
 		width: 1000px;
 	}
@@ -125,7 +125,7 @@ body {
 	@media screen and (max-width: 1199px) {
 		font-size: 24px;
 		width: 390px;
-		top: 10px;
+		top: 20px;
 	}
 
 	@media screen and (max-width: 939px) {
@@ -133,6 +133,7 @@ body {
 	}
 
 	@media screen and (max-width: 639px) {
+		top: 26px;
 		font-size: 14px;
 		width: 230px;
 	}
@@ -140,7 +141,7 @@ body {
 	@media screen and (max-width: 399px) {
 		font-size: 12px;
 		width: calc(100% - 8px);
-		top: 21px;
+		top: 38px;
 		line-height: 0.8;
 	}
 
@@ -175,6 +176,7 @@ body {
 	@media screen and (min-width: 2440px) {
 		width: 160px;
 		height: 15px;
+		top: 17px;
 	}
 
 	@media screen and (max-width: 1919px) {
@@ -183,14 +185,18 @@ body {
 		height: 10px;
 	}
 
+	@media screen and (max-width: 1199px) {
+		top: 20px;
+	}
+
 	@media screen and (max-width: 639px) {
-		top: 10px;
+		top: 26px;
 		width: 90px;
 		height: 8px;
 	}
 
 	@media screen and (max-width: 399px) {
-		top: 4px;
+		top: 20px;
 	}
 }
 
@@ -210,7 +216,7 @@ body {
 	transform: translateY(0);
 
 	@media screen and (min-width: 2440px) {
-		top: 40px;
+		top: 43px;
 		gap: 14px;
 		padding: 12px 40px;
 		border-radius: 6px;
@@ -226,22 +232,23 @@ body {
 	@media screen and (max-width: 1199px) {
 		width: 286px;
 		padding: 6px;
+		top: 45px;
 	}
 
 	@media screen and (max-width: 939px) {
 		width: 176px;
 		padding: 4px;
-		top: 30px;
+		top: 40px;
 	}
 
 	@media screen and (max-width: 639px) {
 		width: 132px;
-		top: 24px;
+		top: 43px;
 	}
 
 	@media screen and (max-width: 399px) {
 		width: fit-content;
-		top: 52px;
+		top: 65px;
 	}
 
 	span {
@@ -296,7 +303,7 @@ body {
 	}
 
 	@media screen and (max-width: 1199px) {
-		bottom: 10px;
+		bottom: 4px;
 	}
 
 	@media screen and (max-width: 639px) {
