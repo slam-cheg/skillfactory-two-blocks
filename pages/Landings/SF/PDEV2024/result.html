@@ -1,0 +1,2212 @@
+<!DOCTYPE html>
+<html lang="Ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PDEV2024</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<style>
+			@font-face {
+				font-family: "heliosexBOLD-neuemachina";
+				src: url("https://tools.skillfactory.ru/heliosext.woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "heliosexBOLD-neuemachina";
+				src: url("https://tools.skillfactory.ru/HeliosExtC-Bold.woff") format("woff");
+				font-weight: 700;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "heliosexBOLD-neuemachina";
+				src: url("https://tools.skillfactory.ru/PPNeueMachina-InktrapRegular.woff") format("woff");
+				font-weight: 800;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "NT Somic";
+				src: url("https://tools.skillfactory.ru/fonts/NTSomic-Regular.woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "NT Somic";
+				src: url("https://tools.skillfactory.ru/fonts/NTSomic-Medium.woff") format("woff");
+				font-weight: 500;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "NT Somic";
+				src: url("https://tools.skillfactory.ru/fonts/NTSomic-Bold.woff") format("woff");
+				font-weight: 800;
+				font-style: normal;
+			}
+			#allrecords ul {
+				padding-left: 0;
+			}
+
+			* {
+				padding: 0;
+				margin: 0;
+				font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+				box-sizing: border-box;
+			}
+
+			.outer-wrapper {
+				width: 100%;
+				overflow: hidden;
+			}
+
+			.inner-wrapper {
+				width: 1160px;
+				margin: 0 auto;
+				position: relative;
+			}
+			@media screen and (max-width: 1199px) {
+				.inner-wrapper {
+					max-width: 940px;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.inner-wrapper {
+					max-width: 620px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.inner-wrapper {
+					max-width: 460px;
+				}
+			}
+			@media screen and (max-width: 479px) {
+				.inner-wrapper {
+					max-width: 300px;
+				}
+			}
+
+			.h2-title {
+				font-weight: 800;
+				font-size: 45px;
+				line-height: 0.8;
+				color: #181818;
+			}
+			@media screen and (max-width: 639px) {
+				.h2-title {
+					font-size: 28px;
+					max-width: 300px;
+				}
+			}
+
+			.reviews {
+				padding: 90px 0;
+				overflow: hidden;
+			}
+			@media screen and (max-width: 639px) {
+				.reviews {
+					padding: 60px 0;
+				}
+			}
+			.reviews__header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				margin-bottom: 60px;
+			}
+			@media screen and (max-width: 639px) {
+				.reviews__header {
+					flex-direction: column;
+					margin-bottom: 20px;
+					align-items: flex-start;
+					gap: 40px;
+					justify-content: normal;
+				}
+			}
+			.reviews__pagination {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			@media screen and (max-width: 639px) {
+				.reviews__pagination {
+					gap: 4px;
+				}
+			}
+			.reviews__pagination-button {
+				outline: none;
+				border: none;
+				cursor: pointer;
+				transition: 0.3s;
+				background: transparent;
+			}
+			.reviews__pagination-button svg {
+				width: 50px;
+				height: 50px;
+			}
+			@media screen and (max-width: 639px) {
+				.reviews__pagination-button svg {
+					width: 40px;
+					height: 40px;
+				}
+			}
+			.reviews__pagination-button svg rect {
+				fill: #b5e916;
+				transition: 0.3s;
+			}
+			.reviews__pagination-button svg path {
+				fill: #181818;
+				transition: 0.3s;
+			}
+			@media screen and (min-width: 1200px) {
+				.reviews__pagination-button:hover svg rect {
+					fill: #043933;
+					transition: 0.3s;
+				}
+				.reviews__pagination-button:hover svg path {
+					fill: #e7e7e7;
+					transition: 0.3s;
+				}
+			}
+
+			.review {
+				background: #f2f2f4;
+				padding: 20px;
+				border-radius: 6px;
+				min-height: 280px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			@media screen and (max-width: 639px) {
+				.review {
+					min-height: 220px;
+					border-radius: 4px;
+				}
+			}
+			.review__text {
+				font-family: "NT Somic";
+				font-style: normal;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 1.2;
+				color: rgba(24, 24, 24, 0.5);
+			}
+			@media screen and (max-width: 639px) {
+				.review__text {
+					font-size: 14px;
+				}
+			}
+			.review__avatar {
+				width: 50px;
+				-o-object-fit: contain;
+				object-fit: contain;
+				border-radius: 30px;
+			}
+			@media screen and (max-width: 639px) {
+				.review__avatar {
+					width: 40px;
+				}
+			}
+			.review__name {
+				font-weight: 800;
+				font-size: 16px;
+				text-transform: uppercase;
+			}
+			@media screen and (max-width: 639px) {
+				.review__name {
+					font-size: 12px;
+				}
+			}
+			.review__bottom {
+				display: flex;
+				gap: 14px;
+				align-items: center;
+			}
+			@media screen and (max-width: 639px) {
+				.review__bottom {
+					gap: 10px;
+				}
+			}
+
+			.program {
+				background: #f2f2f4;
+				padding: 90px 0;
+				overflow: hidden;
+			}
+			@media screen and (max-width: 639px) {
+				.program {
+					padding: 60px 0;
+				}
+			}
+			.program__header {
+				display: grid;
+				grid-template-columns: 370px 560px;
+				justify-content: space-between;
+				margin-bottom: 80px;
+			}
+			@media screen and (max-width: 1199px) {
+				.program__header {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.program__header {
+					grid-template-columns: 1fr;
+					gap: 40px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.program__header {
+					gap: 10px;
+					margin-bottom: 20px;
+				}
+			}
+			.program__header-col {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+			}
+			@media screen and (max-width: 639px) {
+				.program__header-col {
+					gap: 60px;
+				}
+			}
+			.program__labels {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				width: 90%;
+			}
+			@media screen and (max-width: 639px) {
+				.program__labels {
+					gap: 4px;
+					width: 100%;
+				}
+			}
+			.program__label {
+				padding: 10px 12px 6px 12px;
+				background: #ffffff;
+				color: #181818;
+				font-size: 16px;
+				line-height: 1.2;
+				font-weight: 800;
+				border-radius: 6px;
+				text-transform: uppercase;
+			}
+			@media screen and (max-width: 639px) {
+				.program__label {
+					font-size: 12px;
+					padding: 8px 8px 5px 8px;
+					border-radius: 4px;
+				}
+			}
+			.program__lead {
+				font-family: "NT Somic";
+				font-size: 24px;
+				color: #181818;
+				font-weight: 400;
+				line-height: 1.2;
+			}
+			@media screen and (max-width: 639px) {
+				.program__lead {
+					font-size: 15px;
+				}
+			}
+			.program .accordeon__header-content {
+				display: grid;
+				grid-template-columns: 540px 490px;
+				gap: 40px;
+				align-items: start;
+			}
+			@media screen and (max-width: 1199px) {
+				.program .accordeon__header-content {
+					grid-template-columns: 430px 1fr;
+				}
+			}
+			@media screen and (max-width: 959px) {
+				.program .accordeon__header-content {
+					grid-template-columns: 1fr;
+					gap: 14px;
+				}
+			}
+			.program .accordeon__item_bonus {
+				background: #043933 !important;
+				border-radius: 6px;
+			}
+			@media screen and (max-width: 639px) {
+				.program .accordeon__item_bonus {
+					border-radius: 4px;
+				}
+			}
+			.program .accordeon__item_bonus .accordeon__header {
+				cursor: auto !important;
+			}
+			.program .accordeon__item_bonus .accordeon__body {
+				padding: 0 20px;
+			}
+			@media screen and (max-width: 639px) {
+				.program .accordeon__item_bonus .accordeon__body {
+					padding: 0 10px;
+				}
+			}
+			.program .accordeon__item_bonus .accordeon__separator div {
+				height: 0;
+			}
+			.program .accordeon__item_bonus .accordeon__body-columns {
+				grid-template-columns: 1fr;
+			}
+			.program .accordeon__item_bonus .accordeon__list-lead {
+				color: #899d9b;
+				padding: 10px 0 16px 0;
+			}
+
+			.program .accordeon__list-labels {
+				gap: 8px;
+			}
+			.program .accordeon__list-label {
+				font-size: 16px;
+			}
+			@media screen and (max-width: 639px) {
+				.program .accordeon__list-labels {
+					gap: 4px;
+				}
+				.program .accordeon__list {
+					padding-left: 12px !important;
+				}
+				.program .accordeon__list-label {
+					font-size: 12px;
+				}
+			}
+
+			.accordeon {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				margin-bottom: 0 !important;
+			}
+			.accordeon ul {
+				margin-bottom: 0 !important;
+			}
+			.accordeon__item_opened .accordeon__body {
+				pointer-events: auto;
+				transition: max-height 0.5s;
+			}
+			.accordeon__item_opened .accordeon__close-button {
+				width: 36px;
+				height: 36px;
+				transform: rotate(45deg);
+				transition: 0.3s;
+			}
+			@media screen and (min-width: 1200px) {
+				.accordeon__item_opened .accordeon__close-button:hover {
+					transform: rotate(50deg);
+					transition: 0.3s;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__item_opened .accordeon__close-button {
+					width: 16px;
+					height: 16px;
+				}
+			}
+			.accordeon__item_bonus .accordeon__header {
+				background: #043933 !important;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__item_bonus .accordeon__header {
+					padding: 14px 10px !important;
+				}
+			}
+			.accordeon__item_bonus .accordeon__header-labels {
+				display: flex;
+				gap: 6px;
+			}
+			.accordeon__item_bonus .h5-title {
+				color: #ffffff !important;
+			}
+			.accordeon__item_bonus .accordeon__close-button {
+				background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/cross-white.svg) !important;
+			}
+			.accordeon__item_bonus .accordeon__header-content {
+				width: 100%;
+			}
+			.accordeon__header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				cursor: pointer;
+				padding: 20px;
+				background: #ffffff;
+				border-radius: 6px;
+			}
+			@media screen and (max-width: 939px) {
+				.accordeon__header {
+					align-items: flex-start;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__header {
+					align-items: flex-start;
+					padding: 14px 30px 14px 10px;
+					border-radius: 4px;
+				}
+			}
+			.accordeon__header-content {
+				display: flex;
+				width: calc(100% - 36px);
+				align-items: center;
+			}
+			.accordeon__header-labels {
+				list-style: none;
+			}
+			.accordeon__header-label {
+				padding: 12px 14px 8px 14px;
+				text-transform: uppercase;
+				background: #f2f2f4;
+				border-radius: 6px;
+				max-width: -moz-fit-content;
+				max-width: fit-content;
+				font-weight: 800;
+				font-size: 16px;
+				color: #181818;
+				line-height: 1;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__header-label {
+					font-size: 12px;
+					padding: 10px 12px 6px 12px;
+					display: flex;
+					align-items: center;
+					border-radius: 4px;
+				}
+			}
+			.accordeon__separator {
+				overflow: hidden;
+				transition: 0.5s;
+			}
+			.accordeon__separator div {
+				height: 30px;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__separator div {
+					height: 20px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__separator_bottom div {
+					height: 30px;
+				}
+			}
+			.accordeon__body {
+				transition: max-height 0.5s;
+				pointer-events: none;
+				overflow: hidden;
+				max-height: 0px;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__body {
+					padding: 0 10px;
+				}
+			}
+			.accordeon__body-columns {
+				display: grid;
+				grid-template-columns: 560px auto;
+				gap: 40px;
+			}
+			@media screen and (max-width: 1199px) {
+				.accordeon__body-columns {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__body-columns {
+					grid-template-columns: 1fr;
+				}
+			}
+			.accordeon__body-col {
+				display: flex;
+				flex-direction: column;
+				gap: 40px;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__body-col {
+					gap: 20px;
+				}
+				.accordeon__body-col:first-child {
+					flex-direction: column-reverse;
+				}
+			}
+
+			.accordeon__body-columns_same .accordeon__body-col:first-child {
+				gap: 40px;
+			}
+			.accordeon .h5-title {
+				font-size: 30px;
+				font-weight: 800;
+				line-height: 1;
+				padding-top: 5px;
+				color: #181818;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon .h5-title {
+					font-size: 16px;
+					margin-bottom: 0;
+					padding-top: 0;
+				}
+			}
+			.accordeon__close-button {
+				background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/cross.svg);
+				background-repeat: no-repeat;
+				background-color: transparent;
+				background-position: center;
+				background-size: 100%;
+				border: none;
+				cursor: pointer;
+				display: block;
+				outline: none;
+				width: 36px;
+				height: 36px;
+				transition: 0.3s;
+			}
+			@media screen and (min-width: 1200px) {
+				.accordeon__close-button:hover {
+					transform: rotate(5deg);
+					transition: 0.3s;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__close-button {
+					width: 16px;
+					height: 16px;
+				}
+			}
+			.accordeon__list {
+				padding-left: 14px !important;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__list {
+					padding-left: 16px !important;
+				}
+			}
+			.accordeon__list-lead {
+				font-family: "NT Somic";
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 1.2;
+				color: #181818;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__list-lead {
+					font-size: 15px;
+				}
+			}
+			.accordeon__list-labels {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 4px;
+			}
+			.accordeon__list-label {
+				font-weight: 800;
+				font-size: 20px;
+				padding: 8px 10px 4px 10px;
+				border-radius: 6px;
+				line-height: 1.2;
+				background: #ffffff;
+				color: #181818;
+				text-transform: uppercase;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__list-label {
+					font-size: 12px;
+					padding: 10px 8px 6px 8px;
+					border-radius: 4px;
+				}
+			}
+			.accordeon__bigLabel {
+				padding: 20px;
+				width: 100%;
+				background: #043933;
+				border-radius: 6px;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__bigLabel {
+					padding: 10px;
+					border-radius: 4px;
+				}
+			}
+			.accordeon__bigLabel span {
+				font-family: "NT Somic";
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 1.2;
+				color: #ffffff;
+				text-align: left;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__bigLabel span {
+					font-size: 15px;
+				}
+			}
+			.accordeon__text {
+				font-family: "NT Somic";
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 1.2;
+				color: #181818;
+				padding-left: 10px;
+				margin-bottom: 8px;
+			}
+			.accordeon__text:last-child {
+				margin-bottom: 0;
+			}
+			.accordeon__text::marker {
+				content: "—";
+				margin-right: 10px;
+			}
+			@media screen and (max-width: 639px) {
+				.accordeon__text {
+					font-size: 15px;
+				}
+			}
+			.accordeon__text a {
+				text-decoration: none;
+				color: #181818 !important;
+			}
+
+			.how-to-learn {
+				padding: 90px 0;
+				overflow: hidden;
+			}
+			@media screen and (max-width: 639px) {
+				.how-to-learn {
+					padding: 60px 0;
+				}
+			}
+			.how-to-learn__header {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 40px;
+				margin-bottom: 60px;
+			}
+			@media screen and (max-width: 959px) {
+				.how-to-learn__header {
+					grid-template-columns: 1fr;
+					gap: 40px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.how-to-learn__header {
+					gap: 10px;
+					margin-bottom: 40px;
+				}
+			}
+			.how-to-learn__lead {
+				font-family: "NT Somic";
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 1.2;
+				color: #181818;
+			}
+			@media screen and (max-width: 639px) {
+				.how-to-learn__lead {
+					font-size: 15px;
+				}
+			}
+			.how-to-learn__main {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 40px;
+			}
+			@media screen and (max-width: 959px) {
+				.how-to-learn__main {
+					grid-template-columns: 1fr;
+				}
+			}
+			.how-to-learn__videos {
+				position: relative;
+			}
+			.how-to-learn__video-container {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				visibility: hidden;
+				opacity: 0;
+				pointer-events: none;
+				transition: 0.5s;
+				border-radius: 6px;
+				overflow: hidden;
+			}
+			@media screen and (max-width: 959px) {
+				.how-to-learn__video-container {
+					position: absolute;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.how-to-learn__video-container {
+					border-radius: 4px;
+				}
+			}
+			.how-to-learn__video-container_opened {
+				position: relative;
+				transition: 0.5s;
+				pointer-events: auto;
+				visibility: visible;
+				opacity: 1;
+			}
+			.how-to-learn__video-cover {
+				background: rgba(0, 0, 0, 0.4);
+				transition: 0.5s;
+				position: absolute;
+				top: 1px;
+				z-index: 2;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				transition: 0.5s;
+				pointer-events: auto;
+			}
+			.how-to-learn__video-cover_hidden {
+				transition: 0.5s;
+				background: transparent;
+				pointer-events: none;
+			}
+			.how-to-learn__playbutton {
+				background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/play.svg);
+				width: 66px;
+				height: 66px;
+				margin: auto;
+				transition: 0.5s;
+				cursor: pointer;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				position: absolute;
+				top: calc(50% - 33px);
+				left: calc(50% - 33px);
+				z-index: 2;
+				background-size: contain;
+			}
+			.how-to-learn__playbutton svg {
+				width: 66px;
+				height: 66px;
+			}
+			.how-to-learn__playbutton:hover {
+				transition: 0.5s;
+				opacity: 0.8;
+			}
+			.how-to-learn__playbutton_active {
+				transition: 0.5s;
+				background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/pause.svg);
+				top: calc(100% - 40px);
+				left: 6px;
+				width: 30px;
+				height: 30px;
+			}
+			.how-to-learn .accordeon__header {
+				background: #f2f2f4;
+				align-items: flex-start;
+			}
+			@media screen and (max-width: 639px) {
+				.how-to-learn .accordeon__header {
+					padding: 15px 10px;
+				}
+				.how-to-learn .accordeon__list {
+					padding-left: 12px !important;
+				}
+			}
+			.how-to-learn .accordeon__header-content {
+				flex-direction: column;
+				gap: 10px;
+				align-items: flex-start;
+			}
+			.how-to-learn .accordeon .h5-title {
+				padding-top: 0;
+			}
+			.how-to-learn .accordeon__header-label {
+				padding: 0;
+				font-size: 20px;
+				background: transparent;
+				font-family: "NT Somic";
+				font-weight: 400;
+				font-size: 24px;
+				line-height: 1.2;
+				text-transform: none;
+			}
+			@media screen and (max-width: 639px) {
+				.how-to-learn .accordeon__header-label {
+					font-size: 15px;
+				}
+			}
+			.how-to-learn .accordeon__separator div {
+				height: 20px;
+			}
+			.how-to-learn .accordeon__body-columns {
+				display: flex;
+				flex-direction: column;
+				gap: unset;
+			}
+			.how-to-learn .accordeon__body-col {
+				gap: unset;
+				padding: 0 20px;
+			}
+			@media screen and (max-width: 639px) {
+				.how-to-learn .accordeon__body-col {
+					padding: 0;
+				}
+			}
+			.how-to-learn .accordeon__text {
+				margin-bottom: 10px;
+			}
+			.how-to-learn .accordeon__text:last-of-type {
+				margin-bottom: 0;
+			}
+
+			.tariffs {
+				padding: 90px 0;
+				overflow: hidden;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs {
+					padding: 60px 0;
+				}
+			}
+			.tariffs .h2-title {
+				max-width: 230px;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .h2-title {
+					max-width: -moz-fit-content;
+					max-width: fit-content;
+				}
+			}
+			.tariffs__header {
+				margin-bottom: 60px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			@media screen and (max-width: 959px) {
+				.tariffs__header {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 40px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs__header {
+					gap: 20px;
+					margin-bottom: 40px;
+				}
+			}
+			.tariffs__pagination {
+				margin-bottom: 20px;
+			}
+			@media screen and (min-width: 640px) {
+				.tariffs__pagination {
+					display: none;
+				}
+			}
+			.tariffs__pagination-button {
+				background: transparent;
+				outline: none;
+				border: none;
+			}
+			.tariffs__pagination-button_hidden {
+				display: none;
+			}
+			.tariffs__announce {
+				display: grid;
+				grid-template-columns: 210px 330px;
+				gap: 20px;
+				border-radius: 6px;
+				background: #f2f2f4;
+				overflow: hidden;
+			}
+			@media screen and (max-width: 959px) {
+				.tariffs__announce {
+					grid-template-columns: 1fr;
+					padding: 10px;
+					width: 100%;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs__announce {
+					gap: 10px;
+					padding: 10px 26px 10px 10px;
+					border-radius: 4px;
+				}
+			}
+			.tariffs__announce-col:first-child p {
+				font-size: 24px;
+				line-height: 1;
+				font-weight: 800;
+				text-transform: uppercase;
+				color: #ffffff;
+				background: #ff6945;
+				padding: 13px 32px 7px 32px;
+			}
+			@media screen and (max-width: 959px) {
+				.tariffs__announce-col:first-child p {
+					width: -moz-fit-content;
+					width: fit-content;
+					border-radius: 6px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs__announce-col:first-child p {
+					font-size: 12px;
+					padding: 12px 8px 8px 8px;
+					border-radius: 4px;
+				}
+			}
+			.tariffs__announce-col:last-child {
+				padding: 10px 30px 10px 10px;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs__announce-col:last-child {
+					padding: 0;
+				}
+			}
+			.tariffs__announce-col:last-child p {
+				font-weight: 400;
+				font-family: "NT Somic", Arial, sans-serif;
+				font-size: 20px;
+				line-height: 1.2;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs__announce-col:last-child p {
+					font-size: 15px;
+				}
+			}
+			.tariffs .card {
+				background: #f2f2f4;
+				border-radius: 6px;
+				position: relative;
+				padding: 70px 16px 20px 20px;
+				display: flex;
+				flex-direction: column;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card {
+					padding: 54px 10px 20px 10px;
+					border-radius: 4px;
+				}
+			}
+			.tariffs .card__label {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				background: #ff6945;
+				color: #ffffff;
+				border-radius: 6px;
+				padding: 6px 8px 3px 8px;
+				font-size: 24px;
+				line-height: 1;
+				font-weight: 800;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__label {
+					font-size: 20px;
+					border-radius: 4px;
+				}
+			}
+			.tariffs .card__top {
+				margin-bottom: 40px;
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__top {
+					gap: 4px;
+					order: 1;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__bottom {
+					order: 2;
+					margin-bottom: 40px;
+				}
+			}
+			.tariffs .card__title {
+				font-size: 30px;
+				font-weight: 800;
+				line-height: 1;
+				color: #181818;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__title {
+					font-size: 20px;
+				}
+			}
+			.tariffs .card__lead {
+				font-family: "NT Somic";
+				font-size: 16px;
+				font-weight: 1.2;
+				color: rgba(24, 24, 24, 0.5);
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__lead {
+					font-size: 15px;
+				}
+			}
+			.tariffs .card__list {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				margin-bottom: 60px;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__list {
+					order: 3;
+					gap: 10px;
+					margin-bottom: 40px;
+				}
+			}
+			.tariffs .card__list-text {
+				font-size: 16px;
+				font-family: "NT Somic";
+				font-weight: 400;
+				line-height: 1.2;
+				color: #181818;
+				max-width: calc(100% - 32px);
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__list-text {
+					font-size: 15px;
+				}
+			}
+			.tariffs .card__list-item {
+				display: flex;
+				gap: 20px;
+				border-bottom: 1px solid #bcbcbc;
+				padding-bottom: 12px;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__list-item {
+					padding-bottom: 10px;
+				}
+			}
+			.tariffs .card__list-item::before {
+				content: "";
+				background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/list-plus.svg);
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 12px;
+				height: 12px;
+				position: relative;
+				top: 4px;
+			}
+			.tariffs .card__list-item_disabled .card__list-text {
+				color: rgba(24, 24, 24, 0.4);
+			}
+			.tariffs .card__list-item_disabled::before {
+				background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/list-minus.svg);
+			}
+			.tariffs .card__list-item:last-child {
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+			.tariffs .card__prices {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				margin-bottom: 20px;
+			}
+			.tariffs .card__price {
+				color: #181818;
+				font-size: 30px;
+				line-height: 1;
+				font-weight: 800;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__price {
+					font-size: 28px;
+				}
+			}
+			.tariffs .card__price_old {
+				font-size: 24px;
+				line-height: 1;
+				font-weight: 800;
+				color: rgba(24, 24, 24, 0.4);
+				text-decoration: line-through;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__price_old {
+					font-size: 20px;
+				}
+			}
+			.tariffs .card__installment {
+				color: rgba(24, 24, 24, 0.4);
+				font-size: 16px;
+				font-family: "NT Somic";
+				line-height: 1;
+				font-weight: 400;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__installment {
+					font-size: 12px;
+				}
+			}
+			.tariffs .card__installment span {
+				font-weight: 400;
+				font-size: 16px;
+				font-family: "NT Somic";
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__installment span {
+					font-size: 12px;
+				}
+			}
+			.tariffs .card__button {
+				background: #b5e916;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-decoration: none;
+				border-radius: 6px;
+				color: #181818 !important;
+				font-size: 20px;
+				line-height: 1.2;
+				font-family: "NT Somic";
+				font-weight: 400;
+				padding: 20px 0;
+				transition: 0.3s;
+				margin-bottom: 10px;
+			}
+			@media screen and (max-width: 639px) {
+				.tariffs .card__button {
+					font-size: 15px;
+					padding: 16px 0;
+					margin-bottom: 0;
+					border-radius: 4px;
+				}
+			}
+			.tariffs .card__button:hover {
+				transition: 0.2s;
+				background: #24584f;
+				color: #ffffff !important;
+			}
+			.tariffs .card__button_transparent {
+				background: transparent;
+				border: 1px solid #181818;
+				color: #181818 !important;
+				margin-bottom: 0;
+				order: 4;
+			}
+			.tariffs .card__button_transparent:hover {
+				transform: 0.3s;
+				background: #181818;
+				border: 1px solid #181818 !important;
+			}
+			.tariffs .card_green {
+				background: #043933;
+			}
+			.tariffs .card_green .card__title,
+			.tariffs .card_green .card__list-text,
+			.tariffs .card_green .card__price {
+				color: #ffffff;
+			}
+			.tariffs .card_green .card__lead,
+			.tariffs .card_green .card__price_old,
+			.tariffs .card_green .card__list-item_disabled .card__list-text,
+			.tariffs .card_green .card__installment {
+				color: rgba(255, 255, 255, 0.4);
+			}
+			.tariffs .card_green .card__button_transparent {
+				border: 1px solid #ffffff;
+				color: #ffffff !important;
+			}
+
+			.faq {
+				padding: 90px 0;
+			}
+			@media screen and (max-width: 639px) {
+				.faq {
+					padding: 60px 0;
+				}
+				.faq .h2-title {
+					max-width: 200px;
+				}
+			}
+			.faq__header {
+				margin-bottom: 60px;
+			}
+			@media screen and (max-width: 639px) {
+				.faq__header {
+					margin-bottom: 40px;
+				}
+			}
+			.faq .accordeon__item {
+				background: #f2f2f4;
+				border-radius: 6px;
+			}
+			.faq .accordeon__header {
+				background: transparent;
+			}
+			@media screen and (max-width: 639px) {
+				.faq .accordeon__header {
+					padding: 15px 10px;
+				}
+				.faq .accordeon__item {
+					border-radius: 4px;
+				}
+			}
+			.faq .accordeon__body {
+				padding: 0;
+			}
+			.faq .accordeon__body-columns {
+				grid-template-columns: 1fr;
+				padding: 0 20px 20px 20px;
+			}
+			@media screen and (max-width: 639px) {
+				.faq .accordeon__body-columns {
+					padding: 0 10px 20px 10px;
+				}
+			}
+			.faq .accordeon__list {
+				display: none;
+			}
+			@media screen and (max-width: 639px) {
+				.faq .accordeon__list-lead {
+					font-size: 15px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.faq .accordeon .h5-title {
+					font-size: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<section class="reviews">
+			<div class="outer-wrapper">
+				<div class="inner-wrapper">
+					<div class="reviews__header">
+						<h2 class="h2-title">
+							Истории студентов, <br />
+							окончивших курс
+						</h2>
+						<div class="reviews__pagination">
+							<button class="reviews__pagination-button reviews__pagination-button_left">
+								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="50" height="50" rx="25" fill="#043933" />
+									<path d="M32.1328 24.0814V25.8708H21.3131L25.988 30.4752L24.6385 31.6681L17.8671 25.0119L24.6385 18.3318L25.988 19.5247L21.3854 24.0814H32.1328Z" fill="#E7E7E7" />
+								</svg>
+							</button>
+							<button class="reviews__pagination-button reviews__pagination-button_right">
+								<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="50" height="50" rx="25" fill="#B5E916" />
+									<path d="M17.8672 24.0814V25.8708H28.6869L24.012 30.4752L25.3615 31.6681L32.1329 25.0119L25.3615 18.3318L24.012 19.5247L28.6146 24.0814H17.8672Z" fill="#181818" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="reviews__slider">
+						<ul class="reviews__elements swiper-wrapper">
+							<li class="review swiper-slide">
+								<div class="review__top">
+									<p class="review__text">&laquo;Я&nbsp;сама освоила Python, легко закончила курс, а&nbsp;теперь я&nbsp;сеньор-питонист и&nbsp;получаю в&nbsp;два раза больше&raquo;</p>
+								</div>
+								<div class="review__bottom">
+									<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/nijevyasova.webp" alt="Отзыв о курсе Python-разработчик в skillfactory" class="review__avatar" />
+									<p class="review__name">Наталья<br />Нижевясова</p>
+								</div>
+							</li>
+							<li class="review swiper-slide">
+								<div class="review__top">
+									<p class="review__text">&laquo;Оцениваю себя как специалиста между junior и&nbsp;middle. Мне&nbsp;39, считаю, что к&nbsp;43-44 могу стать годам senior- разработчиком&raquo;</p>
+								</div>
+								<div class="review__bottom">
+									<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/abramov.webp" alt="Отзыв о курсе Python-разработчик в skillfactory" class="review__avatar" />
+									<p class="review__name">Илья<br />Абрамов</p>
+								</div>
+							</li>
+							<li class="review swiper-slide">
+								<div class="review__top">
+									<p class="review__text">&laquo;Я&nbsp;освоила Python на&nbsp;карантине и&nbsp;теперь работаю в&nbsp;консалтинге&raquo;</p>
+								</div>
+								<div class="review__bottom">
+									<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/petrova.webp" alt="Отзыв о курсе Python-разработчик в skillfactory" class="review__avatar" />
+									<p class="review__name">Лариса<br />Петрова</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="program">
+			<div class="inner-wrapper">
+				<div class="program__header">
+					<div class="program__header-col">
+						<h2 class="h2-title">Как построено обучение</h2>
+					</div>
+					<div class="program__header-col">
+						<p class="program__lead">Программа курса составлена вместе с&nbsp;опытными разработчиками&nbsp;&mdash; они прошли путь от&nbsp;новичка до&nbsp;старшего специалиста и&nbsp;знают, какие навыки нужны нанимающим компаниям</p>
+						<div class="program__labels">
+							<span class="program__label">6&nbsp;проектов</span>
+							<span class="program__label">280 часов практики</span>
+							<span class="program__label">Финальный проект</span>
+							<span class="program__label">120 часов теории</span>
+						</div>
+					</div>
+				</div>
+				<ul class="accordeon accordeon_separators">
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Программирование</h5>
+								<ul class="accordeon__header-labels">
+									<li class="accordeon__header-label">3 месяца</li>
+								</ul>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator accordeon__separator_top">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">10&nbsp;часов интерактивных вебинаров</span>
+										<span class="accordeon__list-label">тренажер по&nbsp;Python</span>
+										<span class="accordeon__list-label">20&nbsp;задач на&nbsp;алгоритмы</span>
+										<span class="accordeon__list-label">50&nbsp;написанных программ</span>
+										<span class="accordeon__list-label">проект&nbsp;&mdash; Telegram-бот на&nbsp;Python</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Начнете писать код и&nbsp;создадите Telegram-бота</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">разбираться в&nbsp;типах данных</li>
+										<li class="accordeon__text">использовать разные алгоритмы для решения задач</li>
+										<li class="accordeon__text">писать код на&nbsp;Python</li>
+										<li class="accordeon__text">работать с&nbsp;файлами и&nbsp;данными</li>
+										<li class="accordeon__text">размещать код на&nbsp;GitHub</li>
+										<li class="accordeon__text">использовать ООП в&nbsp;программировании для Python</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator accordeon__separator_bottom">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Бэкенд-разработка</h5>
+								<ul class="accordeon__header-labels">
+									<li class="accordeon__header-label">5 месяцев</li>
+								</ul>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator accordeon__separator_top">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">20&nbsp;часов интерактивных вебинаров</span>
+										<span class="accordeon__list-label">2&nbsp;тренажера: SQL и&nbsp;HTML</span>
+										<span class="accordeon__list-label">20+&nbsp;мини-проектов</span>
+										<span class="accordeon__list-label">5&nbsp;сквозных проектов</span>
+										<span class="accordeon__list-label">большой проект на&nbsp;Django &laquo;Доска объявлений&raquo;</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Изучите веб-сервисы и&nbsp;создадите доску объявлений по&nbsp;типу &laquo;Авито&raquo;</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">поднимать веб-сервер на&nbsp;Python</li>
+										<li class="accordeon__text">настраивать взаимодействие с&nbsp;базами данных</li>
+										<li class="accordeon__text">проектировать базу данных</li>
+										<li class="accordeon__text">верстать веб-интерфейс на&nbsp;основе шаблонов Django</li>
+										<li class="accordeon__text">настраивать и&nbsp;проводить тестирование кода</li>
+										<li class="accordeon__text">создавать свой REST API</li>
+										<li class="accordeon__text">использовать Docker для сборки проекта</li>
+										<li class="accordeon__text">делать веб-проекты на&nbsp;Django и&nbsp;размещать их&nbsp;на&nbsp;сервере</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator accordeon__separator_bottom">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Финальный проект</h5>
+								<ul class="accordeon__header-labels">
+									<li class="accordeon__header-label">1 месяц</li>
+								</ul>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator accordeon__separator_top">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">2&nbsp;часа интерактивных вебинаров</span>
+										<span class="accordeon__list-label">финальный проект &laquo;Сервис REST API с&nbsp;подключением к&nbsp;базе данных&raquo;</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Примените полученные за&nbsp;курс знания и&nbsp;разработаете сервис с&nbsp;базой данных</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">Строить сложный API с&nbsp;подключением к&nbsp;SQL-базе данных и&nbsp;дополнительным условием&nbsp;&mdash; созданием веб-интерфейса</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator accordeon__separator_bottom">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Продвинутые навыки</h5>
+								<ul class="accordeon__header-labels">
+									<li class="accordeon__header-label">2 месяца</li>
+								</ul>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator accordeon__separator_top">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<div class="accordeon__list-labels">
+										<span class="accordeon__list-label">8 дополнительных модулей</span>
+										<span class="accordeon__list-label">2 сквозных проекта</span>
+									</div>
+									<div class="accordeon__bigLabel">
+										<span>Получите дополнительные скиллы, чтобы повысить шансы найти первую работу</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Чему научитесь:</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">работать в&nbsp;командной строке Linux</li>
+										<li class="accordeon__text">создавать веб-страницы с&nbsp;адаптивной версткой</li>
+										<li class="accordeon__text">ускорять и&nbsp;оптимизировать свой код с&nbsp;помощью асинхронного программирования</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator accordeon__separator_bottom">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Практика на реальных проектах</h5>
+								<ul class="accordeon__header-labels">
+									<li class="accordeon__header-label">1-3 месяца</li>
+								</ul>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__separator accordeon__separator_top">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns accordeon__body-columns_same">
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Что сделали студенты в&nbsp;2023 году</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">Провели хакатон и&nbsp;решили 7&nbsp;задач для разных партнеров</li>
+										<li class="accordeon__text">Создали интерактивный стенд с&nbsp;распознаванием голоса для &laquo;Эксмо&raquo;</li>
+										<li class="accordeon__text">Разработали <a href="https://blog.skillfactory.ru/keis-agrotech-zifrovaya-ferma/?utm_source=smm&utm_medium=tg&utm_campaign=np_sf_gamepro_smm_tg_media_post_19-01-2024_all_sf_sf-media_sf-id:64962323&utm_content=sf-media&utm_term=sf-id:64962323" target="_blank">игру</a> для Россельхозбанка</li>
+										<li class="accordeon__text">Запустили чат-бот для Московского зоопарка</li>
+									</ul>
+									<div class="accordeon__bigLabel">
+										<span>Хакатоны, конкурсы и&nbsp;стажировки в&nbsp;компаниях. Получите опыт работы с&nbsp;задачами бизнеса</span>
+									</div>
+								</div>
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Что вас ждет</p>
+									<ul class="accordeon__list">
+										<li class="accordeon__text">Хакатон по&nbsp;лендингам с&nbsp;возможностью попасть на&nbsp;стажировку в&nbsp;<a href="https://streamads.media/" target="_blank" rel="nofollow">StreamAds</a></li>
+										<li class="accordeon__text">Реализация личного проекта с&nbsp;призовым фондом</li>
+										<li class="accordeon__text">Стажировка в&nbsp;сервисе аналитики <a href="https://vard.tech/" target="_blank">VARD</a> с&nbsp;защитой итогового проекта, кейсом в&nbsp;портфолио, шансом устроиться в&nbsp;штат</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator accordeon__separator_bottom">
+							<div></div>
+						</div>
+					</li>
+
+					<li class="accordeon__item accordeon__item_bonus accordeon__item_opened">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Курс по&nbsp;английскому языку</h5>
+								<ul class="accordeon__header-labels">
+									<li class="accordeon__header-label">Бонус</li>
+									<li class="accordeon__header-label">Кроме тарифа &laquo;Базовый&raquo;</li>
+								</ul>
+							</div>
+						</div>
+						<div class="accordeon__separator accordeon__separator_top">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Сможете лучше ориентироваться в&nbsp;синтаксисе Python и&nbsp;читать техническую документацию</p>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator accordeon__separator_bottom">
+							<div></div>
+						</div>
+					</li>
+					<li class="accordeon__item accordeon__item_bonus accordeon__item_opened">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Курс по&nbsp;Soft Skills</h5>
+								<ul class="accordeon__header-labels">
+									<li class="accordeon__header-label">Бонус</li>
+									<li class="accordeon__header-label">Кроме тарифа &laquo;Базовый&raquo;</li>
+								</ul>
+							</div>
+						</div>
+						<div class="accordeon__separator accordeon__separator_top">
+							<div></div>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Поймете, как развивать навыки общения с&nbsp;командой и&nbsp;заказчиками</p>
+								</div>
+							</div>
+						</div>
+						<div class="accordeon__separator accordeon__separator_bottom">
+							<div></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="how-to-learn">
+			<div class="inner-wrapper">
+				<div class="how-to-learn__header">
+					<h2 class="h2-title">Как проходит <br />обучение</h2>
+					<p class="how-to-learn__lead">В&nbsp;среднем оно занимает 10&nbsp;часов в&nbsp;неделю: это 2&nbsp;часа учебы в&nbsp;день по&nbsp;будням или 5&nbsp;часов&nbsp;&mdash; по&nbsp;выходным. Доступ к&nbsp;материалам курса остается навсегда</p>
+				</div>
+				<div class="how-to-learn__main">
+					<div class="how-to-learn__videos">
+						<div class="how-to-learn__video-container how-to-learn__video-container_opened" id="format">
+							<video id="video" src="https://storage.yandexcloud.net/sf-wallaper-bucket/video/lectures.mp4" loop width="100%" frameborder="0" playsinline></video>
+							<div class="how-to-learn__video-cover"></div>
+							<button class="how-to-learn__playbutton"></button>
+						</div>
+					</div>
+					<ul class="accordeon accordeon_separators">
+						<li class="accordeon__item accordeon__item_opened" id="format">
+							<div class="accordeon__header">
+								<div class="accordeon__header-content">
+									<h5 class="h5-title">Формат</h5>
+									<ul class="accordeon__header-labels">
+										<li class="accordeon__header-label">Теория на&nbsp;понятном языке и&nbsp;много практики внутри единой онлайн- платформы</li>
+									</ul>
+								</div>
+								<button class="accordeon__close-button"></button>
+							</div>
+							<div class="accordeon__separator accordeon__separator_top">
+								<div></div>
+							</div>
+							<div class="accordeon__body">
+								<div class="accordeon__body-columns">
+									<div class="accordeon__body-col">
+										<ul class="accordeon__list">
+											<li class="accordeon__text">Записанные лекции и задания для самостоятельной работы</li>
+											<li class="accordeon__text">Разбор сложных тем на&nbsp;вебинарах с&nbsp;менторами</li>
+											<li class="accordeon__text">3&nbsp;тренажера с&nbsp;десятками заданий в&nbsp;каждом модуле программы</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordeon__separator accordeon__separator_bottom">
+								<div></div>
+							</div>
+						</li>
+						<li class="accordeon__item" id="feedback">
+							<div class="accordeon__header">
+								<div class="accordeon__header-content">
+									<h5 class="h5-title">Обратная связь</h5>
+									<ul class="accordeon__header-labels">
+										<li class="accordeon__header-label">Менторы и&nbsp;координаторы поддержат и&nbsp;ответят на&nbsp;вопросы</li>
+									</ul>
+								</div>
+								<button class="accordeon__close-button"></button>
+							</div>
+							<div class="accordeon__separator accordeon__separator_top">
+								<div></div>
+							</div>
+							<div class="accordeon__body">
+								<div class="accordeon__body-columns">
+									<div class="accordeon__body-col">
+										<ul class="accordeon__list">
+											<li class="accordeon__text">Менторы&nbsp;&mdash; опытные Python- разработчики. Помогут разобраться в&nbsp;темах и проверят домашние задания.</li>
+											<li class="accordeon__text">Координаторы&nbsp;&mdash; команда заботы о&nbsp;студентах. Решат организационные вопросы, поддержат и&nbsp;помогут пройти обучение до&nbsp;конца.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordeon__separator accordeon__separator_bottom">
+								<div></div>
+							</div>
+						</li>
+						<li class="accordeon__item" id="social">
+							<div class="accordeon__header">
+								<div class="accordeon__header-content">
+									<h5 class="h5-title">IT-сообщество</h5>
+									<ul class="accordeon__header-labels">
+										<li class="accordeon__header-label">На&nbsp;курсе у&nbsp;вас появятся связи, полезные для продвижения в&nbsp;сфере</li>
+									</ul>
+								</div>
+								<button class="accordeon__close-button"></button>
+							</div>
+							<div class="accordeon__separator accordeon__separator_top">
+								<div></div>
+							</div>
+							<div class="accordeon__body">
+								<div class="accordeon__body-columns">
+									<div class="accordeon__body-col">
+										<ul class="accordeon__list">
+											<li class="accordeon__text">Общий чат курса, чтобы общаться с&nbsp;другими студентами</li>
+											<li class="accordeon__text">Чат с&nbsp;ментором, чтобы прояснить непонятные темы и&nbsp;задания</li>
+											<li class="accordeon__text">Мероприятия и&nbsp;стажировки с&nbsp;партнерами, чтобы наработать опыт и&nbsp;показать свои скиллы работодателям</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordeon__separator accordeon__separator_bottom">
+								<div></div>
+							</div>
+						</li>
+						<li class="accordeon__item" id="carrier">
+							<div class="accordeon__header">
+								<div class="accordeon__header-content">
+									<h5 class="h5-title">Центр карьеры</h5>
+									<ul class="accordeon__header-labels">
+										<li class="accordeon__header-label">Поможем построить новую карьеру и&nbsp;будем с&nbsp;вами до&nbsp;самого оффера</li>
+									</ul>
+								</div>
+								<button class="accordeon__close-button"></button>
+							</div>
+							<div class="accordeon__separator accordeon__separator_top">
+								<div></div>
+							</div>
+							<div class="accordeon__body">
+								<div class="accordeon__body-columns">
+									<div class="accordeon__body-col">
+										<ul class="accordeon__list">
+											<li class="accordeon__text">Соберем сильное резюме и&nbsp;расскажем, где искать вакансии</li>
+											<li class="accordeon__text">Сформируем карьерный трек и&nbsp;подготовим к&nbsp;поиску работы</li>
+											<li class="accordeon__text">Потренируем проходить собеседования</li>
+											<li class="accordeon__text">Научим искать работу за&nbsp;рубежом</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="accordeon__separator accordeon__separator_bottom">
+								<div></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="tariffs">
+			<div class="inner-wrapper">
+				<div class="tariffs__header">
+					<h2 class="h2-title">Тарифы обучения</h2>
+					<div class="tariffs__announce">
+						<div class="tariffs__announce-col"><p>Осталось 10 мест</p></div>
+						<div class="tariffs__announce-col"><p>Акция действует при записи на&nbsp;ближайший поток</p></div>
+					</div>
+				</div>
+				<div class="tariffs__pagination">
+					<button class="tariffs__pagination-button tariffs__pagination-button_left tariffs__pagination-button_hidden">
+						<svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
+							<path d="M16.0449 8.5331L16.0449 6.52057L3.87546 6.52057L9.13354 1.34168L7.61574 -9.05934e-07L-0.000335513 7.48658L7.61574 15L9.13354 13.6583L3.95677 8.53309L16.0449 8.5331Z" fill="#181818" />
+						</svg>
+					</button>
+					<button class="tariffs__pagination-button tariffs__pagination-button_right">
+						<svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
+							<path d="M0 6.4669V8.47943H12.1695L6.91139 13.6583L8.42918 15L16.0453 7.51342L8.42918 0L6.91139 1.34168L12.0881 6.4669H0Z" fill="#181818" />
+						</svg>
+					</button>
+				</div>
+				<div class="tariffs__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="card">
+								<p class="card__label discount_auto_basic">-<span>40</span>%</p>
+								<div class="card__top">
+									<h3 class="card__title">Базовый</h3>
+									<p class="card__lead">Для самостоятельных студентов</p>
+								</div>
+								<ul class="card__list">
+									<li class="card__list-item"><p class="card__list-text">6&nbsp;проектов в&nbsp;портфолио</p></li>
+									<li class="card__list-item"><p class="card__list-text">Стажировка от&nbsp;компании&#8209;партнера</p></li>
+									<li class="card__list-item"><p class="card__list-text">Карьерный курс и&nbsp;поддержка</p></li>
+									<li class="card__list-item card__list-item_disabled"><p class="card__list-text">Консультации с&nbsp;экспертом в&nbsp;Python&#8209;разработке</p></li>
+									<li class="card__list-item card__list-item_disabled"><p class="card__list-text">Тестовое техническое собеседование</p></li>
+									<li class="card__list-item card__list-item_disabled"><p class="card__list-text">Карьерная консультация</p></li>
+									<li class="card__list-item card__list-item_disabled"><p class="card__list-text">Ревью резюме</p></li>
+									<li class="card__list-item card__list-item_disabled"><p class="card__list-text">Мини-курс &laquo;Английский для&nbsp;IT&raquo;</p></li>
+									<li class="card__list-item card__list-item_disabled"><p class="card__list-text">&laquo;Курс Python для анализа данных&raquo;</p></li>
+									<li class="card__list-item card__list-item_disabled"><p class="card__list-text">Курс SQL Pro</p></li>
+								</ul>
+								<div class="card__bottom">
+									<div class="card__prices">
+										<p class="card__price card__price_old price_installment_basic"><span>6 717</span>&nbsp;₽/мес.</p>
+										<p class="card__price price_installment_discount_basic"><span>4 030</span>&nbsp;₽/мес.</p>
+										<p class="card__installment count_of_installment_months">на&nbsp;<span>36</span>&nbsp;месяцев в&nbsp;рассрочку, или сразу, с&nbsp;дополнительной скидкой 10%&nbsp;&mdash; <span class="full-price">219&nbsp;996</span>&nbsp;₽</p>
+									</div>
+
+									<a href="#" class="card__button">оплатить курс</a>
+								</div>
+								<a href="#" class="card__button card__button_transparent">забронировать место</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card card_green">
+								<p class="card__label discount_auto_basic">-<span>40</span>%</p>
+								<div class="card__top">
+									<h3 class="card__title">Персональный</h3>
+									<p class="card__lead">Для тех, кому важна поддержка</p>
+								</div>
+								<ul class="card__list">
+									<li class="card__list-item"><p class="card__list-text">6&nbsp;проектов в&nbsp;портфолио</p></li>
+									<li class="card__list-item"><p class="card__list-text">Стажировка от&nbsp;компании&#8209;партнера</p></li>
+									<li class="card__list-item"><p class="card__list-text">Карьерный курс и&nbsp;поддержка</p></li>
+									<li class="card__list-item"><p class="card__list-text">Консультации с&nbsp;экспертом в&nbsp;Python&#8209;разработке</p></li>
+									<li class="card__list-item"><p class="card__list-text">Тестовое техническое собеседование</p></li>
+									<li class="card__list-item"><p class="card__list-text">Карьерная консультация</p></li>
+									<li class="card__list-item"><p class="card__list-text">Ревью резюме</p></li>
+									<li class="card__list-item"><p class="card__list-text">Мини-курс &laquo;Английский для&nbsp;IT&raquo;</p></li>
+									<li class="card__list-item"><p class="card__list-text">&laquo;Курс Python для анализа данных&raquo;</p></li>
+									<li class="card__list-item card__list-item_disabled"><p class="card__list-text">Курс SQL Pro</p></li>
+								</ul>
+								<div class="card__bottom">
+									<div class="card__prices">
+										<p class="card__price card__price_old price_installment_basic"><span>6 717</span>&nbsp;₽/мес.</p>
+										<p class="card__price price_installment_discount_basic"><span>4 030</span>&nbsp;₽/мес.</p>
+										<p class="card__installment count_of_installment_months">на&nbsp;<span>36</span>&nbsp;месяцев в&nbsp;рассрочку, или сразу, с&nbsp;дополнительной скидкой 10%&nbsp;&mdash; <span class="full-price">219&nbsp;996</span>&nbsp;₽</p>
+									</div>
+									<div class="card__buttons">
+										<a href="#" class="card__button">оплатить курс</a>
+									</div>
+								</div>
+								<a href="#" class="card__button card__button_transparent">забронировать место</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="card">
+								<p class="card__label discount_auto_basic">-<span>40</span>%</p>
+								<div class="card__top">
+									<h3 class="card__title">Персональный+</h3>
+									<p class="card__lead">Для тех, кто хочет получить максимум</p>
+								</div>
+								<ul class="card__list">
+									<li class="card__list-item"><p class="card__list-text">6&nbsp;проектов в&nbsp;портфолио</p></li>
+									<li class="card__list-item"><p class="card__list-text">Стажировка от&nbsp;компании&#8209;партнера</p></li>
+									<li class="card__list-item"><p class="card__list-text">Карьерный курс и&nbsp;поддержка</p></li>
+									<li class="card__list-item"><p class="card__list-text">Консультации с&nbsp;экспертом в&nbsp;Python&#8209;разработке</p></li>
+									<li class="card__list-item"><p class="card__list-text">Тестовое техническое собеседование</p></li>
+									<li class="card__list-item"><p class="card__list-text">Карьерная консультация</p></li>
+									<li class="card__list-item"><p class="card__list-text">Ревью резюме</p></li>
+									<li class="card__list-item"><p class="card__list-text">Мини-курс &laquo;Английский для&nbsp;IT&raquo;</p></li>
+									<li class="card__list-item"><p class="card__list-text">&laquo;Курс Python для анализа данных&raquo;</p></li>
+									<li class="card__list-item"><p class="card__list-text">Курс SQL Pro</p></li>
+								</ul>
+								<div class="card__bottom">
+									<div class="card__prices">
+										<p class="card__price card__price_old price_installment_basic"><span>6 717</span>&nbsp;₽/мес.</p>
+										<p class="card__price price_installment_discount_basic"><span>4 030</span>&nbsp;₽/мес.</p>
+										<p class="card__installment count_of_installment_months">на&nbsp;<span>36</span>&nbsp;месяцев в&nbsp;рассрочку, или сразу, с&nbsp;дополнительной скидкой 10%&nbsp;&mdash; <span class="full-price">219&nbsp;996</span>&nbsp;₽</p>
+									</div>
+									<div class="card__buttons">
+										<a href="#" class="card__button">оплатить курс</a>
+									</div>
+								</div>
+								<a href="#" class="card__button card__button_transparent">забронировать место</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="faq">
+			<div class="inner-wrapper">
+				<div class="faq__header">
+					<h2 class="h2-title">Часто задаваемые <br />вопросы</h2>
+				</div>
+				<ul class="accordeon">
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Нужен&nbsp;ли английский для прохождения курса?</h5>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Нет, все обучение&nbsp;&mdash; на&nbsp;русском языке. Иногда мы&nbsp;можем давать ссылки на&nbsp;англоязычные материалы, но&nbsp;только на&nbsp;дополнительные, а&nbsp;не&nbsp;основные.</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Какое оборудование нужно для обучения?</h5>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Ноутбук или стационарный компьютер на&nbsp;macOS или Windows версии Vista и&nbsp;выше. Желательный объем оперативной памяти&nbsp;&mdash; от&nbsp;8&nbsp;ГБ. Все инструкции по&nbsp;установке необходимого&nbsp;ПО вышлем до&nbsp;начала обучения.</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Что будет, если я&nbsp;не&nbsp;успею выполнить задания или пропущу часть занятий?</h5>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">Мы&nbsp;предложим вам перевестись на&nbsp;один из&nbsp;следующих потоков курса или включить заморозку обучения. С&nbsp;этим и&nbsp;другими вопросами можно обратиться к&nbsp;координатору курса.</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="accordeon__item">
+						<div class="accordeon__header">
+							<div class="accordeon__header-content">
+								<h5 class="h5-title">Можно&nbsp;ли оформить налоговый вычет?</h5>
+							</div>
+
+							<button class="accordeon__close-button"></button>
+						</div>
+						<div class="accordeon__body">
+							<div class="accordeon__body-columns">
+								<div class="accordeon__body-col">
+									<p class="accordeon__list-lead">
+										Да, если вы&nbsp;гражданин&nbsp;РФ, то&nbsp;можете компенсировать часть расходов на&nbsp;обучение. Подать заявление на&nbsp;вычет можно в&nbsp;течение 3&nbsp;лет с&nbsp;того года, когда вы&nbsp;оплатили учебу. Государство вернет&nbsp;13% от&nbsp;стоимости обучения в&nbsp;пределах лимита, установленного законом. Если возникнут вопросы, специалист Skillfactory поможет разобраться с&nbsp;процедурой
+										и&nbsp;подготовить документы.
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!--Reviews-->
+		<script>
+			const reviews = document.querySelector(".reviews");
+			const reviewsSliderPrev = reviews.querySelector(".reviews__pagination-button_left");
+			const reviewsSliderNext = reviews.querySelector(".reviews__pagination-button_right");
+
+			const reviewsSlider = new Swiper(".reviews__slider", {
+				navigation: {
+					nextEl: reviewsSliderNext,
+					prevEl: reviewsSliderPrev,
+				},
+				slideToClickedSlide: true,
+				mousewheel: {
+					invert: false,
+					forceToAxis: true,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1.1,
+						spaceBetween: 20,
+					},
+					640: {
+						slidesPerView: 1.5,
+						spaceBetween: 20,
+					},
+					960: {
+						slidesPerView: 2.45,
+						spaceBetween: 20,
+					},
+				},
+			});
+		</script>
+		<!--Accordeon-->
+		<script type="module">
+			class InitAccordeon {
+				constructor(parent) {
+					this._parent = parent;
+					this._accordeon = parent.querySelector(".accordeon");
+					this._accordeonItems = [...this._accordeon.querySelectorAll(".accordeon__item")];
+					this._innerWrapperWidth = parent.querySelector(".inner-wrapper").getBoundingClientRect().width;
+				}
+
+				init() {
+					this._accordeonItems.forEach((item) => {
+						const accordeonHeader = item.querySelector(".accordeon__header");
+						const bodyItem = item.querySelector(".accordeon__body");
+						const bodyContent = bodyItem.querySelector(".accordeon__body-columns");
+						let itemOpened = false;
+						let separatorsHeight = [];
+						let separators = null;
+
+						item.classList.contains("accordeon__item_opened") ? (itemOpened = true) : (itemOpened = false);
+
+						if (this._accordeon.classList.contains("accordeon_separators")) {
+							separators = item.querySelectorAll(".accordeon__separator");
+							separators.forEach((separator) => {
+								separatorsHeight.push(separator.querySelector("div").getBoundingClientRect().height);
+							});
+							if (itemOpened) {
+								this.__changeSeparators(separators, separatorsHeight);
+							} else {
+								this.__changeSeparators(separators, [0, 0]);
+							}
+						}
+						if (itemOpened) {
+							bodyItem.style.maxHeight = `${bodyContent.getBoundingClientRect().height}px`;
+						} else {
+							bodyItem.style.maxHeight = `0px`;
+						}
+						if (!item.classList.contains("accordeon__item_bonus")) {
+							accordeonHeader.addEventListener("click", () => {
+								this.__closePrevOpenedAccordeonItem(item);
+								this.__openCloseAccordeon(item, bodyItem, bodyContent, separators, separatorsHeight);
+							});
+						}
+					});
+				}
+
+				initOneVideo() {
+					const parentClass = this._parent.className;
+					const videoContainer = this._parent.querySelector(`.${parentClass}__video-container`);
+					const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`);
+
+					playButton.addEventListener("click", () => {
+						this.__playPause(videoContainer, parentClass);
+					});
+				}
+
+				initSeveralVideos() {
+					const parentClass = this._parent.className;
+					const videos = [...this._parent.querySelectorAll(`.${parentClass}__video-container`)];
+
+					for (let i = 0; i < this._accordeonItems.length; i++) {
+						const accordHeader = this._accordeonItems[i].querySelector(".accordeon__header");
+						accordHeader.addEventListener("click", () => {
+							this.__changeVideo(parentClass, videos, this._accordeonItems[i]);
+						});
+
+						const videoContainer = videos.find((video) => video.id === this._accordeonItems[i].id);
+
+						const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`);
+						playButton.addEventListener("click", () => {
+							this.__playPause(videoContainer, parentClass);
+						});
+					}
+				}
+
+				__playPause(videoContainer, parentClass) {
+					const playButton = videoContainer.querySelector(`.${parentClass}__playbutton`);
+					const videoCover = videoContainer.querySelector(`.${parentClass}__video-cover`);
+					const video = videoContainer.querySelector(`#video`);
+
+					if (video.paused && videoContainer.classList.contains(`${parentClass}__video-container_opened`)) {
+						video.play();
+						videoCover.classList.add(`${parentClass}__video-cover_hidden`);
+						playButton.classList.add(`${parentClass}__playbutton_active`);
+					} else {
+						video.pause();
+						videoCover.classList.remove(`${parentClass}__video-cover_hidden`);
+						playButton.classList.remove(`${parentClass}__playbutton_active`);
+					}
+				}
+
+				__changeVideo(parentClass, videos, currentAccordItem) {
+					const neededVideoContainer = videos.find((video) => video.id === currentAccordItem.id);
+					const openedVideoContainer = videos.find((video) => video.classList.contains(`${parentClass}__video-container_opened`));
+
+					if (this.__countOpenedAccordItems() !== 0) {
+						if (openedVideoContainer) {
+							openedVideoContainer.classList.remove(`${parentClass}__video-container_opened`);
+							this.__playPause(openedVideoContainer, parentClass);
+						}
+
+						if (currentAccordItem.classList.contains("accordeon__item_opened")) {
+							neededVideoContainer.classList.add(`${parentClass}__video-container_opened`);
+							return;
+						} else {
+							neededVideoContainer.classList.remove(`${parentClass}__video-container_opened`);
+							return;
+						}
+					}
+				}
+
+				__countOpenedAccordItems() {
+					let openedNum = 0;
+					this._accordeonItems.forEach((item) => {
+						if (item.classList.contains("accordeon__item_opened")) {
+							openedNum += 1;
+						}
+					});
+					return openedNum;
+				}
+
+				__openCloseAccordeon(item, body, content, separatorsArr, separatorsHeight) {
+					if (!item.classList.contains("accordeon__item_opened") || item.classList.contains("accordeon__item_bonus")) {
+						if (separatorsArr !== null) {
+							this.__changeSeparators(separatorsArr, separatorsHeight);
+						}
+
+						body.style.maxHeight = `${content.getBoundingClientRect().height}px`;
+						item.classList.add("accordeon__item_opened");
+						return item;
+					} else {
+						if (separatorsArr !== null) {
+							if (separatorsArr !== null) {
+								this.__changeSeparators(separatorsArr, [0, 0]);
+							}
+						}
+
+						body.style.maxHeight = `0px`;
+						item.classList.remove("accordeon__item_opened");
+					}
+				}
+
+				__changeSeparators(separatorsArr, separatorsHeight) {
+					for (let i = 0; i < separatorsArr.length; i++) {
+						separatorsArr[i].style.maxHeight = `${separatorsHeight[i]}px`;
+					}
+				}
+
+				__closePrevOpenedAccordeonItem(item) {
+					const prevOpenedItem = this._accordeonItems.find((item) => item.classList.contains("accordeon__item_opened"));
+					if (prevOpenedItem && item !== prevOpenedItem) {
+						const prevOpenedBodyItem = prevOpenedItem.querySelector(".accordeon__body");
+						const prevOpenedBodyContent = prevOpenedItem.querySelector(".accordeon__body-columns");
+						let prevOpenedSeparatorsHeight = 0;
+						let prevOpenedSeparators = null;
+						prevOpenedSeparators = prevOpenedItem.querySelectorAll(".accordeon__separator");
+						prevOpenedSeparators.forEach((separator) => {
+							prevOpenedSeparatorsHeight = separator.querySelector("div").getBoundingClientRect().height;
+						});
+
+						this.__openCloseAccordeon(prevOpenedItem, prevOpenedBodyItem, prevOpenedBodyContent, prevOpenedSeparators, prevOpenedSeparatorsHeight);
+					}
+				}
+			}
+
+			// Program
+			const programBlock = document.querySelector(".program");
+			const programAccord = new InitAccordeon(programBlock);
+			programAccord.init();
+
+			// How to learn
+			const howToLearn = document.querySelector(".how-to-learn");
+			const howToLearnAccord = new InitAccordeon(howToLearn);
+			howToLearnAccord.init();
+			howToLearnAccord.initOneVideo();
+			//howToLearnAccord.initSeveralVideos();
+
+			//FAQ
+			const faqBlock = document.querySelector(".faq");
+			const faqAccordeon = new InitAccordeon(faqBlock);
+			faqAccordeon.init();
+		</script>
+		<!--Tariffs-->
+		<script>
+			const tariffsBlock = document.querySelector(".tariffs");
+			const tariffsPaginationButtonLeft = tariffsBlock.querySelector(".tariffs__pagination-button_left");
+			const tariffsPaginationButtonRight = tariffsBlock.querySelector(".tariffs__pagination-button_right");
+
+			const tariffsSlider = new Swiper(".tariffs__slider", {
+				loop: false,
+				navigation: {
+					nextEl: tariffsPaginationButtonRight,
+					prevEl: tariffsPaginationButtonLeft,
+				},
+				spaceBetween: 25,
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+					},
+					960: {
+						slidesPerView: 2,
+					},
+					1200: {
+						slidesPerView: 3,
+					},
+				},
+			});
+
+			tariffsSlider.on("reachEnd", () => {
+				changeButtons(tariffsPaginationButtonRight, tariffsPaginationButtonLeft);
+			});
+			tariffsSlider.on("reachBeginning", () => {
+				changeButtons(tariffsPaginationButtonLeft, tariffsPaginationButtonRight);
+			});
+
+			function changeButtons(buttonAdd, buttonRemove) {
+				buttonAdd.classList.add("tariffs__pagination-button_hidden");
+				buttonRemove.classList.remove("tariffs__pagination-button_hidden");
+			}
+		</script>
+	</body>
+</html>

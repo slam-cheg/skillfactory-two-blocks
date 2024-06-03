@@ -1,0 +1,472 @@
+@font-face {
+  font-family: "PP_SF Neue Machina";
+  src: url("./PPNeueMachina-InktrapRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HeliosExt Web";
+  src: url("./heliosext.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 110px;
+  width: 100%;
+  margin: 0;
+}
+
+.link {
+  background: #b5e916;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  overflow: hidden;
+}
+
+.title {
+  font-family: "PP_SF Neue Machina";
+  color: #043933;
+  line-height: 1;
+  position: absolute;
+  top: 12px;
+  font-size: 36px;
+  width: 800px;
+  left: calc(50% - 935px);
+}
+@media screen and (min-width: 2440px) {
+  .title {
+    left: calc(50% - 1206px);
+  }
+}
+@media screen and (max-width: 1919px) {
+  .title {
+    left: calc(50% - 695px);
+  }
+}
+@media screen and (max-width: 1439px) {
+  .title {
+    left: calc(50% - 580px);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .title {
+    left: calc(50% - 460px);
+  }
+}
+@media screen and (max-width: 939px) {
+  .title {
+    left: calc(50% - 310px);
+  }
+}
+@media screen and (max-width: 639px) {
+  .title {
+    left: calc(50% - 190px);
+  }
+}
+@media screen and (max-width: 399px) {
+  .title {
+    left: 4px;
+  }
+}
+@media screen and (min-width: 2440px) {
+  .title {
+    top: 10px;
+    font-size: 40px;
+    width: 1000px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .title {
+    font-size: 28px;
+    width: 670px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .title {
+    font-size: 24px;
+    width: 390px;
+    top: 10px;
+  }
+}
+@media screen and (max-width: 939px) {
+  .title {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .title {
+    font-size: 14px;
+    width: 230px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .title {
+    font-size: 12px;
+    width: calc(100% - 8px);
+    top: 21px;
+    line-height: 0.8;
+  }
+}
+.title span {
+  background: #ff6945;
+  color: #ffffff;
+  display: inline-block;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1919px) {
+  .title span {
+    padding: 5px 4px 0px 4px;
+    margin-top: -2px;
+    border-radius: 2px;
+  }
+}
+
+.logo {
+  position: absolute;
+  background-image: url(./SkillFactory.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 14px;
+  left: calc(50% - 88px);
+  width: 140px;
+  height: 13px;
+}
+@media screen and (min-width: 2440px) {
+  .logo {
+    left: calc(50% - 218px);
+  }
+}
+@media screen and (max-width: 1919px) {
+  .logo {
+    left: calc(50% + 140px);
+  }
+}
+@media screen and (max-width: 1439px) {
+  .logo {
+    left: calc(50% + 80px);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .logo {
+    left: calc(50% - 50px);
+  }
+}
+@media screen and (max-width: 939px) {
+  .logo {
+    left: calc(50% + 50px);
+  }
+}
+@media screen and (max-width: 639px) {
+  .logo {
+    left: calc(50% + 46px);
+  }
+}
+@media screen and (max-width: 399px) {
+  .logo {
+    left: 4px;
+  }
+}
+@media screen and (min-width: 2440px) {
+  .logo {
+    width: 160px;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  .logo {
+    top: 12px;
+    width: 110px;
+    height: 10px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .logo {
+    top: 10px;
+    width: 90px;
+    height: 8px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .logo {
+    top: 4px;
+  }
+}
+
+.frame {
+  color: #043933;
+  position: absolute;
+  background: #fffaed;
+  display: flex;
+  left: calc(50% - 88px);
+  top: 39px;
+  gap: 14px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 2px solid #043933;
+  z-index: 2;
+}
+@media screen and (min-width: 2440px) {
+  .frame {
+    left: calc(50% - 218px);
+  }
+}
+@media screen and (max-width: 1919px) {
+  .frame {
+    left: calc(50% + 140px);
+  }
+}
+@media screen and (max-width: 1439px) {
+  .frame {
+    left: calc(50% + 80px);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .frame {
+    left: calc(50% - 50px);
+  }
+}
+@media screen and (max-width: 939px) {
+  .frame {
+    left: calc(50% + 50px);
+  }
+}
+@media screen and (max-width: 639px) {
+  .frame {
+    left: calc(50% + 46px);
+  }
+}
+@media screen and (max-width: 399px) {
+  .frame {
+    left: 4px;
+  }
+}
+@media screen and (min-width: 2440px) {
+  .frame {
+    top: 40px;
+    gap: 14px;
+    padding: 12px 40px;
+    border-radius: 6px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  .frame {
+    top: 34px;
+    width: 200px;
+    gap: 5px;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .frame {
+    width: 286px;
+    padding: 6px;
+  }
+}
+@media screen and (max-width: 939px) {
+  .frame {
+    width: 176px;
+    padding: 4px;
+    top: 30px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .frame {
+    width: 132px;
+    top: 24px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .frame {
+    width: -moz-fit-content;
+    width: fit-content;
+    top: 52px;
+  }
+}
+.frame span {
+  font-family: "PP_SF Neue Machina";
+  padding-top: 3px;
+  font-size: 21px;
+}
+@media screen and (max-width: 1919px) {
+  .frame span {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .frame span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .frame span {
+    font-size: 10px;
+    padding-top: 2px;
+  }
+}
+.frame p {
+  font-family: "HeliosExt Web";
+  font-size: 20px;
+}
+@media screen and (max-width: 1919px) {
+  .frame p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .frame p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .frame p {
+    font-size: 10px;
+  }
+}
+
+.disclamer {
+  font-family: "HeliosExt Web";
+  color: #181818;
+  position: absolute;
+  opacity: 0.6;
+  font-size: 8px;
+  bottom: 12px;
+  left: calc(50% - 935px);
+  line-height: 1;
+}
+@media screen and (min-width: 2440px) {
+  .disclamer {
+    left: calc(50% - 1206px);
+  }
+}
+@media screen and (max-width: 1919px) {
+  .disclamer {
+    left: calc(50% - 695px);
+  }
+}
+@media screen and (max-width: 1439px) {
+  .disclamer {
+    left: calc(50% - 580px);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .disclamer {
+    left: calc(50% - 460px);
+  }
+}
+@media screen and (max-width: 939px) {
+  .disclamer {
+    left: calc(50% - 310px);
+  }
+}
+@media screen and (max-width: 639px) {
+  .disclamer {
+    left: calc(50% - 190px);
+  }
+}
+@media screen and (max-width: 399px) {
+  .disclamer {
+    left: 4px;
+  }
+}
+@media screen and (min-width: 2440px) {
+  .disclamer {
+    bottom: 8px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .disclamer {
+    bottom: 10px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .disclamer {
+    width: 290px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .disclamer {
+    width: calc(100% - 60px);
+    bottom: 2px;
+  }
+}
+
+.wires {
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+  top: -173px;
+  right: calc(50% - 1115px);
+  width: 712px;
+}
+@media screen and (min-width: 2440px) {
+  .wires {
+    top: -213px;
+    right: calc(50% - 1345px);
+    transform: rotate(6deg);
+    width: 910px;
+  }
+}
+@media screen and (max-width: 1919px) {
+  .wires {
+    right: calc(50% - 1094px);
+    top: -173px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .wires {
+    right: calc(50% - 1004px);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .wires {
+    right: calc(50% - 734px);
+    top: -110px;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 939px) {
+  .wires {
+    right: calc(50% - 604px);
+    transform: rotate(-25deg);
+    top: -148px;
+    width: 466px;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 639px) {
+  .wires {
+    right: calc(50% - 424px);
+    transform: rotate(-15deg);
+    top: -66px;
+    width: 366px;
+  }
+}
+@media screen and (max-width: 399px) {
+  .wires {
+    right: -142px;
+    transform: rotate(215deg);
+    top: 45px;
+    width: 236px;
+  }
+}
+
+.anim.title, .anim.logo, .anim.frame {
+  transform: translateY(-300%);
+  transition: transform 0.5s;
+}
+.anim.wires {
+  transform: translateY(300%);
+  transition: transform 0.5s;
+}
