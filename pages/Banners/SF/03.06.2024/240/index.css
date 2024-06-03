@@ -43,6 +43,8 @@ body {
   width: 800px;
   left: calc(50% - 935px);
   z-index: 5;
+  transform: translateY(0);
+  transition: transform 0.5s;
 }
 @media screen and (min-width: 2440px) {
   .title {
@@ -122,6 +124,8 @@ body {
   line-height: 1.1;
   width: 400px;
   z-index: 4;
+  transform: translateY(0);
+  transition: transform 0.5s;
 }
 @media screen and (min-width: 2440px) {
   .description {
@@ -214,6 +218,8 @@ body {
   left: calc(50% - 935px);
   width: 170px;
   height: 15px;
+  transform: translateY(0);
+  transition: transform 0.5s;
 }
 @media screen and (min-width: 2440px) {
   .logo {
@@ -285,6 +291,8 @@ body {
   border-radius: 4px;
   border: 3px solid #043933;
   z-index: 3;
+  transform: translateY(0);
+  transition: transform 0.5s;
 }
 @media screen and (min-width: 2440px) {
   .frame {
@@ -468,6 +476,8 @@ body {
   right: calc(50% - 1036px);
   width: 830px;
   z-index: 1;
+  opacity: 1;
+  transition: opacity 1s;
 }
 @media screen and (min-width: 2440px) {
   .image {
@@ -511,11 +521,11 @@ body {
   }
 }
 
-.anim.title, .anim.logo, .anim.frame {
+.anim.title, .anim.logo, .anim.frame, .anim.description {
   transform: translateY(-300%);
   transition: transform 0.5s;
 }
-.anim.wires {
-  transform: translateY(300%);
-  transition: transform 0.5s;
+.anim.image {
+  opacity: 0;
+  transition: opacity 1s;
 }
