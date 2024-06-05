@@ -12,11 +12,7 @@ const imageQuestionTemplate = document.querySelector("#image-question").content.
 const textAnswerTemplate = document.querySelector("#text-answer").content.querySelector(".answer");
 const imageAnswerTemplate = document.querySelector("#image-answer").content.querySelector(".answer");
 
-prevButton.addEventListener("click", () => {
-	const currentQuestion = quizBlock.querySelector(".question_active");
-	decrementScores(quizData.questions[`${Number(currentQuestion.dataset.prevQuestion) - 1}`]["variants"]);
-	flipQuestions(currentQuestion.dataset.prevQuestion);
-});
+prevButton.addEventListener("click", setPrevQuestion);
 
 createQuestion(quizData.questions[0].number);
 
@@ -25,8 +21,7 @@ function countResult() {
 }
 
 function createQuestion(questionNumber) {
-	let questionData;
-	questionData = quizData.questions.find((question) => question.number === questionNumber);
+	let questionData = quizData.questions.find((question) => question.number === questionNumber);
 	if (!questionData) {
 		questionData = quizData.questions.find((question) => Math.floor(question.number) === Math.floor(questionNumber));
 	}
@@ -39,14 +34,14 @@ function createQuestion(questionNumber) {
 	newQuestion.classList.add("question_active");
 	const answersContainer = newQuestion.querySelector(".question__answers");
 	questionData.variants.forEach((answer) => {
-		const newAnswer = createAnswer(answer, questionData.type, questionData.validation);
+		const newAnswer = createAnswer(answer, questionData.type, questionData.validation, questionNumber);
 		append(answersContainer, newAnswer);
 	});
 	append(quizContainer, newQuestion);
 	viewProgress(questionData.number);
 }
 
-function createAnswer(answer, type, validation) {
+function createAnswer(answer, type, validation, questionNumber) {
 	let newAnswer;
 	if (type === "usual") {
 		newAnswer = textAnswerTemplate.cloneNode(true);
@@ -63,7 +58,7 @@ function createAnswer(answer, type, validation) {
 		newAnswer.dataset.scores = answer.scores.join(",");
 	}
 	newAnswer.addEventListener("click", () => {
-		clickAnswer(newAnswer, validation);
+		clickAnswer(newAnswer, validation, questionNumber);
 	});
 
 	return newAnswer;
@@ -73,35 +68,58 @@ function append(container, element) {
 	container.appendChild(element);
 }
 
-function clickAnswer(newAnswer, validation) {
+function clickAnswer(answer, validation, questionNumber) {
 	let last = false;
-	if (newAnswer.dataset.nextQuestion === "null") {
+	if (answer.dataset.nextQuestion === "null") {
 		last = true;
 	}
 	if (validation !== "true") {
-		incrementScores(newAnswer.dataset.scores);
+		incrementScores(answer, questionNumber);
 	}
-	flipQuestions(newAnswer.dataset.nextQuestion, last);
+	flipQuestions(answer.dataset.nextQuestion, last);
 }
 
-function incrementScores(scores) {
+function incrementScores(answer, questionNum) {
+	let questionNumber = questionNum;
+	if (questionNum.toString().length > 1) {
+		questionNumber = Math.floor(questionNumber);
+	}
+	const scores = answer.dataset.scores;
 	scores.split(",").forEach((score) => {
 		quizData.variants[`${score}`]["score"] += 1;
+		if (answer.classList.contains("answer_image")) {
+			quizData.questions[`${questionNumber - 1}`]["clickedVariant"] = `${answer.querySelector("img").src}`;
+		} else {
+			quizData.questions[`${questionNumber - 1}`]["clickedVariant"] = `${answer.querySelector("p").textContent}`;
+		}
 	});
 }
 
-function decrementScores(variants) {
-    variants.forEach(variant => {
-        const scores = variant.scores
-        scores.forEach((score) => {
-            quizData.variants[`${score}`]["score"] -= 1;
-            
-            if(quizData.variants[`${score}`]["score"] < 0) {
-                quizData.variants[`${score}`]["score"] = 0;
-            }
-        });
-    })
+function decrementScores(variants, questionNum) {
+	let questionNumber = questionNum;
+	if (questionNum.toString().length > 1) {
+		questionNumber = Math.floor(questionNumber);
+	}
+	const neededVariant = variants.find((variant) => variant.value === quizData.questions[`${questionNumber}`]["clickedVariant"]);
+	const scores = neededVariant.scores;
+	scores.forEach((score) => {
+		quizData.variants[`${score}`]["score"] -= 1;
+		if (quizData.variants[`${score}`]["score"] < 0) {
+			quizData.variants[`${score}`]["score"] = 0;
+		}
+	});
+}
 
+function setPrevQuestion() {
+	debugger
+	const currentQuestion = quizBlock.querySelector(".question_active");
+	let questionNumber = Number(currentQuestion.dataset.prevQuestion) - 1;
+	if (questionNumber.toString().length > 1) {
+		questionNumber = Math.floor(Number(currentQuestion.dataset.prevQuestion));
+	}
+	const questionData = quizData.questions[`${questionNumber}`]["variants"];
+	decrementScores(questionData, questionNumber);
+	flipQuestions(currentQuestion.dataset.prevQuestion);
 }
 
 function removePrevQuestion() {
