@@ -1,6 +1,8 @@
 .grid__cell {
     &:nth-child(1) {
         grid-area: logo;
+        display: flex;
+        justify-content: flex-start;
 
         @media screen and (max-width: $ver-tablet) {
             margin-bottom: 36px;

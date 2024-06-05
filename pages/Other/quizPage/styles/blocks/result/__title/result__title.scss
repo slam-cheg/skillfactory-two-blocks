@@ -1,0 +1,16 @@
+.result__title {
+    font-family: "heliosexBOLD-neuemachina";
+    font-size: 40px;
+    font-weight: 800;
+    line-height: .9;
+    color: #181818;
+
+    @media screen and (max-width: $hor-mobile) {
+        font-size: 28px;
+    }
+
+    .result__profession {
+        filter: blur(10px);
+        pointer-events: none;
+    }
+}

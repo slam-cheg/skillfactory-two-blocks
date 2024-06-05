@@ -99,6 +99,7 @@
 @media screen and (max-width: 639px) {
   .quiz__title {
     font-size: 24px;
+    max-width: 260px;
   }
 }
 
@@ -144,6 +145,11 @@
   background: #B5E916;
   border-radius: 4px;
   padding: 0px 3px 3px 3px;
+}
+@media screen and (max-width: 639px) {
+  .quiz__description span {
+    padding: 0px 3px 1px 3px;
+  }
 }
 @media screen and (max-width: 639px) {
   .quiz__description {
@@ -265,6 +271,8 @@
 
 .grid__cell:nth-child(1) {
   grid-area: logo;
+  display: flex;
+  justify-content: flex-start;
 }
 @media screen and (max-width: 959px) {
   .grid__cell:nth-child(1) {
@@ -375,4 +383,21 @@
     width: 15px;
     height: 15px;
   }
+}
+
+.result__title {
+  font-family: "heliosexBOLD-neuemachina";
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 0.9;
+  color: #181818;
+}
+@media screen and (max-width: 639px) {
+  .result__title {
+    font-size: 28px;
+  }
+}
+.result__title .result__profession {
+  filter: blur(10px);
+  pointer-events: none;
 }

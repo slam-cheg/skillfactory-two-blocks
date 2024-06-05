@@ -3,569 +3,657 @@ export const quizData = {
 		// Сюда пишем что должно происходить в результате после окончания квиза. Можно добавить дополнительные буквы.
 		A: {
 			score: 0,
-			url: "https://free.skillfactory.ru/burnout_result_light",
+			url: "https://free.skillfactory.ru/proftest-result-fpw-new",
 		},
 		B: {
 			score: 0,
-			url: "https://free.skillfactory.ru/burnout_result_medium",
+			url: "https://free.skillfactory.ru/proftest-result-pdev-new",
 		},
 		C: {
 			score: 0,
-			url: "https://free.skillfactory.ru/burnout_result_high",
+			url: "https://free.skillfactory.ru/proftest-result-frpro-new",
+		},
+		D: {
+			score: 0,
+			url: "https://free.skillfactory.ru/proftest-result-dspr-new",
+		},
+		E: {
+			score: 0,
+			url: "https://free.skillfactory.ru/proftest-result-dapr-new",
+		},
+		F: {
+			score: 0,
+			url: "https://free.skillfactory.ru/proftest-result-qap-new",
+		},
+		G: {
+			score: 0,
+			url: "https://free.skillfactory.ru/proftest-result-muim-new",
+		},
+		H: {
+			score: 0,
+			url: "https://free.skillfactory.ru/proftest-result-graphpro-new",
+		},
+		I: {
+			score: 0,
+			url: "https://free.skillfactory.ru/proftest-result-uxspro-new",
+		},
+		J: {
+			score: 0,
+			url: "https://free.skillfactory.ru/proftest-result-intnew-new",
 		},
 	},
-	validationToVariants: ["B", "C"], // Сюда в виде массива пишем варианты которым показываем валидативные вопросы если они набрали большее количество баллов
+	validationToVariants: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"], // Сюда в виде массива пишем варианты которым показываем валидативные вопросы если они набрали большее количество баллов
+    totalQuestions: 18,
 	questions: [
-		// Указываем вопросы в виде массива из объектов
+		//1
 		{
-			question: "В конце рабочего дня я чувствую себя как выжатый лимон", // Сам вопрос
+			question: "Какой предмет был вам наиболее интересен в школе или университете?", // Сам вопрос
 			type: "usual", // Тип вопроса. usual - обычный текстовый, image - с картинками
-			validation: "false", // Вопрос для валидации, true/false
-			position: "normal", // Тип позиции вопроса в тесте. normal - обычный порядковый вопрос, last - последний вопрос всего теста, lastUsual - последний вопрос не валидационный
-			length: "short", // Указываем длину вариантов ответа. short - короткие, однословные, long - длинные многословные
-			variation: "unset", // Указываем если этот вопрос появляется по условию. unset - не выставлено (обычный вопрос), цифра - порядковый номер ответа из предыдущего вопроса (начиная с 1)
-			variable: "true", // Является ли вопрос вариативным (после него вопросы разные в зависимости от ответа). Может быть true или false
+			validation: "false", // Вопрос для анкеты, true/false
+			position: "normal", // Тип позиции вопроса в тесте. normal - обычный вопрос, last - последний вопрос всего теста, lastUsual - последний вопрос не анкетный
+			number: 1,
 			variants: [
-				// Указываем варианты в виде массива из объектов
 				{
-					scores: ["A"], // Какие буквы будут добавляться у этого ответа
-					value: "Никогда", // Текст варианта
-					image: "url", // Урл на изображение, добавляется если вопрос с изображением
+					scores: ["D", "E"],
+					value: "Математика",
+					nextQuestion: 2,
 				},
 				{
-					scores: ["A"],
-					value: "Редко",
+					scores: ["H", "I", "J"],
+					value: "Гуманитарные науки",
+					nextQuestion: 2,
 				},
 				{
-					scores: ["B"],
-					value: "Иногда",
+					scores: ["A", "B", "C", "F"],
+					value: "Информатика",
+					nextQuestion: 2,
 				},
 				{
-					scores: ["C"],
-					value: "Часто",
-				},
-				{
-					scores: ["C"],
-					value: "Почти всегда",
+					scores: ["G"],
+					value: "Обществознание и менеджмент",
+					nextQuestion: 2,
 				},
 			],
 		},
+		//2
 		{
-			question: "Var 1",
+			question: "Вам проще справляться с задачами на работе",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "short",
-			variation: "1",
-			variable: "false",
+			number: 2,
 			variants: [
 				{
-					scores: ["A"],
-					value: "Никогда",
+					scores: ["A", "B", "C", "D", "E", "F"],
+					value: "В одиночку",
+					nextQuestion: 3,
 				},
 				{
-					scores: ["A"],
-					value: "Редко",
-				},
-				{
-					scores: ["B"],
-					value: "Иногда",
-				},
-				{
-					scores: ["C"],
-					value: "Часто",
-				},
-				{
-					scores: ["C"],
-					value: "Почти всегда",
+					scores: ["G", "H", "I", "J"],
+					value: "Вместе с коллегами",
+					nextQuestion: 3,
 				},
 			],
 		},
+		//3
 		{
-			question: "Var 2",
+			question: "Если бы не нужно было работать, вы бы",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "short",
-			variation: "2",
-			variable: "false",
+			number: 3,
 			variants: [
 				{
-					scores: ["A"],
-					value: "Никогда",
+					scores: ["H", "I", "J"],
+					value: "Занимались творчеством",
+					nextQuestion: 4,
 				},
 				{
-					scores: ["B"],
-					value: "Редко",
+					scores: ["D", "E"],
+					value: "Путешествовали и изучали мир",
+					nextQuestion: 4,
 				},
 				{
-					scores: ["B"],
-					value: "Иногда",
+					scores: ["A", "B", "C", "F"],
+					value: "Создавали новые технологии",
+					nextQuestion: 4,
 				},
 				{
-					scores: ["C"],
-					value: "Часто",
-				},
-				{
-					scores: ["C"],
-					value: "Почти всегда",
+					scores: ["G"],
+					value: "Много общались с людьми и помогали им",
+					nextQuestion: 4,
 				},
 			],
 		},
+		//4
 		{
-			question: "Var 3",
+			question: "Какое изображение вам больше всего откликается?",
+			type: "image",
+			validation: "false",
+			position: "normal",
+			number: 4,
+			variants: [
+				{
+					scores: ["A", "B", "C", "F"],
+					value: "1",
+					url: "https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/A.webp",
+					nextQuestion: 5.1,
+				},
+				{
+					scores: ["D", "E", "G"],
+					value: "2",
+					url: "https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/B.webp",
+					nextQuestion: 5.2,
+				},
+				{
+					scores: ["H", "I", "J"],
+					value: "3",
+					url: "https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/C.webp",
+					nextQuestion: 5.3,
+				},
+			],
+		},
+		//5.1
+		{
+			question: "Ваша сильная черта характера",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "long",
-			variation: "3",
-			variable: "false",
+			number: 5.1,
 			variants: [
 				{
-					scores: ["A"],
-					value: "с легкостью и энергией приступаю к рабочим делам",
+					scores: ["D"],
+					value: "Прагматичность",
+					nextQuestion: 6,
 				},
 				{
-					scores: ["B"],
-					value: "нужно время, чтобы прийти в себя и «загрузиться», но далее спокойно начинаю работать",
+					scores: ["A"],
+					value: "Независимость",
+					nextQuestion: 6,
 				},
 				{
 					scores: ["C"],
-					value: "чувствую апатию и нежелание приступать даже к самой легкой задаче",
+					value: "Креативность",
+					nextQuestion: 6,
+				},
+				{
+					scores: ["B"],
+					value: "Логика",
+					nextQuestion: 6,
 				},
 			],
 		},
+		//5.2
 		{
-			question: "Var 4",
+			question: "Какое качество помогает вам в жизни больше всего?",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "short",
-			variation: "4",
-			variable: "false",
+			number: 5.2,
 			variants: [
 				{
-					scores: ["C"],
-					value: "Никогда",
+					scores: ["G"],
+					value: "Проактивность",
+					nextQuestion: 6,
 				},
 				{
-					scores: ["B"],
-					value: "Редко",
+					scores: ["F"],
+					value: "Внимательность к деталям",
+					nextQuestion: 6,
 				},
 				{
-					scores: ["B"],
-					value: "Иногда",
-				},
-				{
-					scores: ["A"],
-					value: "Часто",
-				},
-				{
-					scores: ["A"],
-					value: "Почти всегда",
+					scores: ["E"],
+					value: "Аналитический склад ума",
+					nextQuestion: 6,
 				},
 			],
 		},
+		//5.3
 		{
-			question: "Var 5",
+			question: "Что вы цените в себе больше всего?",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "short",
-			variation: "5",
-			variable: "false",
+			number: 5.3,
 			variants: [
 				{
-					scores: ["A"],
-					value: "Никогда",
+					scores: ["I"],
+					value: "Целеустремленность",
+					nextQuestion: 6,
 				},
 				{
-					scores: ["B"],
-					value: "Редко",
+					scores: ["H"],
+					value: "Мечтательность",
+					nextQuestion: 6,
 				},
 				{
-					scores: ["B"],
-					value: "Иногда",
-				},
-				{
-					scores: ["C"],
-					value: "Часто",
-				},
-				{
-					scores: ["C"],
-					value: "Почти всегда",
+					scores: ["J"],
+					value: "Стремление к знаниям",
+					nextQuestion: 6,
 				},
 			],
 		},
+		//6
 		{
-			question: "Я могу разрешить конфликт в команде на работе",
+			question: "Вы быстро разбираетесь в новых приложениях без инструкций?",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "short",
-			variation: "unset",
-			variable: "false",
+			number: 6,
 			variants: [
 				{
-					scores: ["C"],
-					value: "Никогда",
+					scores: ["A", "B", "C", "D", "E", "F"],
+					value: "Да",
+					nextQuestion: 7,
 				},
 				{
-					scores: ["C"],
-					value: "Редко",
-				},
-				{
-					scores: ["B"],
-					value: "Иногда",
-				},
-				{
-					scores: ["A"],
-					value: "Часто",
-				},
-				{
-					scores: ["A"],
-					value: "Почти всегда",
+					scores: ["G", "H", "I", "J"],
+					value: "Нет",
+					nextQuestion: 7,
 				},
 			],
 		},
+		//7
 		{
-			question: "Если передо мной ставят кропотливую и требующую большого внимания задачу, я...",
+			question: "Предпочитаете мыслить образами и картинками?",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "long",
-			variation: "unset",
-			variable: "false",
+			number: 7,
 			variants: [
 				{
-					scores: ["A"],
-					value: "уверенно начну выполнять задание, выключу рабочие чаты, чтобы полноценно погрузиться в работу",
+					scores: ["H", "J", "I", "C"],
+					value: "Да",
+					nextQuestion: 8,
 				},
 				{
-					scores: ["B"],
-					value: "сначала 2–3 раза прочитаю задание, налью себе чай, морально настроюсь и приступлю",
-				},
-				{
-					scores: ["C"],
-					value: "буду долго откладывать задачу, постоянно отвлекаться на что-то",
+					scores: ["A", "B", "D", "E", "F", "G"],
+					value: "Нет",
+					nextQuestion: 8,
 				},
 			],
 		},
+		//8
 		{
-			question: "Мне говорят: «Я вижу искру в твоих глазах от работы»",
+			question: "Как вы лучше всего запоминаете информацию?",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "short",
-			variation: "unset",
-			variable: "false",
+			number: 8,
 			variants: [
 				{
-					scores: ["C"],
-					value: "Никогда",
+					scores: ["G", "E", "D"],
+					value: "Через логические схемы",
+					nextQuestion: 9.1,
 				},
 				{
-					scores: ["C"],
-					value: "Редко",
+					scores: ["A", "B", "C", "F"],
+					value: "Через тексты и книги",
+					nextQuestion: 9.2,
 				},
 				{
-					scores: ["B"],
-					value: "Иногда",
-				},
-				{
-					scores: ["A"],
-					value: "Часто",
-				},
-				{
-					scores: ["A"],
-					value: "Почти всегда",
+					scores: ["H", "I", "J"],
+					value: "Через рисунки и изображения",
+					nextQuestion: 9.3,
 				},
 			],
 		},
+		//9.1
 		{
-			question: "Я раздражаюсь на коллег, которые медленно выполняют свою работу",
+			question: "Какое приложение вам больше всего пригодилось бы?",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "short",
-			variation: "unset",
-			variable: "false",
+			number: 9.1,
 			variants: [
 				{
-					scores: ["A"],
-					value: "Никогда",
+					scores: ["G"],
+					value: "Генератор текстов и идей",
+					nextQuestion: 10,
 				},
 				{
-					scores: ["A"],
-					value: "Редко",
+					scores: ["E"],
+					value: "Калькулятор личного бюджета",
+					nextQuestion: 10,
 				},
 				{
-					scores: ["B"],
-					value: "Иногда",
-				},
-				{
-					scores: ["C"],
-					value: "Часто",
-				},
-				{
-					scores: ["C"],
-					value: "Почти всегда",
+					scores: ["D"],
+					value: "Нейросеть для прогнозов будущего",
+					nextQuestion: 10,
 				},
 			],
 		},
+		//9.2
 		{
-			question: "Я чувствую эмоциональный подъем на работе",
+			question: "Вы заходите на сайт. На что обратите внимание в первую очередь?",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "long",
-			variation: "unset",
-			variable: "false",
+			number: 9.2,
 			variants: [
 				{
 					scores: ["A"],
-					value: "Всегда, даже от самой маленькой выполненной задачи",
-				},
-				{
-					scores: ["B"],
-					value: "Только когда руководитель хвалит и отмечает ценность моей работы",
+					value: "Удобство и простота",
+					nextQuestion: 10,
 				},
 				{
 					scores: ["C"],
-					value: "Никогда, эмоционально я воскресаю только после работы",
+					value: "Красивый дизайн",
+					nextQuestion: 10,
+				},
+				{
+					scores: ["B"],
+					value: "Быстрая работа",
+					nextQuestion: 10,
+				},
+				{
+					scores: ["F"],
+					value: "Отсутствие ляпов и багов",
+					nextQuestion: 10,
 				},
 			],
 		},
+		//9.3
 		{
-			question: "Я люблю свою работу и вижу ее ценность",
+			question: "Что вы замечаете, гуляя по городу?",
 			type: "usual",
 			validation: "false",
 			position: "normal",
-			length: "short",
-			variation: "unset",
-			variable: "false",
+			number: 9.3,
 			variants: [
 				{
-					scores: ["C"],
-					value: "Никогда",
+					scores: ["I"],
+					value: "Людей и их стиль",
+					nextQuestion: 10,
 				},
 				{
-					scores: ["B"],
-					value: "Редко",
+					scores: ["H"],
+					value: "Граффити и мелкие детали",
+					nextQuestion: 10,
 				},
 				{
-					scores: ["B"],
-					value: "Иногда",
-				},
-				{
-					scores: ["A"],
-					value: "Часто",
-				},
-				{
-					scores: ["A"],
-					value: "Почти всегда",
+					scores: ["J"],
+					value: "Архитектуру зданий",
+					nextQuestion: 10,
 				},
 			],
 		},
+		//10
 		{
-			question: "У меня появляются мысли сменить работу или направление моей работы",
+			question: "Какие видео предпочитаете смотреть?",
+			type: "usual",
+			validation: "false",
+			position: "normal",
+			number: 10,
+			variants: [
+				{
+					scores: ["A", "B", "C", "F"],
+					value: "Обучающие и развивающие",
+					nextQuestion: 11,
+				},
+				{
+					scores: ["D", "E"],
+					value: "Про путешествия и природу",
+					nextQuestion: 11,
+				},
+				{
+					scores: ["H", "J", "I"],
+					value: "Музыкальные — клипы и концерты",
+					nextQuestion: 11,
+				},
+				{
+					scores: ["G"],
+					value: "О жизни других людей: интервью, подкасты",
+					nextQuestion: 11,
+				},
+			],
+		},
+		//11
+		{
+			question: "Как планируете встречи с друзьями?",
+			type: "usual",
+			validation: "false",
+			position: "normal",
+			number: 11,
+			variants: [
+				{
+					scores: ["D", "E"],
+					value: "Сначала продумываю маршрут",
+					nextQuestion: 12,
+				},
+				{
+					scores: ["G"],
+					value: "Главное — темы для разговоров",
+					nextQuestion: 12,
+				},
+				{
+					scores: ["H", "J", "I"],
+					value: "Ищу новые места, где еще не были",
+					nextQuestion: 12,
+				},
+				{
+					scores: ["A", "B", "C", "F"],
+					value: "Начинаю с бюджета",
+					nextQuestion: 12,
+				},
+			],
+		},
+		//12
+		{
+			question: "Что бы вы предпочли делать на работе?",
 			type: "usual",
 			validation: "false",
 			position: "lastUsual",
-			length: "short",
-			variation: "unset",
-			variable: "false",
+			number: 12,
 			variants: [
 				{
-					scores: ["A"],
-					value: "Никогда",
+					scores: ["D", "E"],
+					value: "Анализировать данные",
+					nextQuestion: 13,
 				},
 				{
-					scores: ["B"],
-					value: "Редко",
+					scores: ["G"],
+					value: "Общаться и делать проекты в команде",
+					nextQuestion: 13,
 				},
 				{
-					scores: ["B"],
-					value: "Иногда",
+					scores: ["H", "J", "I"],
+					value: "Генерировать идеи и придумывать новое",
+					nextQuestion: 13,
 				},
 				{
-					scores: ["C"],
-					value: "Часто",
-				},
-				{
-					scores: ["C"],
-					value: "Почти всегда",
+					scores: ["A", "B", "C", "F"],
+					value: "Решать сложные задачи",
+					nextQuestion: 13,
 				},
 			],
 		},
+		//Анкетирование
+		//13
 		{
 			question: "Сколько вам лет?",
 			type: "usual",
 			validation: "true",
 			position: "normal",
-			length: "short",
-			variation: "unset",
-			variable: "false",
+			number: 13,
 			variants: [
 				{
-					value: "Младше 18",
+					value: "Меньше 18",
+					nextQuestion: 14,
 				},
 				{
 					value: "От 18 до 20",
+					nextQuestion: 14,
 				},
 				{
 					value: "От 21 до 25",
+					nextQuestion: 14,
 				},
 				{
 					value: "От 26 до 30",
+					nextQuestion: 14,
 				},
 				{
 					value: "От 31 до 40",
+					nextQuestion: 14,
 				},
 				{
 					value: "От 41 до 50",
+					nextQuestion: 14,
 				},
 				{
 					value: "Больше 50",
+					nextQuestion: 14,
 				},
 			],
 		},
+        //14
 		{
-			question: "Где вы сейчас живете?",
+			question: "Что бы вы предпочли делать на работе?",
 			type: "usual",
 			validation: "true",
 			position: "normal",
-			length: "long",
-			variation: "unset",
-			variable: "false",
+			number: 14,
 			variants: [
 				{
 					value: "РФ: Москва или Санкт-Петербург",
+                    nextQuestion: 15,
 				},
 				{
 					value: "РФ: город-миллионник",
+                    nextQuestion: 15,
 				},
 				{
 					value: "РФ: город с населением от 100 000 до 1 млн человек",
+                    nextQuestion: 15,
 				},
 				{
 					value: "РФ: город с населением до 100 000 человек",
+                    nextQuestion: 15,
 				},
 				{
 					value: "РФ: село, станица, хутор, поселок городского типа",
+                    nextQuestion: 15,
 				},
 				{
 					value: "Другая страна СНГ",
+                    nextQuestion: 15,
 				},
 				{
 					value: "Зарубежная страна",
+                    nextQuestion: 15,
 				},
 			],
 		},
+        //15
 		{
-			question: "Чем вам интересна сфера IT или дизайна?",
+            question: "Чем вам интересна сфера IT и дизайна?",
 			type: "usual",
 			validation: "true",
 			position: "normal",
-			length: "long",
-			variation: "unset",
-			variable: "false",
+			number: 15,
 			variants: [
 				{
-					value: "Больше перспектив, есть куда развиваться",
+					value: "Нравятся перспективы",
+                    nextQuestion: 16,
 				},
 				{
-					value: "Хочу попробовать себя в новом направлении",
+					value: "Пора попробовать что-то новое",
+                    nextQuestion: 16,
 				},
 				{
-					value: "Не устраивает доход на текущей работе",
+					value: "Хочу больше зарабатывать",
+                    nextQuestion: 16,
 				},
 				{
-					value: "Не могу найти работу",
-				},
-				{
-					value: "Ищу первую профессию",
-				},
-				{
-					value: "Хочу работать из дома",
-				},
-				{
-					value: "Хочу переехать в другую страну",
-				},
-				{
-					value: "Хочу разобраться, потому что все о ней говорят",
-				},
+					value: "Мечтаю о гибком графике и работе из дома",
+                    nextQuestion: 16,
+				}
 			],
 		},
+        //16
 		{
-			question: "Рассматриваете ли вы дополнительное обучение?",
+            question: "Рассматриваете ли вы дополнительное обучение?",
 			type: "usual",
 			validation: "true",
 			position: "normal",
-			length: "long",
-			variation: "unset",
-			variable: "false",
+			number: 16,
 			variants: [
 				{
 					value: "Готов приступить к обучению в течение недели",
+                    nextQuestion: 17,
 				},
 				{
 					value: "Готов приступить к обучению в ближайший месяц",
+                    nextQuestion: 17,
 				},
 				{
 					value: "Еще не определился",
+                    nextQuestion: 17,
 				},
 				{
 					value: "Не планирую учиться",
+                    nextQuestion: 17,
 				},
 			],
 		},
+        //17
 		{
-			question: "Сколько вы готовы инвестировать в свое обучение в год, если решите начать учиться?",
+			question: "Сколько вы готовы потратить на профессиональное обучение в месяц, если решите учиться?",
 			type: "usual",
 			validation: "true",
 			position: "normal",
-			length: "long",
-			variation: "unset",
-			variable: "false",
+			number: 17,
 			variants: [
 				{
-					value: "До 50 000 рублей",
+					value: "Только бесплатно",
+                    nextQuestion: 18,
 				},
 				{
-					value: "От 50 000 до 100 000 рублей",
+					value: "До 5000 рублей",
+                    nextQuestion: 18,
 				},
 				{
-					value: "От 100 000 до 150 000 рублей",
+					value: "От 5000 до 7000 рублей",
+                    nextQuestion: 18,
 				},
 				{
-					value: "Более 150 000 рублей",
+					value: "От 7000 до 10 000 рублей",
+                    nextQuestion: 18,
 				},
 				{
-					value: "Готов(а) учиться только бесплатно",
+					value: "От 10 000 до 15 000 рублей",
+                    nextQuestion: 18,
+				},
+                {
+					value: "Больше 15 000 рублей",
+                    nextQuestion: 18,
 				},
 			],
 		},
+        //18
 		{
 			question: "Что для вас наиболее важно при выборе обучения?",
 			type: "usual",
 			validation: "true",
 			position: "last",
-			length: "long",
-			variation: "unset",
-			variable: "false",
+			number: 18,
 			variants: [
 				{
-					value: "Как устроен процесс обучения (формат, расписание, практика, обучающая платформа)",
+					value: "Формат и сам процесс",
+                    nextQuestion: null,
 				},
 				{
-					value: "Программа обучения (чему я научусь, конкретные модули, насколько это нужно в реальной жизни)",
+					value: "Программа и навыки",
+                    nextQuestion: null,
 				},
 				{
-					value: "Цены (какие есть варианты для меня, скидки, рассрочки, ежемесячный платеж)",
+					value: "Цена, конечно!",
+                    nextQuestion: null,
 				},
 				{
-					value: "Гарантия трудоустройства (Центр карьеры, как мне помогут найти новую работу, как быстро смогу ее найти)",
+					value: "Мне нужна гарантия трудоустройства",
+                    nextQuestion: null,
 				},
 			],
 		},
