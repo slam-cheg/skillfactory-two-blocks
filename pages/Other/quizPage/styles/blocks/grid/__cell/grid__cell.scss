@@ -1,0 +1,32 @@
+.grid__cell {
+    &:nth-child(1) {
+        grid-area: logo;
+
+        @media screen and (max-width: $ver-tablet) {
+            margin-bottom: 36px;
+        }
+    }
+    &:nth-child(2) {
+        grid-area: percent;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media screen and (max-width: $ver-tablet) {
+            margin-bottom: 10px;
+        }
+    }
+    &:nth-child(3) {
+        grid-area: title;
+        padding-top: 30px;
+
+        @media screen and (max-width: $ver-tablet) {
+            padding-top: 0;
+            margin-bottom: 15px;
+        }
+    }
+    &:nth-child(4) {
+        grid-area: test;
+        position: relative;
+    }
+}

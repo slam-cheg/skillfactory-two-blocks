@@ -1,0 +1,14 @@
+.answer__bullit {
+	background: #ffffff;
+	width: 22px;
+	height: 22px;
+	border-radius: 50px;
+	border: 1px solid #cccccc;
+	transition: 0.3s;
+	flex-shrink: 0;
+
+    @media screen and (max-width: $hor-mobile) {
+		width: 20px;
+        height: 20px;
+	}
+}

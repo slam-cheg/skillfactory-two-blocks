@@ -1,0 +1,9 @@
+.quiz__logo {
+    max-width: 200%;
+    height: 14px;
+
+    @media screen and (max-width: $ver-tablet) {
+        height: auto;
+        max-width: 100%;
+    }
+}

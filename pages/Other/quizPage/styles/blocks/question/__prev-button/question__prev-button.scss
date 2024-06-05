@@ -1,0 +1,28 @@
+.question__prev-button {
+    background-color: transparent;
+    background-image: url(../images/back-btn.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    outline: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+    bottom: 28px;
+    left: 32px;
+
+    &:hover {
+        transition: .3s;
+        opacity: .7;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+        width: 20px;
+        height: 18px;
+        left: 10px;
+        bottom: 30px;
+    }
+}

@@ -1,0 +1,13 @@
+.quiz {
+    padding: 50px 0;
+
+    @media screen and (max-width:$hor-mobile) {
+        padding: 20px 0 60px 0;
+    }
+}
+
+@import "./__title/quiz__title.scss";
+@import "./__text/quiz__text.scss";
+@import "./__progress/quiz__progress.scss";
+@import "./__logo/quiz__logo.scss";
+@import "./__description/quiz__description.scss";
