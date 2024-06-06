@@ -17,7 +17,19 @@ prevButton.addEventListener("click", getPrevQuestion);
 createQuestion(quizData.questions[0].number);
 
 function countResult() {
-	console.log(quizData.variants);
+	let maxNum = 0;
+	let resultVariant = "";
+
+	for (let key in quizData.variants) {
+		if (quizData.variants[key]["score"] > maxNum) {
+			maxNum = quizData.variants[key]["score"];
+			resultVariant = key;
+		}
+	}
+	const hash = window.location.hash;
+	const resultUrl = `${quizData.variants[resultVariant]["url"]}${hash}`;
+	console.log(`Redirected to ${resultUrl} with winner ${resultVariant}`);
+	// window.location.replace(url);
 }
 
 function createQuestion(questionNumber) {
@@ -152,5 +164,5 @@ function viewProgress(currentQuestionNumber) {
 }
 
 function younger() {
-	localStorage.setItem("Age", "younger");
+	window.location.hash = "younger18yo"
 }
