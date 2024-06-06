@@ -4,9 +4,11 @@
     font-weight: 800;
     line-height: .9;
     color: #181818;
+    margin-bottom: -10px;
 
     @media screen and (max-width: $hor-mobile) {
         font-size: 28px;
+        margin-bottom: -30px;
     }
 
     .result__profession {

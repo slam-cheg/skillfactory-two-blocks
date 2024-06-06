@@ -1,7 +1,7 @@
 import { quizData } from "./data.js";
 
 const quizBlock = document.querySelector(".quiz");
-const grid = quizBlock.querySelector(".grid");
+const gridCells = quizBlock.querySelectorAll(".grid__cell");
 const resultBlock = quizBlock.querySelector(".result");
 const resultPercent = quizBlock.querySelector(".result__percent");
 const quizContainer = quizBlock.querySelector("#quizContainer");
@@ -146,9 +146,7 @@ function removePrevQuestion() {
 function flipQuestions(nextQuestionNumber, last) {
 	if (last) {
 		countResult();
-		grid.style.display = "none";
-		resultBlock.style.display = "block";
-		resultPercent.textContent = Math.floor(Math.random() * (98 - 92 + 1)) + 92;
+		hideTest();
 		return;
 	}
 
@@ -165,4 +163,12 @@ function viewProgress(currentQuestionNumber) {
 
 function younger() {
 	window.location.hash = "younger18yo"
+}
+
+function hideTest () {
+	for(let i = 1; i < gridCells.length; i++) {
+		gridCells[i].style.display = "none";
+	}
+	resultBlock.style.display = "block";
+	resultPercent.textContent = Math.floor(Math.random() * (98 - 92 + 1)) + 92;
 }

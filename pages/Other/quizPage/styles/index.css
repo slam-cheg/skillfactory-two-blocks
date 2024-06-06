@@ -221,7 +221,7 @@
 
 .question__prev-button {
   background-color: transparent;
-  background-image: url(../images/back-btn.svg);
+  background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/back-btn.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -391,13 +391,94 @@
   font-weight: 800;
   line-height: 0.9;
   color: #181818;
+  margin-bottom: -10px;
 }
 @media screen and (max-width: 639px) {
   .result__title {
     font-size: 28px;
+    margin-bottom: -30px;
   }
 }
 .result__title .result__profession {
   filter: blur(10px);
   pointer-events: none;
+}
+
+.bonuses {
+  margin-bottom: 74px;
+}
+@media screen and (max-width: 639px) {
+  .bonuses {
+    margin-bottom: 60px;
+  }
+}
+
+.bonuses__title {
+  font-family: "heliosexBOLD-neuemachina";
+  font-weight: 800;
+  font-size: 32px;
+  color: #000000;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__title {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+}
+
+.bonuses__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.bonuses__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 30px 20px;
+  background: #DDE6E7;
+  border-radius: 6px;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__card {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+}
+
+.bonuses__title {
+  font-family: "heliosexBOLD-neuemachina";
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  line-height: 1.1;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__title {
+    font-size: 16px;
+  }
+}
+
+.bonuses__card-arrow {
+  max-width: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__card-arrow {
+    max-width: 17px;
+  }
 }

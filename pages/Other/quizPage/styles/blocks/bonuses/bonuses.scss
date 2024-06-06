@@ -1,0 +1,13 @@
+.bonuses {
+    margin-bottom: 74px;
+
+    @media screen and (max-width: $hor-mobile) {
+        margin-bottom: 60px;
+    }
+}
+
+@import "./__title/bonuses__title.scss";
+@import "./__grid/bonuses__grid.scss";
+@import "./__card/bonuses__card.scss";
+@import "./__card-text/bonuses__card-text.scss";
+@import "./__card-arrow/bonuses__card-arrow.scss";
