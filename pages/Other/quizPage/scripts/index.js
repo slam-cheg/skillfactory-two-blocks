@@ -12,7 +12,7 @@ const imageQuestionTemplate = document.querySelector("#image-question").content.
 const textAnswerTemplate = document.querySelector("#text-answer").content.querySelector(".answer");
 const imageAnswerTemplate = document.querySelector("#image-answer").content.querySelector(".answer");
 
-prevButton.addEventListener("click", setPrevQuestion);
+prevButton.addEventListener("click", getPrevQuestion);
 
 createQuestion(quizData.questions[0].number);
 
@@ -30,7 +30,6 @@ function createQuestion(questionNumber) {
 	questionData.type === "usual" ? (newQuestion = textQuestionTemplate.cloneNode(true)) : (newQuestion = imageQuestionTemplate.cloneNode(true));
 	const title = newQuestion.querySelector(".question__title");
 	title.textContent = questionData.question;
-	questionData.number > 1 ? (newQuestion.dataset.prevQuestion = `${questionData.number - 1}`) : (newQuestion.dataset.prevQuestion = "null");
 	newQuestion.classList.add("question_active");
 	const answersContainer = newQuestion.querySelector(".question__answers");
 	questionData.variants.forEach((answer) => {
@@ -47,6 +46,9 @@ function createAnswer(answer, type, validation, questionNumber) {
 		newAnswer = textAnswerTemplate.cloneNode(true);
 		const answerText = newAnswer.querySelector(".answer__text");
 		answerText.textContent = answer.value;
+		if (answer.value === "Меньше 18") {
+			newAnswer.addEventListener("click", younger);
+		}
 	} else {
 		newAnswer = imageAnswerTemplate.cloneNode(true);
 		const answerImage = newAnswer.querySelector(".answer__image");
@@ -80,27 +82,17 @@ function clickAnswer(answer, validation, questionNumber) {
 }
 
 function incrementScores(answer, questionNum) {
-	let questionNumber = questionNum;
-	if (questionNum.toString().length > 1) {
-		questionNumber = Math.floor(questionNumber);
-	}
+	const currentQuestion = quizData.questions.find((question) => question.number === questionNum);
+	answer.classList.contains("answer_image") ? (currentQuestion.clickedVariant = answer.querySelector("img").alt) : (currentQuestion.clickedVariant = answer.querySelector("p").textContent);
 	const scores = answer.dataset.scores;
 	scores.split(",").forEach((score) => {
 		quizData.variants[`${score}`]["score"] += 1;
-		if (answer.classList.contains("answer_image")) {
-			quizData.questions[`${questionNumber - 1}`]["clickedVariant"] = `${answer.querySelector("img").src}`;
-		} else {
-			quizData.questions[`${questionNumber - 1}`]["clickedVariant"] = `${answer.querySelector("p").textContent}`;
-		}
 	});
 }
 
-function decrementScores(variants, questionNum) {
-	let questionNumber = questionNum;
-	if (questionNum.toString().length > 1) {
-		questionNumber = Math.floor(questionNumber);
-	}
-	const neededVariant = variants.find((variant) => variant.value === quizData.questions[`${questionNumber}`]["clickedVariant"]);
+function decrementScores(prevQuestion) {
+	const variants = prevQuestion.variants;
+	const neededVariant = variants.find((variant) => prevQuestion.clickedVariant === variant.value);
 	const scores = neededVariant.scores;
 	scores.forEach((score) => {
 		quizData.variants[`${score}`]["score"] -= 1;
@@ -110,16 +102,29 @@ function decrementScores(variants, questionNum) {
 	});
 }
 
-function setPrevQuestion() {
-	debugger
-	const currentQuestion = quizBlock.querySelector(".question_active");
-	let questionNumber = Number(currentQuestion.dataset.prevQuestion) - 1;
-	if (questionNumber.toString().length > 1) {
-		questionNumber = Math.floor(Number(currentQuestion.dataset.prevQuestion));
+function getPrevQuestion() {
+	const activeQuestion = quizBlock.querySelector(".question_active");
+	const activeQuestionTitle = activeQuestion.querySelector(".question__title").textContent;
+	const currentQuestionData = quizData.questions.find((question) => question.question === activeQuestionTitle);
+	let prevQuestionNumber = Math.floor(currentQuestionData.number - 1);
+	if (!quizData.questions.find((question) => question.number === prevQuestionNumber)) {
+		for (let i = 1; i < quizData.questions.length; i++) {
+			const num = Number(`${prevQuestionNumber}.${i}`);
+			let seekQuestion = quizData.questions.find((question) => question.number === num);
+			if (!seekQuestion) {
+				continue;
+			} else {
+				if (seekQuestion.clickedVariant) {
+					prevQuestionNumber = seekQuestion.number;
+					break;
+				}
+			}
+		}
 	}
-	const questionData = quizData.questions[`${questionNumber}`]["variants"];
-	decrementScores(questionData, questionNumber);
-	flipQuestions(currentQuestion.dataset.prevQuestion);
+	const prevQuestionData = quizData.questions.find((question) => question.number === prevQuestionNumber);
+
+	decrementScores(prevQuestionData);
+	flipQuestions(prevQuestionNumber);
 }
 
 function removePrevQuestion() {
@@ -144,4 +149,8 @@ function flipQuestions(nextQuestionNumber, last) {
 
 function viewProgress(currentQuestionNumber) {
 	progress.textContent = Math.round((100 * currentQuestionNumber) / quizData.totalQuestions);
+}
+
+function younger() {
+	localStorage.setItem("Age", "younger");
 }
