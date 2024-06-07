@@ -4,10 +4,12 @@
     font-weight: 800;
     line-height: .9;
     color: #181818;
+    margin-top: 34px;
     margin-bottom: -10px;
 
     @media screen and (max-width: $hor-mobile) {
         font-size: 28px;
+        margin-top: 0;
         margin-bottom: -30px;
     }
 
