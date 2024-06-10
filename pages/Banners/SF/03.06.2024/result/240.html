@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="Ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TECHSUP-1269 240px</title>
+		<style>
+			@font-face {
+				font-family: "PP_SF Neue Machina";
+				src: url("./PPNeueMachina-InktrapRegular.woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+			}
+			@font-face {
+				font-family: "HeliosExt Web";
+				src: url("./heliosext.woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+			}
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			html,
+			body {
+				height: 240px;
+				width: 100%;
+				margin: 0;
+			}
+
+			.link {
+				background: #dde6e7;
+				position: relative;
+				height: 100%;
+				width: 100%;
+				text-decoration: none;
+				display: flex;
+				overflow: hidden;
+			}
+
+			.title {
+				font-family: "PP_SF Neue Machina";
+				color: #ff6945;
+				line-height: 1;
+				position: absolute;
+				top: 74px;
+				font-size: 57px;
+				width: 800px;
+				left: calc(50% - 935px);
+				z-index: 5;
+				transform: translateY(0);
+				transition: transform 0.5s;
+			}
+			@media screen and (min-width: 2440px) {
+				.title {
+					left: calc(50% - 1175px);
+				}
+			}
+			@media screen and (max-width: 1919px) {
+				.title {
+					left: calc(50% - 585px);
+				}
+			}
+			@media screen and (max-width: 1199px) {
+				.title {
+					left: calc(50% - 455px);
+				}
+			}
+			@media screen and (max-width: 939px) {
+				.title {
+					left: calc(50% - 306px);
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.title {
+					left: calc(50% - 190px);
+				}
+			}
+			@media screen and (max-width: 399px) {
+				.title {
+					left: calc(50% - 135px);
+				}
+			}
+			@media screen and (min-width: 2440px) {
+				.title {
+					top: calc(50% - 66px);
+					font-size: 66px;
+					width: 900px;
+				}
+			}
+			@media screen and (max-width: 1919px) {
+				.title {
+					top: 74px;
+					font-size: 46px;
+				}
+			}
+			@media screen and (max-width: 1199px) {
+				.title {
+					font-size: 40px;
+					width: 550px;
+				}
+			}
+			@media screen and (max-width: 939px) {
+				.title {
+					font-size: 28px;
+					width: 390px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.title {
+					top: 60px;
+				}
+			}
+			@media screen and (max-width: 399px) {
+				.title {
+					font-size: 22px;
+					width: 270px;
+					top: 50px;
+				}
+			}
+
+			.description {
+				color: #043933;
+				position: absolute;
+				left: calc(50% - 117px);
+				top: 115px;
+				font-size: 27px;
+				font-family: "HeliosExt Web";
+				line-height: 1.1;
+				width: 400px;
+				z-index: 4;
+				transform: translateY(0);
+				transition: transform 0.5s;
+			}
+			@media screen and (min-width: 2440px) {
+				.description {
+					top: calc(50% - 15px);
+					left: calc(50% - 197px);
+					font-size: 32px;
+					width: 460px;
+				}
+			}
+			@media screen and (max-width: 1919px) {
+				.description {
+					left: calc(50% - 935px);
+					top: 170px;
+					font-size: 26px;
+					width: -moz-fit-content;
+					width: fit-content;
+				}
+			}
+			@media screen and (max-width: 1919px) and (min-width: 2440px) {
+				.description {
+					left: calc(50% - 1175px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 1919px) {
+				.description {
+					left: calc(50% - 585px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 1199px) {
+				.description {
+					left: calc(50% - 455px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 939px) {
+				.description {
+					left: calc(50% - 306px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 639px) {
+				.description {
+					left: calc(50% - 190px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 399px) {
+				.description {
+					left: calc(50% - 135px);
+				}
+			}
+			@media screen and (max-width: 1199px) {
+				.description {
+					top: 146px;
+					font-size: 20px;
+				}
+			}
+			@media screen and (max-width: 939px) {
+				.description {
+					top: 126px;
+					font-size: 18px;
+					width: 270px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.description {
+					top: 116px;
+					font-size: 18px;
+					width: 320px;
+				}
+			}
+			@media screen and (max-width: 399px) {
+				.description {
+					width: 270px;
+					top: 122px;
+					font-size: 16px;
+				}
+			}
+			.description span {
+				background: #b5e916;
+				display: inline-block;
+				text-transform: uppercase;
+				padding: 0px 4px;
+			}
+			.logo {
+				position: absolute;
+				background-image: url(./SkillFactory.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				position: absolute;
+				top: 89px;
+				left: calc(50% - 117px);
+				width: 170px;
+				height: 15px;
+				transform: translateY(0);
+				transition: transform 0.5s;
+			}
+			@media screen and (min-width: 2440px) {
+				.logo {
+					width: 200px;
+					height: 18px;
+					left: calc(50% - 197px);
+					top: 70px;
+				}
+			}
+			@media screen and (max-width: 1919px) {
+				.logo {
+					top: 49px;
+					left: calc(50% - 935px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (min-width: 2440px) {
+				.logo {
+					left: calc(50% - 1175px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 1919px) {
+				.logo {
+					left: calc(50% - 585px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 1199px) {
+				.logo {
+					left: calc(50% - 455px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 939px) {
+				.logo {
+					left: calc(50% - 306px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 639px) {
+				.logo {
+					left: calc(50% - 190px);
+				}
+			}
+			@media screen and (max-width: 1919px) and (max-width: 399px) {
+				.logo {
+					left: calc(50% - 135px);
+				}
+			}
+			@media screen and (max-width: 939px) {
+				.logo {
+					width: 130px;
+					height: 12px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.logo {
+					width: 120px;
+					height: 11px;
+					top: 35px;
+				}
+			}
+			@media screen and (max-width: 399px) {
+				.logo {
+					width: 110px;
+					height: 10px;
+					top: 30px;
+				}
+			}
+
+			.frame {
+				color: #043933;
+				position: absolute;
+				background: #ffffff;
+				display: flex;
+				right: calc(50% - 806px);
+				width: 264px;
+				top: 91px;
+				gap: 10px;
+				padding: 16px 14px;
+				border-radius: 4px;
+				border: 3px solid #043933;
+				z-index: 3;
+				transform: translateY(0);
+				transition: transform 0.5s;
+			}
+			@media screen and (min-width: 2440px) {
+				.frame {
+					right: calc(50% - 993px);
+					width: 366px;
+					top: calc(50% - 50px);
+				}
+			}
+			@media screen and (max-width: 1919px) {
+				.frame {
+					right: calc(50% - 570px);
+					width: 244px;
+					top: 75px;
+					gap: 10px;
+					padding: 10px;
+					border-radius: 4px;
+				}
+			}
+			@media screen and (max-width: 1199px) {
+				.frame {
+					right: calc(50% - 420px);
+					width: 222px;
+					top: 127px;
+				}
+			}
+			@media screen and (max-width: 939px) {
+				.frame {
+					right: calc(50% - 180px);
+					width: 222px;
+					top: 117px;
+					padding: 6px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.frame {
+					right: unset;
+					left: calc(50% - 935px);
+					width: -moz-max-content;
+					width: max-content;
+					top: 164px;
+					padding: 4px;
+					gap: 4px;
+					border: 1px solid #043933;
+				}
+			}
+			@media screen and (max-width: 639px) and (min-width: 2440px) {
+				.frame {
+					left: calc(50% - 1175px);
+				}
+			}
+			@media screen and (max-width: 639px) and (max-width: 1919px) {
+				.frame {
+					left: calc(50% - 585px);
+				}
+			}
+			@media screen and (max-width: 639px) and (max-width: 1199px) {
+				.frame {
+					left: calc(50% - 455px);
+				}
+			}
+			@media screen and (max-width: 639px) and (max-width: 939px) {
+				.frame {
+					left: calc(50% - 306px);
+				}
+			}
+			@media screen and (max-width: 639px) and (max-width: 639px) {
+				.frame {
+					left: calc(50% - 190px);
+				}
+			}
+			@media screen and (max-width: 639px) and (max-width: 399px) {
+				.frame {
+					left: calc(50% - 135px);
+				}
+			}
+			@media screen and (max-width: 399px) {
+				.frame {
+					top: 168px;
+				}
+			}
+			.frame span {
+				font-family: "PP_SF Neue Machina";
+				color: #ff6945;
+				font-size: 22px;
+				padding-top: 2px;
+			}
+			@media screen and (max-width: 639px) {
+				.frame span {
+					font-size: 12px;
+				}
+			}
+			.frame p {
+				font-family: "HeliosExt Web";
+				font-size: 20px;
+			}
+			@media screen and (min-width: 2440px) {
+				.frame p {
+					font-size: 26px;
+				}
+			}
+			@media screen and (max-width: 1919px) {
+				.frame p {
+					font-size: 18px;
+				}
+			}
+			@media screen and (max-width: 1199px) {
+				.frame p {
+					font-size: 16px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.frame p {
+					font-size: 14px;
+				}
+			}
+			@media screen and (max-width: 399px) {
+				.frame p {
+					font-size: 13px;
+				}
+			}
+
+			.disclamer {
+				font-family: "HeliosExt Web";
+				color: #181818;
+				position: absolute;
+				opacity: 0.6;
+				font-size: 12px;
+				bottom: 12px;
+				left: calc(50% - 935px);
+				line-height: 1;
+				z-index: 2;
+			}
+			@media screen and (min-width: 2440px) {
+				.disclamer {
+					left: calc(50% - 1175px);
+				}
+			}
+			@media screen and (max-width: 1919px) {
+				.disclamer {
+					left: calc(50% - 585px);
+				}
+			}
+			@media screen and (max-width: 1199px) {
+				.disclamer {
+					left: calc(50% - 455px);
+				}
+			}
+			@media screen and (max-width: 939px) {
+				.disclamer {
+					left: calc(50% - 306px);
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.disclamer {
+					left: calc(50% - 190px);
+				}
+			}
+			@media screen and (max-width: 399px) {
+				.disclamer {
+					left: calc(50% - 135px);
+				}
+			}
+			@media screen and (max-width: 1199px) {
+				.disclamer {
+					width: 522px;
+				}
+			}
+			@media screen and (max-width: 939px) {
+				.disclamer {
+					width: 372px;
+					font-size: 10px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.disclamer {
+					width: 228px;
+					font-size: 8px;
+					bottom: 10px;
+				}
+			}
+			.image {
+				position: absolute;
+				-o-object-fit: contain;
+				object-fit: contain;
+				top: -62px;
+				right: calc(50% - 1036px);
+				width: 830px;
+				z-index: 1;
+				opacity: 1;
+				transition: opacity 1s;
+			}
+			@media screen and (min-width: 2440px) {
+				.image {
+					top: -72px;
+					right: calc(50% - 1266px);
+					width: 1030px;
+				}
+			}
+			@media screen and (max-width: 1919px) {
+				.image {
+					top: -22px;
+					right: calc(50% - 746px);
+					width: 680px;
+				}
+			}
+			@media screen and (max-width: 1199px) {
+				.image {
+					right: calc(50% - 556px);
+					width: 540px;
+				}
+			}
+			@media screen and (max-width: 939px) {
+				.image {
+					right: calc(50% - 486px);
+					width: 490px;
+				}
+			}
+			@media screen and (max-width: 639px) {
+				.image {
+					right: calc(50% - 349px);
+					width: 330px;
+					top: 78px;
+				}
+			}
+			@media screen and (max-width: 399px) {
+				.image {
+					right: calc(50% - 336px);
+					width: 280px;
+					top: 28px;
+					transform: rotate(-45deg);
+				}
+			}
+
+			.anim.title,
+			.anim.logo,
+			.anim.frame,
+			.anim.description {
+				transform: translateY(-300%);
+				transition: transform 0.5s;
+			}
+			.anim.image {
+				opacity: 0;
+				transition: opacity 1s;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="%banner.reference_mrc_user1%" target="%banner.target%" class="link">
+			<p class="title anim">Выпускаем специалистов, близких к&nbsp;уровню middle</p>
+			<p class="description anim">со&nbsp;скидкой до&nbsp;45% по&nbsp;промокоду <span>SRAVNI</span></p>
+			<div class="logo anim"></div>
+			<div class="frame anim">
+				<span>→</span>
+				<p>курс по&nbsp;софт скилам в&nbsp;подарок</p>
+			</div>
+			<img src="./image.png" class="image anim" />
+			<p class="disclamer">Реклама. Информация о&nbsp;рекламодателе ООО &laquo;Скилфэктори&raquo; на&nbsp;сайте www.skillfactory.ru. ИНН 9702009530</p>
+		</a>
+		<script>
+			const title = document.querySelector(".title");
+			const description = document.querySelector(".description");
+			const logo = document.querySelector(".logo");
+			const frame = document.querySelector(".frame");
+			const image = document.querySelector(".image");
+
+			setTimeout(() => {
+				anim(title);
+				anim(logo);
+			}, 300);
+			setTimeout(() => {
+				anim(description);
+			}, 700);
+			setTimeout(() => {
+				anim(frame);
+				anim(image);
+			}, 1100);
+
+			function anim(elem) {
+				elem.classList.remove("anim");
+			}
+		</script>
+	</body>
+</html>
