@@ -234,14 +234,310 @@
   position: absolute;
   z-index: 1;
   pointer-events: none;
+  background-position: top right !important;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.card#GRAPHPRO .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPHPRO.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#GRAPHPRO .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPHPRO-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#GRAPHPRO .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPHPRO-2.png) no-repeat;
+  }
+}
+.card#UXUIPRO .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/UXUIPRO.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#UXUIPRO .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/UXUIPRO-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#UXUIPRO .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/UXUIPRO-2.png) no-repeat;
+  }
+}
+.card#MOTIONPRO .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/MOTIONPRO.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#MOTIONPRO .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/MOTIONPRO-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#MOTIONPRO .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/MOTIONPRO-2.png) no-repeat;
+  }
 }
 .card#COM-DESIGNER .card__image {
-  top: -55px;
-  right: -123px;
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/COMDES.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#COM-DESIGNER .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/COMDES-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#COM-DESIGNER .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/COMDES-2.png) no-repeat;
+  }
+}
+.card#THREEDART .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/3DART.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#THREEDART .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/3DART-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#THREEDART .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/3DART-2.png) no-repeat;
+  }
+}
+.card#STARTDESIGN .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/STARTDESIGN.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#STARTDESIGN .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/STARTDESIGN-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#STARTDESIGN .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/STARTDESIGN-2.png) no-repeat;
+  }
+}
+.card#GAMEDES .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GAMEDES.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#GAMEDES .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GAMEDES-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#GAMEDES .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GAMEDES-2.png) no-repeat;
+  }
+}
+.card#WEBDES .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/WEBDES.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#WEBDES .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/WEBDES-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#WEBDES .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/WEBDES-2.png) no-repeat;
+  }
+}
+.card#NEURODES .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/NEURODES.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#NEURODES .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/NEURODES-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#NEURODES .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/NEURODES-2.png) no-repeat;
+  }
+}
+.card#COMILLUST .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/COMILLUST.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#COMILLUST .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/COMILLUST-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#COMILLUST .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/COMILLUST-2.png) no-repeat;
+  }
+}
+.card#VIDEOREJ .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/VIDEOREJ.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#VIDEOREJ .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/VIDEOREJ-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#VIDEOREJ .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/VIDEOREJ-2.png) no-repeat;
+  }
+}
+.card#UIDES .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/UIDES.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#UIDES .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/UIDES-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#UIDES .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/UIDES-2.png) no-repeat;
+  }
+}
+.card#GRAPHINTENDE .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPHINTENDE.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#GRAPHINTENDE .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPHINTENDE-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#GRAPHINTENDE .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPHINTENDE-2.png) no-repeat;
+  }
+}
+.card#GRAPHINTENSE .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPHINTENSE.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#GRAPHINTENSE .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPHINTENSE-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#GRAPHINTENSE .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPHINTENSE-2.png) no-repeat;
+  }
+}
+.card#MEDIADIS .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/MEDIADIS.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#MEDIADIS .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/MEDIADIS-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#MEDIADIS .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/MEDIADIS-2.png) no-repeat;
+  }
+}
+.card#GRAPH .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPH.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#GRAPH .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPH-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#GRAPH .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GRAPH-2.png) no-repeat;
+  }
+}
+.card#UXUI .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/UXUI.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#UXUI .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/UXUI-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#UXUI .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/UXUI-2.png) no-repeat;
+  }
+}
+.card#MOTION .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/MOTION.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#MOTION .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/MOTION-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#MOTION .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/MOTION-2.png) no-repeat;
+  }
 }
 .card#INT-DESIGNER .card__image {
-  top: 26px;
-  right: -87px;
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/INT-DESIGNER.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#INT-DESIGNER .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/INT-DESIGNER-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#INT-DESIGNER .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/INT-DESIGNER-2.png) no-repeat;
+  }
+}
+.card#PHOTO .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/PHOTO.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#PHOTO .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/PHOTO-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#PHOTO .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/PHOTO-2.png) no-repeat;
+  }
+}
+.card#DESSYS .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/DESSYS.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#DESSYS .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/DESSYS-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#DESSYS .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/DESSYS-2.png) no-repeat;
+  }
+}
+.card#WEBDESPROF .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/WEBDESPROF.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#WEBDESPROF .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/WEBDESPROF-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#WEBDESPROF .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/WEBDESPROF-2.png) no-repeat;
+  }
+}
+.card#GAMEMANAGE .card__image {
+  background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GAMEMANAGE.png) no-repeat;
+}
+@media screen and (max-width: 959px) {
+  .card#GAMEMANAGE .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GAMEMANAGE-1.png) no-repeat;
+  }
+}
+@media screen and (max-width: 639px) {
+  .card#GAMEMANAGE .card__image {
+    background: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/CD-courses/GAMEMANAGE-2.png) no-repeat;
+  }
 }
 .card__price-wrapper {
   display: flex;
