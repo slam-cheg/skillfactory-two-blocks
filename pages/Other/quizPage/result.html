@@ -506,6 +506,63 @@
 				}
 			}
 		</style>
+		<style>
+			.quiz__topList {
+				display: flex;
+				gap: 14px;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			.quiz__topList-item {
+				display: grid;
+				grid-template-columns: 12px auto;
+				gap: 14px;
+			}
+			.quiz__topList-item::before {
+				content: "";
+				transform: translateY(8px);
+				background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/arrow-mandarin.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				width: 12px;
+				height: 10px;
+			}
+			@media screen and (max-width: 639px) {
+				.quiz__topList-item::before {
+					transform: translateY(4px);
+				}
+			}
+
+			.quiz__chips {
+				display: flex;
+				gap: 14px;
+				flex-wrap: nowrap;
+				margin-bottom: 34px;
+			}
+			@media screen and (max-width: 639px) {
+				.quiz__chips {
+					margin-bottom: 30px;
+				}
+			}
+
+			.quiz__chip {
+				font-size: 16px;
+				text-transform: uppercase;
+				font-weight: 400;
+				line-height: 0.8;
+				color: #181818;
+				padding: 6px 14px 4px 14px;
+				background: #b5e916;
+				border-radius: 4px;
+			}
+			@media screen and (max-width: 639px) {
+				.quiz__chip {
+					font-size: 12px;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<section class="quiz">
@@ -515,12 +572,20 @@
 						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/SFxCD.svg" alt="Skillfactory и Contented" class="quiz__logo" />
 					</div>
 					<div class="grid__cell">
-						<div class="quiz__progress"><span>20</span>%</div>
+						<div class="quiz__progress"><span>0</span>%</div>
 					</div>
 					<div class="grid__cell">
+						<div class="quiz__chips">
+							<div class="quiz__chip">бесплатно</div>
+							<div class="quiz__chip">5 минут</div>
+						</div>
 						<div class="quiz__text">
 							<h1 class="quiz__title">Пройдите тест, чтобы определиться с&nbsp;профессией в&nbsp;IT&nbsp;или дизайне</h1>
-							<p class="quiz__description">и&nbsp;получить карьерную консультацию <span>в&nbsp;подарок</span></p>
+							<p class="quiz__description">и&nbsp;получить в&nbsp;подарок:</p>
+							<ul class="quiz__topList">
+								<li class="quiz__topList-item quiz__description">личную консультацию с&nbsp;карьерным экспертом</li>
+								<li class="quiz__topList-item quiz__description">мини-курс для старта в&nbsp;выбранной профессии</li>
+							</ul>
 						</div>
 					</div>
 					<div class="grid__cell" id="quizContainer">
@@ -580,7 +645,6 @@
 				<div class="answer__bullit"></div>
 			</li>
 		</template>
-
 		<script>
 			const quizData = {
 				variants: {
