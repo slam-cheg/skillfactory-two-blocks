@@ -1,0 +1,20 @@
+.quiz__topList-item {
+    display: grid;
+    grid-template-columns: 12px auto;
+    gap: 14px;
+
+    &::before {
+        content: "";
+        transform: translateY(8px);
+        background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/arrow-mandarin.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 12px;
+        height: 10px;
+
+        @media screen and (max-width: $hor-mobile) {
+            transform: translateY(4px);
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.quiz__chip {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: .8;
+    color: $color-coal;
+    padding: 6px 14px 4px 14px;
+    background: $color-green;
+    border-radius: 4px;
+
+    @media screen and (max-width: $hor-mobile) {
+        font-size: 12px;
+    }
+}

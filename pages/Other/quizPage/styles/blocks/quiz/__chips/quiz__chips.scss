@@ -1,0 +1,10 @@
+.quiz__chips {
+    display: flex;
+    gap: 14px;
+    flex-wrap: nowrap;
+    margin-bottom: 34px;
+
+    @media screen and (max-width: $hor-mobile) {
+        margin-bottom: 30px;
+    }
+}

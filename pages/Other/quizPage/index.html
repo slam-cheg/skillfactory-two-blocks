@@ -1,86 +1,94 @@
 <!DOCTYPE html>
 <html lang="Ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Page</title>
-    <link rel="stylesheet" href="./styles/index.css">
-</head>
-<body>
-    <section class="quiz">
-        <div class="inner-wrapper">
-            <div class="grid">
-                <div class="grid__cell">
-                    <img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/SFxCD.svg" alt="Skillfactory и Contented" class="quiz__logo">
-                </div>
-                <div class="grid__cell">
-                    <div class="quiz__progress"><span>20</span>%</div>
-                </div>
-                <div class="grid__cell">
-                    <div class="quiz__text">
-                        <h1 class="quiz__title">Пройдите тест, чтобы определиться с&nbsp;профессией в&nbsp;IT&nbsp;или дизайне</h1>
-                        <p class="quiz__description">и&nbsp;получить карьерную консультацию <span>в&nbsp;подарок</span></p>
-                    </div>
-                </div>
-                <div class="grid__cell" id="quizContainer">
-                    <button class="question__prev-button"></button>
-                </div>
-            </div>
-            <div class="result" style="display: none;">
-                <p class="result__title">Вам на <span class="result__percent">92</span>% подходит профессия <span class="result__profession">171816418114</span></p>
-            </div>
-        </div>
-    </section>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz Page</title>
+		<link rel="stylesheet" href="./styles/index.css" />
+	</head>
+	<body>
+		<section class="quiz">
+			<div class="inner-wrapper">
+				<div class="grid">
+					<div class="grid__cell">
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/SFxCD.svg" alt="Skillfactory и Contented" class="quiz__logo" />
+					</div>
+					<div class="grid__cell">
+						<div class="quiz__progress"><span>20</span>%</div>
+					</div>
+					<div class="grid__cell">
+						<div class="quiz__chips">
+							<div class="quiz__chip">бесплатно</div>
+							<div class="quiz__chip">5 минут</div>
+						</div>
+						<div class="quiz__text">
+							<h1 class="quiz__title">Пройдите тест, чтобы определиться с&nbsp;профессией в&nbsp;IT&nbsp;или дизайне</h1>
+							<p class="quiz__description">и&nbsp;получить в&nbsp;подарок:</p>
+							<ul class="quiz__topList">
+								<li class="quiz__topList-item quiz__description">личную консультацию с&nbsp;карьерным экспертом</li>
+								<li class="quiz__topList-item quiz__description">мини-курс для старта в&nbsp;выбранной профессии</li>
+							</ul>
+						</div>
+					</div>
+					<div class="grid__cell" id="quizContainer">
+						<button class="question__prev-button"></button>
+					</div>
+				</div>
+				<div class="result" style="display: none">
+					<p class="result__title">Вам на <span class="result__percent">92</span>% подходит профессия <span class="result__profession">171816418114</span></p>
+				</div>
+			</div>
+		</section>
 
-    <section class="bonuses" style="display: none;">
-        <div class="inner-wrapper">
-            <h2 class="bonuses__title">Ваши бонусы за&nbsp;прохождение теста</h2>
-            <div class="bonuses__grid">
-                <div class="bonuses__card">
-                    <img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/bonuses-arrow.svg" class="bonuses__card-arrow">
-                    <p class="bonuses__card-text">Консультация с&nbsp;карьерным экспертом</p>
-                </div>
-                <div class="bonuses__card">
-                    <img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/bonuses-arrow.svg" class="bonuses__card-arrow">
-                    <p class="bonuses__card-text">Мини-курс для выбора профессии в&nbsp;IT или дизайне</p>
-                </div>
-                <div class="bonuses__card">
-                    <img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/bonuses-arrow.svg" class="bonuses__card-arrow">
-                    <p class="bonuses__card-text">Чат-бот с&nbsp;гайдами о&nbsp;профессиях и&nbsp;тестами</p>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section class="bonuses" style="display: none">
+			<div class="inner-wrapper">
+				<h2 class="bonuses__title">Ваши бонусы за&nbsp;прохождение теста</h2>
+				<div class="bonuses__grid">
+					<div class="bonuses__card">
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/bonuses-arrow.svg" class="bonuses__card-arrow" />
+						<p class="bonuses__card-text">Консультация с&nbsp;карьерным экспертом</p>
+					</div>
+					<div class="bonuses__card">
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/bonuses-arrow.svg" class="bonuses__card-arrow" />
+						<p class="bonuses__card-text">Мини-курс для выбора профессии в&nbsp;IT или дизайне</p>
+					</div>
+					<div class="bonuses__card">
+						<img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/bonuses-arrow.svg" class="bonuses__card-arrow" />
+						<p class="bonuses__card-text">Чат-бот с&nbsp;гайдами о&nbsp;профессиях и&nbsp;тестами</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <template id="text-question">
-        <div class="question">
-            <div class="question__title">*</div>
-            <ul class="question__answers"></ul>
-        </div>
-    </template>
+		<template id="text-question">
+			<div class="question">
+				<div class="question__title">*</div>
+				<ul class="question__answers"></ul>
+			</div>
+		</template>
 
-    <template id="image-question">
-        <div class="question">
-            <div class="question__title">*</div>
-            <ul class="question__answers question__answers_image"></ul>
-        </div>
-    </template>
+		<template id="image-question">
+			<div class="question">
+				<div class="question__title">*</div>
+				<ul class="question__answers question__answers_image"></ul>
+			</div>
+		</template>
 
-    <template id="text-answer">
-        <li class="answer">
-            <div class="answer__bullit"></div>
-            <p class="answer__text">*</p>
-        </li>
-    </template>
+		<template id="text-answer">
+			<li class="answer">
+				<div class="answer__bullit"></div>
+				<p class="answer__text">*</p>
+			</li>
+		</template>
 
-    <template id="image-answer">
-        <li class="answer answer_image">
-            <img src="./images/A.jpg" alt="" class="answer__image">
-            <div class="answer__bullit"></div>
-        </li>
-    </template>
+		<template id="image-answer">
+			<li class="answer answer_image">
+				<img src="./images/A.jpg" alt="" class="answer__image" />
+				<div class="answer__bullit"></div>
+			</li>
+		</template>
 
-    <script type="module" src="./scripts/data.js"></script>
-    <script type="module" src="./scripts/index.js"></script>
-</body>
+		<script type="module" src="./scripts/data.js"></script>
+		<script type="module" src="./scripts/index.js"></script>
+	</body>
 </html>
