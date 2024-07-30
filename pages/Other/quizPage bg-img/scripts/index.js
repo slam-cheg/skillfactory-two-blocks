@@ -34,6 +34,10 @@ function createQuestion(questionNumber) {
 	progressTotal.textContent = quizData.totalQuestions;
 	newQuestion.classList.add("question_active");
 
+	if(questionNumber === quizData.totalQuestions) {
+		nextButton.textContent = "Начать учиться";
+	}
+
 	questionData.variants.forEach((answer) => {
 		const newAnswer = createAnswer(answer, questionData.type, questionData.validation, questionNumber);
 		newAnswer.dataset.question = questionData.question;
