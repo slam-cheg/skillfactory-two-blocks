@@ -1,0 +1,25 @@
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1.8717fr;
+	column-gap: 40px;
+	row-gap: 40px;
+	grid-template-areas:
+		"logo percent"
+		"title test";
+
+	@media screen and (max-width: $hor-tablet) {
+		grid-template-columns: 1fr 2fr;
+	}
+
+	@media screen and (max-width: $ver-tablet) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"logo"
+			"title"
+			"percent"
+			"test";
+		gap: 0;
+	}
+}
+
+@import "./__cell/grid__cell.scss";

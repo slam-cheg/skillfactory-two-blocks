@@ -1,0 +1,11 @@
+.question__answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    margin-bottom: auto;
+
+    @media screen and (max-width:$hor-mobile) {
+        gap: 10px;
+    }
+}

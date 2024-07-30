@@ -1,0 +1,31 @@
+.question {
+    width: 100%;
+    height: 730px;
+    background: #DDE6E7;
+    padding: 30px 32px;
+    border-radius: 6px;
+    height: 730px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $hor-tablet) {
+        height: 805px;
+    }
+
+    @media screen and (max-width: $ver-tablet) {
+        gap: 30px;
+        height: auto;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+        padding: 20px 10px 83px 10px;
+    }
+}
+
+@import "./__title/question__title.scss";
+@import "./__answers/question__answers.scss";
+@import "./__answers/_image/question__answers_image.scss";
+@import "./__prev-button/question__prev-button.scss";
+@import "./__footer/question__footer.scss";

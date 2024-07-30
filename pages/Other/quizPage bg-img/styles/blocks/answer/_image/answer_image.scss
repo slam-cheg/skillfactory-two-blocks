@@ -1,0 +1,18 @@
+.answer_image {
+    flex-direction: column;
+    padding: 0 0 10px 0;
+    gap: 10px;
+    width: 100%;
+
+    img {
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+        .answer__bullit {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

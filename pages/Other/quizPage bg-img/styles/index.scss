@@ -1,0 +1,12 @@
+@import "../../../../styles/modules/variables.scss";
+@import "../../../../styles/modules/mixins.scss";
+@import "../../../../fonts/SF/fonts.scss";
+@import "../../../../styles/modules/blocks/tilda-reset/SF/tilda-reset.scss";
+@import "../../../../styles/modules/blocks/inner-wrapper/inner-wrapper.scss";
+
+@import "./blocks/quiz/quiz.scss";
+@import "./blocks/question/question.scss";
+@import "./blocks/grid/grid.scss";
+@import "./blocks/answer/answer.scss";
+@import "./blocks/result/result.scss";
+@import "./blocks/bonuses/bonuses.scss";

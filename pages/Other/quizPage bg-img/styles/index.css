@@ -1,0 +1,606 @@
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/heliosext.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/HeliosExtC-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/PPNeueMachina-InktrapRegular.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("https://tools.skillfactory.ru/fonts/NTSomic-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("https://tools.skillfactory.ru/fonts/NTSomic-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("https://tools.skillfactory.ru/fonts/NTSomic-Bold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+#allrecords ul {
+  padding-left: 0;
+}
+#allrecords a {
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.inner-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .inner-wrapper {
+    max-width: 940px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .inner-wrapper {
+    max-width: 620px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .inner-wrapper {
+    max-width: 460px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .inner-wrapper {
+    max-width: 300px;
+  }
+}
+
+.quiz {
+  padding: 50px 0;
+}
+@media screen and (max-width: 639px) {
+  .quiz {
+    padding: 20px 0 60px 0;
+  }
+}
+
+.quiz__title {
+  font-family: "heliosexBOLD-neuemachina";
+  font-weight: 800;
+  font-size: 34px;
+  color: #181818;
+  line-height: 0.9;
+  max-width: 370px;
+}
+@media screen and (max-width: 959px) {
+  .quiz__title {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 639px) {
+  .quiz__title {
+    font-size: 24px;
+    max-width: 260px;
+  }
+}
+
+.quiz__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 959px) {
+  .quiz__text {
+    gap: 15px;
+  }
+}
+
+.quiz__progress {
+  font-family: "heliosexBOLD-neuemachina";
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 0.9;
+  color: #404040;
+  opacity: 0.4;
+}
+
+.quiz__logo {
+  max-width: 200%;
+  height: 14px;
+}
+@media screen and (max-width: 959px) {
+  .quiz__logo {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+.quiz__description {
+  font-family: "heliosexBOLD-neuemachina";
+  font-weight: 400;
+  font-size: 20px;
+  color: #181818;
+  line-height: 1.1;
+}
+.quiz__description span {
+  background: #B5E916;
+  border-radius: 4px;
+  padding: 0px 3px 3px 3px;
+}
+@media screen and (max-width: 639px) {
+  .quiz__description span {
+    padding: 0px 3px 1px 3px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .quiz__description {
+    font-size: 16px;
+  }
+}
+
+.quiz__topList {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quiz__topList-item {
+  display: grid;
+  grid-template-columns: 12px auto;
+  gap: 14px;
+}
+.quiz__topList-item::before {
+  content: "";
+  transform: translateY(8px);
+  background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/arrow-mandarin.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 12px;
+  height: 10px;
+}
+@media screen and (max-width: 639px) {
+  .quiz__topList-item::before {
+    transform: translateY(4px);
+  }
+}
+
+.quiz__chips {
+  display: flex;
+  gap: 14px;
+  flex-wrap: nowrap;
+  margin-bottom: 34px;
+}
+@media screen and (max-width: 639px) {
+  .quiz__chips {
+    margin-bottom: 30px;
+  }
+}
+
+.quiz__chip {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 0.8;
+  color: #181818;
+  padding: 6px 14px 4px 14px;
+  background: #B5E916;
+  border-radius: 4px;
+}
+@media screen and (max-width: 639px) {
+  .quiz__chip {
+    font-size: 12px;
+  }
+}
+
+.quiz__button {
+  background: #043933;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  width: 200px;
+  height: 54px;
+  font-family: "heliosexBOLD-neuemachina";
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quiz__button:hover {
+  transition: 0.3s;
+  background: #b5e916;
+  color: #181818;
+}
+
+.quiz__wire {
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+}
+@media screen and (max-width: 959px) {
+  .quiz__wire {
+    left: unset;
+    right: 0px;
+    bottom: 80px;
+    transform: rotate(250deg);
+    width: 224px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .quiz__wire {
+    right: -20px;
+    bottom: 50px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .quiz__wire {
+    right: -90px;
+    bottom: 90px;
+    width: 190px;
+  }
+}
+
+.question {
+  width: 100%;
+  height: 730px;
+  background: #DDE6E7;
+  padding: 30px 32px;
+  border-radius: 6px;
+  height: 730px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1199px) {
+  .question {
+    height: 805px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .question {
+    gap: 30px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 639px) {
+  .question {
+    width: calc(100% + 20px);
+    margin: 0 -10px;
+    padding: 20px 10px 83px 10px;
+  }
+}
+
+.question__title {
+  font-family: "heliosexBOLD-neuemachina";
+  font-weight: 400;
+  font-size: 24px;
+  color: #181818;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 639px) {
+  .question__title {
+    font-size: 16px;
+  }
+}
+
+.question__answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 639px) {
+  .question__answers {
+    gap: 10px;
+  }
+}
+
+.question__answers_image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+@media screen and (max-width: 639px) {
+  .question__answers_image {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.question__prev-button {
+  background-color: transparent;
+  background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/quiz/back-btn.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  outline: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 28px;
+  left: 32px;
+}
+.question__prev-button:hover {
+  transition: 0.3s;
+  opacity: 0.7;
+}
+@media screen and (max-width: 639px) {
+  .question__prev-button {
+    width: 20px;
+    height: 18px;
+    left: 10px;
+    bottom: 30px;
+  }
+}
+
+.question__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8717fr;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 40px;
+  grid-template-areas: "logo percent" "title test";
+}
+@media screen and (max-width: 1199px) {
+  .grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media screen and (max-width: 959px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "title" "percent" "test";
+    gap: 0;
+  }
+}
+
+.grid__cell {
+  position: relative;
+}
+.grid__cell:nth-child(1) {
+  grid-area: logo;
+  display: flex;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 959px) {
+  .grid__cell:nth-child(1) {
+    margin-bottom: 80px;
+  }
+}
+.grid__cell:nth-child(2) {
+  grid-area: percent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 959px) {
+  .grid__cell:nth-child(2) {
+    margin-bottom: 10px;
+  }
+}
+.grid__cell:nth-child(3) {
+  grid-area: title;
+  padding-top: 30px;
+}
+@media screen and (max-width: 959px) {
+  .grid__cell:nth-child(3) {
+    padding-top: 0;
+    margin-bottom: 15px;
+  }
+}
+.grid__cell:nth-child(4) {
+  grid-area: test;
+  position: relative;
+}
+
+.answer {
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #cccccc;
+  padding: 16px 30px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .answer:hover {
+    transition: 0.3s;
+    background: #b5e916;
+  }
+  .answer:hover .answer__bullit {
+    transition: 0.3s;
+    border: 1px solid #ffffff;
+  }
+}
+@media screen and (max-width: 639px) {
+  .answer {
+    gap: 20px;
+    padding: 22px 22px 22px 15px;
+  }
+}
+
+.answer__bullit {
+  background: #ffffff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50px;
+  border: 1px solid #cccccc;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 639px) {
+  .answer__bullit {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.answer__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #181818;
+}
+@media screen and (max-width: 639px) {
+  .answer__text {
+    font-size: 14px;
+  }
+}
+
+.answer_image {
+  flex-direction: column;
+  padding: 0 0 10px 0;
+  gap: 10px;
+  width: 100%;
+}
+.answer_image img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 639px) {
+  .answer_image .answer__bullit {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.answer_active {
+  transition: 0.3s;
+  background: #b5e916;
+}
+
+.result__title {
+  font-family: "heliosexBOLD-neuemachina";
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 0.9;
+  color: #181818;
+  margin-top: 34px;
+  margin-bottom: -10px;
+}
+@media screen and (max-width: 639px) {
+  .result__title {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: -30px;
+  }
+}
+.result__title .result__profession {
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.bonuses {
+  margin-bottom: 74px;
+}
+@media screen and (max-width: 639px) {
+  .bonuses {
+    margin-bottom: 60px;
+  }
+}
+
+.bonuses__title {
+  font-family: "heliosexBOLD-neuemachina";
+  font-weight: 800;
+  font-size: 32px;
+  color: #000000;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__title {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+}
+
+.bonuses__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.bonuses__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 30px 20px;
+  background: #DDE6E7;
+  border-radius: 6px;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__card {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+}
+
+.bonuses__card-text {
+  font-family: "heliosexBOLD-neuemachina";
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  line-height: 1.1;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__card-text {
+    font-size: 16px;
+  }
+}
+
+.bonuses__card-arrow {
+  max-width: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 639px) {
+  .bonuses__card-arrow {
+    max-width: 17px;
+  }
+}

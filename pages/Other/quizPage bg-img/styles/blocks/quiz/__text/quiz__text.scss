@@ -1,0 +1,9 @@
+.quiz__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: $ver-tablet) {
+        gap: 15px;
+    }
+}

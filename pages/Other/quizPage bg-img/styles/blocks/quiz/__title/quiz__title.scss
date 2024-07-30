@@ -1,0 +1,17 @@
+.quiz__title {
+	font-family: "heliosexBOLD-neuemachina";
+	font-weight: 800;
+	font-size: 34px;
+	color: #181818;
+	line-height: 0.9;
+    max-width: 370px;
+
+	@media screen and (max-width: $ver-tablet) {
+		max-width: 100%;
+	}
+
+	@media screen and (max-width: $hor-mobile) {
+		font-size: 24px;
+		max-width: 260px;
+	}
+}

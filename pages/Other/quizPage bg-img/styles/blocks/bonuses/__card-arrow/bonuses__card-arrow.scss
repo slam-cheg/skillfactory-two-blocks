@@ -1,0 +1,8 @@
+.bonuses__card-arrow {
+    max-width: 24px;
+    object-fit: contain;
+
+    @media screen and (max-width: $hor-mobile) {
+        max-width: 17px;
+    }
+}
