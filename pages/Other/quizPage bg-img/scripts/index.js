@@ -110,9 +110,5 @@ function younger() {
 }
 
 function hideTest() {
-	for (let i = 1; i < gridCells.length; i++) {
-		gridCells[i].style.display = "none";
-	}
-	resultBlock.style.display = "block";
-	resultPercent.textContent = Math.floor(Math.random() * (98 - 92 + 1)) + 92;
+	location.href = "https://free.skillfactory.ru/free-it-thanks"
 }
