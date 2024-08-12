@@ -17,27 +17,21 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "CoFo Sans";
-  src: url("https://static.tildacdn.com/tild3965-3764-4731-a634-636639303036/CoFoSans-Regular.woff");
+  font-family: "NT Somic";
+  src: url("https://tools.skillfactory.ru/fonts/NTSomic-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "CoFo Sans";
-  src: url("https://static.tildacdn.com/tild3934-3534-4238-b733-363661636632/CoFoSans-Medium.woff");
+  font-family: "NT Somic";
+  src: url("https://tools.skillfactory.ru/fonts/NTSomic-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "CoFo Sans";
-  src: url("https://static.tildacdn.com/tild6631-6237-4138-b738-353333613266/CoFoSans-Bold.woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "CoFo Sans";
-  src: url("./CoFoSans-Black.woff");
-  font-weight: 900;
+  font-family: "NT Somic";
+  src: url("https://tools.skillfactory.ru/fonts/NTSomic-Bold.woff") format("woff");
+  font-weight: 800;
   font-style: normal;
 }
 #allrecords ul {
@@ -52,10 +46,6 @@
   margin: 0;
   font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
   box-sizing: border-box;
-}
-
-.outer-wrapper {
-  background: #b5e916;
 }
 
 .inner-wrapper {
@@ -116,34 +106,34 @@
   }
 }
 
-.courses-ny2024 {
+.bts-2024 {
   margin-bottom: 60px;
-  background: #004f00;
+  background: #5c5c5c;
   overflow: hidden;
 }
-.courses-ny2024__header {
+.bts-2024__header {
   display: flex;
   justify-content: space-between;
   height: 100px;
   align-items: center;
-  margin-bottom: 56px;
+  margin-bottom: 46px;
   z-index: 10;
 }
 @media screen and (max-width: 639px) {
-  .courses-ny2024__header {
+  .bts-2024__header {
     margin-bottom: 70px;
   }
 }
 @media screen and (max-width: 479px) {
-  .courses-ny2024__header {
+  .bts-2024__header {
     margin-bottom: 24px;
     height: 80px;
   }
 }
-.courses-ny2024__logo-wrapper img {
+.bts-2024__logo-wrapper img {
   max-width: 188px;
 }
-.courses-ny2024__nav {
+.bts-2024__nav {
   display: flex;
   list-style: none;
   padding-left: 0 !important;
@@ -151,11 +141,11 @@
   align-items: center;
 }
 @media screen and (max-width: 1199px) {
-  .courses-ny2024__nav {
+  .bts-2024__nav {
     display: none;
   }
 }
-.courses-ny2024__nav-item {
+.bts-2024__nav-item {
   text-decoration: none !important;
   text-transform: uppercase;
   color: #fff !important;
@@ -163,11 +153,11 @@
   font-weight: 400;
   transition: 0.2s;
 }
-.courses-ny2024__nav-item:hover {
+.bts-2024__nav-item:hover {
   transition: 0.2s;
   opacity: 0.7;
 }
-.courses-ny2024__burger {
+.bts-2024__burger {
   display: none;
   border: none;
   background: none;
@@ -175,208 +165,157 @@
   position: relative;
   color: transparent !important;
 }
-.courses-ny2024__burger .courses-ny2024__burger-line {
+.bts-2024__burger .bts-2024__burger-line {
   width: 17px;
   height: 2px;
   background: #fff;
   transition: 0.2s;
 }
 @media screen and (max-width: 1199px) {
-  .courses-ny2024__burger {
+  .bts-2024__burger {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
   }
 }
-.courses-ny2024__burger_clicked .main__burger-line:first-of-type {
+.bts-2024__burger_clicked .main__burger-line:first-of-type {
   transform: rotate(45deg) translate3d(5px, 5px, 0px);
   transition: 0.2s;
 }
-.courses-ny2024__burger_clicked .main__burger-line:nth-of-type(2) {
+.bts-2024__burger_clicked .main__burger-line:nth-of-type(2) {
   opacity: 0;
   transition: 0.2s;
 }
-.courses-ny2024__burger_clicked .main__burger-line:last-of-type {
+.bts-2024__burger_clicked .main__burger-line:last-of-type {
   transform: rotate(-45deg) translate3d(5px, -5px, 0px);
   transition: 0.2s;
 }
-.courses-ny2024__background {
+.bts-2024__background {
   padding: 0;
   border-radius: 8px;
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 @media screen and (max-width: 959px) {
-  .courses-ny2024__background {
+  .bts-2024__background {
     overflow: visible;
   }
 }
 @media screen and (max-width: 639px) {
-  .courses-ny2024__background {
+  .bts-2024__background {
     padding: 0;
   }
 }
-.courses-ny2024 .h2-title {
+.bts-2024 .h2-title {
   margin-bottom: 30px;
   max-width: 700px;
-  font-size: 60px;
-  color: #fff;
+  font-size: 66px;
+  color: #b5e916;
   line-height: 90%;
   letter-spacing: -1.8px;
 }
 @media screen and (max-width: 959px) {
-  .courses-ny2024 .h2-title {
+  .bts-2024 .h2-title {
     font-size: 58px;
   }
 }
 @media screen and (max-width: 639px) {
-  .courses-ny2024 .h2-title {
+  .bts-2024 .h2-title {
     margin-bottom: 20px;
     max-width: unset;
     width: calc(100% + 20px);
-    font-size: 46px;
+    font-size: 39px;
     line-height: 90%;
   }
 }
-.courses-ny2024__description {
-  font-size: 22px;
-  max-width: 646px;
-  margin-bottom: 126px;
+@media screen and (max-width: 369px) {
+  .bts-2024 .h2-title {
+    font-size: 34px;
+  }
+}
+.bts-2024__description {
+  font-size: 24px;
+  max-width: 310px;
+  margin-bottom: 70px;
   color: #fff;
 }
+.bts-2024__description span {
+  background: #b5e916;
+  padding-inline: 4px;
+  color: #5c5c5c;
+  border-radius: 2px;
+}
 @media screen and (max-width: 639px) {
-  .courses-ny2024__description {
+  .bts-2024__description {
     font-size: 14px;
     margin-bottom: 40px;
   }
 }
-.courses-ny2024__button {
-  margin-bottom: 56px;
+.bts-2024__button {
+  margin-bottom: 50px;
   color: #000 !important;
   text-align: center;
   font-size: 16px;
   font-weight: 400;
   line-height: 135%;
   text-decoration: none;
-  background: #ffe040;
+  background: #ffffff;
   border-radius: 4px;
   padding: 17px 0px 16px 0px;
   transition: 0.3s;
   max-width: 326px;
   max-height: 54px;
 }
-.courses-ny2024__button:hover {
+.bts-2024__button:hover {
   background: #000;
   transition: 0.3s;
   color: #fff !important;
 }
 @media screen and (max-width: 959px) {
-  .courses-ny2024__button {
-    margin-bottom: 240px;
+  .bts-2024__button {
+    margin-bottom: 487px;
   }
 }
 @media screen and (max-width: 639px) {
-  .courses-ny2024__button {
+  .bts-2024__button {
     max-width: unset;
-    margin-bottom: 320px;
+    margin-bottom: 290px;
   }
 }
 @media screen and (max-width: 479px) {
-  .courses-ny2024__button {
+  .bts-2024__button {
     margin-bottom: 300px;
     padding: 16px 0;
   }
 }
-.courses-ny2024__image {
+.bts-2024__image {
   position: absolute;
   pointer-events: none;
-}
-.courses-ny2024__image_one {
-  bottom: 0px;
-  right: 90px;
+  bottom: -4px;
+  right: 0;
   z-index: 2;
-  width: 330px;
 }
 @media screen and (max-width: 1199px) {
-  .courses-ny2024__image_one {
-    right: 20px;
-    width: 290px;
+  .bts-2024__image {
+    right: -130px;
+    width: 420px;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 959px) {
-  .courses-ny2024__image_one {
-    right: 0px;
+  .bts-2024__image {
+    right: unset;
   }
 }
 @media screen and (max-width: 639px) {
-  .courses-ny2024__image_one {
-    right: 140px;
-    width: 210px;
+  .bts-2024__image {
+    width: 250px;
   }
 }
 @media screen and (max-width: 479px) {
-  .courses-ny2024__image_one {
-    right: 0px;
-    width: 200px;
-  }
-}
-.courses-ny2024__image_two {
-  bottom: 0;
-  right: -20px;
-}
-@media screen and (max-width: 1199px) {
-  .courses-ny2024__image_two {
-    bottom: 0;
-    right: -16px;
-    width: 450px;
-  }
-}
-@media screen and (max-width: 959px) {
-  .courses-ny2024__image_two {
-    bottom: 0;
-    right: -30px;
-    width: 450px;
-  }
-}
-@media screen and (max-width: 639px) {
-  .courses-ny2024__image_two {
-    right: 40px;
-    width: 400px;
-  }
-}
-@media screen and (max-width: 479px) {
-  .courses-ny2024__image_two {
-    right: -50px;
-    bottom: -20px;
-    width: 380px;
-  }
-}
-.courses-ny2024__image_three {
-  z-index: 1;
-  mix-blend-mode: overlay;
-  right: 44px;
-  top: 142px;
-}
-@media screen and (max-width: 1199px) {
-  .courses-ny2024__image_three {
-    right: 24px;
-    top: unset;
-    bottom: 56px;
-    width: 100px;
-  }
-}
-@media screen and (max-width: 959px) {
-  .courses-ny2024__image_three {
-    right: 0;
-    bottom: 0;
-    width: 90px;
-  }
-}
-@media screen and (max-width: 479px) {
-  .courses-ny2024__image_three {
-    width: 104px;
+  .bts-2024__image {
+    width: 262px;
   }
 }
