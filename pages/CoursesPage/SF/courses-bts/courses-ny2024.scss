@@ -1,0 +1,331 @@
+@import "../../fonts/index.scss";
+
+#allrecords {
+	ul {
+		padding-left: 0;
+	}
+	a {
+		color: inherit;
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+.outer-wrapper {
+	background: #b5e916;
+}
+
+.inner-wrapper {
+	width: 1160px;
+	margin: 0 auto;
+	position: relative;
+
+	@media screen and (max-width: 1199px) {
+		max-width: 940px;
+	}
+	@media screen and (max-width: 959px) {
+		max-width: 620px;
+	}
+	@media screen and (max-width: 639px) {
+		max-width: 460px;
+	}
+	@media screen and (max-width: 479px) {
+		max-width: 300px;
+	}
+}
+
+.h2-title {
+	color: #181818;
+	font-size: 64px;
+	line-height: 90%;
+	font-weight: 800;
+	max-width: 770px;
+	margin-bottom: 27px;
+
+	@media screen and (max-width: 1199px) {
+		font-size: 55px;
+	}
+
+	@media screen and (max-width: 959px) {
+		font-size: 50px;
+	}
+
+	@media screen and (max-width: 639px) {
+		font-size: 40px;
+		line-height: 36px;
+	}
+
+	@media screen and (max-width: 479px) {
+		font-size: 30px;
+		line-height: 28px;
+		margin-bottom: 24px;
+	}
+}
+
+.courses-ny2024 {
+	margin-bottom: 60px;
+	background: #004f00;
+	overflow: hidden;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		height: 100px;
+		align-items: center;
+		margin-bottom: 56px;
+		z-index: 10;
+
+		@media screen and (max-width: 639px) {
+			margin-bottom: 70px;
+		}
+
+		@media screen and (max-width: 479px) {
+			margin-bottom: 24px;
+			height: 80px;
+		}
+	}
+
+	&__logo-wrapper {
+		img {
+			max-width: 188px;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		list-style: none;
+		padding-left: 0 !important;
+		gap: 30px;
+		align-items: center;
+
+		@media screen and (max-width: 1199px) {
+			display: none;
+		}
+	}
+
+	&__nav-item {
+		text-decoration: none !important;
+		text-transform: uppercase;
+		color: #fff !important;
+		font-size: 14px;
+		font-weight: 400;
+		transition: 0.2s;
+
+		&:hover {
+			transition: 0.2s;
+			opacity: 0.7;
+		}
+	}
+
+	&__burger {
+		display: none;
+		border: none;
+		background: none;
+		outline: none;
+		position: relative;
+		color: transparent !important;
+
+		.courses-ny2024__burger-line {
+			width: 17px;
+			height: 2px;
+			background: #fff;
+			transition: 0.2s;
+		}
+
+		@media screen and (max-width: 1199px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 5px;
+		}
+
+		&_clicked {
+			.main__burger-line:first-of-type {
+				transform: rotate(45deg) translate3d(5px, 5px, 0px);
+				transition: 0.2s;
+			}
+			.main__burger-line:nth-of-type(2) {
+				opacity: 0;
+				transition: 0.2s;
+			}
+			.main__burger-line:last-of-type {
+				transform: rotate(-45deg) translate3d(5px, -5px, 0px);
+				transition: 0.2s;
+			}
+		}
+	}
+
+	&__background {
+		padding: 0;
+		border-radius: 8px;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (max-width: 959px) {
+			overflow: visible;
+		}
+
+		@media screen and (max-width: 639px) {
+			padding: 0;
+		}
+	}
+
+	.h2-title {
+		margin-bottom: 30px;
+		max-width: 700px;
+		font-size: 60px;
+		color: #fff;
+		line-height: 90%;
+		letter-spacing: -1.8px;
+
+		@media screen and (max-width: 959px) {
+			font-size: 58px;
+		}
+
+		@media screen and (max-width: 639px) {
+			margin-bottom: 20px;
+			max-width: unset;
+			width: calc(100% + 20px);
+			font-size: 46px;
+			line-height: 90%;
+		}
+	}
+
+	&__description {
+		font-size: 22px;
+		max-width: 646px;
+		margin-bottom: 126px;
+		color: #fff;
+
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__button {
+		margin-bottom: 56px;
+		color: #000 !important;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 135%;
+		text-decoration: none;
+		background: #ffe040;
+		border-radius: 4px;
+		padding: 17px 0px 16px 0px;
+		transition: 0.3s;
+		max-width: 326px;
+		max-height: 54px;
+
+		&:hover {
+			background: #000;
+			transition: 0.3s;
+			color: #fff !important;
+		}
+
+		@media screen and (max-width: 959px) {
+			margin-bottom: 240px;
+		}
+
+		@media screen and (max-width: 639px) {
+			max-width: unset;
+			margin-bottom: 320px;
+		}
+
+		@media screen and (max-width: 479px) {
+			margin-bottom: 300px;
+			padding: 16px 0;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		pointer-events: none;
+
+		&_one {
+			bottom: 0px;
+			right: 90px;
+			z-index: 2;
+			width: 330px;
+
+			@media screen and (max-width: 1199px) {
+				right: 20px;
+				width: 290px;
+			}
+
+			@media screen and (max-width: 959px) {
+				right: 0px;
+			}
+
+			@media screen and (max-width: 639px) {
+				right: 140px;
+				width: 210px;
+			}
+
+			@media screen and (max-width: 479px) {
+				right: 0px;
+				width: 200px;
+			}
+		}
+
+		&_two {
+			bottom: 0;
+			right: -20px;
+
+			@media screen and (max-width: 1199px) {
+				bottom: 0;
+				right: -16px;
+				width: 450px;
+			}
+
+			@media screen and (max-width: 959px) {
+				bottom: 0;
+				right: -30px;
+				width: 450px;
+			}
+
+			@media screen and (max-width: 639px) {
+				right: 40px;
+				width: 400px;
+			}
+
+			@media screen and (max-width: 479px) {
+				right: -50px;
+				bottom: -20px;
+				width: 380px;
+			}
+		}
+
+		&_three {
+			z-index: 1;
+			mix-blend-mode: overlay;
+			right: 44px;
+			top: 142px;
+
+			@media screen and (max-width: 1199px) {
+				right: 24px;
+				top: unset;
+				bottom: 56px;
+				width: 100px;
+			}
+
+			@media screen and (max-width: 959px) {
+				right: 0;
+				bottom: 0;
+				width: 90px;
+			}
+
+			@media screen and (max-width: 479px) {
+				width: 104px;
+			}
+		}
+	}
+}
