@@ -1,0 +1,127 @@
+.main_bts .main__nav-item {
+  color: #fff !important;
+}
+.main_bts .title {
+  color: #b5e916;
+  font-size: 70px;
+  line-height: 0.9;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 959px) {
+  .main_bts .title {
+    font-size: 62px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_bts .title {
+    font-size: 46px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_bts .title {
+    font-size: 33px;
+  }
+}
+.main_bts .h2-title {
+  color: #b5e916;
+}
+.main_bts .columns {
+  grid-template-columns: 1.7fr 1fr;
+}
+@media screen and (max-width: 959px) {
+  .main_bts .columns {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_bts .columns {
+    padding-bottom: 46px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .main_bts .list {
+    margin-bottom: 500px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_bts .list {
+    margin-bottom: 304px;
+  }
+}
+.main_bts .list-item {
+  color: #ffffff;
+  margin-bottom: 92px;
+}
+.main_bts .list-item span {
+  color: #5c5c5c;
+  background: #b5e916;
+  border-radius: 2px;
+  padding-inline: 4px;
+}
+.main_bts .directions__list-link_green {
+  background: #b5e916;
+  color: inherit !important;
+}
+.main_bts .directions__list-link_green:hover {
+  background: #000;
+  color: #fff !important;
+}
+.main_bts .directions__title {
+  color: #ffffff !important;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 479px) {
+  .main_bts .directions__title {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 959px) {
+  .main_bts .main__pic {
+    top: -760px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_bts .main__pic {
+    left: -25px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_bts .main__pic {
+    left: 0;
+    top: -520px;
+  }
+}
+.main_bts .main__pic img {
+  max-width: unset !important;
+  height: auto !important;
+  position: absolute !important;
+  right: -160px !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  width: 610px;
+}
+@media screen and (max-width: 1199px) {
+  .main_bts .main__pic img {
+    right: -330px !important;
+  }
+}
+@media screen and (max-width: 959px) {
+  .main_bts .main__pic img {
+    width: 590px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_bts .main__pic img {
+    right: unset !important;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_bts .main__pic img {
+    width: 370px !important;
+  }
+}
+.main_bts .main__bottom-border {
+  background-image: url(./images/grey-bottom.svg);
+}

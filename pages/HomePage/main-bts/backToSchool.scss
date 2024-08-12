@@ -1,0 +1,108 @@
+.main_bts {
+	.main__nav-item {
+		color: #fff !important;
+	}
+	.title {
+		color: #b5e916;
+		font-size: 70px;
+		line-height: 0.9;
+		margin-bottom: 50px;
+
+		@media screen and (max-width: 959px) {
+			font-size: 62px;
+		}
+		@media screen and (max-width: 639px) {
+			font-size: 46px;
+			margin-bottom: 32px;
+		}
+		@media screen and (max-width: 479px) {
+			font-size: 33px;
+		}
+	}
+	.h2-title {
+		color: #b5e916;
+	}
+	.columns {
+		grid-template-columns: 1.7fr 1fr;
+		@media screen and (max-width: 959px) {
+			grid-template-columns: 1fr;
+		}
+		@media screen and (max-width: 479px) {
+			padding-bottom: 46px;
+		}
+	}
+	.list {
+		@media screen and (max-width: 959px) {
+			margin-bottom: 500px;
+		}
+		@media screen and (max-width: 479px) {
+			margin-bottom: 304px;
+		}
+	}
+	.list-item {
+		color: #ffffff;
+		margin-bottom: 92px;
+		span {
+			color: #5c5c5c;
+			background: #b5e916;
+			border-radius: 2px;
+			padding-inline: 4px;
+		}
+	}
+	.directions__list-link_green {
+		background: #b5e916;
+		color: inherit !important;
+
+		&:hover {
+			background: #000;
+			color: #fff !important;
+		}
+	}
+	.directions__title {
+		color: #ffffff !important;
+		font-size: 20px;
+		margin-bottom: 20px;
+		@media screen and (max-width: 479px) {
+			font-size: 14px !important;
+		}
+	}
+	.main__pic {
+		@media screen and (max-width: 959px) {
+			top: -760px;
+		}
+		@media screen and (max-width: 639px) {
+			left: -25px;
+		}
+		@media screen and (max-width: 479px) {
+			left: 0;
+			top: -520px;
+		}
+
+		img {
+			max-width: unset !important;
+			height: auto !important;
+			position: absolute !important;
+			right: -160px !important;
+			object-fit: contain !important;
+			width: 610px;
+
+			@media screen and (max-width: 1199px) {
+				right: -330px !important;
+			}
+
+			@media screen and (max-width: 959px) {
+				width: 590px;
+			}
+
+			@media screen and (max-width: 639px) {
+				right: unset !important;
+			}
+			@media screen and (max-width: 479px) {
+				width: 370px !important;
+			}
+		}
+	}
+	.main__bottom-border {
+		background-image: url(./images/grey-bottom.svg);
+	}
+}
