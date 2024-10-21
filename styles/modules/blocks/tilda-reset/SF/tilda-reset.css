@@ -1,0 +1,12 @@
+#allrecords ul {
+  padding-left: 0;
+}
+#allrecords a {
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}/*# sourceMappingURL=tilda-reset.css.map */

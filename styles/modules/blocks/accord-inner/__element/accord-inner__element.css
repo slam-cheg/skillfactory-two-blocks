@@ -1,0 +1,8 @@
+.accord-inner__element {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #a2c1c4;
+}
+.accord-inner__element:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}/*# sourceMappingURL=accord-inner__element.css.map */

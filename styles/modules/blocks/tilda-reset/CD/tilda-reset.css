@@ -1,0 +1,13 @@
+#allrecords ul {
+  padding-left: 0;
+}
+#allrecords a {
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "CoFo Sans", Arial, sans-serif;
+  box-sizing: border-box;
+}/*# sourceMappingURL=tilda-reset.css.map */

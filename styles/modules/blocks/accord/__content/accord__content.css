@@ -1,0 +1,6 @@
+@media screen and (max-width: 639px) {
+  .accord__content {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=accord__content.css.map */

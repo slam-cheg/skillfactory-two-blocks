@@ -1,0 +1,31 @@
+.accord-opened .accord-outer__body,
+.accord-opened .accord-inner__body {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  max-height: initial;
+  transition: 0.2s;
+}
+.accord-opened .accord-inner__element:first-of-type .accord-header_inner {
+  padding-top: 60px;
+}
+.accord-opened .accord-inner__element .accord-header_inner {
+  padding-top: 20px;
+}
+@media screen and (max-width: 639px) {
+  .accord-opened .accord-inner__element .accord-header_inner {
+    padding-top: 20px;
+  }
+}
+.accord-opened .accord-inner__body {
+  padding-top: 23px;
+}
+@media screen and (max-width: 639px) {
+  .accord-opened .accord-inner__body {
+    padding-top: 20px;
+  }
+}
+.accord-opened .accord-inner svg {
+  transform: rotate(45deg);
+  transition: 0.2s;
+}/*# sourceMappingURL=accord-opened.css.map */

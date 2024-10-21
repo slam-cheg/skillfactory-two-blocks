@@ -1,0 +1,120 @@
+.faq {
+  background: #f4f4f4;
+  padding: 90px 0 60px 0;
+  position: relative;
+}
+@media screen and (max-width: 639px) {
+  .faq {
+    padding: 60px 0;
+  }
+}
+.faq .h2-title {
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 639px) {
+  .faq .h2-title {
+    margin-bottom: 60px;
+  }
+}
+.faq .accordeon {
+  list-style: none;
+}
+.faq .accordeon__item {
+  padding: 10px 0;
+  border-top: 1px solid #939393;
+}
+.faq .accordeon__item:last-of-type {
+  border-bottom: 1px solid #939393;
+}
+@media screen and (min-width: 640px) {
+  .faq .accordeon__item_opened .h5-title {
+    transform: translateY(-8px) !important;
+    transition: transform 0.5s !important;
+  }
+}
+.faq .accordeon__item_opened .accordeon__body {
+  pointer-events: auto;
+  transition: max-height 0.5s;
+}
+.faq .accordeon__item_opened .accordeon__close-button {
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+@media screen and (min-width: 1200px) {
+  .faq .accordeon__item_opened .accordeon__close-button:hover {
+    transform: rotate(50deg);
+    transition: 0.3s;
+  }
+}
+.faq .accordeon__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 639px) {
+  .faq .accordeon__header {
+    align-items: center;
+  }
+}
+.faq .accordeon__body {
+  transition: max-height 0.5s;
+  pointer-events: none;
+  overflow: hidden;
+}
+.faq .accordeon .h5-title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 0.9;
+  text-transform: lowercase;
+  transform: translateY(0);
+  transition: transform 0.3s;
+}
+@media screen and (max-width: 639px) {
+  .faq .accordeon .h5-title {
+    font-size: 16px;
+    margin-bottom: 0;
+    max-width: calc(100% - 30px);
+  }
+}
+.faq .accordeon__close-button {
+  background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/CD/spreadPages/interrior-designer/cross.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: 100%;
+  border: none;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+@media screen and (min-width: 1200px) {
+  .faq .accordeon__close-button:hover {
+    transform: rotate(5deg);
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 639px) {
+  .faq .accordeon__close-button {
+    width: 28px;
+    height: 28px;
+  }
+}
+.faq .accordeon__list {
+  list-style: none;
+}
+.faq .accordeon__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #939393;
+  text-transform: lowercase;
+}
+@media screen and (max-width: 639px) {
+  .faq .accordeon__text:first-child {
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=faq.css.map */

@@ -1,0 +1,20 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  list-style: none;
+  pointer-events: auto;
+  overflow: hidden;
+  transition: 1s;
+}
+@media screen and (max-width: 1199px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 959px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=cards.css.map */

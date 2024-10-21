@@ -1,0 +1,25 @@
+.accord-outer {
+  border-radius: 8px;
+  background: #dde6e7;
+  padding: 30px 0;
+  transition: 0.5s;
+  max-height: initial;
+  margin-bottom: 10px;
+}
+.accord-outer:last-of-type {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 639px) {
+  .accord-outer:last-of-type {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .accord-outer {
+    padding: 20px 0;
+  }
+}
+.accord-outer .accord-button {
+  background: #043933;
+  border-radius: 4px;
+}/*# sourceMappingURL=accord-outer.css.map */

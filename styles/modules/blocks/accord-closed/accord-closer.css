@@ -1,0 +1,13 @@
+.accord-closed .accord-outer__body,
+.accord-closed .accord-inner__body {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
+  transition: 0s;
+  padding-top: 0;
+}
+.accord-closed .accord-button svg {
+  transform: rotate(180deg);
+  transition: 0.2s;
+}/*# sourceMappingURL=accord-closer.css.map */

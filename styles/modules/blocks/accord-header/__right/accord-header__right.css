@@ -1,0 +1,22 @@
+.accord-header__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 959px) {
+  .accord-header__right {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .accord-header__right {
+    align-items: flex-start;
+  }
+  .accord-header__right button {
+    width: 35px;
+    height: 35px;
+  }
+}/*# sourceMappingURL=accord-header__right.css.map */

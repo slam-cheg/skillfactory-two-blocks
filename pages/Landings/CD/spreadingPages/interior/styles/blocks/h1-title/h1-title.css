@@ -1,0 +1,11 @@
+.h1-title {
+  color: #fff;
+  font-size: 60px;
+  line-height: 0.9;
+  font-weight: 400;
+}
+@media screen and (max-width: 639px) {
+  .h1-title {
+    font-size: 40px;
+  }
+}/*# sourceMappingURL=h1-title.css.map */
