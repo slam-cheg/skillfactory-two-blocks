@@ -1,0 +1,314 @@
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/heliosext.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/HeliosExtC-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "heliosexBOLD-neuemachina";
+  src: url("https://tools.skillfactory.ru/PPNeueMachina-InktrapRegular.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("https://tools.skillfactory.ru/fonts/NTSomic-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("https://tools.skillfactory.ru/fonts/NTSomic-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NT Somic";
+  src: url("https://tools.skillfactory.ru/fonts/NTSomic-Bold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+#allrecords ul {
+  padding-left: 0;
+}
+#allrecords a {
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "heliosexBOLD-neuemachina", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.outer-wrapper {
+  background: #b5e916;
+}
+
+.inner-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .inner-wrapper {
+    max-width: 940px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .inner-wrapper {
+    max-width: 620px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .inner-wrapper {
+    max-width: 460px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .inner-wrapper {
+    max-width: 300px;
+  }
+}
+
+.h2-title {
+  color: #181818;
+  font-size: 70px;
+  line-height: 0.85;
+  font-weight: 800;
+  max-width: 770px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1199px) {
+  .h2-title {
+    font-size: 55px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .h2-title {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .h2-title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .h2-title {
+    margin-bottom: 24px;
+  }
+}
+.h2-title span {
+  color: #ff6945;
+}
+
+.courses-bf {
+  margin-bottom: 60px;
+  background: #e3e7e8;
+  overflow: hidden;
+}
+.courses-bf__header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  margin-bottom: 56px;
+  z-index: 10;
+}
+@media screen and (max-width: 479px) {
+  .courses-bf__header {
+    margin-bottom: 24px;
+    height: 80px;
+  }
+}
+.courses-bf__logo-wrapper img {
+  max-width: 188px;
+}
+.courses-bf__nav {
+  display: flex;
+  list-style: none;
+  padding-left: 0 !important;
+  gap: 30px;
+  align-items: center;
+}
+@media screen and (max-width: 1199px) {
+  .courses-bf__nav {
+    display: none;
+  }
+}
+.courses-bf__nav-item {
+  text-decoration: none !important;
+  text-transform: uppercase;
+  color: #181818 !important;
+  font-size: 14px;
+  font-weight: 400;
+  transition: 0.2s;
+}
+.courses-bf__nav-item:hover {
+  transition: 0.2s;
+  opacity: 0.7;
+}
+.courses-bf__burger {
+  display: none;
+  border: none;
+  background: none;
+  outline: none;
+  position: relative;
+  color: transparent !important;
+}
+.courses-bf__burger .courses-bf__burger-line {
+  width: 17px;
+  height: 2px;
+  background: #181818;
+  transition: 0.2s;
+}
+@media screen and (max-width: 1199px) {
+  .courses-bf__burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+.courses-bf__burger_clicked .main__burger-line:first-of-type {
+  transform: rotate(45deg) translate3d(5px, 5px, 0px);
+  transition: 0.2s;
+}
+.courses-bf__burger_clicked .main__burger-line:nth-of-type(2) {
+  opacity: 0;
+  transition: 0.2s;
+}
+.courses-bf__burger_clicked .main__burger-line:last-of-type {
+  transform: rotate(-45deg) translate3d(5px, -5px, 0px);
+  transition: 0.2s;
+}
+.courses-bf__background {
+  padding: 0;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 959px) {
+  .courses-bf__background {
+    overflow: visible;
+  }
+}
+@media screen and (max-width: 639px) {
+  .courses-bf__background {
+    padding: 0;
+  }
+}
+.courses-bf .h2-title {
+  margin-bottom: 30px;
+  max-width: 700px;
+  font-size: 60px;
+}
+@media screen and (max-width: 959px) {
+  .courses-bf .h2-title {
+    font-size: 56px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .courses-bf .h2-title {
+    margin-bottom: 20px;
+    max-width: unset;
+    width: calc(100% + 20px);
+    font-size: 40px;
+    line-height: 90%;
+  }
+}
+.courses-bf__description {
+  font-size: 25px;
+  line-height: 1.2;
+  max-width: 560px;
+  margin-bottom: 48px;
+}
+@media screen and (max-width: 639px) {
+  .courses-bf__description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+.courses-bf__button {
+  margin-bottom: 56px;
+  color: #000 !important;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 135%;
+  text-decoration: none;
+  background: #B5E916;
+  border-radius: 4px;
+  padding: 17px 0px 16px 0px;
+  transition: 0.3s;
+  max-width: 326px;
+  max-height: 54px;
+}
+.courses-bf__button:hover {
+  background: #043933;
+  transition: 0.3s;
+  color: #fff !important;
+}
+@media screen and (max-width: 959px) {
+  .courses-bf__button {
+    margin-bottom: 410px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .courses-bf__button {
+    max-width: unset;
+    margin-bottom: 300px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .courses-bf__button {
+    margin-bottom: 300px;
+    padding: 16px 0;
+  }
+}
+.courses-bf__image {
+  position: absolute;
+  pointer-events: none;
+}
+.courses-bf__image_one {
+  bottom: 0px;
+  right: -14px;
+  z-index: 2;
+}
+@media screen and (max-width: 1199px) {
+  .courses-bf__image_one {
+    bottom: 0;
+    right: -10px;
+    width: 360px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .courses-bf__image_one {
+    bottom: 0;
+    right: 260px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .courses-bf__image_one {
+    bottom: 0;
+    right: 190px;
+    width: 270px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .courses-bf__image_one {
+    bottom: 0;
+    right: 20px;
+    width: 266px;
+  }
+}/*# sourceMappingURL=bf-courses.css.map */
