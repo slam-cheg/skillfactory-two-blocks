@@ -279,6 +279,7 @@
 .courses-bf__image {
   position: absolute;
   pointer-events: none;
+  height: auto !important;
 }
 .courses-bf__image_one {
   bottom: 0px;

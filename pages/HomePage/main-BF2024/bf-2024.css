@@ -39,80 +39,72 @@
     flex-direction: column;
   }
 }
-.main .main__pic {
-  position: absolute;
-  left: 630px;
-  top: -90px;
+.main .main__img {
+  position: absolute !important;
   width: 100%;
-  height: auto;
-  display: block;
-  pointer-events: none;
+  max-width: unset !important;
+  height: 100% !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  top: 10px;
+  left: 534px;
 }
 @media screen and (max-width: 1199px) {
-  .main .main__pic {
-    left: 520px;
-    top: -20px;
+  .main .main__img {
+    top: -30px;
+    left: 534px;
   }
 }
 @media screen and (max-width: 959px) {
-  .main .main__pic {
-    left: -57px;
-    top: 340px;
+  .main .main__img {
+    top: -30px;
+    left: -36px;
   }
-}
-@media screen and (max-width: 639px) {
-  .main .main__pic {
-    top: 288px;
-    left: -16px;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 479px) {
-  .main .main__pic {
-    top: 228px;
-    width: 130%;
-  }
-}
-.main .main__img {
-  position: absolute !important;
-  width: 97%;
-  max-width: unset !important;
-  height: auto !important;
 }
 @media screen and (max-width: 639px) {
   .main .main__img {
-    width: 120%;
+    top: -20px;
+    left: -36px;
   }
 }
 @media screen and (max-width: 479px) {
   .main .main__img {
-    width: 140% !important;
-    left: 60px !important;
+    top: 40px;
+    left: 14px;
+    width: 140%;
   }
 }
 .main .main__sticker {
-  top: 254px;
-  left: 146px;
-  width: 50%;
-  object-fit: contain;
+  position: absolute;
+  top: 222px;
+  left: 764px;
+  width: 40%;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+@media screen and (max-width: 1199px) {
+  .main .main__sticker {
+    top: 302px;
+    left: 644px;
+  }
 }
 @media screen and (max-width: 959px) {
   .main .main__sticker {
-    top: 194px;
-    left: 46px;
+    top: 494px;
+    left: -4px !important;
     width: 50%;
   }
 }
 @media screen and (max-width: 639px) {
   .main .main__sticker {
-    top: 134px;
+    top: 384px;
     left: 32px;
     width: 60%;
   }
 }
 @media screen and (max-width: 479px) {
   .main .main__sticker {
-    top: 122px;
+    top: 392px;
     left: 123px;
     width: 80%;
   }
@@ -127,7 +119,7 @@
 }
 @media screen and (max-width: 639px) {
   .main .list {
-    margin-bottom: 430px;
+    margin-bottom: 380px;
   }
 }
 @media screen and (max-width: 479px) {
@@ -168,4 +160,7 @@
 }
 .main .directions__list-link_green:hover {
   background: #b5e916 !important;
+}
+.main__bottom-border {
+  background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/bf-2024/bottom-border.svg) !important;
 }/*# sourceMappingURL=bf-2024.css.map */

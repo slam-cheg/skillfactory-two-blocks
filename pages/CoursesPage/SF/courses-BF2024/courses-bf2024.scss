@@ -220,7 +220,7 @@
     max-height: 54px;
 
     &:hover {
-      background: #043933;
+      background: #181818;
       transition: 0.3s;
       color: #fff !important;
     }
@@ -243,6 +243,7 @@
   &__image {
     position: absolute;
     pointer-events: none;
+    height: auto !important;
 
     &_one {
 		bottom: 0px;
