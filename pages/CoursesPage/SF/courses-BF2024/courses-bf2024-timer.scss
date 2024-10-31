@@ -1,0 +1,50 @@
+.courses-bf {
+  &__timer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 70px;
+    align-items: center;
+
+    @media screen and (max-width: 639px) {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 36px;
+    }
+
+    &-title {
+      max-width: 90px;
+      font-size: 16px;
+      color: #181818;
+      opacity: 0.7;
+
+      @media screen and (max-width: 639px) {
+        max-width: unset;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      align-items: center;
+    }
+
+    &-values {
+      font-size: 24px;
+      font-weight: 900;
+      color: #181818;
+    }
+
+    &-names {
+      display: flex;
+      gap: 18px;
+    }
+
+    &-name {
+      font-size: 10px;
+      font-weight: 900;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.courses-bf__timer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 70px;
+  align-items: center;
+}
+@media screen and (max-width: 639px) {
+  .courses-bf__timer {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 36px;
+  }
+}
+.courses-bf__timer-title {
+  max-width: 90px;
+  font-size: 16px;
+  color: #181818;
+  opacity: 0.7;
+}
+@media screen and (max-width: 639px) {
+  .courses-bf__timer-title {
+    max-width: unset;
+  }
+}
+.courses-bf__timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  align-items: center;
+}
+.courses-bf__timer-values {
+  font-size: 24px;
+  font-weight: 900;
+  color: #181818;
+}
+.courses-bf__timer-names {
+  display: flex;
+  gap: 18px;
+}
+.courses-bf__timer-name {
+  font-size: 10px;
+  font-weight: 900;
+}/*# sourceMappingURL=courses-bf2024-timer.css.map */
