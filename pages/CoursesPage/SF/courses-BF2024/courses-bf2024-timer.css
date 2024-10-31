@@ -3,6 +3,7 @@
   gap: 10px;
   margin-bottom: 70px;
   align-items: center;
+  min-width: 230px;
 }
 @media screen and (max-width: 639px) {
   .courses-bf__timer {
