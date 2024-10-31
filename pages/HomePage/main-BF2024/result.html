@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Friday</title>
+    <link rel="stylesheet" href="https://tools.skillfactory.ru/css/index.css" />
+    <style>
+      .outer-wrapper {
+        background: #e3e7e8 !important;
+      }
+
+      .main {
+        position: relative;
+      }
+      .main .title {
+        font-size: 70px;
+        line-height: 0.85;
+        margin-bottom: 40px;
+      }
+      @media screen and (max-width: 959px) {
+        .main .title {
+          font-size: 56px;
+        }
+      }
+      @media screen and (max-width: 639px) {
+        .main .title {
+          font-size: 40px;
+          margin-bottom: 20px;
+        }
+      }
+      .main .title span {
+        color: #ff6945;
+      }
+      .main .columns {
+        grid-template-columns: 1fr;
+        padding-bottom: 126px;
+      }
+      @media screen and (max-width: 639px) {
+        .main .columns {
+          padding-bottom: 36px;
+        }
+      }
+      @media screen and (max-width: 959px) {
+        .main .column {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .main .main__img {
+        position: absolute !important;
+        width: 100%;
+        max-width: unset !important;
+        height: 100% !important;
+        -o-object-fit: contain !important;
+        object-fit: contain !important;
+        top: 10px;
+        left: 534px;
+      }
+      @media screen and (max-width: 1199px) {
+        .main .main__img {
+          top: -30px;
+          left: 534px;
+        }
+      }
+      @media screen and (max-width: 959px) {
+        .main .main__img {
+          top: -30px;
+          left: -36px;
+        }
+      }
+      @media screen and (max-width: 639px) {
+        .main .main__img {
+          top: -20px;
+          left: -36px;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .main .main__img {
+          top: 40px;
+          left: 14px;
+          width: 140%;
+        }
+      }
+      .main .main__sticker {
+        position: absolute;
+        top: 222px;
+        left: 764px;
+        width: 40%;
+        -o-object-fit: contain !important;
+        object-fit: contain !important;
+      }
+      @media screen and (max-width: 1199px) {
+        .main .main__sticker {
+          top: 302px;
+          left: 644px;
+        }
+      }
+      @media screen and (max-width: 959px) {
+        .main .main__sticker {
+          top: 494px;
+          left: -4px !important;
+          width: 50%;
+        }
+      }
+      @media screen and (max-width: 639px) {
+        .main .main__sticker {
+          top: 384px;
+          left: 32px;
+          width: 60%;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .main .main__sticker {
+          top: 392px;
+          left: 123px;
+          width: 80%;
+        }
+      }
+      .main .list {
+        max-width: 540px;
+      }
+      @media screen and (max-width: 959px) {
+        .main .list {
+          margin-bottom: 510px;
+        }
+      }
+      @media screen and (max-width: 639px) {
+        .main .list {
+          margin-bottom: 380px;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .main .list {
+          margin-bottom: 330px;
+        }
+      }
+      .main .list-item {
+        font-size: 25px;
+        line-height: 1.2;
+      }
+      @media screen and (max-width: 639px) {
+        .main .list-item {
+          font-size: 16px;
+        }
+      }
+      .main .directions {
+        max-width: 600px;
+      }
+      .main .directions__title {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 639px) {
+        .main .directions__title {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+      }
+      .main .directions__list-link {
+        color: #181818 !important;
+      }
+      .main .directions__list-link:hover {
+        background: #f4f4f4;
+      }
+      .main .directions__list-link_green {
+        background: #f4f4f4;
+        color: #181818 !important;
+      }
+      .main .directions__list-link_green:hover {
+        background: #b5e916 !important;
+      }
+      .main__bottom-border {
+        background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/images/bf-2024/bottom-border.svg) !important;
+      } /*# sourceMappingURL=bf-2024.css.map */
+    </style>
+  </head>
+  <body>
+    <section class="main main_bf">
+      <div class="outer-wrapper">
+        <div class="inner-wrapper">
+          <div class="main__header">
+            <div class="main__logo-wrapper">
+              <img src="https://static.tildacdn.com/tild3736-6663-4331-b065-623334663336/SkillFactory.svg" alt="SkillFactory - научитесь работать в IT" />
+            </div>
+            <ul class="main__nav">
+              <li><a href="#submenu:details" class="main__nav-item">онлайн-курсы</a></li>
+              <li><a href="/free-events" target="_blank" class="main__nav-item">БЕСПЛАТНО</a></li>
+              <li><a href="/career-center" target="_blank" class="main__nav-item">центр карьеры</a></li>
+              <li><a href="/contacts" target="_blank" class="main__nav-item">контакты</a></li>
+              <li><a href="https://blog.skillfactory.ru/" target="_blank" class="main__nav-item">Медиа</a></li>
+              <li><a href="https://new.skillfactory.ru/corporativnoye-obuchenye" target="_blank" class="main__nav-item">корпоративное обучение</a></li>
+            </ul>
+            <a href="#submenu:details" class="main__burger">
+              <span class="main__burger-line">&nbsp;</span>
+              <span class="main__burger-line">&nbsp;</span>
+              <span class="main__burger-line">&nbsp;</span>
+            </a>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <h1 class="title">Кто-то верит в&nbsp;знаки<br /><span>Мы верим в&nbsp;знания</span></h1>
+              <ul class="list">
+                <li class="list-item">Черная пятница в Skillfactory:</li>
+                <br />
+                <li class="list-item">скидка&nbsp;до&nbsp;60% и&nbsp;4&nbsp;курса по&nbsp;дизайну или&nbsp;IT в&nbsp;подарок</li>
+              </ul>
+              <div class="directions">
+                <p class="directions__title">Выберите направление</p>
+                <ul class="directions__list">
+                  <li>
+                    <a target="_blank" href="/courses/programmirovanie" class="directions__list-link">
+                      <span>Программирование</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#181818"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/courses/data-science" class="directions__list-link">
+                      <span>Data Science</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#181818"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/courses/analitika-dannyh" class="directions__list-link">
+                      <span>Аналитика данных</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#181818"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/courses/testirovanie" class="directions__list-link">
+                      <span>Тестирование</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#181818"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/vyssheye-obrazovaniye?_ga=2.141819569.2076350999.1690653443-215108554.1686124528" class="directions__list-link">
+                      <span>Высшее образование</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#181818"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/courses/design" class="directions__list-link">
+                      <span>Дизайн</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#181818"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/courses/management-i-upravlenie" class="directions__list-link">
+                      <span>Менеджмент</span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M22 20.938V-3.24914e-08L0.901643 -1.94998e-07L0.901643 2.74731L17.4099 2.74731L0 20.0425L1.97052 22L19.1916 4.89247V20.938L22 20.938Z" fill="#181818"></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a target="_blank" href="/courses" class="directions__list-link directions__list-link_green"><span>Все курсы</span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <img src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/bf-2024/img.webp" alt="skillfactory - IT курсы" class="main__img" loading="lazy" />
+              <img class="main__sticker main__sticker" src="https://storage.yandexcloud.net/sf-wallaper-bucket/images/bf-2024/icons.webp" alt="skillfactory - черная пятница" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main__bottom-border"></div>
+    </section>
+  </body>
+</html>
