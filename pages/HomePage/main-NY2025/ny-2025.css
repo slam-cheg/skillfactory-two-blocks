@@ -1,0 +1,261 @@
+.main_ny-2025 {
+  margin-bottom: 178px;
+}
+.main_ny-2025 .outer-wrapper {
+  background: #083800;
+  padding-bottom: 182px;
+}
+@media screen and (max-width: 959px) {
+  .main_ny-2025 .outer-wrapper {
+    padding-bottom: 64px;
+  }
+}
+.main_ny-2025 .main__header-wrapper {
+  position: relative;
+  z-index: 99;
+  background: #fff;
+  margin-bottom: 70px;
+}
+.main_ny-2025 .title {
+  color: #fff;
+  font-size: 70px;
+  line-height: 0.9;
+  font-weight: 800;
+  margin-bottom: 28px;
+  max-width: 736px;
+  z-index: 10;
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .main_ny-2025 .title {
+    max-width: 523px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 .title {
+    font-size: 40px;
+    max-width: 300px;
+  }
+}
+.main_ny-2025 .list {
+  margin-bottom: 70px;
+  z-index: 10;
+  position: relative;
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 .list {
+    margin-bottom: 374px;
+  }
+}
+.main_ny-2025 .list-item {
+  color: #fff;
+}
+.main_ny-2025 .list-item span {
+  background: #ff6945;
+  border-radius: 4px;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 .list-item {
+    font-size: 16px;
+    max-width: 260px;
+  }
+}
+.main_ny-2025 .directions {
+  max-width: 746px;
+  z-index: 10;
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .main_ny-2025 .directions {
+    max-width: 546px;
+  }
+}
+.main_ny-2025 .directions__title {
+  color: #fff;
+}
+.main_ny-2025 .directions__list-link_orange {
+  background: #ff6945;
+}
+.main_ny-2025 .directions__list-link_orange span {
+  color: #fff;
+}
+.main_ny-2025 .directions__list-link_orange:hover {
+  background: #b5e916;
+}
+.main_ny-2025 .directions__list-link_orange:hover span {
+  color: #181818;
+}
+.main_ny-2025 #keys {
+  right: calc(50% - 50vw - 51px);
+  bottom: -183px;
+  z-index: 7;
+}
+@media screen and (max-width: 1199px) {
+  .main_ny-2025 #keys {
+    max-height: 300px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .main_ny-2025 #keys {
+    display: none;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 #keys {
+    display: none;
+  }
+}
+.main_ny-2025 #wires {
+  top: -130px;
+  right: -40px;
+  z-index: 1;
+}
+@media screen and (max-width: 959px) {
+  .main_ny-2025 #wires {
+    right: -130px;
+    top: -120px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 #wires {
+    transform: rotate(22deg);
+    top: -320px;
+    right: -60px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_ny-2025 #wires {
+    transform: rotate(22deg);
+    top: -280px;
+    right: unset;
+    left: -200px;
+  }
+}
+.main_ny-2025 #snow {
+  top: -52px;
+  right: -74px;
+  z-index: 9;
+}
+@media screen and (max-width: 959px) {
+  .main_ny-2025 #snow {
+    top: 188px;
+    right: -84px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 #snow {
+    top: 198px;
+    right: -184px;
+  }
+}
+.main_ny-2025 #btn {
+  top: 400px;
+  right: 93px;
+  z-index: 3;
+}
+@media screen and (max-width: 959px) {
+  .main_ny-2025 #btn {
+    top: 400px;
+    right: -77px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 #btn {
+    top: 386px;
+    right: 133px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_ny-2025 #btn {
+    top: 428px;
+    right: 51px;
+    width: 60px;
+  }
+}
+.main_ny-2025 #snowman {
+  right: -60px;
+  bottom: -90px;
+  z-index: 5;
+}
+@media screen and (max-width: 959px) {
+  .main_ny-2025 #snowman {
+    right: 50px;
+    bottom: -80px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 #snowman {
+    right: unset;
+    left: 0;
+    width: 130px;
+    bottom: 320px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_ny-2025 #snowman {
+    width: 110px;
+    bottom: 300px;
+  }
+}
+.main_ny-2025 #face {
+  bottom: 110px;
+  right: 210px;
+  z-index: 6;
+}
+@media screen and (max-width: 959px) {
+  .main_ny-2025 #face {
+    display: none;
+  }
+}
+.main_ny-2025 #toy {
+  top: 110px;
+  right: -70px;
+  z-index: 4;
+}
+@media screen and (max-width: 959px) {
+  .main_ny-2025 #toy {
+    top: 210px;
+    right: -130px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 #toy {
+    right: 17px;
+    top: 260px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_ny-2025 #toy {
+    top: 300px;
+    right: 10px;
+    width: 90px;
+  }
+}
+.main_ny-2025 #toy2 {
+  top: 48px;
+  right: 17px;
+  z-index: 2;
+}
+@media screen and (max-width: 959px) {
+  .main_ny-2025 #toy2 {
+    right: -113px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .main_ny-2025 #toy2 {
+    right: -13px;
+    top: 170px;
+    width: 90px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .main_ny-2025 #toy2 {
+    right: -13px;
+    top: 200px;
+  }
+}
+.main_ny-2025 .main__img {
+  position: absolute;
+}/*# sourceMappingURL=ny-2025.css.map */

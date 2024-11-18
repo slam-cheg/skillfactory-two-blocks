@@ -1,0 +1,63 @@
+@import "../../../../styles/modules/variables.scss";
+
+.courses-ny2025 {
+  &__timer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+    align-items: center;
+    min-width: 230px;
+
+    @media screen and (max-width: 639px) {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+
+    &-title {
+      max-width: 90px;
+      font-size: 16px;
+      color: #fff;
+      opacity: 0.7;
+
+      @media screen and (max-width: 639px) {
+        max-width: unset;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      align-items: center;
+    }
+
+    &-values {
+      font-size: 24px;
+      font-weight: 900;
+      color: #181818;
+    }
+
+    &-names {
+      display: flex;
+      gap: 18px;
+    }
+
+    &-name {
+      font-size: 10px;
+      font-weight: 900;
+    }
+  }
+
+  #wires {
+    @media screen and (min-width: calc($hor-mobile + 1px)) and (max-width: $ver-tablet) {
+      width: 520px;
+    }
+
+    @media screen and (min-width: calc($ver-mobile + 1px)) and (max-width: $hor-mobile) {
+      width: auto;
+    }
+  }
+}

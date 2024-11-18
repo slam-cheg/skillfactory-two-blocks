@@ -1,0 +1,296 @@
+@import "../../../../styles/modules/variables.scss";
+
+.courses-ny2025 {
+  margin-bottom: 178px;
+
+  .outer-wrapper {
+    background: #083800;
+    padding-bottom: 60px;
+
+    @media screen and (max-width: $ver-tablet) {
+      padding-bottom: 64px;
+    }
+  }
+  .main__header {
+    &-wrapper {
+      position: relative;
+      z-index: 99;
+      background: #fff;
+      margin-bottom: 70px;
+    }
+  }
+  .title {
+    color: #fff;
+    font-size: 60px;
+    line-height: 0.9;
+    font-weight: 800;
+    margin-bottom: 30px;
+    max-width: 656px;
+    z-index: 10;
+    position: relative;
+
+    @media screen and (max-width: $hor-tablet) {
+      max-width: 450px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      font-size: 40px;
+      max-width: 300px;
+    }
+  }
+
+  .list-item {
+    color: #fff;
+    margin-bottom: 120px;
+
+    span {
+      background: #ff6945;
+      border-radius: 4px;
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+
+    @media screen and (max-width: $ver-tablet) {
+      max-width: 340px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      font-size: 16px;
+      max-width: 260px;
+      margin-bottom: 374px;
+    }
+  }
+  .directions {
+    max-width: 746px;
+    z-index: 10;
+    position: relative;
+
+    @media screen and (max-width: $hor-tablet) {
+      max-width: 546px;
+    }
+
+    &__title {
+      color: #fff;
+    }
+
+    &__list-link_orange {
+      background: #ff6945;
+
+      span {
+        color: #fff;
+      }
+
+      &:hover {
+        background: #b5e916;
+
+        span {
+          color: #181818;
+        }
+      }
+    }
+  }
+
+  #keys {
+    right: calc(50% - 50vw - 4px);
+    bottom: -64px;
+    width: 750px;
+    z-index: 7;
+
+    @media screen and (max-width: $hor-tablet) {
+      max-height: 300px;
+    }
+
+    @media screen and (max-width: $ver-tablet) {
+      display: none;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      display: none;
+    }
+  }
+
+  #wires {
+    top: -164px;
+    right: 68px;
+    z-index: 1;
+    transform: rotate(7deg);
+
+    @media screen and (max-width: $ver-tablet) {
+      right: -150px;
+      top: -240px;
+      width: 480px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      transform: rotate(40deg);
+      top: -270px;
+      right: 60px;
+      width: auto;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      transform: rotate(32deg);
+      top: -57px;
+      right: unset;
+      left: -140px;
+      width: 450px;
+    }
+  }
+
+  #snow {
+    top: -52px;
+    right: -54px;
+    z-index: 9;
+    width: 470px;
+
+    @media screen and (max-width: $hor-tablet) {
+    }
+
+    @media screen and (max-width: $ver-tablet) {
+      top: 118px;
+      right: -124px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      top: 198px;
+      right: -104px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+    }
+  }
+
+  #btn {
+    top: 172px;
+    right: 120px;
+    z-index: 3;
+    width: 45px;
+
+    @media screen and (max-width: $ver-tablet) {
+      top: 300px;
+      right: -27px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      top: 346px;
+      right: 143px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      top: 428px;
+      right: 101px;
+      width: 60px;
+    }
+  }
+
+  #snowman {
+    right: 10px;
+    bottom: -2px;
+    z-index: 5;
+    width: 100px;
+
+    @media screen and (max-width: $ver-tablet) {
+      right: 50px;
+      bottom: 30px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      right: unset;
+      left: 0;
+      width: 130px;
+      bottom: 70px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      width: 110px;
+      bottom: 120px;
+    }
+  }
+
+  #face {
+    bottom: 83px;
+    right: 210px;
+    z-index: 6;
+    width: 60px;
+
+    @media screen and (max-width: $ver-tablet) {
+      display: none;
+    }
+  }
+
+  #toy {
+    top: 22px;
+    right: 40px;
+    z-index: 4;
+    width: 62px;
+
+    @media screen and (max-width: $ver-tablet) {
+      top: 160px;
+      right: -100px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      right: 37px;
+      top: 260px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      top: 360px;
+      right: 0px;
+      width: 90px;
+    }
+  }
+
+  #toy2 {
+    top: -26px;
+    right: 77px;
+    z-index: 2;
+    width: 64px;
+
+    @media screen and (max-width: $ver-tablet) {
+      right: -113px;
+      top: 40px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      right: -33px;
+      top: 120px;
+      width: 90px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      right: -20px;
+      top: 280px;
+    }
+  }
+
+  &__button {
+    color: #fff !important;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 135%;
+    text-decoration: none;
+    background: #ff6945;
+    border-radius: 4px;
+    padding: 14px 0;
+    transition: 0.3s;
+    max-width: 420px;
+    max-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+
+    &:hover {
+      background: #b5e916;
+      color: #181818 !important;
+      transition: 0.3s;
+    }
+  }
+
+  .main__img {
+    position: absolute;
+  }
+}

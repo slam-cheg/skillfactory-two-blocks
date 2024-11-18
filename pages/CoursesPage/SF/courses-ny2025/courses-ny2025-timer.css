@@ -1,0 +1,56 @@
+.courses-ny2025__timer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 50px;
+  align-items: center;
+  min-width: 230px;
+}
+@media screen and (max-width: 639px) {
+  .courses-ny2025__timer {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+.courses-ny2025__timer-title {
+  max-width: 90px;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.7;
+}
+@media screen and (max-width: 639px) {
+  .courses-ny2025__timer-title {
+    max-width: unset;
+  }
+}
+.courses-ny2025__timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  align-items: center;
+}
+.courses-ny2025__timer-values {
+  font-size: 24px;
+  font-weight: 900;
+  color: #181818;
+}
+.courses-ny2025__timer-names {
+  display: flex;
+  gap: 18px;
+}
+.courses-ny2025__timer-name {
+  font-size: 10px;
+  font-weight: 900;
+}
+@media screen and (min-width: 640px) and (max-width: 959px) {
+  .courses-ny2025 #wires {
+    width: 520px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 639px) {
+  .courses-ny2025 #wires {
+    width: auto;
+  }
+}/*# sourceMappingURL=courses-ny2025-timer.css.map */

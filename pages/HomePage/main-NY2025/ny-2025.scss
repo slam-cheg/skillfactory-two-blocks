@@ -1,0 +1,260 @@
+@import "../../../styles/modules/variables.scss";
+
+.main_ny-2025 {
+  margin-bottom: 178px;
+
+  .outer-wrapper {
+    background: #083800;
+    padding-bottom: 182px;
+
+    @media screen and (max-width: $ver-tablet) {
+      padding-bottom: 64px;
+    }
+  }
+  .main__header {
+    &-wrapper {
+      position: relative;
+      z-index: 99;
+      background: #fff;
+      margin-bottom: 70px;
+    }
+  }
+  .title {
+    color: #fff;
+    font-size: 70px;
+    line-height: 0.9;
+    font-weight: 800;
+    margin-bottom: 28px;
+    max-width: 736px;
+    z-index: 10;
+    position: relative;
+
+    @media screen and (max-width: $hor-tablet) {
+      max-width: 523px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      font-size: 40px;
+      max-width: 300px;
+    }
+  }
+  .list {
+    margin-bottom: 70px;
+    z-index: 10;
+    position: relative;
+
+    @media screen and (max-width: $hor-mobile) {
+      margin-bottom: 374px;
+    }
+  }
+  .list-item {
+    color: #fff;
+
+    span {
+      background: #ff6945;
+      border-radius: 4px;
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      font-size: 16px;
+      max-width: 260px;
+    }
+  }
+  .directions {
+    max-width: 746px;
+    z-index: 10;
+    position: relative;
+
+    @media screen and (max-width: $hor-tablet) {
+      max-width: 546px;
+    }
+
+    &__title {
+      color: #fff;
+    }
+
+    &__list-link_orange {
+      background: #ff6945;
+
+      span {
+        color: #fff;
+      }
+
+      &:hover {
+        background: #b5e916;
+
+        span {
+          color: #181818;
+        }
+      }
+    }
+  }
+
+  #keys {
+    right: calc(50% - 50vw - 51px);
+    bottom: -183px;
+    z-index: 7;
+
+    @media screen and (max-width: $hor-tablet) {
+      max-height: 300px;
+    }
+
+    @media screen and (max-width: $ver-tablet) {
+      display: none;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      display: none;
+    }
+  }
+
+  #wires {
+    top: -130px;
+    right: -40px;
+    z-index: 1;
+
+    @media screen and (max-width: $ver-tablet) {
+      right: -130px;
+      top: -120px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      transform: rotate(22deg);
+      top: -320px;
+      right: -60px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      transform: rotate(22deg);
+      top: -280px;
+      right: unset;
+      left: -200px;
+    }
+  }
+
+  #snow {
+    top: -52px;
+    right: -74px;
+    z-index: 9;
+
+    @media screen and (max-width: $hor-tablet) {
+    }
+
+    @media screen and (max-width: $ver-tablet) {
+      top: 188px;
+      right: -84px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      top: 198px;
+      right: -184px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+    }
+  }
+
+  #btn {
+    top: 400px;
+    right: 93px;
+    z-index: 3;
+
+    @media screen and (max-width: $ver-tablet) {
+      top: 400px;
+      right: -77px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      top: 386px;
+      right: 133px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      top: 428px;
+      right: 51px;
+      width: 60px;
+    }
+  }
+
+  #snowman {
+    right: -60px;
+    bottom: -90px;
+    z-index: 5;
+
+    @media screen and (max-width: $ver-tablet) {
+      right: 50px;
+      bottom: -80px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      right: unset;
+      left: 0;
+      width: 130px;
+      bottom: 320px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      width: 110px;
+      bottom: 300px;
+    }
+  }
+
+  #face {
+    bottom: 110px;
+    right: 210px;
+    z-index: 6;
+
+    @media screen and (max-width: $ver-tablet) {
+      display: none;
+    }
+  }
+
+  #toy {
+    top: 110px;
+    right: -70px;
+    z-index: 4;
+
+    @media screen and (max-width: $ver-tablet) {
+      top: 210px;
+      right: -130px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      right: 17px;
+      top: 260px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      top: 300px;
+      right: 10px;
+      width: 90px;
+    }
+  }
+
+  #toy2 {
+    top: 48px;
+    right: 17px;
+    z-index: 2;
+
+    @media screen and (max-width: $ver-tablet) {
+      right: -113px;
+    }
+
+    @media screen and (max-width: $hor-mobile) {
+      right: -13px;
+      top: 170px;
+      width: 90px;
+    }
+
+    @media screen and (max-width: $ver-mobile) {
+      right: -13px;
+      top: 200px;
+    }
+  }
+
+  .main__img {
+    position: absolute;
+  }
+}
