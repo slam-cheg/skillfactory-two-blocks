@@ -8,58 +8,65 @@
     margin-bottom: 75px;
   }
 }
-.reviews-mixed__slider {
-  padding-top: 100px;
+.reviews-mixed__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
 }
-@media screen and (max-width: 959px) {
-  .reviews-mixed__slider {
-    padding-top: 70px;
+@media screen and (max-width: 639px) {
+  .reviews-mixed__header {
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    gap: 40px;
+    justify-content: normal;
   }
 }
-.reviews-mixed .pagination__buttons {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  top: 0;
+.reviews-mixed__pagination {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 @media screen and (max-width: 639px) {
-  .reviews-mixed .pagination__buttons {
-    top: 120px;
+  .reviews-mixed__pagination {
+    gap: 4px;
   }
 }
-@media screen and (max-width: 479px) {
-  .reviews-mixed .pagination__buttons {
-    right: unset;
-    left: 0;
-  }
-}
-.reviews-mixed .pagination__button {
-  width: 40px;
-  height: 40px;
-  background-image: url(https://static.tildacdn.com/tild6430-6532-4461-b164-346166623365/f0ac3312-51d0-4886-8.svg);
-  background-size: 14px;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50px;
-  background-color: #dde5e6;
-  transition: 0.2s;
+.reviews-mixed__pagination-button {
+  outline: none;
+  border: none;
   cursor: pointer;
+  transition: 0.3s;
+  background: transparent;
 }
-.reviews-mixed .pagination__button:hover {
-  transition: 0.2s;
-  opacity: 0.7;
-  background-color: #033932;
+.reviews-mixed__pagination-button svg {
+  width: 50px;
+  height: 50px;
 }
-@media screen and (max-width: 959px) {
-  .reviews-mixed .pagination__button {
-    width: 30px;
-    height: 30px;
+@media screen and (max-width: 639px) {
+  .reviews-mixed__pagination-button svg {
+    width: 40px;
+    height: 40px;
   }
 }
-.reviews-mixed .pagination__button_next {
-  transform: rotate(180deg);
+.reviews-mixed__pagination-button svg rect {
+  fill: #b5e916;
+  transition: 0.3s;
+}
+.reviews-mixed__pagination-button svg path {
+  fill: #181818;
+  transition: 0.3s;
+}
+@media screen and (min-width: 1200px) {
+  .reviews-mixed__pagination-button:hover svg rect {
+    fill: #043933;
+    transition: 0.3s;
+  }
+  .reviews-mixed__pagination-button:hover svg path {
+    fill: #e7e7e7;
+    transition: 0.3s;
+  }
 }
 .reviews-mixed .text-slide {
   background: #f2f2f4;

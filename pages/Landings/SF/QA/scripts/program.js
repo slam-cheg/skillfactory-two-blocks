@@ -30,6 +30,8 @@ programTabs.forEach(tab => {
 		changeAccord(tab)
 	})
 })
+
+allAccordWrappers[1].style.display = "none";
  
 function changeAccord(tabClicked) {
 	const clickedDirection = tabClicked.dataset.direction;

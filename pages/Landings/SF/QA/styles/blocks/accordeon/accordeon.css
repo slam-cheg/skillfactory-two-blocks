@@ -185,6 +185,7 @@
   line-height: 1;
   padding-top: 5px;
   color: #181818;
+  font-family: "heliosexBOLD-neuemachina";
 }
 @media screen and (max-width: 639px) {
   .accordeon .h5-title {
