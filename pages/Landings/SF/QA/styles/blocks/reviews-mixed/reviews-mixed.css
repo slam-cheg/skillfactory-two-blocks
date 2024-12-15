@@ -1,0 +1,207 @@
+.reviews-mixed {
+  overflow: hidden;
+  margin-bottom: 110px;
+  position: relative;
+}
+@media screen and (max-width: 479px) {
+  .reviews-mixed {
+    margin-bottom: 75px;
+  }
+}
+.reviews-mixed__slider {
+  padding-top: 100px;
+}
+@media screen and (max-width: 959px) {
+  .reviews-mixed__slider {
+    padding-top: 70px;
+  }
+}
+.reviews-mixed .pagination__buttons {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 639px) {
+  .reviews-mixed .pagination__buttons {
+    top: 120px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .reviews-mixed .pagination__buttons {
+    right: unset;
+    left: 0;
+  }
+}
+.reviews-mixed .pagination__button {
+  width: 40px;
+  height: 40px;
+  background-image: url(https://static.tildacdn.com/tild6430-6532-4461-b164-346166623365/f0ac3312-51d0-4886-8.svg);
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+  background-color: #dde5e6;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.reviews-mixed .pagination__button:hover {
+  transition: 0.2s;
+  opacity: 0.7;
+  background-color: #033932;
+}
+@media screen and (max-width: 959px) {
+  .reviews-mixed .pagination__button {
+    width: 30px;
+    height: 30px;
+  }
+}
+.reviews-mixed .pagination__button_next {
+  transform: rotate(180deg);
+}
+.reviews-mixed .text-slide {
+  background: #f2f2f4;
+  padding: 20px;
+  border-radius: 6px;
+  height: auto;
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.reviews-mixed .text-slide__text {
+  font-family: "NT Somic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: rgba(24, 24, 24, 0.5);
+}
+@media screen and (max-width: 639px) {
+  .reviews-mixed .text-slide__text {
+    font-size: 14px;
+  }
+}
+.reviews-mixed .text-slide__avatar {
+  width: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 30px;
+}
+@media screen and (max-width: 639px) {
+  .reviews-mixed .text-slide__avatar {
+    width: 40px;
+  }
+}
+.reviews-mixed .text-slide__name {
+  font-weight: 800;
+  font-size: 16px;
+  font-family: "heliosexBOLD-neuemachina";
+  text-transform: uppercase;
+}
+@media screen and (max-width: 639px) {
+  .reviews-mixed .text-slide__name {
+    font-size: 12px;
+  }
+}
+.reviews-mixed .text-slide__bottom {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+@media screen and (max-width: 639px) {
+  .reviews-mixed .text-slide__bottom {
+    gap: 10px;
+  }
+}
+.reviews-mixed .video-slide {
+  position: relative;
+  border-radius: 20px;
+  width: 260px;
+}
+.reviews-mixed .video-slide__iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  border-radius: 6px;
+}
+@media screen and (max-width: 1199px) {
+  .reviews-mixed .video-slide__iframe-wrapper {
+    height: 370px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .reviews-mixed .video-slide__iframe-wrapper {
+    height: 420px;
+  }
+}
+.reviews-mixed .video-slide__play {
+  position: absolute;
+  z-index: 3;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.reviews-mixed .video-slide__play svg circle {
+  fill: #fff;
+}
+.reviews-mixed .video-slide__play svg path {
+  fill: #043933;
+}
+.reviews-mixed .video-slide__play:hover {
+  transition: 0.2s;
+  opacity: 0.7;
+}
+.reviews-mixed .video-slide__play_hidden {
+  opacity: 0;
+  transition: 0.2s;
+  visibility: hidden;
+  pointer-events: none;
+}
+.reviews-mixed .video-slide__preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  border-radius: 6px;
+  opacity: 0.4;
+  transition: 0.2s;
+}
+.reviews-mixed .video-slide__preview_hidden {
+  opacity: 0;
+  transition: 0.2s;
+}
+.reviews-mixed .video-slide__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 6px;
+}
+.reviews-mixed .video-slide__name {
+  color: #fff !important;
+  font-size: 16px;
+  position: absolute;
+  text-decoration: none !important;
+  font-family: "heliosexBOLD-neuemachina";
+  text-transform: uppercase;
+  bottom: 30px;
+  left: 20px;
+  z-index: 6;
+  max-width: 150px;
+}/*# sourceMappingURL=reviews-mixed.css.map */

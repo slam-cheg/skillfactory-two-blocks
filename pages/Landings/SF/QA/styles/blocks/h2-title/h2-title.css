@@ -3,6 +3,7 @@
   font-size: 46px;
   line-height: 0.8;
   color: #181818;
+  font-family: "heliosexBOLD-neuemachina";
 }
 @media screen and (max-width: 639px) {
   .h2-title {
