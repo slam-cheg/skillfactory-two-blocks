@@ -1,0 +1,17 @@
+.program, .tariffs, .faq {
+    font-family: "heliosexBOLD-neuemachina";
+}
+
+@import "../../../../../fonts/SF/fonts.scss";
+@import "../../../../../styles/modules/blocks/tilda-reset/SF/tilda-reset.scss";
+@import "../../../../../styles/modules/variables.scss";
+@import "../../../../../styles/modules/mixins.scss";
+@import "./blocks/outer-wrapper/outer-wrapper.scss";
+@import "../../../../../styles/modules/blocks/inner-wrapper/inner-wrapper.scss";
+
+@import "./blocks/h2-title/h2-title.scss";
+@import "./blocks/h3-title/h3-title.scss";
+@import "./blocks/program/program.scss";
+@import "./blocks/accordeon/accordeon.scss";
+@import "./blocks/tariffs/tariffs.scss";
+@import "./blocks/faq/faq.scss";

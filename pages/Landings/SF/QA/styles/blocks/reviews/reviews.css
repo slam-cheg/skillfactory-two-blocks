@@ -1,0 +1,122 @@
+.reviews {
+  padding: 90px 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 639px) {
+  .reviews {
+    padding: 60px 0;
+  }
+}
+.reviews__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 639px) {
+  .reviews__header {
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    gap: 40px;
+    justify-content: normal;
+  }
+}
+.reviews__pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 639px) {
+  .reviews__pagination {
+    gap: 4px;
+  }
+}
+.reviews__pagination-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  background: transparent;
+}
+.reviews__pagination-button svg {
+  width: 50px;
+  height: 50px;
+}
+@media screen and (max-width: 639px) {
+  .reviews__pagination-button svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+.reviews__pagination-button svg rect {
+  fill: #b5e916;
+  transition: 0.3s;
+}
+.reviews__pagination-button svg path {
+  fill: #181818;
+  transition: 0.3s;
+}
+@media screen and (min-width: 1200px) {
+  .reviews__pagination-button:hover svg rect {
+    fill: #043933;
+    transition: 0.3s;
+  }
+  .reviews__pagination-button:hover svg path {
+    fill: #e7e7e7;
+    transition: 0.3s;
+  }
+}
+
+.review {
+  background: #f2f2f4;
+  padding: 20px;
+  border-radius: 6px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.review__text {
+  font-family: "NTSomic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: rgba(24, 24, 24, 0.5);
+}
+@media screen and (max-width: 639px) {
+  .review__text {
+    font-size: 14px;
+  }
+}
+.review__avatar {
+  width: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 30px;
+}
+@media screen and (max-width: 639px) {
+  .review__avatar {
+    width: 40px;
+  }
+}
+.review__name {
+  font-weight: 800;
+  font-size: 16px;
+}
+@media screen and (max-width: 639px) {
+  .review__name {
+    font-size: 12px;
+  }
+}
+.review__bottom {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+@media screen and (max-width: 639px) {
+  .review__bottom {
+    gap: 10px;
+  }
+}/*# sourceMappingURL=reviews.css.map */

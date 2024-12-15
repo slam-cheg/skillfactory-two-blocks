@@ -1,0 +1,12 @@
+.h3-title {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "heliosexBOLD-neuemachina";
+  line-height: 1;
+  max-width: 500px;
+}
+@media screen and (max-width: 639px) {
+  .h3-title {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=h3-title.css.map */

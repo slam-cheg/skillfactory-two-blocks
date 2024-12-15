@@ -1,0 +1,11 @@
+.h2-title {
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 0.8;
+    color: #181818;
+
+    @media screen and (max-width: 639px) {
+        font-size: 28px;
+        max-width: 300px;
+    }
+}

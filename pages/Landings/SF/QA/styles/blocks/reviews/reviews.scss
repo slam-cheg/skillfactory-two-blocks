@@ -1,0 +1,127 @@
+.reviews {
+	padding: 90px 0;
+	overflow: hidden;
+
+	@media screen and (max-width: 639px) {
+		padding: 60px 0;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 60px;
+
+		@media screen and (max-width: 639px) {
+			flex-direction: column;
+			margin-bottom: 20px;
+			align-items: flex-start;
+			gap: 40px;
+			justify-content: normal;
+		}
+	}
+
+	&__pagination {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		@media screen and (max-width: 639px) {
+			gap: 4px;
+		}
+	}
+
+	&__pagination-button {
+		outline: none;
+		border: none;
+		cursor: pointer;
+		transition: 0.3s;
+		background: transparent;
+
+		svg {
+			width: 50px;
+			height: 50px;
+
+			@media screen and (max-width: 639px) {
+				width: 40px;
+				height: 40px;
+			}
+
+			rect {
+				fill: #b5e916;
+				transition: 0.3s;
+			}
+			path {
+				fill: #181818;
+				transition: 0.3s;
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+			&:hover {
+				svg {
+					rect {
+						fill: #043933;
+						transition: 0.3s;
+					}
+					path {
+						fill: #e7e7e7;
+						transition: 0.3s;
+					}
+				}
+			}
+		}
+	}
+}
+
+.review {
+	background: #f2f2f4;
+	padding: 20px;
+	border-radius: 6px;
+	min-height: 280px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	&__text {
+		font-family: "NTSomic";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 1.2;
+		color: rgba(24, 24, 24, 0.5);
+
+		@media screen and (max-width: 639px) {
+			font-size: 14px;
+		}
+	}
+
+	&__avatar {
+		width: 50px;
+		object-fit: contain;
+		border-radius: 30px;
+
+		@media screen and (max-width: 639px) {
+			width: 40px;
+		}
+	}
+
+	&__name {
+		font-weight: 800;
+		font-size: 16px;
+
+		@media screen and (max-width: 639px) {
+			font-size: 12px;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		gap: 14px;
+		align-items: center;
+
+		@media screen and (max-width: 639px) {
+			gap: 10px;
+		}
+	}
+}

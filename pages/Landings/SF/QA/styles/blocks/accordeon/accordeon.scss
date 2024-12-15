@@ -1,0 +1,333 @@
+.accordeon {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &_bg {
+    background: #fff;
+    padding: 90px 20px 50px 20px;
+
+    @media screen and (max-width: 639px) {
+      background: #f2f2f4;
+      padding: 40px 0 0 0;
+    }
+  }
+
+  &__item {
+    &_opened {
+      .accordeon__body {
+        pointer-events: auto;
+        transition: max-height 0.5s;
+      }
+
+      .accordeon__close-button {
+        width: 36px;
+        height: 36px;
+        transform: rotate(45deg);
+        transition: 0.3s;
+
+        @media screen and (min-width: 1200px) {
+          &:hover {
+            transform: rotate(50deg);
+            transition: 0.3s;
+          }
+        }
+
+        @media screen and (max-width: 639px) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &_bonus {
+      .accordeon__header {
+        background: #043933 !important;
+
+        &-labels {
+          display: flex;
+          gap: 6px;
+        }
+      }
+      .h5-title {
+        color: #ffffff !important;
+      }
+      .accordeon__close-button {
+        background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/cross-white.svg) !important;
+      }
+    }
+
+    &_green {
+      background: #043933 !important;
+      border-radius: 6px;
+
+      .accordeon__header {
+        background: transparent !important;
+      }
+
+      .h5-title,
+      .accordeon__list-lead,
+      .accordeon__text {
+        color: #ffffff !important;
+      }
+
+      .accordeon__close-button {
+        background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/cross-white.svg) !important;
+      }
+
+      .accordeon__body {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    background: #f2f2f4;
+    border-radius: 6px;
+
+    @media screen and (max-width: 939px) {
+      align-items: flex-start;
+    }
+
+    @media screen and (max-width: 639px) {
+      background: #fff;
+      align-items: flex-start;
+      padding: 14px 30px 14px 10px;
+    }
+
+    &-content {
+      display: flex;
+      width: calc(100% - 36px);
+      align-items: center;
+    }
+
+    &-labels {
+      list-style: none;
+    }
+
+    &-label {
+      padding: 10px 14px;
+      text-transform: uppercase;
+      background: #f2f2f4;
+      border-radius: 6px;
+      max-width: fit-content;
+      font-weight: 800;
+      font-size: 16px;
+      color: #181818;
+      line-height: 1;
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+        padding: 12px 18px 8px 18px;
+      }
+    }
+  }
+
+  &__separator {
+    overflow: hidden;
+    transition: 0.5s;
+    div {
+      height: 30px;
+
+      @media screen and (max-width: 639px) {
+        height: 20px;
+      }
+    }
+
+    &_bottom {
+      div {
+        height: 40px;
+
+        @media screen and (max-width: 639px) {
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  &__body {
+    transition: max-height 0.5s;
+    pointer-events: none;
+    overflow: hidden;
+    max-height: 0px;
+
+    &-columns {
+      display: grid;
+      grid-template-columns: 540px auto;
+      gap: 40px;
+
+      @media screen and (max-width: 1199px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (max-width: 639px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+      &:first-child {
+        gap: 36px;
+
+        @media screen and (max-width: 639px) {
+          gap: 20px;
+        }
+      }
+      &:last-child {
+        gap: 40px;
+
+        @media screen and (max-width: 639px) {
+          gap: 20px;
+        }
+      }
+    }
+
+    &-columns_same {
+      .accordeon__body-col {
+        &:first-child {
+          gap: 40px;
+        }
+      }
+    }
+  }
+
+  .h5-title {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+    padding-top: 5px;
+    color: #181818;
+
+    @media screen and (max-width: 639px) {
+      font-size: 16px;
+      margin-bottom: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__close-button {
+    background-image: url(https://storage.yandexcloud.net/sf-wallaper-bucket/pdev2024/cross.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    background-size: 100%;
+    border: none;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+
+    @media screen and (min-width: 1200px) {
+      &:hover {
+        transform: rotate(5deg);
+        transition: 0.3s;
+      }
+    }
+
+    @media screen and (max-width: 639px) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__list {
+    padding-left: 0;
+    list-style: none;
+
+    &-lead {
+      font-family: "NT Somic";
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #181818;
+
+      @media screen and (max-width: 639px) {
+        font-size: 15px;
+      }
+    }
+
+    &-labels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    &-label {
+      font-weight: 800;
+      font-size: 16px;
+      padding: 8px 10px 4px 10px;
+      border-radius: 6px;
+      line-height: 1;
+      background: #f2f2f4;
+      color: #181818;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 639px) {
+        background: #fff;
+        font-size: 12px;
+        padding: 10px 8px 6px 8px;
+      }
+    }
+  }
+
+  &__bigLabel {
+    padding: 20px 0;
+    width: 100%;
+    background: #043933;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 639px) {
+      padding: 10px;
+      justify-content: flex-start;
+    }
+
+    span {
+      font-family: "NT Somic";
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #ffffff;
+      text-align: center;
+
+      @media screen and (max-width: 639px) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__text {
+    font-family: "NT Somic";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #181818;
+    display: flex;
+
+    &::before {
+      content: "—";
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 639px) {
+      font-size: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #181818 !important;
+    }
+  }
+}

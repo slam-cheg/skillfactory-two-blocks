@@ -1,0 +1,55 @@
+.faq {
+	padding: 90px 0;
+
+	@media screen and (max-width: 639px) {
+		padding: 60px 0;
+
+		.h2-title {
+			max-width: 200px;
+		}
+	}
+
+	&__header {
+		margin-bottom: 60px;
+
+		@media screen and (max-width: 639px) {
+			margin-bottom: 40px;
+		}
+	}
+	.accordeon {
+		&__item {
+			background: #f2f2f4;
+			border-radius: 6px;
+		}
+		&__header {
+			background: transparent;
+
+			@media screen and (max-width: 639px) {
+				padding: 15px 10px;
+			}
+		}
+		&__body-columns {
+			grid-template-columns: 1fr;
+			padding: 0 20px 20px 20px;
+
+			@media screen and (max-width: 639px) {
+                padding: 0 10px 20px 10px;
+			}
+		}
+		&__list {
+			display: none;
+
+			&-lead {
+				@media screen and (max-width: 639px) {
+					font-size: 15px;
+				}
+			}
+		}
+
+		.h5-title {
+			@media screen and (max-width: 639px) {
+				font-size: 20px;
+			}
+		}
+	}
+}

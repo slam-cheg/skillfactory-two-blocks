@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Box</title>
+    <style>
+      .cookie-popup {
+        position: fixed;
+        bottom: 10px;
+        max-width: 760px;
+        background: #fff;
+        left: calc(50% - 760px / 2);
+        padding: 12px 20px;
+        border-radius: 6px;
+        z-index: 999999;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.4s;
+        box-sizing: border-box;
+      }
+      .cookie-popup_visible {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity 0.4s;
+      }
+      .cookie-popup__content {
+        display: flex;
+        gap: 44px;
+        align-items: center;
+      }
+      .cookie-popup__text {
+        font-family: "Somic-Machine";
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.2;
+        flex-basis: fit-content;
+      }
+      .cookie-popup__text a {
+        color: inherit !important;
+        text-decoration: underline !important;
+      }
+      .cookie-popup__button {
+        background: #b5e916;
+        outline: none !important;
+        border: none !important;
+        width: 120px;
+        height: 44px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 959px) {
+        .cookie-popup {
+          max-width: 620px;
+          left: calc(50% - 620px / 2);
+        }
+        .cookie-popup__text {
+          font-size: 14px;
+        }
+        .cookie-popup__button {
+          width: 80px;
+          height: 40px;
+        }
+      }
+      @media screen and (max-width: 639px) {
+        .cookie-popup {
+          max-width: 460px;
+          left: calc(50% - 460px / 2);
+          padding: 20px;
+        }
+        .cookie-popup__content {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .cookie-popup__text {
+          font-size: 14px;
+        }
+        .cookie-popup__button {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .cookie-popup {
+          max-width: 300px;
+          left: calc(50% - 300px / 2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cookie-popup cookie-popup_visible">
+      <div class="cookie-popup__content">
+        <p class="cookie-popup__text">Нажимая кнопку &laquo;ОК&raquo; или продолжая посещение и&nbsp;использование сайта я&nbsp;даю согласие на&nbsp;обработку файлов сооkіе. Запретить обработку cookie вы&nbsp;можете через браузер. Подробнее в&nbsp;<a href="/position_of_user_personal_data">Политике</a></p>
+        <button class="cookie-popup__button">ОК</button>
+      </div>
+    </div>
+    <script>
+      function getCookie(name) {
+        const nameEQ = name + "=";
+        const cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i].trim();
+          if (cookie.startsWith(nameEQ)) {
+            return cookie.substring(nameEQ.length);
+          }
+        }
+        return null;
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const popup = document.querySelector(".cookie-popup");
+        const button = document.querySelector(".cookie-popup__button");
+
+        // Сюда пишем куку которую проверяем
+        if (!getCookie("_ym_uid")) {
+          popup.classList.add("cookie-popup_visible");
+        }
+
+        button.addEventListener("click", () => {
+          popup.classList.remove("cookie-popup_visible");
+        });
+      });
+    </script>
+  </body>
+</html>
