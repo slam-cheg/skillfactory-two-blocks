@@ -135,10 +135,11 @@
       justify-content: space-between;
       background: #fff;
       padding: 12px;
+      border-radius: 4px;
 
-	  span {
-		font-size: 12px;
-	  }
+      span {
+        font-size: 12px;
+      }
 
       svg {
         transition: 0.2s;
@@ -161,13 +162,21 @@
       justify-content: space-between;
     }
 
+    .accordeon__list {
+      margin-bottom: 0;
+    }
+
     .accordeon__text {
       margin-bottom: 8px;
     }
 
+    .accordeon__text:last-child {
+      margin-bottom: 0 !important;
+    }
+
     @media screen and (max-width: 639px) {
       background: #f2f2f4;
-	  padding: 50px 0 0 0;
+      padding: 50px 0 0 0;
     }
   }
 
@@ -202,11 +211,12 @@
       width: 100%;
       padding: 12px;
       font-size: 12px;
-      background: #fff;
+      color: #043933 !important;
+      background: #fff !important;
       border-radius: 0;
-	  justify-content: flex-start;
-	  text-transform: none;
-	  font-weight: 800;
+      justify-content: flex-start;
+      text-transform: none;
+      font-weight: 800;
 
       @media screen and (max-width: 639px) {
         display: flex;

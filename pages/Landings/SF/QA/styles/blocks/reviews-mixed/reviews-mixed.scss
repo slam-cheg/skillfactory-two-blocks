@@ -83,6 +83,22 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @media screen and (max-width: 1199px) {
+      width: 940px;
+    }
+
+    @media screen and (max-width: 959px) {
+      width: 620px;
+    }
+
+    @media screen and (max-width: 639px) {
+      width: 460px;
+    }
+
+    @media screen and (max-width: 479px) {
+      width: 300px;
+    }
+
     &__text {
       font-family: "NT Somic";
       font-style: normal;
@@ -133,6 +149,10 @@
     border-radius: 20px;
     width: 260px;
 
+    @media screen and (max-width: 639px) {
+      width: 168px;
+    }
+
     &__iframe-wrapper {
       position: relative;
       width: 100%;
@@ -148,7 +168,7 @@
       }
 
       @media screen and (max-width: 639px) {
-        height: 420px;
+        height: 248px;
       }
     }
 
@@ -223,6 +243,11 @@
       left: 20px;
       z-index: 6;
       max-width: 150px;
+      font-weight: 800;
+
+      @media screen and (max-width: 639px) {
+        font-size: 12px;
+      }
     }
   }
 }

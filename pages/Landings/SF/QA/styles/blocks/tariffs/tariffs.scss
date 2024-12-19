@@ -173,9 +173,11 @@
 			font-weight: 800;
 			line-height: 1;
 			color: #181818;
+			min-height: 60px;
 
 			@media screen and (max-width: 639px) {
 				font-size: 20px;
+				min-height: 40px;
 			}
 		}
 

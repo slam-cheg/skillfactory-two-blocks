@@ -4,8 +4,8 @@ const iframeWrappers = document.querySelectorAll(".video-slide__iframe-wrapper")
 const reviewsMixedSlider = new Swiper(".reviews-mixed__slider", {
 	loop: false,
 	navigation: {
-		nextEl: "#reviews-mixed-prev-btn",
-		prevEl: "#reviews-mixed-next-btn",
+		nextEl: ".reviews-mixed__pagination-button_right",
+		prevEl: ".reviews-mixed__pagination-button_left",
 	},
 	spaceBetween: 20,
 	slideToClickedSlide: false,

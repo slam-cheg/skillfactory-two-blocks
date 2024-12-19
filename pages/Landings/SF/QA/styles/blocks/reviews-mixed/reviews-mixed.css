@@ -78,6 +78,26 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 1199px) {
+  .reviews-mixed .text-slide {
+    width: 940px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .reviews-mixed .text-slide {
+    width: 620px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .reviews-mixed .text-slide {
+    width: 460px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .reviews-mixed .text-slide {
+    width: 300px;
+  }
+}
 .reviews-mixed .text-slide__text {
   font-family: "NT Somic";
   font-style: normal;
@@ -128,6 +148,11 @@
   border-radius: 20px;
   width: 260px;
 }
+@media screen and (max-width: 639px) {
+  .reviews-mixed .video-slide {
+    width: 168px;
+  }
+}
 .reviews-mixed .video-slide__iframe-wrapper {
   position: relative;
   width: 100%;
@@ -145,7 +170,7 @@
 }
 @media screen and (max-width: 639px) {
   .reviews-mixed .video-slide__iframe-wrapper {
-    height: 420px;
+    height: 248px;
   }
 }
 .reviews-mixed .video-slide__play {
@@ -211,4 +236,10 @@
   left: 20px;
   z-index: 6;
   max-width: 150px;
+  font-weight: 800;
+}
+@media screen and (max-width: 639px) {
+  .reviews-mixed .video-slide__name {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=reviews-mixed.css.map */

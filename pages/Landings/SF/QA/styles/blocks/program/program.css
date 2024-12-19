@@ -127,6 +127,7 @@
   justify-content: space-between;
   background: #fff;
   padding: 12px;
+  border-radius: 4px;
 }
 .program__tabs-select span {
   font-size: 12px;
@@ -145,8 +146,14 @@
 .program__tab-lead .accordeon__body-col {
   justify-content: space-between;
 }
+.program__tab-lead .accordeon__list {
+  margin-bottom: 0;
+}
 .program__tab-lead .accordeon__text {
   margin-bottom: 8px;
+}
+.program__tab-lead .accordeon__text:last-child {
+  margin-bottom: 0 !important;
 }
 @media screen and (max-width: 639px) {
   .program__tab-lead {
@@ -185,7 +192,8 @@
   width: 100%;
   padding: 12px;
   font-size: 12px;
-  background: #fff;
+  color: #043933 !important;
+  background: #fff !important;
   border-radius: 0;
   justify-content: flex-start;
   text-transform: none;
